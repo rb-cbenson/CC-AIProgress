@@ -68,7 +68,11 @@
       "image-analysis",
       "translation"
     ],
-    "integrations": [],
+    "integrations": [
+      "dall-e-api",
+      "openai-api",
+      "openrouter"
+    ],
     "accessMethod": "web+api",
     "platformSupport": [
       "web",
@@ -142,7 +146,10 @@
       "code-analysis",
       "translation"
     ],
-    "integrations": [],
+    "integrations": [
+      "claude-api",
+      "openrouter"
+    ],
     "accessMethod": "web+api",
     "platformSupport": [
       "web",
@@ -202,7 +209,11 @@
       "image-analysis",
       "web-search"
     ],
-    "integrations": [],
+    "integrations": [
+      "gemini-api",
+      "google-notebooklm",
+      "openrouter"
+    ],
     "accessMethod": "web+api",
     "platformSupport": [
       "web",
@@ -264,7 +275,10 @@
       "summarization",
       "web-search"
     ],
-    "integrations": [],
+    "integrations": [
+      "openrouter",
+      "perplexity-api"
+    ],
     "accessMethod": "web+api",
     "platformSupport": [
       "web",
@@ -319,7 +333,9 @@
       "code-generation",
       "image-generation"
     ],
-    "integrations": [],
+    "integrations": [
+      "openrouter"
+    ],
     "accessMethod": "web+api",
     "platformSupport": [
       "web",
@@ -638,7 +654,10 @@
     "capabilities": [
       "image-generation"
     ],
-    "integrations": [],
+    "integrations": [
+      "davinci-resolve",
+      "runway"
+    ],
     "accessMethod": "web",
     "platformSupport": [
       "web"
@@ -740,7 +759,13 @@
       "image-generation",
       "image-editing"
     ],
-    "integrations": [],
+    "integrations": [
+      "blender",
+      "davinci-resolve",
+      "lm-studio",
+      "ollama",
+      "runway"
+    ],
     "accessMethod": "cli",
     "platformSupport": [
       "windows",
@@ -846,7 +871,10 @@
     "capabilities": [
       "image-generation"
     ],
-    "integrations": [],
+    "integrations": [
+      "davinci-resolve",
+      "runway"
+    ],
     "accessMethod": "web+api",
     "platformSupport": [
       "web",
@@ -964,7 +992,15 @@
       "image-editing",
       "video-editing"
     ],
-    "integrations": [],
+    "integrations": [
+      "adobe-firefly",
+      "dall-e-api",
+      "davinci-resolve",
+      "elevenlabs",
+      "midjourney",
+      "stable-diffusion",
+      "suno"
+    ],
     "accessMethod": "web+api",
     "platformSupport": [
       "web",
@@ -1013,7 +1049,10 @@
     "capabilities": [
       "video-generation"
     ],
-    "integrations": [],
+    "integrations": [
+      "davinci-resolve",
+      "elevenlabs"
+    ],
     "accessMethod": "web+api",
     "platformSupport": [
       "web",
@@ -1068,7 +1107,10 @@
     "capabilities": [
       "video-generation"
     ],
-    "integrations": [],
+    "integrations": [
+      "davinci-resolve",
+      "elevenlabs"
+    ],
     "accessMethod": "web+api",
     "platformSupport": [
       "web",
@@ -1291,7 +1333,10 @@
       "music-generation",
       "audio-generation"
     ],
-    "integrations": [],
+    "integrations": [
+      "davinci-resolve",
+      "runway"
+    ],
     "accessMethod": "web+api",
     "platformSupport": [
       "web",
@@ -1407,7 +1452,13 @@
       "music-generation",
       "speech-synthesis"
     ],
-    "integrations": [],
+    "integrations": [
+      "davinci-resolve",
+      "kling",
+      "openai-api",
+      "pika",
+      "runway"
+    ],
     "accessMethod": "web+api",
     "platformSupport": [
       "web",
@@ -1479,7 +1530,12 @@
       "code-analysis",
       "code-execution"
     ],
-    "integrations": [],
+    "integrations": [
+      "cursor",
+      "github-actions",
+      "github-pages",
+      "windsurf"
+    ],
     "accessMethod": "desktop-app",
     "platformSupport": [
       "windows",
@@ -1539,7 +1595,12 @@
       "code-analysis",
       "code-execution"
     ],
-    "integrations": [],
+    "integrations": [
+      "claude-api",
+      "github-copilot",
+      "openai-api",
+      "tabnine"
+    ],
     "accessMethod": "desktop-app",
     "platformSupport": [
       "windows",
@@ -1605,7 +1666,14 @@
       "automation",
       "web-search"
     ],
-    "integrations": [],
+    "integrations": [
+      "claude-api",
+      "fastapi",
+      "github-actions",
+      "github-pages",
+      "playwright",
+      "puppeteer"
+    ],
     "accessMethod": "desktop-app",
     "platformSupport": [
       "windows",
@@ -1657,7 +1725,12 @@
       "code-analysis",
       "code-execution"
     ],
-    "integrations": [],
+    "integrations": [
+      "claude-api",
+      "github-copilot",
+      "openai-api",
+      "tabnine"
+    ],
     "accessMethod": "desktop-app",
     "platformSupport": [
       "windows",
@@ -1765,7 +1838,10 @@
       "code-generation",
       "code-analysis"
     ],
-    "integrations": [],
+    "integrations": [
+      "cursor",
+      "windsurf"
+    ],
     "accessMethod": "desktop-app",
     "platformSupport": [
       "windows",
@@ -1823,7 +1899,10 @@
       "summarization",
       "web-search"
     ],
-    "integrations": [],
+    "integrations": [
+      "grammarly",
+      "zapier"
+    ],
     "accessMethod": "web",
     "platformSupport": [
       "web"
@@ -1867,7 +1946,10 @@
       "summarization",
       "web-search"
     ],
-    "integrations": [],
+    "integrations": [
+      "gemini",
+      "zapier"
+    ],
     "accessMethod": "web",
     "platformSupport": [
       "web"
@@ -1922,7 +2004,9 @@
       "text-editing",
       "summarization"
     ],
-    "integrations": [],
+    "integrations": [
+      "notion-ai"
+    ],
     "accessMethod": "web",
     "platformSupport": [
       "web"
@@ -2454,7 +2538,14 @@
       "automation",
       "api-call"
     ],
-    "integrations": [],
+    "integrations": [
+      "claude-api",
+      "google-notebooklm",
+      "n8n",
+      "notion-ai",
+      "openai-api",
+      "twilio"
+    ],
     "accessMethod": "web+api",
     "platformSupport": [
       "web",
@@ -2570,7 +2661,20 @@
       "automation",
       "api-call"
     ],
-    "integrations": [],
+    "integrations": [
+      "claude-api",
+      "gemini-api",
+      "github-actions",
+      "groq",
+      "mistral",
+      "openai-api",
+      "perplexity-api",
+      "runway-api",
+      "suno-api",
+      "tavily",
+      "twilio",
+      "zapier"
+    ],
     "accessMethod": "web+api",
     "platformSupport": [
       "web",
@@ -3872,7 +3976,20 @@
       "text-generation",
       "text-analysis"
     ],
-    "integrations": [],
+    "integrations": [
+      "chatgpt",
+      "claude",
+      "claude-api",
+      "gemini",
+      "gemini-api",
+      "grok",
+      "groq",
+      "mistral",
+      "ollama",
+      "openai-api",
+      "perplexity",
+      "perplexity-api"
+    ],
     "accessMethod": "web",
     "platformSupport": [
       "web"
@@ -4764,7 +4881,11 @@
       "text-generation",
       "text-analysis"
     ],
-    "integrations": [],
+    "integrations": [
+      "lm-studio",
+      "openrouter",
+      "stable-diffusion"
+    ],
     "accessMethod": "cli",
     "platformSupport": [
       "windows",
@@ -4812,7 +4933,10 @@
       "text-generation",
       "text-analysis"
     ],
-    "integrations": [],
+    "integrations": [
+      "ollama",
+      "stable-diffusion"
+    ],
     "accessMethod": "desktop-app",
     "platformSupport": [
       "windows",
@@ -7344,7 +7468,13 @@
       "path-planning",
       "3d-modeling"
     ],
-    "integrations": [],
+    "integrations": [
+      "jetson-orin",
+      "mujoco",
+      "realsense",
+      "ros2",
+      "unitree-sdk"
+    ],
     "accessMethod": "desktop-app",
     "platformSupport": [
       "linux"
@@ -7432,7 +7562,12 @@
       "robot-control",
       "path-planning"
     ],
-    "integrations": [],
+    "integrations": [
+      "drake",
+      "isaac-sim",
+      "ros2",
+      "unitree-sdk"
+    ],
     "accessMethod": "cli",
     "platformSupport": [
       "windows",
@@ -7481,7 +7616,12 @@
       "robot-control",
       "sensor-processing"
     ],
-    "integrations": [],
+    "integrations": [
+      "ardupilot",
+      "foxglove",
+      "px4",
+      "ros2"
+    ],
     "accessMethod": "cli",
     "platformSupport": [
       "linux"
@@ -7695,7 +7835,11 @@
       "path-planning",
       "sensor-processing"
     ],
-    "integrations": [],
+    "integrations": [
+      "ardupilot",
+      "gazebo",
+      "ros2"
+    ],
     "accessMethod": "cli",
     "platformSupport": [
       "linux",
@@ -7738,7 +7882,11 @@
       "path-planning",
       "sensor-processing"
     ],
-    "integrations": [],
+    "integrations": [
+      "gazebo",
+      "px4",
+      "ros2"
+    ],
     "accessMethod": "desktop-app",
     "platformSupport": [
       "windows",
@@ -7793,7 +7941,11 @@
       "simulation",
       "robot-control"
     ],
-    "integrations": [],
+    "integrations": [
+      "isaac-sim",
+      "mujoco",
+      "ros2"
+    ],
     "accessMethod": "desktop-app",
     "platformSupport": [
       "windows",
@@ -7907,7 +8059,14 @@
       "sensor-processing",
       "robot-control"
     ],
-    "integrations": [],
+    "integrations": [
+      "edge-impulse",
+      "isaac-sim",
+      "luxonis-oak",
+      "opencv",
+      "realsense",
+      "ros2"
+    ],
     "accessMethod": "desktop-app",
     "platformSupport": [
       "windows",
@@ -7963,7 +8122,10 @@
       "code-generation",
       "deployment"
     ],
-    "integrations": [],
+    "integrations": [
+      "jetson-orin",
+      "ros2"
+    ],
     "accessMethod": "desktop-app",
     "platformSupport": [
       "windows",
@@ -8099,7 +8261,10 @@
       "simulation",
       "robot-control"
     ],
-    "integrations": [],
+    "integrations": [
+      "gazebo",
+      "ros2"
+    ],
     "accessMethod": "desktop-app",
     "platformSupport": [
       "windows",
@@ -8156,7 +8321,12 @@
       "image-analysis",
       "3d-modeling"
     ],
-    "integrations": [],
+    "integrations": [
+      "isaac-sim",
+      "jetson-orin",
+      "opencv",
+      "ros2"
+    ],
     "accessMethod": "desktop-app",
     "platformSupport": [
       "windows",
@@ -8212,7 +8382,11 @@
       "sensor-processing",
       "image-analysis"
     ],
-    "integrations": [],
+    "integrations": [
+      "jetson-orin",
+      "opencv",
+      "ros2"
+    ],
     "accessMethod": "desktop-app",
     "platformSupport": [
       "windows",
@@ -8440,7 +8614,10 @@
       "robot-control",
       "path-planning"
     ],
-    "integrations": [],
+    "integrations": [
+      "mujoco",
+      "ros2"
+    ],
     "accessMethod": "desktop-app",
     "platformSupport": [
       "windows",
@@ -8543,7 +8720,20 @@
       "api-call",
       "translation"
     ],
-    "integrations": [],
+    "integrations": [
+      "claude",
+      "claude-code",
+      "clinicaltrials-api",
+      "cursor",
+      "google-scholar-alerts",
+      "groq",
+      "n8n",
+      "openrouter",
+      "pubmed-api",
+      "tavily",
+      "windsurf",
+      "zapier"
+    ],
     "accessMethod": "api",
     "platformSupport": [
       "api"
@@ -8602,7 +8792,19 @@
       "api-call",
       "translation"
     ],
-    "integrations": [],
+    "integrations": [
+      "chatgpt",
+      "cursor",
+      "dall-e-api",
+      "elevenlabs",
+      "n8n",
+      "openrouter",
+      "power-automate",
+      "runway-api",
+      "tavily",
+      "windsurf",
+      "zapier"
+    ],
     "accessMethod": "api",
     "platformSupport": [
       "api"
@@ -8667,7 +8869,12 @@
       "translation",
       "image-analysis"
     ],
-    "integrations": [],
+    "integrations": [
+      "gemini",
+      "n8n",
+      "openrouter",
+      "tavily"
+    ],
     "accessMethod": "api",
     "platformSupport": [
       "api"
@@ -8723,7 +8930,12 @@
       "web-search",
       "api-call"
     ],
-    "integrations": [],
+    "integrations": [
+      "n8n",
+      "openrouter",
+      "perplexity",
+      "tavily"
+    ],
     "accessMethod": "api",
     "platformSupport": [
       "api"
@@ -8771,7 +8983,11 @@
       "image-generation",
       "api-call"
     ],
-    "integrations": [],
+    "integrations": [
+      "chatgpt",
+      "openai-api",
+      "runway"
+    ],
     "accessMethod": "web+api",
     "platformSupport": [
       "web",
@@ -8827,7 +9043,10 @@
       "music-generation",
       "api-call"
     ],
-    "integrations": [],
+    "integrations": [
+      "davinci-resolve",
+      "n8n"
+    ],
     "accessMethod": "web+api",
     "platformSupport": [
       "web",
@@ -8882,7 +9101,10 @@
       "video-generation",
       "api-call"
     ],
-    "integrations": [],
+    "integrations": [
+      "n8n",
+      "openai-api"
+    ],
     "accessMethod": "web+api",
     "platformSupport": [
       "web",
@@ -8942,7 +9164,14 @@
       "deployment",
       "code-execution"
     ],
-    "integrations": [],
+    "integrations": [
+      "claude-code",
+      "github-copilot",
+      "github-pages",
+      "n8n",
+      "playwright",
+      "puppeteer"
+    ],
     "accessMethod": "web+api",
     "platformSupport": [
       "web",
@@ -8988,7 +9217,12 @@
     "capabilities": [
       "deployment"
     ],
-    "integrations": [],
+    "integrations": [
+      "claude-code",
+      "cloudflare-tunnel",
+      "github-actions",
+      "github-copilot"
+    ],
     "accessMethod": "web",
     "platformSupport": [
       "web"
@@ -9078,7 +9312,12 @@
       "web-scraping",
       "automation"
     ],
-    "integrations": [],
+    "integrations": [
+      "claude-code",
+      "fastapi",
+      "github-actions",
+      "playwright"
+    ],
     "accessMethod": "cli",
     "platformSupport": [
       "windows",
@@ -9121,7 +9360,12 @@
       "web-scraping",
       "automation"
     ],
-    "integrations": [],
+    "integrations": [
+      "claude-code",
+      "fastapi",
+      "github-actions",
+      "puppeteer"
+    ],
     "accessMethod": "cli",
     "platformSupport": [
       "windows",
@@ -9165,7 +9409,14 @@
       "deployment",
       "api-call"
     ],
-    "integrations": [],
+    "integrations": [
+      "claude-code",
+      "cloudflare-tunnel",
+      "coqui-tts",
+      "playwright",
+      "puppeteer",
+      "twilio"
+    ],
     "accessMethod": "desktop-app",
     "platformSupport": [
       "windows",
@@ -9214,7 +9465,10 @@
     "capabilities": [
       "deployment"
     ],
-    "integrations": [],
+    "integrations": [
+      "fastapi",
+      "github-pages"
+    ],
     "accessMethod": "web+api",
     "platformSupport": [
       "web",
@@ -9263,7 +9517,15 @@
       "code-execution",
       "video-editing"
     ],
-    "integrations": [],
+    "integrations": [
+      "davinci-resolve",
+      "freecad",
+      "fusion-360",
+      "kicad",
+      "opencv",
+      "orcaslicer-cli",
+      "stable-diffusion"
+    ],
     "accessMethod": "desktop-app",
     "platformSupport": [
       "windows",
@@ -9310,7 +9572,12 @@
       "3d-modeling",
       "cad-design"
     ],
-    "integrations": [],
+    "integrations": [
+      "blender",
+      "fusion-360",
+      "kicad",
+      "orcaslicer-cli"
+    ],
     "accessMethod": "desktop-app",
     "platformSupport": [
       "windows",
@@ -9361,7 +9628,13 @@
       "cad-design",
       "simulation"
     ],
-    "integrations": [],
+    "integrations": [
+      "blender",
+      "freecad",
+      "jlcpcb-api",
+      "kicad",
+      "orcaslicer-cli"
+    ],
     "accessMethod": "desktop-app",
     "platformSupport": [
       "windows",
@@ -9404,7 +9677,11 @@
       "3d-slicing",
       "file-conversion"
     ],
-    "integrations": [],
+    "integrations": [
+      "blender",
+      "freecad",
+      "fusion-360"
+    ],
     "accessMethod": "desktop-app",
     "platformSupport": [
       "windows",
@@ -9447,7 +9724,9 @@
       "circuit-design",
       "simulation"
     ],
-    "integrations": [],
+    "integrations": [
+      "kicad"
+    ],
     "accessMethod": "desktop-app",
     "platformSupport": [
       "windows",
@@ -9497,7 +9776,10 @@
       "pcb-layout",
       "api-call"
     ],
-    "integrations": [],
+    "integrations": [
+      "fusion-360",
+      "kicad"
+    ],
     "accessMethod": "desktop-app",
     "platformSupport": [
       "windows",
@@ -9547,7 +9829,18 @@
       "video-editing",
       "audio-generation"
     ],
-    "integrations": [],
+    "integrations": [
+      "adobe-firefly",
+      "blender",
+      "elevenlabs",
+      "kling",
+      "midjourney",
+      "pika",
+      "runway",
+      "stable-diffusion",
+      "suno",
+      "suno-api"
+    ],
     "accessMethod": "desktop-app",
     "platformSupport": [
       "windows",
@@ -9589,7 +9882,10 @@
     "capabilities": [
       "speech-synthesis"
     ],
-    "integrations": [],
+    "integrations": [
+      "fastapi",
+      "ros2"
+    ],
     "accessMethod": "api",
     "platformSupport": [
       "api"
@@ -9637,7 +9933,11 @@
       "api-call",
       "speech-synthesis"
     ],
-    "integrations": [],
+    "integrations": [
+      "fastapi",
+      "n8n",
+      "zapier"
+    ],
     "accessMethod": "api",
     "platformSupport": [
       "api"
@@ -9690,7 +9990,9 @@
     "capabilities": [
       "automation"
     ],
-    "integrations": [],
+    "integrations": [
+      "openai-api"
+    ],
     "accessMethod": "web",
     "platformSupport": [
       "web"
@@ -9834,7 +10136,11 @@
       "web-search",
       "api-call"
     ],
-    "integrations": [],
+    "integrations": [
+      "claude-api",
+      "clinicaltrials-api",
+      "google-scholar-alerts"
+    ],
     "accessMethod": "web+api",
     "platformSupport": [
       "web",
@@ -9876,7 +10182,10 @@
       "data-analysis",
       "api-call"
     ],
-    "integrations": [],
+    "integrations": [
+      "claude-api",
+      "pubmed-api"
+    ],
     "accessMethod": "web+api",
     "platformSupport": [
       "web",
@@ -9918,7 +10227,10 @@
       "web-search",
       "data-analysis"
     ],
-    "integrations": [],
+    "integrations": [
+      "claude-api",
+      "pubmed-api"
+    ],
     "accessMethod": "web+api",
     "platformSupport": [
       "web",
@@ -9996,9 +10308,11 @@
       "simulation"
     ],
     "integrations": [
-      "jlcpcb-api",
+      "blender",
       "freecad",
-      "blender"
+      "fusion-360",
+      "jlcpcb-api",
+      "ltspice"
     ],
     "accessMethod": "desktop-app",
     "platformSupport": [
@@ -10045,10 +10359,11 @@
       "code-execution"
     ],
     "integrations": [
-      "realsense",
+      "blender",
+      "jetson-orin",
       "luxonis-oak",
-      "ros2-nav2",
-      "jetson-orin"
+      "realsense",
+      "ros2"
     ],
     "accessMethod": "cli",
     "platformSupport": [
@@ -10104,7 +10419,10 @@
       "api-call"
     ],
     "integrations": [
-      "openrouter"
+      "claude-api",
+      "n8n",
+      "openrouter",
+      "tavily"
     ],
     "accessMethod": "api",
     "platformSupport": [
@@ -10161,8 +10479,11 @@
     ],
     "integrations": [
       "claude-api",
+      "gemini-api",
+      "groq",
+      "n8n",
       "openai-api",
-      "groq"
+      "perplexity-api"
     ],
     "accessMethod": "api",
     "platformSupport": [
@@ -10218,6 +10539,7 @@
       "api-call"
     ],
     "integrations": [
+      "n8n",
       "openrouter"
     ],
     "accessMethod": "web+api",
@@ -10266,13 +10588,20 @@
       "code-execution"
     ],
     "integrations": [
+      "ardupilot",
+      "coqui-tts",
+      "drake",
+      "edge-impulse",
+      "foxglove",
       "gazebo",
-      "ros2-nav2",
       "isaac-sim",
+      "jetson-orin",
+      "luxonis-oak",
       "mujoco",
-      "realsense",
       "opencv",
-      "px4"
+      "px4",
+      "realsense",
+      "unitree-sdk"
     ],
     "accessMethod": "cli",
     "platformSupport": [
