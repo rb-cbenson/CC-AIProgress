@@ -1,0 +1,138 @@
+{
+  "summary": "Critical trust incidents and self-improvement health issues need to be addressed immediately",
+  "actions": [
+    {
+      "priority": 1,
+      "type": "update-trust-framework",
+      "description": "Update trust-framework.json to reflect the critical incidents for 'litellm', 'moltbook', and 'chrome-ai-extensions'",
+      "target_file": "trust-framework.json",
+      "auto_approved": false,
+      "details": {
+        "incidents": [
+          "litellm",
+          "moltbook",
+          "chrome-ai-extensions"
+        ]
+      }
+    },
+    {
+      "priority": 2,
+      "type": "add-source",
+      "description": "Add sources for 2 multi-tool developers to improve developer coverage",
+      "target_file": "sources.json",
+      "auto_approved": true,
+      "details": {
+        "developers": [
+          "developer1",
+          "developer2"
+        ]
+      }
+    },
+    {
+      "priority": 3,
+      "type": "fix-cross-reference",
+      "description": "Update tools.json to include 'moltbook', 'chrome-ai-extensions', 'amazon-q-vscode', and 'meta-ai' to fix cross-reference consistency",
+      "target_file": "tools.json",
+      "auto_approved": true,
+      "details": {
+        "tools": [
+          "moltbook",
+          "chrome-ai-extensions",
+          "amazon-q-vscode",
+          "meta-ai"
+        ]
+      }
+    },
+    {
+      "priority": 4,
+      "type": "add-missing-source-types",
+      "description": "Add 3 missing source types: standards-body, substack, and app-store",
+      "target_file": "sources.json",
+      "auto_approved": true,
+      "details": {
+        "source_types": [
+          "standards-body",
+          "substack",
+          "app-store"
+        ]
+      }
+    },
+    {
+      "priority": 5,
+      "type": "fix-url",
+      "description": "Verify and update URL domains for tools 'dalle', 'flux', 'windsurf', 'gemini-code-assist', 'ida-pro', 'off-script', 'openclaw', 'rodin-ai', 'browser-use', 'autogen', 'langgraph', 'swe-agent', 'llamacpp', and 'koboldcpp'",
+      "target_file": "tools.json",
+      "auto_approved": true,
+      "details": {
+        "tools": [
+          "dalle",
+          "flux",
+          "windsurf",
+          "gemini-code-assist",
+          "ida-pro",
+          "off-script",
+          "openclaw",
+          "rodin-ai",
+          "browser-use",
+          "autogen",
+          "langgraph",
+          "swe-agent",
+          "llamacpp",
+          "koboldcpp"
+        ]
+      }
+    },
+    {
+      "priority": 6,
+      "type": "update-lastverified",
+      "description": "Update last verified dates for all tools to ensure data freshness",
+      "target_file": "tools.json",
+      "auto_approved": true,
+      "details": {}
+    },
+    {
+      "priority": 7,
+      "type": "add-tool",
+      "description": "Add new tools to improve coverage and address gaps",
+      "target_file": "tools.json",
+      "auto_approved": false,
+      "details": {
+        "tools": []
+      }
+    },
+    {
+      "priority": 8,
+      "type": "update-meta-counts",
+      "description": "Update meta counts to reflect the current number of tools and categories",
+      "target_file": "meta.json",
+      "auto_approved": true,
+      "details": {}
+    },
+    {
+      "priority": 9,
+      "type": "fix-developer-name",
+      "description": "Update developer names to ensure consistency and accuracy",
+      "target_file": "developers.json",
+      "auto_approved": true,
+      "details": {
+        "developers": []
+      }
+    },
+    {
+      "priority": 10,
+      "type": "modify-system-file",
+      "description": "Modify system files to address self-improvement health issues and improve discovery methods",
+      "target_file": "system.json",
+      "auto_approved": false,
+      "details": {}
+    }
+  ],
+  "deferred": [
+    "Research and address geographic gaps",
+    "Improve category balance",
+    "Address staleness and duplicates"
+  ],
+  "health_score": 40,
+  "generated": "2026-03-28T10:53:15.798496",
+  "provider": "groq"
+}

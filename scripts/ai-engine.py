@@ -41,6 +41,10 @@ if sys.platform == 'win32':
 
 BASE = Path(__file__).resolve().parent.parent
 DATA = BASE / "data"
+
+# Load API keys from .env
+from env_loader import load_env
+load_env()
 CONFIG_PATH = DATA / "ai-engine-config.json"
 PROVIDERS_DIR = BASE / "scripts" / "providers"
 
@@ -95,6 +99,38 @@ def _gemini_api(prompt):
     except Exception as e:
         return f"ERROR: Gemini API failed: {str(e)[:200]}"
 
+def _groq_api(prompt):
+    """Uses Groq API for ultra-fast inference. Free tier: 30 req/min."""
+    try:
+        from groq import Groq
+        client = Groq(api_key=os.environ.get("GROQ_API_KEY", ""))
+        response = client.chat.completions.create(
+            model="llama-3.3-70b-versatile",
+            messages=[{"role": "user", "content": prompt}],
+            max_tokens=4000,
+            temperature=0.3
+        )
+        return response.choices[0].message.content
+    except ImportError:
+        return "ERROR: groq package not installed. Run: pip install groq"
+    except Exception as e:
+        return f"ERROR: Groq API failed: {str(e)[:200]}"
+
+def _mistral_api(prompt):
+    """Uses Mistral API via OpenAI-compatible endpoint. Free experiment tier."""
+    try:
+        from openai import OpenAI
+        client = OpenAI(base_url="https://api.mistral.ai/v1", api_key=os.environ.get("MISTRAL_API_KEY", ""))
+        response = client.chat.completions.create(
+            model="mistral-small-latest",
+            messages=[{"role": "user", "content": prompt}],
+            max_tokens=4000,
+            temperature=0.3
+        )
+        return response.choices[0].message.content
+    except Exception as e:
+        return f"ERROR: Mistral API failed: {str(e)[:200]}"
+
 def _stub(prompt):
     """Testing stub — returns a fixed response. Use for development."""
     return '{"actions": [], "summary": "Stub provider - no real AI called. Configure a real provider."}'
@@ -114,6 +150,8 @@ def _local_ollama(prompt):
     except Exception as e:
         return f"ERROR: Ollama failed (is it running?): {str(e)[:200]}"
 
+register_provider("groq", _groq_api, "Groq API — ultra-fast Llama inference (requires GROQ_API_KEY)")
+register_provider("mistral", _mistral_api, "Mistral API — European AI (requires MISTRAL_API_KEY)")
 register_provider("claude-cli", _claude_cli, "Claude via CLI (requires claude in PATH)")
 register_provider("openai-api", _openai_api, "OpenAI API (requires OPENAI_API_KEY)")
 register_provider("gemini-api", _gemini_api, "Google Gemini API (requires GOOGLE_API_KEY)")
