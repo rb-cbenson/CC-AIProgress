@@ -746,8 +746,17 @@ function fillFlows(){
         const t=S.tools.find(x=>x.id===s.toolId);
         const freeTag=s.free===false?'<span class="b" style="background:#ef476f;color:white;font-size:8px;margin-left:4px">PAID</span>':
           s.freeLimit?'<span class="b" style="background:#ffd166;color:#333;font-size:8px;margin-left:4px">LIMITED</span>':'';
+        const alts=(s.alternatives||[]).map(a=>{
+          const at=S.tools.find(x=>x.id===a.toolId);
+          const name=at?at.name:a.toolId;
+          const tierColor=a.tier==='free'?'#06d6a0':a.tier==='limited'?'#ffd166':'#ef476f';
+          const tierText=a.tier==='free'?'FREE':a.tier==='limited'?'LIMITED':'PAID';
+          const textColor=a.tier==='limited'?'#333':'white';
+          return `<span class="b" style="background:${tierColor};color:${textColor};font-size:7px;cursor:default" title="${name}: ${a.note||''}">${tierText} ${name}</span>`;
+        }).join(' ');
+        const altRow=alts?`<div style="margin-top:3px;display:flex;flex-wrap:wrap;gap:2px">${alts}</div>`:'';
         return `${i?'<span class="wf-arrow">→</span>':''}
-        <div class="wf-step" data-tip="${s.action}"><span class="n">${s.order}</span><div><span class="t"><a href="${t?t.url:'#'}" target="_blank" style="color:inherit;text-decoration:none">${t?t.name:s.toolId}</a>${freeTag}</span><br><span class="a">${s.action}</span></div></div>`;
+        <div class="wf-step" data-tip="${s.action}"><span class="n">${s.order}</span><div><span class="t"><a href="${t?t.url:'#'}" target="_blank" style="color:inherit;text-decoration:none">${t?t.name:s.toolId}</a>${freeTag}</span><br><span class="a">${s.action}</span>${altRow}</div></div>`;
       }).join('');
       const verified=w.verified?'<span class="b" style="background:#06d6a0;color:white;font-size:8px">VERIFIED</span>':
         '<span class="b" style="background:var(--bg);color:var(--text-muted);font-size:8px">UNVERIFIED</span>';

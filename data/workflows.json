@@ -18,33 +18,112 @@
           "toolId": "openai-api",
           "action": "Script generation and scene breakdown",
           "order": 1,
-          "free": true
+          "free": true,
+          "alternatives": [
+            {
+              "toolId": "groq",
+              "tier": "free",
+              "note": "14,400 req/day"
+            },
+            {
+              "toolId": "mistral",
+              "tier": "free",
+              "note": "Free experiment plan"
+            },
+            {
+              "toolId": "claude",
+              "tier": "limited",
+              "note": "Daily limits"
+            },
+            {
+              "toolId": "openai-api",
+              "tier": "paid",
+              "note": "$5 minimum"
+            }
+          ]
         },
         {
           "toolId": "stable-diffusion",
           "action": "Generate still images per scene (local, free)",
           "order": 2,
-          "free": true
+          "free": true,
+          "alternatives": [
+            {
+              "toolId": "stable-diffusion",
+              "tier": "free",
+              "note": "Local, unlimited"
+            },
+            {
+              "toolId": "dall-e-api",
+              "tier": "paid",
+              "note": "Higher quality"
+            },
+            {
+              "toolId": "midjourney",
+              "tier": "paid",
+              "note": "Best artistic quality"
+            }
+          ]
         },
         {
           "toolId": "elevenlabs",
           "action": "Generate voiceover (audio-FIRST — before visuals)",
           "order": 3,
           "free": true,
-          "freeLimit": "10,000 chars/month"
+          "freeLimit": "10,000 chars/month",
+          "alternatives": [
+            {
+              "toolId": "coqui-tts",
+              "tier": "free",
+              "note": "Local, unlimited"
+            },
+            {
+              "toolId": "elevenlabs",
+              "tier": "limited",
+              "note": "10K chars/month"
+            },
+            {
+              "toolId": "elevenlabs",
+              "tier": "paid",
+              "note": "Unlimited with subscription"
+            }
+          ]
         },
         {
           "toolId": "kling",
           "action": "Animate stills with lip-sync (Motion Brush intensity 3-8)",
           "order": 4,
           "free": true,
-          "freeLimit": "Daily free credits (limited)"
+          "freeLimit": "Daily free credits (limited)",
+          "alternatives": [
+            {
+              "toolId": "pika",
+              "tier": "free",
+              "note": "Daily free generations"
+            },
+            {
+              "toolId": "kling",
+              "tier": "limited",
+              "note": "Daily free credits"
+            },
+            {
+              "toolId": "runway",
+              "tier": "limited",
+              "note": "125 one-time credits"
+            },
+            {
+              "toolId": "runway",
+              "tier": "paid",
+              "note": "Best quality, $18 CAD/mo"
+            }
+          ]
         },
         {
           "toolId": "davinci-resolve",
           "action": "Final edit, captions, export",
           "order": 5,
-          "free": true
+          "free": true,
+          "alternatives": []
         }
       ],
       "orchestration": "n8n or Make connects all steps automatically",
@@ -76,7 +155,7 @@
       "difficulty": "intermediate",
       "verified": true,
       "verifiedSource": "Emergent.sh benchmarks, Builder.io comparison, DEV Community",
-      "costTier": "free",
+      "costTier": "mixed",
       "freeAlternative": null,
       "steps": [
         {
@@ -84,27 +163,79 @@
           "action": "Feature implementation, large refactors, multi-file agentic tasks (80.8% SWE-bench)",
           "order": 1,
           "free": true,
-          "freeLimit": "Claude Max plan"
+          "freeLimit": "Claude Max plan",
+          "alternatives": [
+            {
+              "toolId": "claude-code",
+              "tier": "free",
+              "note": "Included with Max plan"
+            },
+            {
+              "toolId": "cursor",
+              "tier": "limited",
+              "note": "Free tier with limits"
+            },
+            {
+              "toolId": "windsurf",
+              "tier": "limited",
+              "note": "Free tier available"
+            }
+          ]
         },
         {
           "toolId": "cursor",
           "action": "Day-to-day editing, iterative refinement, debugging (auto-routes between models)",
           "order": 2,
           "free": true,
-          "freeLimit": "Limited completions/month"
+          "freeLimit": "Limited completions/month",
+          "alternatives": [
+            {
+              "toolId": "cursor",
+              "tier": "limited",
+              "note": "Limited completions/month"
+            },
+            {
+              "toolId": "windsurf",
+              "tier": "limited",
+              "note": "Free tier"
+            },
+            {
+              "toolId": "cursor",
+              "tier": "paid",
+              "note": "$27 CAD/mo for unlimited"
+            }
+          ]
         },
         {
           "toolId": "github-copilot",
           "action": "CI/CD assistance, documentation, inline completions",
           "order": 3,
           "free": true,
-          "freeLimit": "2000 completions + 50 chats/month"
+          "freeLimit": "2000 completions + 50 chats/month",
+          "alternatives": []
         },
         {
           "toolId": "claude-api",
           "action": "Adversarial code review in CI (different model reviews the code)",
           "order": 4,
           "free": false,
+          "alternatives": [
+            {
+              "toolId": "groq",
+              "tier": "free",
+              "note": "14,400 req/day"
+            },
+            {
+              "toolId": "mistral",
+              "tier": "free",
+              "note": "Free experiment plan"
+            },
+            {
+              "toolId": "claude-api",
+              "tier": "paid",
+              "note": "Best quality for code review"
+            }
+          ],
           "paidNote": "API costs"
         }
       ],
@@ -154,20 +285,23 @@
           "toolId": "ollama",
           "action": "Uncapped exploration sandbox — no filters, no rate limits, idea generation",
           "order": 1,
-          "free": true
+          "free": true,
+          "alternatives": []
         },
         {
           "toolId": "google-notebooklm",
           "action": "Structured understanding, source grounding, organize research",
           "order": 2,
-          "free": true
+          "free": true,
+          "alternatives": []
         },
         {
           "toolId": "claude",
           "action": "Final output: interactive prototypes, UI components, documents",
           "order": 3,
           "free": true,
-          "freeLimit": "Daily limits on free tier"
+          "freeLimit": "Daily limits on free tier",
+          "alternatives": []
         }
       ],
       "orchestration": "Manual handoff between tools",
@@ -212,32 +346,37 @@
           "toolId": "isaac-sim",
           "action": "Import URDF, set up environment, add sensors",
           "order": 1,
-          "free": true
+          "free": true,
+          "alternatives": []
         },
         {
           "toolId": "isaac-sim",
           "action": "Synthetic data generation (NVIDIA Cosmos)",
           "order": 2,
-          "free": true
+          "free": true,
+          "alternatives": []
         },
         {
           "toolId": "isaac-sim",
           "action": "RL training with Isaac Lab",
           "order": 3,
-          "free": true
+          "free": true,
+          "alternatives": []
         },
         {
           "toolId": "ros2",
           "action": "Isaac ROS NITROS — GPU-accelerated Visual SLAM, nvBlox, cuMotion, FoundationPose",
           "order": 4,
-          "free": true
+          "free": true,
+          "alternatives": []
         },
         {
           "toolId": "jetson-orin",
           "action": "Edge deployment — software-in-loop then hardware-in-loop",
           "order": 5,
           "free": true,
-          "freeLimit": "Hardware cost ~$500-2000"
+          "freeLimit": "Hardware cost ~$500-2000",
+          "alternatives": []
         }
       ],
       "orchestration": "NVIDIA toolchain handles pipeline internally",
@@ -286,34 +425,88 @@
           "toolId": "claude-code",
           "action": "Parse requirements, cross-reference datasheets, detect design errors (kicad-happy skills)",
           "order": 1,
-          "free": true
+          "free": true,
+          "alternatives": [
+            {
+              "toolId": "claude-code",
+              "tier": "free",
+              "note": "Included with Max plan"
+            },
+            {
+              "toolId": "cursor",
+              "tier": "limited",
+              "note": "Free tier with limits"
+            },
+            {
+              "toolId": "windsurf",
+              "tier": "limited",
+              "note": "Free tier available"
+            }
+          ]
         },
         {
           "toolId": "kicad",
           "action": "Schematic capture — KiCad AI Plugin for natural language commands",
           "order": 2,
           "free": true,
-          "communityCode": "https://kicad.alttab.rs/"
+          "communityCode": "https://kicad.alttab.rs/",
+          "alternatives": [
+            {
+              "toolId": "kicad",
+              "tier": "free",
+              "note": "Unlimited, open source"
+            },
+            {
+              "toolId": "fusion-360",
+              "tier": "paid",
+              "note": "Professional CAD/CAM"
+            }
+          ]
         },
         {
           "toolId": "kicad",
           "action": "PCB layout with AI auto-routing via Quilter.ai or manual",
           "order": 3,
-          "free": true
+          "free": true,
+          "alternatives": [
+            {
+              "toolId": "kicad",
+              "tier": "free",
+              "note": "Unlimited, open source"
+            },
+            {
+              "toolId": "fusion-360",
+              "tier": "paid",
+              "note": "Professional CAD/CAM"
+            }
+          ]
         },
         {
           "toolId": "blender",
           "action": "3D render of PCB for documentation",
           "order": 4,
           "free": true,
-          "communityCode": "https://github.com/30350n/pcb2blender"
+          "communityCode": "https://github.com/30350n/pcb2blender",
+          "alternatives": [
+            {
+              "toolId": "blender",
+              "tier": "free",
+              "note": "Unlimited, open source"
+            },
+            {
+              "toolId": "freecad",
+              "tier": "free",
+              "note": "Parametric CAD alternative"
+            }
+          ]
         },
         {
           "toolId": "jlcpcb-api",
           "action": "Generate Gerbers, BOM, CPL and order fabrication",
           "order": 5,
           "free": true,
-          "communityCode": "https://github.com/bouni/kicad-jlcpcb-tools"
+          "communityCode": "https://github.com/bouni/kicad-jlcpcb-tools",
+          "alternatives": []
         }
       ],
       "orchestration": "KiCad MCP Server (52 tools) enables AI-to-KiCad communication",
@@ -373,25 +566,93 @@
           "action": "Visual node-based canvas: connect text → image/video → audio → output",
           "order": 1,
           "free": false,
-          "paidNote": "Free tier limited, full Flows requires subscription"
+          "paidNote": "Free tier limited, full Flows requires subscription",
+          "alternatives": [
+            {
+              "toolId": "coqui-tts",
+              "tier": "free",
+              "note": "Local, unlimited"
+            },
+            {
+              "toolId": "elevenlabs",
+              "tier": "limited",
+              "note": "10K chars/month"
+            },
+            {
+              "toolId": "elevenlabs",
+              "tier": "paid",
+              "note": "Unlimited with subscription"
+            }
+          ]
         },
         {
           "toolId": "elevenlabs",
           "action": "35+ integrated models: Veo, Sora, Kling, Wan, Flux, Seedance for visuals",
           "order": 2,
-          "free": false
+          "free": false,
+          "alternatives": [
+            {
+              "toolId": "coqui-tts",
+              "tier": "free",
+              "note": "Local, unlimited"
+            },
+            {
+              "toolId": "elevenlabs",
+              "tier": "limited",
+              "note": "10K chars/month"
+            },
+            {
+              "toolId": "elevenlabs",
+              "tier": "paid",
+              "note": "Unlimited with subscription"
+            }
+          ]
         },
         {
           "toolId": "elevenlabs",
           "action": "TTS, voice cloning, lip-sync, SFX, music generation",
           "order": 3,
-          "free": false
+          "free": false,
+          "alternatives": [
+            {
+              "toolId": "coqui-tts",
+              "tier": "free",
+              "note": "Local, unlimited"
+            },
+            {
+              "toolId": "elevenlabs",
+              "tier": "limited",
+              "note": "10K chars/month"
+            },
+            {
+              "toolId": "elevenlabs",
+              "tier": "paid",
+              "note": "Unlimited with subscription"
+            }
+          ]
         },
         {
           "toolId": "elevenlabs",
           "action": "Non-destructive iteration: change one node, only downstream re-renders",
           "order": 4,
-          "free": false
+          "free": false,
+          "alternatives": [
+            {
+              "toolId": "coqui-tts",
+              "tier": "free",
+              "note": "Local, unlimited"
+            },
+            {
+              "toolId": "elevenlabs",
+              "tier": "limited",
+              "note": "10K chars/month"
+            },
+            {
+              "toolId": "elevenlabs",
+              "tier": "paid",
+              "note": "Unlimited with subscription"
+            }
+          ]
         }
       ],
       "orchestration": "Built-in — ElevenLabs Flows IS the orchestrator",
@@ -417,19 +678,22 @@
           "toolId": "ollama",
           "action": "Local model runtime — download and run open models",
           "order": 1,
-          "free": true
+          "free": true,
+          "alternatives": []
         },
         {
           "toolId": "lm-studio",
           "action": "Alternative: GUI-based local model management",
           "order": 2,
-          "free": true
+          "free": true,
+          "alternatives": []
         },
         {
           "toolId": "ollama",
           "action": "Open WebUI: ChatGPT-like interface with RAG, multi-user, function calling",
           "order": 3,
-          "free": true
+          "free": true,
+          "alternatives": []
         }
       ],
       "orchestration": "Open WebUI handles everything after Ollama is running",
@@ -469,26 +733,46 @@
           "toolId": "chatgpt",
           "action": "Draft content with outline and key points",
           "order": 1,
-          "free": true
+          "free": true,
+          "alternatives": []
         },
         {
           "toolId": "claude",
           "action": "Refine tone, check accuracy, improve structure",
           "order": 2,
-          "free": true
+          "free": true,
+          "alternatives": []
         },
         {
           "toolId": "stable-diffusion",
           "action": "Generate images locally (free, no credits)",
           "order": 3,
-          "free": true
+          "free": true,
+          "alternatives": [
+            {
+              "toolId": "stable-diffusion",
+              "tier": "free",
+              "note": "Local, unlimited"
+            },
+            {
+              "toolId": "dall-e-api",
+              "tier": "paid",
+              "note": "Higher quality"
+            },
+            {
+              "toolId": "midjourney",
+              "tier": "paid",
+              "note": "Best artistic quality"
+            }
+          ]
         },
         {
           "toolId": "grammarly",
           "action": "Final grammar, clarity, style polish",
           "order": 4,
           "free": true,
-          "freeLimit": "Basic suggestions only"
+          "freeLimit": "Basic suggestions only",
+          "alternatives": []
         }
       ],
       "orchestration": "Manual handoff",
