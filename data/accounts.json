@@ -42,6 +42,46 @@
       "apiKeyEnvVar": "HF_TOKEN",
       "status": "active",
       "notes": "Token valid. Inference API needs provider enabled in settings. Model hub, Spaces, datasets all accessible."
+    },
+    {
+      "service": "Groq",
+      "toolId": "groq",
+      "signupDate": "2026-03-28",
+      "method": "google-sso",
+      "plan": "free",
+      "apiKeyEnvVar": "GROQ_API_KEY",
+      "status": "active",
+      "notes": "TESTED AND WORKING. Llama 3.3 70B in 0.07s. Free: 30 req/min, 14,400 req/day."
+    },
+    {
+      "service": "OpenRouter",
+      "toolId": "openrouter",
+      "signupDate": "2026-03-28",
+      "method": "google-sso",
+      "plan": "free",
+      "apiKeyEnvVar": "OPENROUTER_API_KEY",
+      "status": "active",
+      "notes": "TESTED: key valid, 347 models available. Uses OpenAI SDK format. Free models available but rate-limited."
+    },
+    {
+      "service": "Tavily",
+      "toolId": "tavily",
+      "signupDate": "2026-03-28",
+      "method": "google-sso",
+      "plan": "free-researcher",
+      "apiKeyEnvVar": "TAVILY_API_KEY",
+      "status": "active",
+      "notes": "TESTED AND WORKING. 1000 credits/month free. Search, extract, crawl, research APIs."
+    },
+    {
+      "service": "Mistral AI",
+      "toolId": "mistral",
+      "signupDate": "2026-03-28",
+      "method": "google-sso",
+      "plan": "free-experiment",
+      "apiKeyEnvVar": "MISTRAL_API_KEY",
+      "status": "active",
+      "notes": "TESTED AND WORKING. OpenAI-compatible endpoint. Free Experiment plan (anonymized requests used for research). Required phone number."
     }
   ],
   "pending": [
