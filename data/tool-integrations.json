@@ -1,0 +1,180 @@
+{
+  "description": "Integration surface map for major tools — APIs, plugins, MCP servers, file formats, SDKs. Used by Phase 2 chain builder to find real connection paths.",
+  "lastUpdated": "2026-03-28",
+  "autoUpdateFrequency": "monthly for top 15, quarterly for all",
+
+  "profiles": [
+    {
+      "toolId": "claude",
+      "api": {"type": "REST", "format": "anthropic-native", "openaiCompatible": false, "sdks": ["python", "typescript"], "agentSdk": true},
+      "mcp": {"supported": true, "role": "originator", "serversAvailable": 1000, "referenceServers": ["filesystem", "postgresql", "brave-search", "github", "puppeteer", "google-maps"]},
+      "plugins": {"marketplace": false, "mcpEcosystem": true},
+      "fileFormats": {"input": ["pdf", "png", "jpg", "gif", "webp", "txt", "csv", "json", "code"], "output": ["text", "code", "json"]},
+      "webhooks": false,
+      "cli": "claude-code",
+      "browserExtension": true,
+      "automationNodes": {"n8n": true, "zapier": "via-http"},
+      "connectionStrength": "very-high"
+    },
+    {
+      "toolId": "chatgpt",
+      "api": {"type": "REST", "format": "openai", "openaiCompatible": true, "sdks": ["python", "node", "dotnet", "java"]},
+      "mcp": {"supported": true, "role": "client-and-server", "note": "Custom apps via MCP, Codex plugin bundles"},
+      "plugins": {"marketplace": true, "name": "GPT Store + Apps"},
+      "fileFormats": {"input": ["pdf", "png", "jpg", "csv", "json", "xlsx", "docx", "audio"], "output": ["text", "code", "json", "images"]},
+      "webhooks": true,
+      "cli": "codex-cli",
+      "browserExtension": true,
+      "automationNodes": {"n8n": true, "zapier": true},
+      "connectionStrength": "very-high"
+    },
+    {
+      "toolId": "n8n",
+      "api": {"type": "REST", "format": "custom", "totalIntegrations": 1202},
+      "mcp": {"supported": true, "role": "server-and-client", "note": "Can expose workflows as MCP servers AND consume external MCP"},
+      "plugins": {"marketplace": true, "communityNodes": true, "language": "typescript"},
+      "fileFormats": {"input": ["json", "csv", "xml", "binary"], "output": ["json", "csv", "xml", "binary"]},
+      "webhooks": true,
+      "cli": true,
+      "browserExtension": false,
+      "automationNodes": {"n8n": "IS-n8n", "zapier": "can-trigger"},
+      "aiNodes": ["openai", "anthropic", "google", "huggingface", "cohere", "ollama", "elevenlabs"],
+      "connectionStrength": "highest"
+    },
+    {
+      "toolId": "kicad",
+      "api": {"type": "python-ipc", "format": "kicad-python", "version": "0.6.0", "sdks": ["python", "rust"]},
+      "mcp": {"supported": true, "server": "KiCad MCP Server", "tools": 52, "note": "AI agents can control full design cycle"},
+      "plugins": {"marketplace": true, "name": "PCM (Plugin and Content Manager)", "notable": ["KiBot", "KiKit", "Ki-nTree", "kicad-jlcpcb-tools", "kicad-happy"]},
+      "fileFormats": {"input": ["kicad_pcb", "kicad_sch", "netlist"], "output": ["gerber", "excellon", "step", "stl", "vrml", "dxf", "svg", "pdf", "bom-csv", "ipc-d-356"]},
+      "webhooks": false,
+      "cli": "kicad-cli",
+      "browserExtension": false,
+      "automationNodes": {"n8n": false, "zapier": false},
+      "connectionStrength": "high"
+    },
+    {
+      "toolId": "blender",
+      "api": {"type": "python-embedded", "format": "bpy", "sdks": ["python"]},
+      "mcp": {"supported": true, "server": "Blender MCP", "note": "Socket-based two-way with Claude. BlenderForge works with 481+ MCP clients"},
+      "plugins": {"marketplace": true, "name": "Blender Extensions", "notable": ["pcb2blender", "Dream Textures", "AI Render", "3D-Agent", "BlenderForge"]},
+      "fileFormats": {"input": ["blend", "fbx", "obj", "stl", "gltf", "usd", "step", "ply", "svg", "dxf"], "output": ["blend", "fbx", "obj", "stl", "gltf", "usd", "png", "jpg", "exr", "mp4"]},
+      "webhooks": false,
+      "cli": "blender --background --python",
+      "browserExtension": false,
+      "automationNodes": {"n8n": false, "zapier": false},
+      "connectionStrength": "high"
+    },
+    {
+      "toolId": "ros2",
+      "api": {"type": "dds-middleware", "sdks": ["cpp", "python", "rust", "matlab"]},
+      "mcp": {"supported": false},
+      "plugins": {"marketplace": true, "name": "ROS Index", "packages": "thousands"},
+      "fileFormats": {"input": ["urdf", "xacro", "yaml", "bag", "msg", "srv", "action"], "output": ["urdf", "bag", "yaml"]},
+      "webhooks": "rosbridge-websocket",
+      "cli": "ros2",
+      "browserExtension": "foxglove-studio",
+      "automationNodes": {"n8n": false, "zapier": false},
+      "connectionStrength": "high-within-robotics"
+    },
+    {
+      "toolId": "elevenlabs",
+      "api": {"type": "REST", "format": "custom", "sdks": ["python", "typescript", "flutter", "swift", "kotlin"]},
+      "mcp": {"supported": true, "note": "Via Zapier MCP integration"},
+      "plugins": {"marketplace": false, "integrations": ["zendesk", "twilio", "sip", "whatsapp"]},
+      "fileFormats": {"input": ["text", "ssml"], "output": ["mp3", "wav", "opus", "pcm", "alaw"]},
+      "webhooks": true,
+      "cli": false,
+      "browserExtension": "elevenlabs-reader",
+      "automationNodes": {"n8n": true, "zapier": true},
+      "connectionStrength": "high"
+    },
+    {
+      "toolId": "stable-diffusion",
+      "api": {"type": "websocket+rest", "format": "comfyui-api", "sdks": ["python"]},
+      "mcp": {"supported": false},
+      "plugins": {"marketplace": true, "name": "ComfyUI Custom Nodes", "count": 4772, "notable": ["Impact Pack", "AnimateDiff", "ControlNet", "IPAdapter", "WAS Node Suite"]},
+      "fileFormats": {"input": ["png", "jpg", "webp", "safetensors", "ckpt", "json-workflow"], "output": ["png", "jpg", "webp"]},
+      "webhooks": "comfyui-webhook-node",
+      "cli": "python main.py",
+      "browserExtension": false,
+      "automationNodes": {"n8n": "via-http", "zapier": "via-http"},
+      "connectionStrength": "high"
+    },
+    {
+      "toolId": "cursor",
+      "api": {"type": "internal", "format": "mcp-extension-api"},
+      "mcp": {"supported": true, "role": "client", "config": [".cursor/mcp.json", "~/.cursor/mcp.json"], "oauthSupported": true},
+      "plugins": {"marketplace": true, "name": "Cursor Marketplace", "notable": ["Stripe", "MongoDB", "AWS", "Figma", "Linear", "GitLab", "HuggingFace"]},
+      "fileFormats": {"input": ["all-code-files"], "output": ["all-code-files"]},
+      "webhooks": "cursor-automations",
+      "cli": "vscode-terminal",
+      "browserExtension": false,
+      "automationNodes": {"n8n": false, "zapier": false},
+      "connectionStrength": "high"
+    },
+    {
+      "toolId": "midjourney",
+      "api": {"type": "none", "note": "NO official public API as of March 2026"},
+      "mcp": {"supported": false},
+      "plugins": {"marketplace": false},
+      "fileFormats": {"input": ["png", "jpg"], "output": ["png", "jpg"]},
+      "webhooks": false,
+      "cli": false,
+      "browserExtension": "third-party-only",
+      "automationNodes": {"n8n": false, "zapier": false},
+      "connectionStrength": "very-low"
+    },
+    {
+      "toolId": "github-actions",
+      "api": {"type": "REST+GraphQL", "sdks": ["javascript", "python", "go"]},
+      "mcp": {"supported": true, "note": "actions/ai-inference supports read-only GitHub MCP server"},
+      "plugins": {"marketplace": true, "name": "GitHub Marketplace", "aiCategory": true, "notable": ["Claude Code Action", "AI Code Review", "ai-inference"]},
+      "agenticWorkflows": true,
+      "fileFormats": {"input": ["yaml-workflow", "any-artifact"], "output": ["any-artifact"]},
+      "webhooks": true,
+      "cli": "gh",
+      "browserExtension": false,
+      "automationNodes": {"n8n": true, "zapier": true},
+      "connectionStrength": "very-high"
+    },
+    {
+      "toolId": "groq",
+      "api": {"type": "REST", "format": "openai-compatible", "sdks": ["python", "node"]},
+      "mcp": {"supported": false},
+      "plugins": {"marketplace": false},
+      "fileFormats": {"input": ["text", "json"], "output": ["text", "json"]},
+      "webhooks": false,
+      "cli": false,
+      "browserExtension": false,
+      "automationNodes": {"n8n": "via-openai-node", "zapier": "via-http"},
+      "connectionStrength": "medium"
+    },
+    {
+      "toolId": "perplexity",
+      "api": {"type": "REST", "format": "openai-compatible", "endpoints": ["sonar", "agentic-research", "search"], "sdks": ["python", "typescript"]},
+      "mcp": {"supported": false},
+      "plugins": {"marketplace": false, "integrations": ["crunchbase"]},
+      "fileFormats": {"input": ["text"], "output": ["json-with-citations"]},
+      "webhooks": false,
+      "cli": false,
+      "browserExtension": true,
+      "automationNodes": {"n8n": "via-http", "zapier": "via-integrately"},
+      "connectionStrength": "medium"
+    }
+  ],
+
+  "mcpAdoptionStatus": {
+    "native": ["claude", "chatgpt", "gemini", "n8n", "cursor", "kicad", "blender", "github-actions"],
+    "partial": ["elevenlabs"],
+    "none": ["midjourney", "ros2", "perplexity", "stable-diffusion", "groq"],
+    "trend": "MCP adoption accelerating. Expect most major tools to support it by end of 2026."
+  },
+
+  "openaiCompatibleAPIs": ["groq", "mistral", "perplexity", "openrouter", "ollama", "lm-studio", "together-ai", "deepseek"],
+
+  "weakestIntegrations": [
+    {"toolId": "midjourney", "issue": "No API, no SDK, no webhooks. Discord-only. Biggest integration gap in the database."},
+    {"toolId": "ros2", "issue": "Rich within robotics but limited web/AI integration. rosbridge WebSocket is the main bridge."}
+  ]
+}
