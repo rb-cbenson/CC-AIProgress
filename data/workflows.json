@@ -11,8 +11,8 @@
       "difficulty": "intermediate",
       "verified": true,
       "verifiedSource": "n8n template #3121, Like2Byte tutorial, multiple Medium articles",
-      "costTier": "mixed",
-      "freeAlternative": "Replace Kling with free Runway trial, OpusClip with DaVinci Resolve captions",
+      "costTier": "free",
+      "freeAlternative": "Pika (free daily gens), Luma Dream Machine (free monthly), or Veo via Google AI Studio",
       "steps": [
         {
           "toolId": "openai-api",
@@ -37,8 +37,8 @@
           "toolId": "kling",
           "action": "Animate stills with lip-sync (Motion Brush intensity 3-8)",
           "order": 4,
-          "free": false,
-          "paidNote": "Credits required"
+          "free": true,
+          "freeLimit": "Daily free credits (limited)"
         },
         {
           "toolId": "davinci-resolve",
@@ -50,7 +50,7 @@
       "orchestration": "n8n or Make connects all steps automatically",
       "keyInsight": "Audio is generated BEFORE visuals. Kling Motion Brush intensity 3 for calm, 8 for action. ElevenLabs Stability 45%, Similarity 90%.",
       "gaps": [
-        "No free video animation tool matches Kling quality yet"
+        "Free video animation credits are limited per day — may need multiple days for a full project"
       ],
       "lastVerified": "2026-03-28",
       "connectors": [
