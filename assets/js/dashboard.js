@@ -680,7 +680,7 @@ function renderRankings(){
       plotOptions:{bar:{horizontal:true,borderRadius:3,barHeight:'70%',distributed:true}},
       colors:top15.map(t=>{const c=S.cats.find(x=>x.id===t.category);return c?c.color:'#64748b';}),
       legend:{show:false},
-      dataLabels:{enabled:false},
+      dataLabels:{enabled:true,formatter:function(v,opts){return '#'+top15[opts.dataPointIndex]?.ranking.overall;},style:{fontSize:'10px',colors:['#fff']},offsetX:0},
       tooltip:{y:{formatter:function(v,opts){return '#'+top15[opts.dataPointIndex]?.ranking.overall+' overall';}}},
       grid:{show:false},
       theme:{mode:dk?'dark':'light'}
