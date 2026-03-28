@@ -3059,7 +3059,7 @@
     "id": "crew-ai",
     "name": "CrewAI",
     "category": "ai-agents",
-    "developer": "CrewAI Inc.",
+    "developer": "CrewAI Inc",
     "url": "https://crewai.com/",
     "description": "Multi-agent AI framework for orchestrating teams of AI agents that collaborate on complex tasks. Open-source core used by Fortune 500 companies for autonomous workflows.",
     "pricingCAD": {
@@ -3398,38 +3398,6 @@
     "trustScore": 55
   },
   {
-    "id": "openclaw-framework",
-    "name": "OpenClaw",
-    "category": "ai-agents",
-    "developer": "Open Source Community",
-    "url": "https://github.com/openclaw/openclaw",
-    "description": "Open-source autonomous agent framework with 247K+ GitHub stars. Any LLM as autonomous agent for browsing, coding, research.",
-    "pricingCAD": {
-      "freeTier": true,
-      "freeTierDetails": "Fully open source",
-      "paidPlans": []
-    },
-    "ranking": {
-      "overall": 84,
-      "inCategory": 1,
-      "trend": "rising"
-    },
-    "pros": [
-      "Massive community support (247K+ stars)",
-      "Works with any LLM backend",
-      "Browsing, coding, and research capabilities",
-      "Highly extensible plugin system"
-    ],
-    "cons": [
-      "Requires technical setup",
-      "Can be resource-intensive",
-      "Quality depends on underlying LLM"
-    ],
-    "trustScore": 72,
-    "logoUrl": "",
-    "lastVerified": "2026-03-27"
-  },
-  {
     "id": "devin",
     "name": "Devin",
     "category": "ai-agents",
@@ -3528,45 +3496,6 @@
       "Rapidly evolving API"
     ],
     "trustScore": 82,
-    "logoUrl": "",
-    "lastVerified": "2026-03-27"
-  },
-  {
-    "id": "crewai",
-    "name": "CrewAI",
-    "category": "ai-agents",
-    "developer": "CrewAI Inc",
-    "url": "https://www.crewai.com",
-    "description": "Role-based multi-agent framework. Great for prototyping AI agent teams. Python-based.",
-    "pricingCAD": {
-      "freeTier": true,
-      "freeTierDetails": "Open source framework",
-      "paidPlans": [
-        {
-          "name": "Enterprise",
-          "priceCAD": 0,
-          "period": "month",
-          "details": "Custom enterprise pricing available"
-        }
-      ]
-    },
-    "ranking": {
-      "overall": 88,
-      "inCategory": 5,
-      "trend": "rising"
-    },
-    "pros": [
-      "Intuitive role-based agent design",
-      "Great for rapid prototyping",
-      "Active community",
-      "Easy to learn"
-    ],
-    "cons": [
-      "Less mature than LangGraph for production",
-      "Limited built-in tools",
-      "Python only"
-    ],
-    "trustScore": 65,
     "logoUrl": "",
     "lastVerified": "2026-03-27"
   },
@@ -5009,45 +4938,6 @@
     "lastVerified": "2026-03-27"
   },
   {
-    "id": "luma-ai",
-    "name": "Luma Dream Machine",
-    "category": "video-generation",
-    "developer": "Luma AI",
-    "url": "https://lumalabs.ai",
-    "description": "Video generation and 3D capture. Strong at realistic motion and physics.",
-    "pricingCAD": {
-      "freeTier": true,
-      "freeTierDetails": "Limited free generations",
-      "paidPlans": [
-        {
-          "name": "Pro",
-          "priceCAD": 36,
-          "period": "month",
-          "details": "More generations, higher quality"
-        }
-      ]
-    },
-    "ranking": {
-      "overall": 128,
-      "inCategory": 9,
-      "trend": "rising"
-    },
-    "pros": [
-      "Realistic motion and physics",
-      "3D capture capability",
-      "Good free tier",
-      "Improving rapidly"
-    ],
-    "cons": [
-      "Short clip lengths",
-      "Consistency issues",
-      "Pro needed for serious use"
-    ],
-    "trustScore": 65,
-    "logoUrl": "",
-    "lastVerified": "2026-03-27"
-  },
-  {
     "id": "haiper",
     "name": "Haiper",
     "category": "video-generation",
@@ -5705,45 +5595,6 @@
       "Research-grade tool"
     ],
     "trustScore": 70,
-    "logoUrl": "",
-    "lastVerified": "2026-03-27"
-  },
-  {
-    "id": "dify-ai",
-    "name": "Dify",
-    "category": "workflow-automation",
-    "developer": "Dify AI",
-    "url": "https://dify.ai",
-    "description": "Open-source LLM app development platform. Visual workflow builder. RAG pipeline. Agent framework.",
-    "pricingCAD": {
-      "freeTier": true,
-      "freeTierDetails": "Free self-hosted",
-      "paidPlans": [
-        {
-          "name": "Cloud",
-          "priceCAD": 59,
-          "period": "month",
-          "details": "Hosted platform, team features"
-        }
-      ]
-    },
-    "ranking": {
-      "overall": 147,
-      "inCategory": 8,
-      "trend": "rising"
-    },
-    "pros": [
-      "Visual workflow builder",
-      "RAG pipeline built in",
-      "Self-hostable",
-      "Agent framework included"
-    ],
-    "cons": [
-      "Cloud plan expensive",
-      "Complex for beginners",
-      "Rapidly changing API"
-    ],
-    "trustScore": 68,
     "logoUrl": "",
     "lastVerified": "2026-03-27"
   },
