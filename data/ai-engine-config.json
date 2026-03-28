@@ -1,0 +1,23 @@
+{
+  "provider": "claude-cli",
+  "fallback_chain": ["claude-cli", "openai-api", "gemini-api", "ollama", "stub"],
+  "max_actions_per_run": 10,
+  "auto_approve": [
+    "add-source",
+    "fix-developer-name",
+    "update-meta-counts",
+    "fix-url",
+    "update-lastverified"
+  ],
+  "require_approval": [
+    "remove-tool",
+    "remove-source",
+    "change-category",
+    "create-category",
+    "modify-system-file",
+    "bulk-change",
+    "consolidation-event"
+  ],
+  "last_run": null,
+  "total_runs": 0
+}
