@@ -16,14 +16,20 @@ The HTML dashboard is the human interface (viewed on Chromebook/any browser). Th
 
 ## Self-Improvement Protocol
 On EVERY session, the AI should:
-1. **Read** `data/briefings.json` — check what's changed since last session
-2. **Read** `data/automation.json` — check pipeline status and what needs doing
-3. **Gap check** — run `python scripts/gap-analysis.py --brief` to see current blind spots
+1. **Health check** — run `python scripts/self-improve.py` (auto-fixes safe issues, flags the rest)
+2. **Gap check** — run `python scripts/gap-analysis.py --brief` (cross-references all data files for blind spots)
+3. **Read** `data/briefings.json` — check what's changed since last session
 4. **Research** — web search for AI news since the last briefing date
-5. **Update** — any stale data in tools.json, strategies.json, etc.
-6. **Propose** — new tests, new tools to add, new projects, improvements to the system itself
-7. **Execute** — don't just suggest, DO IT (update files, add entries, rewrite stale sections)
-8. **Brief** — append a new entry to briefings.json summarizing what was done and found
+5. **Update** — fix stale data, apply gap-analysis recommendations, update tools/sources/strategies
+6. **Execute** — don't just suggest, DO IT (update files, add entries, rewrite stale sections)
+7. **Brief** — append a new entry to briefings.json summarizing what was done and found
+8. **Backup** — run `python scripts/backup.py "session end"` if significant changes were made
+
+### Improvement Scripts
+- `scripts/self-improve.py` — 8-check engine: integrity, cross-refs, staleness, coverage, duplicates, self-improvement health, trust/security, trajectory tracking. Auto-fixes safe issues. Tracks improvement over time in `data/improvement-history.json`.
+- `scripts/gap-analysis.py` — Cross-references tools↔sources, tools↔projects, categories↔tools, sources↔countries. Finds what SHOULD exist but doesn't.
+- `scripts/validate-data.py` — Schema validation, URL checking, data quality. Run before commits.
+- `scripts/backup.py` — Tagged snapshots for safe rollback. Run before risky operations.
 
 ## Architecture
 ```
