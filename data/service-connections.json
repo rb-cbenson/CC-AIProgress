@@ -1,0 +1,14 @@
+{
+  "description": "User-specific external service configurations. Phase 3 uses these to execute real-world actions (ordering PCBs, deploying code, etc). Keep credentials in environment variables, not here.",
+  "connections": [],
+  "schema": {
+    "id": "string (kebab-case)",
+    "service": "string (human name)",
+    "type": "api|webhook|cli|browser",
+    "endpoint": "string (URL or command)",
+    "authMethod": "env-var|api-key|oauth|none",
+    "authEnvVar": "string (name of env var holding the credential)",
+    "status": "configured|pending|disabled",
+    "notes": "string"
+  }
+}

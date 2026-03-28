@@ -42,7 +42,17 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 82
+    "trustScore": 82,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api",
+      "ios",
+      "android"
+    ]
   },
   {
     "id": "claude",
@@ -87,7 +97,15 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 85
+    "trustScore": 85,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "gemini",
@@ -126,7 +144,16 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 80
+    "trustScore": 80,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api",
+      "android"
+    ]
   },
   {
     "id": "perplexity",
@@ -165,7 +192,17 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 78
+    "trustScore": 78,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api",
+      "ios",
+      "android"
+    ]
   },
   {
     "id": "grok",
@@ -203,7 +240,15 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 72
+    "trustScore": 72,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "deepseek",
@@ -242,7 +287,15 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 65
+    "trustScore": 65,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "kimi",
@@ -274,7 +327,15 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 55
+    "trustScore": 55,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "qwen",
@@ -313,7 +374,15 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 60
+    "trustScore": 60,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "copilot-chat",
@@ -358,7 +427,15 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 80
+    "trustScore": 80,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "zai",
@@ -389,7 +466,15 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 45
+    "trustScore": 45,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "midjourney",
@@ -447,7 +532,14 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 75
+    "trustScore": 75,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web",
+    "platformSupport": [
+      "web"
+    ]
   },
   {
     "id": "dalle",
@@ -486,7 +578,15 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 82
+    "trustScore": 82,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "stable-diffusion",
@@ -525,7 +625,17 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 78
+    "trustScore": 78,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "cli",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux",
+      "api"
+    ]
   },
   {
     "id": "flux",
@@ -564,7 +674,15 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 70
+    "trustScore": 70,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "adobe-firefly",
@@ -609,7 +727,15 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 85
+    "trustScore": 85,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "craiyon",
@@ -647,7 +773,15 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 55
+    "trustScore": 55,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "runway",
@@ -698,7 +832,15 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 72
+    "trustScore": 72,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "kling",
@@ -737,7 +879,15 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 60
+    "trustScore": 60,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "pika",
@@ -782,7 +932,15 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 58
+    "trustScore": 58,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "veo",
@@ -821,7 +979,15 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 78
+    "trustScore": 78,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "heyGen",
@@ -866,7 +1032,15 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 62
+    "trustScore": 62,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "synthesia",
@@ -911,7 +1085,15 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 68
+    "trustScore": 68,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "suno",
@@ -956,7 +1138,15 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 65
+    "trustScore": 65,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "udio",
@@ -994,7 +1184,15 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 60
+    "trustScore": 60,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "elevenlabs",
@@ -1045,7 +1243,15 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 75
+    "trustScore": 75,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "github-copilot",
@@ -1097,7 +1303,17 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 83
+    "trustScore": 83,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "desktop-app",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux",
+      "web"
+    ]
   },
   {
     "id": "cursor",
@@ -1143,7 +1359,16 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 72
+    "trustScore": 72,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "desktop-app",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "claude-code",
@@ -1194,7 +1419,16 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 85
+    "trustScore": 85,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "desktop-app",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "windsurf",
@@ -1233,7 +1467,16 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 68
+    "trustScore": 68,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "desktop-app",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "gemini-code-assist",
@@ -1272,7 +1515,16 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 78
+    "trustScore": 78,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "desktop-app",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "tabnine",
@@ -1317,7 +1569,16 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 70
+    "trustScore": 70,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "desktop-app",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "notion-ai",
@@ -1362,7 +1623,14 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 78
+    "trustScore": 78,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web",
+    "platformSupport": [
+      "web"
+    ]
   },
   {
     "id": "google-notebooklm",
@@ -1395,7 +1663,14 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 82
+    "trustScore": 82,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web",
+    "platformSupport": [
+      "web"
+    ]
   },
   {
     "id": "grammarly",
@@ -1440,7 +1715,14 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 80
+    "trustScore": 80,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web",
+    "platformSupport": [
+      "web"
+    ]
   },
   {
     "id": "meetcody",
@@ -1484,7 +1766,14 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 50
+    "trustScore": 50,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web",
+    "platformSupport": [
+      "web"
+    ]
   },
   {
     "id": "craftnote",
@@ -1522,7 +1811,14 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 55
+    "trustScore": 55,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web",
+    "platformSupport": [
+      "web"
+    ]
   },
   {
     "id": "adam-ai",
@@ -1560,7 +1856,16 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 45
+    "trustScore": 45,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "desktop-app",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "backflip-ai",
@@ -1598,7 +1903,16 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 50
+    "trustScore": 50,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "desktop-app",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "electrix-ai",
@@ -1636,7 +1950,16 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 48
+    "trustScore": 48,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "desktop-app",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "ida-pro",
@@ -1681,7 +2004,16 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 75
+    "trustScore": 75,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "desktop-app",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "aymo-ai",
@@ -1719,7 +2051,14 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 40
+    "trustScore": 40,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web",
+    "platformSupport": [
+      "web"
+    ]
   },
   {
     "id": "hugging-face",
@@ -1764,7 +2103,14 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 65
+    "trustScore": 65,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web",
+    "platformSupport": [
+      "web"
+    ]
   },
   {
     "id": "team-ai",
@@ -1802,7 +2148,14 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 50
+    "trustScore": 50,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web",
+    "platformSupport": [
+      "web"
+    ]
   },
   {
     "id": "zapier",
@@ -1853,7 +2206,15 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 82
+    "trustScore": 82,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "make",
@@ -1898,7 +2259,15 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 78
+    "trustScore": 78,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "n8n",
@@ -1943,7 +2312,15 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 75
+    "trustScore": 75,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "meshy-ai",
@@ -1983,7 +2360,16 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 58
+    "trustScore": 58,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "desktop-app",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "tripo-ai",
@@ -2022,7 +2408,16 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 55
+    "trustScore": 55,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "desktop-app",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "zoo-cad",
@@ -2062,7 +2457,16 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 60
+    "trustScore": 60,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "desktop-app",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "quilter-ai",
@@ -2102,7 +2506,16 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 52
+    "trustScore": 52,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "desktop-app",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "flux-ai",
@@ -2142,7 +2555,16 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 48
+    "trustScore": 48,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "desktop-app",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "circuitmind",
@@ -2182,7 +2604,16 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 50
+    "trustScore": 50,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "desktop-app",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "lovable",
@@ -2222,7 +2653,16 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 65
+    "trustScore": 65,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "desktop-app",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "replit",
@@ -2268,7 +2708,16 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 72
+    "trustScore": 72,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "desktop-app",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "deeppcb",
@@ -2308,7 +2757,16 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 50
+    "trustScore": 50,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "desktop-app",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "printpal",
@@ -2348,7 +2806,16 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 45
+    "trustScore": 45,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "desktop-app",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "elicit",
@@ -2387,7 +2854,15 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 75
+    "trustScore": 75,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "consensus",
@@ -2426,7 +2901,15 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 72
+    "trustScore": 72,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "research-rabbit",
@@ -2458,7 +2941,15 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 68
+    "trustScore": 68,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "spellbook-legal",
@@ -2503,7 +2994,14 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 55
+    "trustScore": 55,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web",
+    "platformSupport": [
+      "web"
+    ]
   },
   {
     "id": "tradeeasy",
@@ -2535,7 +3033,14 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 45
+    "trustScore": 45,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web",
+    "platformSupport": [
+      "web"
+    ]
   },
   {
     "id": "maket-ai",
@@ -2574,7 +3079,16 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 50
+    "trustScore": 50,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "desktop-app",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "khanmigo",
@@ -2613,7 +3127,14 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 78
+    "trustScore": 78,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web",
+    "platformSupport": [
+      "web"
+    ]
   },
   {
     "id": "be-my-eyes",
@@ -2645,7 +3166,14 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 72
+    "trustScore": 72,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web",
+    "platformSupport": [
+      "web"
+    ]
   },
   {
     "id": "seeing-ai",
@@ -2677,7 +3205,14 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 78
+    "trustScore": 78,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web",
+    "platformSupport": [
+      "web"
+    ]
   },
   {
     "id": "scenario-ai",
@@ -2716,7 +3251,15 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 60
+    "trustScore": 60,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "inworld-ai",
@@ -2755,7 +3298,14 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 58
+    "trustScore": 58,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web",
+    "platformSupport": [
+      "web"
+    ]
   },
   {
     "id": "off-script",
@@ -2787,7 +3337,15 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 45
+    "trustScore": 45,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "dishgen",
@@ -2826,7 +3384,14 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 40
+    "trustScore": 40,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web",
+    "platformSupport": [
+      "web"
+    ]
   },
   {
     "id": "cohere",
@@ -2865,7 +3430,15 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 75
+    "trustScore": 75,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "poe",
@@ -2904,7 +3477,14 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 70
+    "trustScore": 70,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web",
+    "platformSupport": [
+      "web"
+    ]
   },
   {
     "id": "openrouter",
@@ -2943,7 +3523,14 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 72
+    "trustScore": 72,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web",
+    "platformSupport": [
+      "web"
+    ]
   },
   {
     "id": "bolt-new",
@@ -2982,7 +3569,16 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 65
+    "trustScore": 65,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "desktop-app",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "v0-dev",
@@ -3021,7 +3617,16 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 68
+    "trustScore": 68,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "desktop-app",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "openclaw",
@@ -3053,7 +3658,14 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 55
+    "trustScore": 55,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "api",
+    "platformSupport": [
+      "api"
+    ]
   },
   {
     "id": "crew-ai",
@@ -3092,7 +3704,14 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 65
+    "trustScore": 65,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "api",
+    "platformSupport": [
+      "api"
+    ]
   },
   {
     "id": "dify",
@@ -3131,7 +3750,14 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 68
+    "trustScore": 68,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "api",
+    "platformSupport": [
+      "api"
+    ]
   },
   {
     "id": "you-com",
@@ -3170,7 +3796,15 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 62
+    "trustScore": 62,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "jasper",
@@ -3215,7 +3849,14 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 65
+    "trustScore": 65,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web",
+    "platformSupport": [
+      "web"
+    ]
   },
   {
     "id": "ideogram",
@@ -3260,7 +3901,15 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 68
+    "trustScore": 68,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "leonardo-ai",
@@ -3305,7 +3954,15 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 65
+    "trustScore": 65,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "luma-dream-machine",
@@ -3350,7 +4007,15 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 65
+    "trustScore": 65,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "rodin-ai",
@@ -3395,7 +4060,16 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-27",
-    "trustScore": 55
+    "trustScore": 55,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "desktop-app",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "devin",
@@ -3433,7 +4107,14 @@
     ],
     "trustScore": 60,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "api",
+    "platformSupport": [
+      "api"
+    ]
   },
   {
     "id": "browser-use",
@@ -3465,7 +4146,14 @@
     ],
     "trustScore": 68,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "api",
+    "platformSupport": [
+      "api"
+    ]
   },
   {
     "id": "autogen",
@@ -3497,7 +4185,14 @@
     ],
     "trustScore": 82,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "api",
+    "platformSupport": [
+      "api"
+    ]
   },
   {
     "id": "langgraph",
@@ -3536,7 +4231,14 @@
     ],
     "trustScore": 75,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "api",
+    "platformSupport": [
+      "api"
+    ]
   },
   {
     "id": "sweep-ai",
@@ -3575,7 +4277,14 @@
     ],
     "trustScore": 62,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "api",
+    "platformSupport": [
+      "api"
+    ]
   },
   {
     "id": "swe-agent",
@@ -3607,7 +4316,14 @@
     ],
     "trustScore": 70,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "api",
+    "platformSupport": [
+      "api"
+    ]
   },
   {
     "id": "ollama",
@@ -3639,7 +4355,16 @@
     ],
     "trustScore": 78,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "cli",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "lm-studio",
@@ -3671,7 +4396,16 @@
     ],
     "trustScore": 72,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "desktop-app",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "llamacpp",
@@ -3703,7 +4437,16 @@
     ],
     "trustScore": 80,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "cli",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "jan-ai",
@@ -3735,7 +4478,16 @@
     ],
     "trustScore": 68,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "cli",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "gpt4all",
@@ -3767,7 +4519,16 @@
     ],
     "trustScore": 70,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "cli",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "localai",
@@ -3799,7 +4560,16 @@
     ],
     "trustScore": 65,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "cli",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "koboldcpp",
@@ -3831,7 +4601,16 @@
     ],
     "trustScore": 60,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "cli",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "text-gen-webui",
@@ -3863,7 +4642,16 @@
     ],
     "trustScore": 65,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "cli",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "gptzero",
@@ -3902,7 +4690,14 @@
     ],
     "trustScore": 72,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "api",
+    "platformSupport": [
+      "api"
+    ]
   },
   {
     "id": "originality-ai",
@@ -3941,7 +4736,14 @@
     ],
     "trustScore": 68,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "api",
+    "platformSupport": [
+      "api"
+    ]
   },
   {
     "id": "nightfall-ai",
@@ -3980,7 +4782,14 @@
     ],
     "trustScore": 75,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "api",
+    "platformSupport": [
+      "api"
+    ]
   },
   {
     "id": "rebuff-ai",
@@ -4012,7 +4821,14 @@
     ],
     "trustScore": 58,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "api",
+    "platformSupport": [
+      "api"
+    ]
   },
   {
     "id": "guardrails-ai",
@@ -4051,7 +4867,14 @@
     ],
     "trustScore": 70,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "api",
+    "platformSupport": [
+      "api"
+    ]
   },
   {
     "id": "lakera-guard",
@@ -4090,7 +4913,14 @@
     ],
     "trustScore": 72,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "api",
+    "platformSupport": [
+      "api"
+    ]
   },
   {
     "id": "whisper",
@@ -4129,7 +4959,14 @@
     ],
     "trustScore": 85,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "api",
+    "platformSupport": [
+      "api"
+    ]
   },
   {
     "id": "assemblyai",
@@ -4168,7 +5005,14 @@
     ],
     "trustScore": 78,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "api",
+    "platformSupport": [
+      "api"
+    ]
   },
   {
     "id": "deepgram",
@@ -4207,7 +5051,14 @@
     ],
     "trustScore": 76,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "api",
+    "platformSupport": [
+      "api"
+    ]
   },
   {
     "id": "play-ht",
@@ -4246,7 +5097,14 @@
     ],
     "trustScore": 68,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "api",
+    "platformSupport": [
+      "api"
+    ]
   },
   {
     "id": "resemble-ai",
@@ -4285,7 +5143,14 @@
     ],
     "trustScore": 65,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "api",
+    "platformSupport": [
+      "api"
+    ]
   },
   {
     "id": "speechify",
@@ -4324,7 +5189,14 @@
     ],
     "trustScore": 72,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "api",
+    "platformSupport": [
+      "api"
+    ]
   },
   {
     "id": "otter-ai",
@@ -4363,7 +5235,14 @@
     ],
     "trustScore": 74,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "api",
+    "platformSupport": [
+      "api"
+    ]
   },
   {
     "id": "descript",
@@ -4402,7 +5281,14 @@
     ],
     "trustScore": 76,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "api",
+    "platformSupport": [
+      "api"
+    ]
   },
   {
     "id": "julius-ai",
@@ -4441,7 +5327,15 @@
     ],
     "trustScore": 62,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "obviously-ai",
@@ -4480,7 +5374,15 @@
     ],
     "trustScore": 60,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "hex-ai",
@@ -4519,7 +5421,15 @@
     ],
     "trustScore": 72,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "tableau-ai",
@@ -4559,7 +5469,15 @@
     ],
     "trustScore": 82,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "semantic-scholar",
@@ -4591,7 +5509,15 @@
     ],
     "trustScore": 85,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "connected-papers",
@@ -4630,7 +5556,15 @@
     ],
     "trustScore": 72,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "scispace",
@@ -4669,7 +5603,15 @@
     ],
     "trustScore": 65,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "phind",
@@ -4708,7 +5650,15 @@
     ],
     "trustScore": 68,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "mistral-chat",
@@ -4747,7 +5697,15 @@
     ],
     "trustScore": 75,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "pi-ai",
@@ -4779,7 +5737,15 @@
     ],
     "trustScore": 62,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "playground-ai",
@@ -4818,7 +5784,15 @@
     ],
     "trustScore": 65,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "krea-ai",
@@ -4857,7 +5831,15 @@
     ],
     "trustScore": 60,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "magnific",
@@ -4896,7 +5878,15 @@
     ],
     "trustScore": 62,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "minimax-video",
@@ -4935,7 +5925,15 @@
     ],
     "trustScore": 58,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "haiper",
@@ -4967,7 +5965,15 @@
     ],
     "trustScore": 58,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "mubert",
@@ -5006,7 +6012,15 @@
     ],
     "trustScore": 60,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "aiva",
@@ -5045,7 +6059,15 @@
     ],
     "trustScore": 65,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "soundraw",
@@ -5084,7 +6106,15 @@
     ],
     "trustScore": 62,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "voicemod",
@@ -5123,7 +6153,15 @@
     ],
     "trustScore": 60,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "codeium",
@@ -5162,7 +6200,16 @@
     ],
     "trustScore": 70,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "desktop-app",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "aider",
@@ -5194,7 +6241,16 @@
     ],
     "trustScore": 72,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "desktop-app",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "continue-dev",
@@ -5226,7 +6282,16 @@
     ],
     "trustScore": 70,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "desktop-app",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "sourcegraph-cody",
@@ -5265,7 +6330,16 @@
     ],
     "trustScore": 75,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "desktop-app",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "napkin-ai",
@@ -5297,7 +6371,14 @@
     ],
     "trustScore": 55,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web",
+    "platformSupport": [
+      "web"
+    ]
   },
   {
     "id": "gamma-ai",
@@ -5336,7 +6417,14 @@
     ],
     "trustScore": 62,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web",
+    "platformSupport": [
+      "web"
+    ]
   },
   {
     "id": "mem-ai",
@@ -5375,7 +6463,14 @@
     ],
     "trustScore": 58,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web",
+    "platformSupport": [
+      "web"
+    ]
   },
   {
     "id": "taskade",
@@ -5414,7 +6509,14 @@
     ],
     "trustScore": 60,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web",
+    "platformSupport": [
+      "web"
+    ]
   },
   {
     "id": "beautiful-ai",
@@ -5453,7 +6555,14 @@
     ],
     "trustScore": 62,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web",
+    "platformSupport": [
+      "web"
+    ]
   },
   {
     "id": "activepieces",
@@ -5492,7 +6601,15 @@
     ],
     "trustScore": 68,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "pipedream",
@@ -5531,7 +6648,15 @@
     ],
     "trustScore": 72,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "litellm",
@@ -5564,7 +6689,15 @@
     ],
     "trustScore": 45,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "routellm",
@@ -5596,7 +6729,15 @@
     ],
     "trustScore": 70,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "isaac-sim",
@@ -5628,7 +6769,14 @@
     ],
     "trustScore": 88,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "desktop-app",
+    "platformSupport": [
+      "linux"
+    ]
   },
   {
     "id": "isaac-lab",
@@ -5658,7 +6806,16 @@
     ],
     "trustScore": 86,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "desktop-app",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "mujoco",
@@ -5689,7 +6846,16 @@
     ],
     "trustScore": 88,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "cli",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "gazebo",
@@ -5721,7 +6887,14 @@
     ],
     "trustScore": 82,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "cli",
+    "platformSupport": [
+      "linux"
+    ]
   },
   {
     "id": "groot-n1",
@@ -5753,7 +6926,16 @@
     ],
     "trustScore": 85,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "desktop-app",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "lerobot",
@@ -5784,7 +6966,16 @@
     ],
     "trustScore": 80,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "desktop-app",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "physical-intelligence-pi0",
@@ -5815,7 +7006,16 @@
     ],
     "trustScore": 72,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "desktop-app",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "open-x-embodiment",
@@ -5845,7 +7045,16 @@
     ],
     "trustScore": 88,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "desktop-app",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "px4",
@@ -5876,7 +7085,15 @@
     ],
     "trustScore": 85,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "cli",
+    "platformSupport": [
+      "linux",
+      "mac"
+    ]
   },
   {
     "id": "ardupilot",
@@ -5907,7 +7124,16 @@
     ],
     "trustScore": 85,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "desktop-app",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "unitree-sdk",
@@ -5950,7 +7176,16 @@
     ],
     "trustScore": 70,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "desktop-app",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "boston-dynamics-sdk",
@@ -5994,7 +7229,16 @@
     ],
     "trustScore": 88,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "desktop-app",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "jetson-orin",
@@ -6039,7 +7283,16 @@
     ],
     "trustScore": 90,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "desktop-app",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "edge-impulse",
@@ -6077,7 +7330,16 @@
     ],
     "trustScore": 75,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "desktop-app",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "isaac-ros",
@@ -6107,7 +7369,16 @@
     ],
     "trustScore": 85,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "desktop-app",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "nav2",
@@ -6138,7 +7409,16 @@
     ],
     "trustScore": 85,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "desktop-app",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "foxglove",
@@ -6176,7 +7456,16 @@
     ],
     "trustScore": 72,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "desktop-app",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "realsense",
@@ -6220,7 +7509,16 @@
     ],
     "trustScore": 82,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "desktop-app",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "luxonis-oak",
@@ -6264,7 +7562,16 @@
     ],
     "trustScore": 72,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "desktop-app",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "covariant",
@@ -6301,7 +7608,16 @@
     ],
     "trustScore": 72,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "desktop-app",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "wandelbots",
@@ -6339,7 +7655,16 @@
     ],
     "trustScore": 70,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "desktop-app",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "intrinsic-flowstate",
@@ -6370,7 +7695,16 @@
     ],
     "trustScore": 78,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "desktop-app",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "meta-habitat",
@@ -6400,7 +7734,16 @@
     ],
     "trustScore": 82,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "desktop-app",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "drake",
@@ -6430,7 +7773,16 @@
     ],
     "trustScore": 80,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "desktop-app",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "webots",
@@ -6461,7 +7813,16 @@
     ],
     "trustScore": 78,
     "logoUrl": "",
-    "lastVerified": "2026-03-27"
+    "lastVerified": "2026-03-27",
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "desktop-app",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "claude-api",
@@ -6499,7 +7860,14 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-28",
-    "trustScore": 88
+    "trustScore": 88,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "api",
+    "platformSupport": [
+      "api"
+    ]
   },
   {
     "id": "openai-api",
@@ -6537,7 +7905,14 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-28",
-    "trustScore": 85
+    "trustScore": 85,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "api",
+    "platformSupport": [
+      "api"
+    ]
   },
   {
     "id": "gemini-api",
@@ -6575,7 +7950,14 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-28",
-    "trustScore": 85
+    "trustScore": 85,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "api",
+    "platformSupport": [
+      "api"
+    ]
   },
   {
     "id": "perplexity-api",
@@ -6613,7 +7995,14 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-28",
-    "trustScore": 78
+    "trustScore": 78,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "api",
+    "platformSupport": [
+      "api"
+    ]
   },
   {
     "id": "dall-e-api",
@@ -6651,7 +8040,15 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-28",
-    "trustScore": 84
+    "trustScore": 84,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "suno-api",
@@ -6695,7 +8092,15 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-28",
-    "trustScore": 72
+    "trustScore": 72,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "runway-api",
@@ -6739,7 +8144,15 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-28",
-    "trustScore": 80
+    "trustScore": 80,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "github-actions",
@@ -6783,7 +8196,15 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-28",
-    "trustScore": 92
+    "trustScore": 92,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "github-pages",
@@ -6814,7 +8235,14 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-28",
-    "trustScore": 92
+    "trustScore": 92,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web",
+    "platformSupport": [
+      "web"
+    ]
   },
   {
     "id": "claude-scheduled-tasks",
@@ -6852,7 +8280,15 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-28",
-    "trustScore": 85
+    "trustScore": 85,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "puppeteer",
@@ -6883,7 +8319,16 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-28",
-    "trustScore": 88
+    "trustScore": 88,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "cli",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "playwright",
@@ -6914,7 +8359,16 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-28",
-    "trustScore": 88
+    "trustScore": 88,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "cli",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "fastapi",
@@ -6945,7 +8399,16 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-28",
-    "trustScore": 82
+    "trustScore": 82,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "desktop-app",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "cloudflare-tunnel",
@@ -6983,7 +8446,15 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-28",
-    "trustScore": 88
+    "trustScore": 88,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "blender",
@@ -7014,7 +8485,16 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-28",
-    "trustScore": 90
+    "trustScore": 90,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "desktop-app",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "freecad",
@@ -7045,7 +8525,16 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-28",
-    "trustScore": 75
+    "trustScore": 75,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "desktop-app",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "fusion-360",
@@ -7083,7 +8572,16 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-28",
-    "trustScore": 85
+    "trustScore": 85,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "desktop-app",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "web"
+    ]
   },
   {
     "id": "orcaslicer-cli",
@@ -7114,7 +8612,16 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-28",
-    "trustScore": 76
+    "trustScore": 76,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "desktop-app",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "ltspice",
@@ -7145,7 +8652,16 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-28",
-    "trustScore": 85
+    "trustScore": 85,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "desktop-app",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "jlcpcb-api",
@@ -7183,7 +8699,16 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-28",
-    "trustScore": 78
+    "trustScore": 78,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "desktop-app",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "davinci-resolve",
@@ -7221,7 +8746,16 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-28",
-    "trustScore": 90
+    "trustScore": 90,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "desktop-app",
+    "platformSupport": [
+      "windows",
+      "mac",
+      "linux"
+    ]
   },
   {
     "id": "coqui-tts",
@@ -7252,7 +8786,14 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-28",
-    "trustScore": 70
+    "trustScore": 70,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "api",
+    "platformSupport": [
+      "api"
+    ]
   },
   {
     "id": "twilio",
@@ -7290,7 +8831,14 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-28",
-    "trustScore": 88
+    "trustScore": 88,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "api",
+    "platformSupport": [
+      "api"
+    ]
   },
   {
     "id": "power-automate",
@@ -7334,7 +8882,14 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-28",
-    "trustScore": 85
+    "trustScore": 85,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web",
+    "platformSupport": [
+      "web"
+    ]
   },
   {
     "id": "toggl",
@@ -7378,7 +8933,14 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-28",
-    "trustScore": 80
+    "trustScore": 80,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web",
+    "platformSupport": [
+      "web"
+    ]
   },
   {
     "id": "rescuetime",
@@ -7416,7 +8978,14 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-28",
-    "trustScore": 75
+    "trustScore": 75,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web",
+    "platformSupport": [
+      "web"
+    ]
   },
   {
     "id": "pubmed-api",
@@ -7447,7 +9016,15 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-28",
-    "trustScore": 95
+    "trustScore": 95,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "clinicaltrials-api",
@@ -7478,7 +9055,15 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-28",
-    "trustScore": 95
+    "trustScore": 95,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "google-scholar-alerts",
@@ -7509,7 +9094,15 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-28",
-    "trustScore": 85
+    "trustScore": 85,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   },
   {
     "id": "youtube",
@@ -7547,6 +9140,14 @@
     ],
     "logoUrl": "",
     "lastVerified": "2026-03-28",
-    "trustScore": 88
+    "trustScore": 88,
+    "firstTracked": "2026-03-28",
+    "capabilities": [],
+    "integrations": [],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ]
   }
 ]
