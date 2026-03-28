@@ -18,11 +18,12 @@ The HTML dashboard is the human interface (viewed on Chromebook/any browser). Th
 On EVERY session, the AI should:
 1. **Read** `data/briefings.json` — check what's changed since last session
 2. **Read** `data/automation.json` — check pipeline status and what needs doing
-3. **Research** — web search for AI news since the last briefing date
-4. **Update** — any stale data in tools.json, strategies.json, etc.
-5. **Propose** — new tests, new tools to add, new projects, improvements to the system itself
-6. **Execute** — don't just suggest, DO IT (update files, add entries, rewrite stale sections)
-7. **Brief** — append a new entry to briefings.json summarizing what was done and found
+3. **Gap check** — run `python scripts/gap-analysis.py --brief` to see current blind spots
+4. **Research** — web search for AI news since the last briefing date
+5. **Update** — any stale data in tools.json, strategies.json, etc.
+6. **Propose** — new tests, new tools to add, new projects, improvements to the system itself
+7. **Execute** — don't just suggest, DO IT (update files, add entries, rewrite stale sections)
+8. **Brief** — append a new entry to briefings.json summarizing what was done and found
 
 ## Architecture
 ```
@@ -89,6 +90,26 @@ The system SHOULD auto-update, auto-correct, and even make major architectural c
 - **Stale data**: Scheduled tasks re-research and rewrite automatically
 - **Unknown unknowns**: Search GitHub trending, Reddit, HN, YouTube, TikTok discussions — find what others are doing that we haven't thought of
 - **Chromebook constraints**: NONE — all computation is cloud-side (Claude servers, n8n VPS, GitHub Actions). Chromebook is just a browser.
+
+## Backup Protocol
+Use `python scripts/backup.py` to create tagged snapshots. Tags are free (just pointers, zero storage).
+
+**When to create a backup tag:**
+- Before any research sweep (tag: `backup-YYYY-MM-DD-pre-sweep`)
+- After major data changes (new categories, 10+ tools added, architecture changes)
+- Before any risky operation (schema changes, large refactors)
+- At the end of productive sessions (tag: `backup-YYYY-MM-DD-session-end`)
+
+**When NOT to bother:**
+- Minor edits (single tool update, typo fix) — regular commits are enough
+- Every individual file change — that's just commit noise
+
+**How to revert:**
+- Single file: `git checkout <tag> -- path/to/file`
+- Everything (safe, creates new commit): `python scripts/backup.py --revert <tag>`
+- See all backups: `python scripts/backup.py --list`
+
+**Push tags to GitHub** so backups survive local machine failure. The script does this automatically.
 
 ## Data Conventions
 - All IDs use kebab-case (e.g., `"text-chat"`, `"chatgpt"`)
