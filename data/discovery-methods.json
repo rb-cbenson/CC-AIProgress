@@ -187,6 +187,25 @@
       "priority": "medium"
     },
     {
+      "id": "community-integration-mining",
+      "name": "Community Integration Mining",
+      "description": "Search GitHub, Stack Overflow, Reddit, and forums for unofficial code that connects tools together. People write scripts, plugins, and workarounds to make tools work together that have no official integration. These community solutions are often the fastest path to connecting tools.",
+      "type": "search-based",
+      "how": "For each pair of high-value tools in tools.json, search GitHub for repos that import/reference both (e.g., 'kicad blender python', 'ros2 opencv example', 'n8n claude api'). Search Stack Overflow for questions about connecting them. Record found repos/solutions in the integrations field AND in a new community-integrations.json file with: tool pair, repo URL, description, stars, last updated, quality assessment.",
+      "tools": ["GitHub Search API", "Stack Overflow API", "Reddit search"],
+      "frequency": "monthly for major tools, quarterly for all",
+      "expectedYield": "10-30 new integration paths per run, many unofficial but practical",
+      "implementationStatus": "not-built",
+      "priority": "high",
+      "searchQueries": [
+        "{tool_a} {tool_b} python github",
+        "{tool_a} {tool_b} integration example",
+        "{tool_a} export {tool_b} import",
+        "site:stackoverflow.com {tool_a} {tool_b}",
+        "site:reddit.com {tool_a} {tool_b} workflow"
+      ]
+    },
+    {
       "id": "discovery-method-improvement",
       "name": "Meta: Improve Discovery Methods",
       "description": "THIS method. The system should periodically review which discovery methods found the most valuable sources and tools, and adjust priorities and frequencies accordingly. Methods that find nothing get deprioritized. Methods that find gold get run more often.",
