@@ -1,0 +1,183 @@
+{
+  "description": "Tracks free tier credits, renewal schedules, and test readiness for each tool. Prevents accidentally burning one-time credits on tests.",
+  "lastUpdated": "2026-03-28",
+
+  "credits": [
+    {
+      "toolId": "tavily",
+      "creditType": "renewable-monthly",
+      "limit": 1000,
+      "used": 22,
+      "remaining": 978,
+      "renewsOn": "2026-04-01",
+      "unit": "API calls (search=1, advanced=5)",
+      "testCost": "1-5 credits per query",
+      "safeToTest": true,
+      "notes": "Renews monthly. 978 remaining. Safe to test freely."
+    },
+    {
+      "toolId": "groq",
+      "creditType": "renewable-daily",
+      "limit": 14400,
+      "used": 10,
+      "remaining": 14390,
+      "renewsOn": "daily",
+      "unit": "requests per day",
+      "testCost": "1 request per test",
+      "safeToTest": true,
+      "notes": "Resets daily. Effectively unlimited for testing."
+    },
+    {
+      "toolId": "mistral",
+      "creditType": "renewable-unknown",
+      "limit": "unknown",
+      "used": 2,
+      "remaining": "unknown",
+      "renewsOn": "unknown",
+      "unit": "requests",
+      "testCost": "1 request per test",
+      "safeToTest": true,
+      "notes": "Free experiment tier. Limits not clearly documented. No charges so far."
+    },
+    {
+      "toolId": "openrouter",
+      "creditType": "renewable-varies",
+      "limit": "varies by model",
+      "used": 3,
+      "remaining": "varies",
+      "renewsOn": "varies by model",
+      "unit": "requests (free models only)",
+      "testCost": "1 request per test (free models)",
+      "safeToTest": true,
+      "notes": "Free models have rate limits but renew. No spending unless using paid models."
+    },
+    {
+      "toolId": "elevenlabs",
+      "creditType": "renewable-monthly",
+      "limit": 10000,
+      "used": 0,
+      "remaining": 10000,
+      "renewsOn": "2026-04-01",
+      "unit": "characters",
+      "testCost": "~100-500 chars per short TTS test",
+      "safeToTest": true,
+      "notes": "10,000 chars/month = ~10 min audio. A short test uses ~1-5% of monthly limit."
+    },
+    {
+      "toolId": "suno",
+      "creditType": "renewable-daily",
+      "limit": 50,
+      "used": 0,
+      "remaining": 50,
+      "renewsOn": "daily",
+      "unit": "credits (1 song = ~5 credits)",
+      "testCost": "5 credits per song",
+      "safeToTest": true,
+      "notes": "50 credits/day = ~10 songs. Resets daily. Safe to test."
+    },
+    {
+      "toolId": "runway",
+      "creditType": "one-time",
+      "limit": 125,
+      "used": 0,
+      "remaining": 125,
+      "renewsOn": "NEVER",
+      "unit": "credits (~3 short videos)",
+      "testCost": "~40 credits per 5-second video",
+      "safeToTest": false,
+      "notes": "ONE-TIME trial credits. Do NOT test casually. Save for a meaningful pipeline test. After these are gone, requires paid plan ($18 CAD/mo)."
+    },
+    {
+      "toolId": "kling",
+      "creditType": "unknown",
+      "limit": "unknown",
+      "used": 0,
+      "remaining": "unknown",
+      "renewsOn": "unknown",
+      "unit": "credits",
+      "testCost": "unknown",
+      "safeToTest": false,
+      "notes": "Need to sign up and check. Likely one-time trial credits. Do not test until verified."
+    },
+    {
+      "toolId": "gemini-api",
+      "creditType": "renewable-daily",
+      "limit": 500,
+      "used": 0,
+      "remaining": 500,
+      "renewsOn": "daily",
+      "unit": "requests per day",
+      "testCost": "1 request per test",
+      "safeToTest": false,
+      "notes": "Quota still showing 0 — provisioning issue. Will be safe to test once active."
+    },
+    {
+      "toolId": "openai-api",
+      "creditType": "prepaid",
+      "limit": 0,
+      "used": 0,
+      "remaining": 0,
+      "renewsOn": "when-you-add-credits",
+      "unit": "USD balance",
+      "testCost": "~$0.01-0.05 per GPT-4o-mini request",
+      "safeToTest": false,
+      "notes": "Requires $5 minimum prepaid. Not loaded yet."
+    },
+    {
+      "toolId": "github-copilot",
+      "creditType": "renewable-monthly",
+      "limit": 2000,
+      "used": 0,
+      "remaining": 2000,
+      "renewsOn": "monthly",
+      "unit": "completions (2000) + chats (50)",
+      "testCost": "1 completion or 1 chat per test",
+      "safeToTest": true,
+      "notes": "Generous monthly limit. Safe to test."
+    },
+    {
+      "toolId": "edge-impulse",
+      "creditType": "renewable-monthly",
+      "limit": 100000,
+      "used": 0,
+      "remaining": 100000,
+      "renewsOn": "monthly",
+      "unit": "inferences",
+      "testCost": "1 inference per test",
+      "safeToTest": true,
+      "notes": "100K inferences/month + 5 projects. Very generous for testing."
+    },
+    {
+      "toolId": "hugging-face",
+      "creditType": "renewable-rate-limited",
+      "limit": 1000,
+      "used": 0,
+      "remaining": 1000,
+      "renewsOn": "rate-limit-resets",
+      "unit": "inference requests per day (approximate)",
+      "testCost": "1 request per test",
+      "safeToTest": true,
+      "notes": "Rate-limited, not credit-limited. Queued but free."
+    }
+  ],
+
+  "safeToTestNow": [
+    "groq", "tavily", "mistral", "openrouter", "elevenlabs", "suno",
+    "github-copilot", "edge-impulse", "hugging-face",
+    "ollama", "blender", "freecad", "kicad", "opencv", "ros2", "mujoco",
+    "gazebo", "stable-diffusion", "davinci-resolve"
+  ],
+
+  "doNotTestCasually": [
+    {"toolId": "runway", "reason": "125 one-time credits, ~3 videos total, never renew"},
+    {"toolId": "kling", "reason": "Credit structure unknown — verify before testing"},
+    {"toolId": "openai-api", "reason": "Requires $5 prepaid"},
+    {"toolId": "gemini-api", "reason": "Quota still provisioning"}
+  ],
+
+  "unlimitedFreeTools": [
+    "ollama", "lm-studio", "llama-cpp", "blender", "freecad", "kicad",
+    "opencv", "ros2", "mujoco", "gazebo", "stable-diffusion", "davinci-resolve",
+    "orcaslicer-cli", "drake", "webots", "fastapi", "playwright", "puppeteer"
+  ]
+}
