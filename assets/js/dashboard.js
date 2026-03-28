@@ -742,7 +742,8 @@ function fillFlows(){
   const workflows=Array.isArray(S.flows)?S.flows:(S.flows.workflows||[]);
   el.innerHTML=`
     ${workflows.map(w=>{
-      const steps=(w.steps||[]).map((s,i)=>{
+      const rawSteps=w.steps||[];
+      const stepsHtml=rawSteps.map((s,i)=>{
         const t=S.tools.find(x=>x.id===s.toolId);
         const freeTag=s.free===false?'<span class="b" style="background:#ef476f;color:white;font-size:8px;margin-left:4px">PAID</span>':
           s.freeLimit?'<span class="b" style="background:#ffd166;color:#333;font-size:8px;margin-left:4px">LIMITED</span>':'';
@@ -755,8 +756,19 @@ function fillFlows(){
           return `<span class="b" style="background:${tierColor};color:${textColor};font-size:7px;cursor:default" title="${name}: ${a.note||''}">${tierText} ${name}</span>`;
         }).join(' ');
         const altRow=alts?`<div style="margin-top:3px;display:flex;flex-wrap:wrap;gap:2px">${alts}</div>`:'';
-        return `${i?'<span class="wf-arrow">→</span>':''}
-        <div class="wf-step" data-tip="${s.action}"><span class="n">${s.order}</span><div><span class="t"><a href="${t?t.url:'#'}" target="_blank" style="color:inherit;text-decoration:none">${t?t.name:s.toolId}</a>${freeTag}</span><br><span class="a">${s.action}</span>${altRow}</div></div>`;
+        const platformTags=(s.platform||[]).map(p=>{
+          const icons={windows:'W',mac:'M',linux:'L',web:'Web',api:'API',ios:'iOS',android:'And'};
+          return `<span style="font-size:7px;color:var(--text-muted);background:var(--bg);padding:0 3px;border-radius:2px">${icons[p]||p}</span>`;
+        }).join('');
+        const localTag=s.localInstall?'<span style="font-size:7px;background:#7c3aed;color:white;padding:0 3px;border-radius:2px;margin-left:2px">LOCAL</span>':'';
+        const connColors={direct:'#06d6a0',api:'#4ecdc4',mcp:'#a855f7',file:'#ffd166',manual:'#94a3b8'};
+        const connLabels={direct:'Direct',api:'API',mcp:'MCP',file:'File',manual:'Manual'};
+        const prevStep=i>0?rawSteps[i-1]:null;
+        const arrow=i===0?'':(prevStep?.connectorToNext?
+          `<span class="wf-arrow" title="${connLabels[prevStep.connectorToNext]||''}${prevStep.connectorDetail?' — '+prevStep.connectorDetail:''}" style="color:${connColors[prevStep.connectorToNext]||'var(--text-muted)'};cursor:help">→</span>`:
+          '<span class="wf-arrow">→</span>');
+        return `${arrow}
+        <div class="wf-step" data-tip="${s.action}"><span class="n">${s.order}</span><div><span class="t"><a href="${t?t.url:'#'}" target="_blank" style="color:inherit;text-decoration:none">${t?t.name:s.toolId}</a>${freeTag}${localTag}</span><br><span class="a">${s.action}</span><div style="margin-top:2px">${platformTags}</div>${altRow}</div></div>`;
       }).join('');
       const verified=w.verified?'<span class="b" style="background:#06d6a0;color:white;font-size:8px">VERIFIED</span>':
         '<span class="b" style="background:var(--bg);color:var(--text-muted);font-size:8px">UNVERIFIED</span>';
@@ -777,7 +789,7 @@ function fillFlows(){
           <span class="b" style="background:var(--bg);color:var(--text-muted)">${w.difficulty||'intermediate'}</span>
           <span class="b" style="background:var(--bg);color:var(--text-muted)">${w.category||''}</span>
         </div>
-        <div class="wf-steps">${steps}</div>
+        <div class="wf-steps">${stepsHtml}</div>
         ${connectors?'<div style="margin-top:6px;display:flex;flex-wrap:wrap;gap:3px">'+connectors+'</div>':''}
         ${insight}${freeAlt}${gaps}
         ${w.verifiedSource?'<div style="font-size:9px;color:var(--text-muted);margin-top:4px">Source: '+w.verifiedSource+'</div>':''}

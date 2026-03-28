@@ -40,7 +40,14 @@
               "tier": "paid",
               "note": "$5 minimum"
             }
-          ]
+          ],
+          "platform": [
+            "api"
+          ],
+          "accessMethod": "api",
+          "localInstall": false,
+          "connectorToNext": "file",
+          "connectorDetail": "File export/import"
         },
         {
           "toolId": "stable-diffusion",
@@ -63,7 +70,17 @@
               "tier": "paid",
               "note": "Best artistic quality"
             }
-          ]
+          ],
+          "platform": [
+            "windows",
+            "mac",
+            "linux",
+            "api"
+          ],
+          "accessMethod": "cli",
+          "localInstall": true,
+          "connectorToNext": "mcp",
+          "connectorDetail": "MCP server available"
         },
         {
           "toolId": "elevenlabs",
@@ -87,7 +104,15 @@
               "tier": "paid",
               "note": "Unlimited with subscription"
             }
-          ]
+          ],
+          "platform": [
+            "web",
+            "api"
+          ],
+          "accessMethod": "web+api",
+          "localInstall": false,
+          "connectorToNext": "direct",
+          "connectorDetail": "Direct integration"
         },
         {
           "toolId": "kling",
@@ -116,14 +141,29 @@
               "tier": "paid",
               "note": "Best quality, $18 CAD/mo"
             }
-          ]
+          ],
+          "platform": [
+            "web",
+            "api"
+          ],
+          "accessMethod": "web+api",
+          "localInstall": false,
+          "connectorToNext": "direct",
+          "connectorDetail": "Direct integration"
         },
         {
           "toolId": "davinci-resolve",
           "action": "Final edit, captions, export",
           "order": 5,
           "free": true,
-          "alternatives": []
+          "alternatives": [],
+          "platform": [
+            "windows",
+            "mac",
+            "linux"
+          ],
+          "accessMethod": "desktop-app",
+          "localInstall": true
         }
       ],
       "orchestration": "n8n or Make connects all steps automatically",
@@ -180,7 +220,16 @@
               "tier": "limited",
               "note": "Free tier available"
             }
-          ]
+          ],
+          "platform": [
+            "windows",
+            "mac",
+            "linux"
+          ],
+          "accessMethod": "desktop-app",
+          "localInstall": true,
+          "connectorToNext": "mcp",
+          "connectorDetail": "MCP server available"
         },
         {
           "toolId": "cursor",
@@ -204,7 +253,16 @@
               "tier": "paid",
               "note": "$27 CAD/mo for unlimited"
             }
-          ]
+          ],
+          "platform": [
+            "windows",
+            "mac",
+            "linux"
+          ],
+          "accessMethod": "desktop-app",
+          "localInstall": true,
+          "connectorToNext": "direct",
+          "connectorDetail": "Direct integration"
         },
         {
           "toolId": "github-copilot",
@@ -212,7 +270,17 @@
           "order": 3,
           "free": true,
           "freeLimit": "2000 completions + 50 chats/month",
-          "alternatives": []
+          "alternatives": [],
+          "platform": [
+            "windows",
+            "mac",
+            "linux",
+            "web"
+          ],
+          "accessMethod": "desktop-app",
+          "localInstall": true,
+          "connectorToNext": "manual",
+          "connectorDetail": "Manual file transfer"
         },
         {
           "toolId": "claude-api",
@@ -236,7 +304,12 @@
               "note": "Best quality for code review"
             }
           ],
-          "paidNote": "API costs"
+          "paidNote": "API costs",
+          "platform": [
+            "api"
+          ],
+          "accessMethod": "api",
+          "localInstall": false
         }
       ],
       "orchestration": "GitHub Actions runs adversarial review step automatically",
@@ -286,14 +359,30 @@
           "action": "Uncapped exploration sandbox — no filters, no rate limits, idea generation",
           "order": 1,
           "free": true,
-          "alternatives": []
+          "alternatives": [],
+          "platform": [
+            "windows",
+            "mac",
+            "linux"
+          ],
+          "accessMethod": "cli",
+          "localInstall": true,
+          "connectorToNext": "file",
+          "connectorDetail": "File export/import"
         },
         {
           "toolId": "google-notebooklm",
           "action": "Structured understanding, source grounding, organize research",
           "order": 2,
           "free": true,
-          "alternatives": []
+          "alternatives": [],
+          "platform": [
+            "web"
+          ],
+          "accessMethod": "web",
+          "localInstall": false,
+          "connectorToNext": "mcp",
+          "connectorDetail": "MCP server available"
         },
         {
           "toolId": "claude",
@@ -301,7 +390,13 @@
           "order": 3,
           "free": true,
           "freeLimit": "Daily limits on free tier",
-          "alternatives": []
+          "alternatives": [],
+          "platform": [
+            "web",
+            "api"
+          ],
+          "accessMethod": "web+api",
+          "localInstall": false
         }
       ],
       "orchestration": "Manual handoff between tools",
@@ -347,28 +442,57 @@
           "action": "Import URDF, set up environment, add sensors",
           "order": 1,
           "free": true,
-          "alternatives": []
+          "alternatives": [],
+          "platform": [
+            "linux"
+          ],
+          "accessMethod": "desktop-app",
+          "localInstall": true,
+          "connectorToNext": "manual",
+          "connectorDetail": "Manual file transfer"
         },
         {
           "toolId": "isaac-sim",
           "action": "Synthetic data generation (NVIDIA Cosmos)",
           "order": 2,
           "free": true,
-          "alternatives": []
+          "alternatives": [],
+          "platform": [
+            "linux"
+          ],
+          "accessMethod": "desktop-app",
+          "localInstall": true,
+          "connectorToNext": "manual",
+          "connectorDetail": "Manual file transfer"
         },
         {
           "toolId": "isaac-sim",
           "action": "RL training with Isaac Lab",
           "order": 3,
           "free": true,
-          "alternatives": []
+          "alternatives": [],
+          "platform": [
+            "linux"
+          ],
+          "accessMethod": "desktop-app",
+          "localInstall": true,
+          "connectorToNext": "direct",
+          "connectorDetail": "Direct integration"
         },
         {
           "toolId": "ros2",
           "action": "Isaac ROS NITROS — GPU-accelerated Visual SLAM, nvBlox, cuMotion, FoundationPose",
           "order": 4,
           "free": true,
-          "alternatives": []
+          "alternatives": [],
+          "platform": [
+            "linux",
+            "windows"
+          ],
+          "accessMethod": "cli",
+          "localInstall": true,
+          "connectorToNext": "direct",
+          "connectorDetail": "Direct integration"
         },
         {
           "toolId": "jetson-orin",
@@ -376,7 +500,14 @@
           "order": 5,
           "free": true,
           "freeLimit": "Hardware cost ~$500-2000",
-          "alternatives": []
+          "alternatives": [],
+          "platform": [
+            "windows",
+            "mac",
+            "linux"
+          ],
+          "accessMethod": "desktop-app",
+          "localInstall": true
         }
       ],
       "orchestration": "NVIDIA toolchain handles pipeline internally",
@@ -442,7 +573,16 @@
               "tier": "limited",
               "note": "Free tier available"
             }
-          ]
+          ],
+          "platform": [
+            "windows",
+            "mac",
+            "linux"
+          ],
+          "accessMethod": "desktop-app",
+          "localInstall": true,
+          "connectorToNext": "mcp",
+          "connectorDetail": "MCP server available"
         },
         {
           "toolId": "kicad",
@@ -461,7 +601,16 @@
               "tier": "paid",
               "note": "Professional CAD/CAM"
             }
-          ]
+          ],
+          "platform": [
+            "windows",
+            "mac",
+            "linux"
+          ],
+          "accessMethod": "desktop-app",
+          "localInstall": true,
+          "connectorToNext": "mcp",
+          "connectorDetail": "MCP server available"
         },
         {
           "toolId": "kicad",
@@ -479,7 +628,16 @@
               "tier": "paid",
               "note": "Professional CAD/CAM"
             }
-          ]
+          ],
+          "platform": [
+            "windows",
+            "mac",
+            "linux"
+          ],
+          "accessMethod": "desktop-app",
+          "localInstall": true,
+          "connectorToNext": "direct",
+          "connectorDetail": "Direct integration"
         },
         {
           "toolId": "blender",
@@ -498,7 +656,16 @@
               "tier": "free",
               "note": "Parametric CAD alternative"
             }
-          ]
+          ],
+          "platform": [
+            "windows",
+            "mac",
+            "linux"
+          ],
+          "accessMethod": "desktop-app",
+          "localInstall": true,
+          "connectorToNext": "mcp",
+          "connectorDetail": "MCP server available"
         },
         {
           "toolId": "jlcpcb-api",
@@ -506,7 +673,14 @@
           "order": 5,
           "free": true,
           "communityCode": "https://github.com/bouni/kicad-jlcpcb-tools",
-          "alternatives": []
+          "alternatives": [],
+          "platform": [
+            "windows",
+            "mac",
+            "linux"
+          ],
+          "accessMethod": "desktop-app",
+          "localInstall": true
         }
       ],
       "orchestration": "KiCad MCP Server (52 tools) enables AI-to-KiCad communication",
@@ -583,7 +757,15 @@
               "tier": "paid",
               "note": "Unlimited with subscription"
             }
-          ]
+          ],
+          "platform": [
+            "web",
+            "api"
+          ],
+          "accessMethod": "web+api",
+          "localInstall": false,
+          "connectorToNext": "mcp",
+          "connectorDetail": "MCP server available"
         },
         {
           "toolId": "elevenlabs",
@@ -606,7 +788,15 @@
               "tier": "paid",
               "note": "Unlimited with subscription"
             }
-          ]
+          ],
+          "platform": [
+            "web",
+            "api"
+          ],
+          "accessMethod": "web+api",
+          "localInstall": false,
+          "connectorToNext": "mcp",
+          "connectorDetail": "MCP server available"
         },
         {
           "toolId": "elevenlabs",
@@ -629,7 +819,15 @@
               "tier": "paid",
               "note": "Unlimited with subscription"
             }
-          ]
+          ],
+          "platform": [
+            "web",
+            "api"
+          ],
+          "accessMethod": "web+api",
+          "localInstall": false,
+          "connectorToNext": "mcp",
+          "connectorDetail": "MCP server available"
         },
         {
           "toolId": "elevenlabs",
@@ -652,7 +850,13 @@
               "tier": "paid",
               "note": "Unlimited with subscription"
             }
-          ]
+          ],
+          "platform": [
+            "web",
+            "api"
+          ],
+          "accessMethod": "web+api",
+          "localInstall": false
         }
       ],
       "orchestration": "Built-in — ElevenLabs Flows IS the orchestrator",
@@ -679,21 +883,46 @@
           "action": "Local model runtime — download and run open models",
           "order": 1,
           "free": true,
-          "alternatives": []
+          "alternatives": [],
+          "platform": [
+            "windows",
+            "mac",
+            "linux"
+          ],
+          "accessMethod": "cli",
+          "localInstall": true,
+          "connectorToNext": "direct",
+          "connectorDetail": "Direct integration"
         },
         {
           "toolId": "lm-studio",
           "action": "Alternative: GUI-based local model management",
           "order": 2,
           "free": true,
-          "alternatives": []
+          "alternatives": [],
+          "platform": [
+            "windows",
+            "mac",
+            "linux"
+          ],
+          "accessMethod": "desktop-app",
+          "localInstall": true,
+          "connectorToNext": "direct",
+          "connectorDetail": "Direct integration"
         },
         {
           "toolId": "ollama",
           "action": "Open WebUI: ChatGPT-like interface with RAG, multi-user, function calling",
           "order": 3,
           "free": true,
-          "alternatives": []
+          "alternatives": [],
+          "platform": [
+            "windows",
+            "mac",
+            "linux"
+          ],
+          "accessMethod": "cli",
+          "localInstall": true
         }
       ],
       "orchestration": "Open WebUI handles everything after Ollama is running",
@@ -734,14 +963,32 @@
           "action": "Draft content with outline and key points",
           "order": 1,
           "free": true,
-          "alternatives": []
+          "alternatives": [],
+          "platform": [
+            "web",
+            "api",
+            "ios",
+            "android"
+          ],
+          "accessMethod": "web+api",
+          "localInstall": false,
+          "connectorToNext": "mcp",
+          "connectorDetail": "MCP server available"
         },
         {
           "toolId": "claude",
           "action": "Refine tone, check accuracy, improve structure",
           "order": 2,
           "free": true,
-          "alternatives": []
+          "alternatives": [],
+          "platform": [
+            "web",
+            "api"
+          ],
+          "accessMethod": "web+api",
+          "localInstall": false,
+          "connectorToNext": "mcp",
+          "connectorDetail": "MCP server available"
         },
         {
           "toolId": "stable-diffusion",
@@ -764,7 +1011,17 @@
               "tier": "paid",
               "note": "Best artistic quality"
             }
-          ]
+          ],
+          "platform": [
+            "windows",
+            "mac",
+            "linux",
+            "api"
+          ],
+          "accessMethod": "cli",
+          "localInstall": true,
+          "connectorToNext": "file",
+          "connectorDetail": "File export/import"
         },
         {
           "toolId": "grammarly",
@@ -772,7 +1029,12 @@
           "order": 4,
           "free": true,
           "freeLimit": "Basic suggestions only",
-          "alternatives": []
+          "alternatives": [],
+          "platform": [
+            "web"
+          ],
+          "accessMethod": "web",
+          "localInstall": false
         }
       ],
       "orchestration": "Manual handoff",
