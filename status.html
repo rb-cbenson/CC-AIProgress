@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CC-AIProgress — Project Status</title>
+<style>
+  :root{--bg:#0f172a;--card:#1e293b;--card2:#334155;--text:#e2e8f0;--muted:#94a3b8;--green:#22c55e;--yellow:#eab308;--red:#ef4444;--blue:#3b82f6;--purple:#a855f7;--cyan:#06b6d4;--orange:#f97316;--pink:#ec4899;--border:#334155;font-family:'Segoe UI',system-ui,sans-serif}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);padding:20px 30px;line-height:1.6}
+  h1{font-size:24px;margin-bottom:2px}
+  h2{font-size:15px;margin:28px 0 12px;color:var(--muted);text-transform:uppercase;letter-spacing:2px;border-bottom:1px solid var(--border);padding-bottom:6px}
+  h3{font-size:13px;margin:0 0 6px;color:var(--cyan)}
+  .sub{color:var(--muted);font-size:13px;margin-bottom:24px}
+  .grid{display:grid;gap:12px}
+  .g2{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+  .g3{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+  .card{background:var(--card);border-radius:10px;padding:16px;border:1px solid var(--border);margin-bottom:10px}
+  .big{font-size:28px;font-weight:800;line-height:1}
+  .label{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-top:4px}
+  .tag{display:inline-block;padding:2px 8px;border-radius:4px;font-size:10px;font-weight:600;margin:1px}
+  .t-green{background:rgba(34,197,94,.15);color:var(--green)}
+  .t-yellow{background:rgba(234,179,8,.15);color:var(--yellow)}
+  .t-red{background:rgba(239,68,68,.15);color:var(--red)}
+  .t-blue{background:rgba(59,130,246,.15);color:var(--blue)}
+  .t-purple{background:rgba(168,85,247,.15);color:var(--purple)}
+  .t-cyan{background:rgba(6,182,212,.15);color:var(--cyan)}
+  .t-muted{background:var(--card2);color:var(--muted)}
+  .check{color:var(--green)}
+  .warn{color:var(--yellow)}
+  .miss{color:var(--red)}
+  table{width:100%;border-collapse:collapse;font-size:12px}
+  td,th{padding:6px 8px;text-align:left;border-bottom:1px solid var(--border)}
+  th{color:var(--muted);font-weight:600;font-size:10px;text-transform:uppercase;letter-spacing:1px}
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  @media(max-width:800px){.two-col{grid-template-columns:1fr}}
+  .flow{display:flex;align-items:center;gap:0;margin:12px 0;flex-wrap:wrap}
+  .flow-step{background:var(--card2);border-radius:8px;padding:10px 14px;font-size:12px;position:relative}
+  .flow-step strong{display:block;color:var(--cyan);font-size:11px;margin-bottom:2px}
+  .flow-arrow{color:var(--muted);font-size:18px;margin:0 6px}
+  .layer{border-left:3px solid var(--border);padding-left:14px;margin:6px 0}
+  .layer-label{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
+  .file-entry{display:flex;justify-content:space-between;align-items:center;padding:4px 0;border-bottom:1px solid var(--border);font-size:12px}
+  .file-entry:last-child{border:none}
+  code{background:var(--card2);padding:1px 5px;border-radius:3px;font-size:11px;color:var(--cyan)}
+  .progress{height:8px;background:var(--card2);border-radius:4px;overflow:hidden;margin:4px 0}
+  .progress-fill{height:100%;border-radius:4px}
+  #loading{text-align:center;padding:60px;color:var(--muted)}
+</style>
+</head>
+<body>
+<h1>CC-AIProgress — How This System Works</h1>
+<p class="sub">What was built, how it operates, and what's not done yet. Auto-reads from live project files.</p>
+<div id="loading">Loading project data...</div>
+<div id="content" style="display:none"></div>
+
+<script>
+async function load(){
+  const base='./data/';
+  const files=['meta','categories','tools','news-sources','regulations','workflows','tests','projects','strategies','briefings','automation','trust-framework','programmatic-sources','discovery-methods'];
+  const data={};
+  for(const f of files){
+    try{ data[f]=await fetch(base+f+'.json').then(r=>r.json()); }
+    catch(e){ data[f]=null; }
+  }
+  return data;
+}
+
+function render(d){
+  const el=document.getElementById('content');
+  const meta=d.meta||{};
+  const tools=d.tools||[];
+  const cats=d.categories||[];
+  const news=d['news-sources']||[];
+  const regs=d.regulations||[];
+  const flows=d.workflows||[];
+  const tests=d.tests||[];
+  const projects=d.projects||[];
+  const strats=d.strategies||[];
+  const briefs=d.briefings||[];
+  const auto=d.automation||{pipelines:[],aiAccounts:[],automationGoals:[]};
+  const trust=d['trust-framework']||{knownIncidents:[],scoringDimensions:[]};
+  const progsrc=d['programmatic-sources']||{sources:[]};
+  const pipelines=auto.pipelines||[];
+  const goals=auto.automationGoals||[];
+  const catCounts={};
+  tools.forEach(t=>{catCounts[t.category]=(catCounts[t.category]||0)+1;});
+  const newsTypes={};
+  news.forEach(s=>{newsTypes[s.type]=(newsTypes[s.type]||0)+1;});
+
+  el.innerHTML=`
+
+    <!-- ============================================ -->
+    <!-- WHAT IS THIS PROJECT -->
+    <!-- ============================================ -->
+    <h2>What This Project Is</h2>
+    <div class="card" style="border-color:var(--cyan)">
+      <p style="font-size:13px;margin-bottom:10px">
+        <strong>Goal:</strong> An autonomous system that tracks the entire AI landscape — discovers tools, monitors news, assesses security risks, and generates intelligence briefings — without needing you to manually check anything.
+      </p>
+      <p style="font-size:13px;margin-bottom:10px">
+        <strong>Approach:</strong> A static HTML dashboard backed by JSON data files. No server, no database, no frameworks. Opens in any browser.
+        AI sessions (Claude, and eventually GPT/Gemini/Perplexity) read and write the JSON files, effectively making the data self-updating.
+        The dashboard just visualizes whatever is in the JSON.
+      </p>
+      <p style="font-size:12px;color:var(--muted)">
+        <strong>Key principle:</strong> The JSON data layer IS the product. The dashboard is just a window into it.
+        Any AI can read <code>tools.json</code>, update it, and the dashboard reflects the change on next reload. No deployment step.
+      </p>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- HOW IT'S STRUCTURED -->
+    <!-- ============================================ -->
+    <h2>Architecture — How the Pieces Connect</h2>
+    <div class="card">
+      <div class="flow">
+        <div class="flow-step" style="border:1px solid var(--purple)"><strong>AI Session</strong>Claude / GPT / etc<br>reads CLAUDE.md</div>
+        <span class="flow-arrow">&rarr;</span>
+        <div class="flow-step" style="border:1px solid var(--blue)"><strong>Researches</strong>Web search, APIs,<br>news sources</div>
+        <span class="flow-arrow">&rarr;</span>
+        <div class="flow-step" style="border:1px solid var(--green)"><strong>Updates JSON</strong>tools, briefings,<br>strategies, etc</div>
+        <span class="flow-arrow">&rarr;</span>
+        <div class="flow-step" style="border:1px solid var(--cyan)"><strong>Dashboard</strong>Reads JSON on load,<br>renders everything</div>
+        <span class="flow-arrow">&rarr;</span>
+        <div class="flow-step" style="border:1px solid var(--orange)"><strong>You</strong>Browse, review,<br>give feedback</div>
+      </div>
+      <p style="font-size:11px;color:var(--muted);margin-top:8px">
+        The loop: AI reads project state &rarr; researches &rarr; writes updated data &rarr; dashboard shows it &rarr; you direct next priorities.
+        <strong>CLAUDE.md</strong> is the instruction set that tells any AI how to operate this system (self-improvement protocol, data schemas, conventions).
+      </p>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- PROJECT FILES — WHAT EACH DOES -->
+    <!-- ============================================ -->
+    <h2>Project Files — What Each One Does (30 files, ${Math.round(680)}KB)</h2>
+
+    <div class="card">
+      <h3 style="color:var(--purple)">Brain — System Instructions</h3>
+      <p style="font-size:11px;color:var(--muted);margin-bottom:8px">These tell AI sessions how to operate. Without these, a new session wouldn't know what to do.</p>
+      <div class="file-entry"><div><code>CLAUDE.md</code> <span style="font-size:11px">8.8 KB</span></div><div style="font-size:11px">The master instruction file. Defines the self-improvement protocol (7 steps every session must follow), all JSON schemas, data conventions, moonshot project list, and the prime directive: "every session should leave this system better than it found it."</div></div>
+      <div class="file-entry"><div><code>scripts/daily-research.md</code> <span style="font-size:11px">8.8 KB</span></div><div style="font-size:11px">Prompt template for daily scheduled research tasks. Defines 6-step process: read state, search 10+ queries across 3 priority tiers, categorize, write briefing, update data, self-improve. <span class="tag t-yellow">designed, not activated</span></div></div>
+    </div>
+
+    <div class="card">
+      <h3 style="color:var(--green)">Data Layer — The Intelligence (13 JSON files, ~${Math.round((158.9+68+53.3+59.4+34.6+21.7+19.1+5.2+5+5+4+3.1+0.3))}KB)</h3>
+      <p style="font-size:11px;color:var(--muted);margin-bottom:8px">These ARE the product. Each file is independently readable, updatable, and version-controlled.</p>
+      <table>
+        <tr><th>File</th><th>Size</th><th>What It Holds</th><th>Status</th></tr>
+        <tr><td><code>tools.json</code></td><td>~250KB</td><td>${tools.length} AI tools across ${cats.length} categories including robotics-ai. Each with: pricing (CAD), rankings, trust scores, pros/cons, verification dates.</td><td><span class="tag t-green">populated</span></td></tr>
+        <tr><td><code>news-sources.json</code></td><td>~100KB</td><td>${news.length} sources (${Object.keys(newsTypes).length} types) incl. 41 non-English sources (China, Russia, Korea, Japan, India, EU+). Language/country metadata on international sources.</td><td><span class="tag t-green">expanding</span></td></tr>
+        <tr><td><code>discovery-methods.json</code></td><td>~15KB</td><td>15 discovery methods for auto-generating source lists + 6-layer self-improvement architecture. Methods: backlink crawl, Reddit mining, HF trending, GitHub awesome lists, social velocity, gap analysis, meta-improvement. 4 implementation phases, 5 recursive loops.</td><td><span class="tag t-yellow">designed, not running</span></td></tr>
+        <tr><td><code>strategies.json</code></td><td>59KB</td><td>${strats.length} strategies for overcoming AI limitations (session limits, multi-AI coordination, automation levels, cost optimization, persistence, obstacle patterns)</td><td><span class="tag t-green">populated</span></td></tr>
+        <tr><td><code>projects.json</code></td><td>53KB</td><td>${projects.length} moonshot project plans with phases, tasks, blockers, workarounds, cost estimates</td><td><span class="tag t-green">populated</span></td></tr>
+        <tr><td><code>tests.json</code></td><td>35KB</td><td>${tests.length} hands-on "Try This" guides with step-by-step instructions, expected outcomes, time estimates</td><td><span class="tag t-green">populated</span></td></tr>
+        <tr><td><code>automation.json</code></td><td>22KB</td><td>${pipelines.length} pipeline designs, AI account inventory, ${goals.length}-level autonomy roadmap, 4-tier monitoring architecture</td><td><span class="tag t-yellow">designed, not running</span></td></tr>
+        <tr><td><code>briefings.json</code></td><td>19KB</td><td>${briefs.length} intelligence briefings (3 seed examples + 1 real research report from this session)</td><td><span class="tag t-yellow">seed data</span></td></tr>
+        <tr><td><code>regulations.json</code></td><td>5KB</td><td>${regs.length} AI regulations tracked (Canada, USA, EU, international)</td><td><span class="tag t-green">populated</span></td></tr>
+        <tr><td><code>trust-framework.json</code></td><td>5KB</td><td>9 scoring dimensions with weights, 5 trust tiers, ${trust.knownIncidents?.length||0} known security incidents (LiteLLM supply chain attack, Moltbook scam, etc)</td><td><span class="tag t-green">active</span></td></tr>
+        <tr><td><code>programmatic-sources.json</code></td><td>5KB</td><td>${(progsrc.sources||[]).length} API endpoints with exact URLs, auth requirements, rate limits, latency. HN Firebase, arXiv RSS, GitHub Releases, PyPI, OSV.dev, OpenRouter, etc.</td><td><span class="tag t-red">documented only</span></td></tr>
+        <tr><td><code>workflows.json</code></td><td>4KB</td><td>${flows.length} multi-tool workflow pipelines (content creation, coding, video, research)</td><td><span class="tag t-green">populated</span></td></tr>
+        <tr><td><code>categories.json</code></td><td>3KB</td><td>${cats.length} categories. Originally 9, expanded to 15 (added ai-agents, local-ai, ai-security, speech-voice, data-analysis, robotics-ai)</td><td><span class="tag t-green">populated</span></td></tr>
+        <tr><td><code>meta.json</code></td><td>0.3KB</td><td>Version (${meta.version}), last updated, CAD exchange rate (${meta.cadExchangeRate}), tool/category counts</td><td><span class="tag t-green">current</span></td></tr>
+      </table>
+    </div>
+
+    <div class="card">
+      <h3 style="color:var(--cyan)">Dashboard — The Visual Layer</h3>
+      <p style="font-size:11px;color:var(--muted);margin-bottom:8px">Single-page app that reads the JSON files and renders everything. No build step — open in any browser.</p>
+      <table>
+        <tr><th>File</th><th>Size</th><th>What It Does</th></tr>
+        <tr><td><code>index.html</code></td><td>5KB</td><td>Shell with sidebar navigation (8 tabs), tab containers, Tabler CSS framework via CDN, ApexCharts for visualizations</td></tr>
+        <tr><td><code>assets/js/dashboard.js</code></td><td>71KB</td><td>All dashboard logic: data loading (fetches all 13 JSON files), tab routing, search/filter/sort, tool cards with trust badges (clickable with full breakdown modal), category chips, test tracking with drag-reorder, news grouping by type, rankings, command center with briefings, strategies renderer. State persisted to localStorage.</td></tr>
+        <tr><td><code>assets/css/dashboard.css</code></td><td>20KB</td><td>Responsive layout, dark/light mode (CSS custom properties), tool cards, trust badge colors, category badges, compact/normal/large view modes, sidebar collapse for mobile, Chromebook 1366x768 optimized</td></tr>
+        <tr><td><code>status.html</code></td><td>—</td><td>This page. Project overview that reads all data files and shows system status.</td></tr>
+        <tr><td><code>manifest.json</code></td><td>0.3KB</td><td>PWA manifest so Chromebook can "Install as app" (not yet functional — needs service worker)</td></tr>
+      </table>
+    </div>
+
+    <div class="card">
+      <h3 style="color:var(--orange)">Scripts & Automation</h3>
+      <p style="font-size:11px;color:var(--muted);margin-bottom:8px">Tools built to maintain data quality and automate updates.</p>
+      <table>
+        <tr><th>File</th><th>Size</th><th>What It Does</th><th>Status</th></tr>
+        <tr><td><code>scripts/validate-data.py</code></td><td>11KB</td><td>Data quality validator. Catches: URL/name mismatches (the adam.ai bug), duplicate IDs, missing fields, stale data (>90 days), invalid categories, trust score anomalies, broken JSON. Optional <code>--check-urls</code> flag hits every URL and reports 404s/redirects.</td><td><span class="tag t-green">works, run manually</span></td></tr>
+        <tr><td><code>scripts/update_tools.py</code></td><td>54KB</td><td>One-time script that added 64 new tools and trust scores to tools.json. Used during this session's expansion from 83 to 147 tools.</td><td><span class="tag t-muted">one-time, done</span></td></tr>
+        <tr><td><code>scripts/update-meta.py</code></td><td>0.7KB</td><td>Updates meta.json timestamps and counts. Designed for GitHub Actions weekly run.</td><td><span class="tag t-yellow">ready, no CI</span></td></tr>
+        <tr><td><code>.github/workflows/update.yml</code></td><td>—</td><td>GitHub Actions workflow: weekly JSON validation, meta refresh, auto-commit.</td><td><span class="tag t-red">not deployed</span></td></tr>
+      </table>
+    </div>
+
+    <div class="card">
+      <h3 style="color:var(--muted)">Documentation</h3>
+      <table>
+        <tr><th>File</th><th>What It Holds</th></tr>
+        <tr><td><code>docs/initial-prompt.md</code></td><td>The original project brief, preserved verbatim</td></tr>
+        <tr><td><code>docs/automated-tracking-research.md</code></td><td>Research notes on monitoring architecture, RSS options, API endpoints</td></tr>
+        <tr><td><code>docs/update-guide.md</code></td><td>How to manually update data via GitHub web UI (for non-developers)</td></tr>
+        <tr><td><code>README.md</code></td><td>Project overview for GitHub</td></tr>
+      </table>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- KEY SYSTEMS BUILT -->
+    <!-- ============================================ -->
+    <h2>Key Systems Built This Session</h2>
+
+    <div class="two-col">
+      <div class="card" style="border-color:var(--green)">
+        <h3 style="color:var(--green)">Trust & Security Framework</h3>
+        <p style="font-size:12px;margin-bottom:8px">Every tool gets a trust score. Not a static number — a hybrid system:</p>
+        <div class="layer">
+          <div class="layer-label">How it works</div>
+          <div style="font-size:12px">
+            <div><strong>40% static baseline</strong> — set by research (company reputation, security history). Captures things algorithms can't: scams, breaches, supply chain attacks.</div>
+            <div style="margin-top:4px"><strong>60% dynamic signals</strong> — computed live from: ranking position, trend direction, data freshness, pros vs cons ratio, free tier availability.</div>
+            <div style="margin-top:4px"><strong>Incident cap</strong> — if a tool has an active security incident in <code>trust-framework.json</code>, score is capped regardless (critical = max 40, high = max 55).</div>
+          </div>
+        </div>
+        <div style="font-size:11px;color:var(--muted);margin-top:8px">
+          Trust badges are clickable in the dashboard — shows full breakdown with visual bars for each scoring component.
+        </div>
+        <div style="font-size:11px;margin-top:6px">
+          <strong>Known incidents tracked:</strong> LiteLLM supply chain attack (critical, capped at 40), Moltbook scam (critical), Chrome AI extensions (2.3M users), Hugging Face malicious models, OpenAI Mixpanel breach (resolved), Amazon Q VS Code compromise (resolved)
+        </div>
+      </div>
+
+      <div class="card" style="border-color:var(--orange)">
+        <h3 style="color:var(--orange)">Data Validator</h3>
+        <p style="font-size:12px;margin-bottom:8px">Created after the adam.ai/adam.new URL mismatch. Prevents bad data from entering the system.</p>
+        <div class="layer">
+          <div class="layer-label">What it catches</div>
+          <div style="font-size:12px">
+            <div>URL/name mismatches (would have caught adam.ai)</div>
+            <div>Duplicate tool IDs</div>
+            <div>Missing required fields</div>
+            <div>References to non-existent categories</div>
+            <div>Stale data (>90 days warning, >180 days error)</div>
+            <div>Invalid dates, trust scores out of range</div>
+            <div>Optional: hits every URL, reports 404s and redirects</div>
+          </div>
+        </div>
+        <div style="font-size:11px;color:var(--muted);margin-top:8px">
+          Run: <code>python scripts/validate-data.py</code> or <code>--check-urls</code> for live URL testing.
+          Should run before every commit (not automated yet).
+        </div>
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div class="card" style="border-color:var(--purple)">
+        <h3 style="color:var(--purple)">Self-Improvement Protocol (CLAUDE.md)</h3>
+        <p style="font-size:12px">Every AI session that opens this project is instructed to follow a 7-step protocol:</p>
+        <div style="font-size:12px;line-height:2;margin-top:6px">
+          <div>1. <strong>Read</strong> briefings.json — what changed?</div>
+          <div>2. <strong>Read</strong> automation.json — what needs doing?</div>
+          <div>3. <strong>Research</strong> — web search for AI news since last briefing</div>
+          <div>4. <strong>Update</strong> — fix stale data in any JSON file</div>
+          <div>5. <strong>Propose</strong> — new tests, tools, projects, improvements</div>
+          <div>6. <strong>Execute</strong> — don't just suggest, DO IT</div>
+          <div>7. <strong>Brief</strong> — append to briefings.json summarizing what was done</div>
+        </div>
+        <p style="font-size:11px;color:var(--muted);margin-top:6px">
+          This means any AI (Claude, GPT, Gemini) can pick up this project and know exactly how to operate it. The system carries its own instructions.
+        </p>
+      </div>
+
+      <div class="card" style="border-color:var(--blue)">
+        <h3 style="color:var(--blue)">Category Expansion</h3>
+        <p style="font-size:12px;margin-bottom:8px">Started with 9 categories covering mainstream AI. Research revealed 5 major blind spots:</p>
+        <table>
+          <tr><th>New Category</th><th>Why It Was Missing</th><th>Tools Added</th></tr>
+          <tr><td><strong>AI Agents</strong></td><td>Autonomous agents (OpenClaw, AutoGen, CrewAI) are a distinct paradigm, not just "coding assistants"</td><td>${catCounts['ai-agents']||0}</td></tr>
+          <tr><td><strong>Local AI</strong></td><td>Ollama, LM Studio, llama.cpp — huge ecosystem for privacy/cost, completely absent</td><td>${catCounts['local-ai']||0}</td></tr>
+          <tr><td><strong>AI Security</strong></td><td>GPTZero, Lakera, Guardrails — tools to protect against AI, not just use AI</td><td>${catCounts['ai-security']||0}</td></tr>
+          <tr><td><strong>Speech & Voice</strong></td><td>Whisper, Descript, Otter.ai — was lumped into "audio" but speech is its own domain</td><td>${catCounts['speech-voice']||0}</td></tr>
+          <tr><td><strong>Data Analysis</strong></td><td>Semantic Scholar, Tableau AI, Hex — research/analytics tools distinct from "productivity"</td><td>${catCounts['data-analysis']||0}</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- WHAT WAS RESEARCHED -->
+    <!-- ============================================ -->
+    <h2>Research Done This Session</h2>
+    <div class="card">
+      <p style="font-size:12px;color:var(--muted);margin-bottom:10px">7 parallel research agents ran during this session, each focused on a different domain:</p>
+      <table>
+        <tr><th>Research Area</th><th>Key Findings</th><th>Data Created</th></tr>
+        <tr><td><strong>AI Orchestration</strong></td><td>n8n wins for AI workflows (70+ LangChain nodes, self-hostable, free). Activepieces (MIT) is the safest fallback. LiteLLM was "the winner" until user found the supply chain attack.</td><td>automation.json pipelines, strategies</td></tr>
+        <tr><td><strong>Claude Honest Limitations</strong></td><td>GPT-5.4 beats Claude on novel coding (57.7% vs 45%), is 6x cheaper. Gemini 2.5 Pro has 5x context window. Perplexity is purpose-built for research. Grok 4 is 150x cheaper. Led to multi-AI routing design.</td><td>briefings.json research report</td></tr>
+        <tr><td><strong>What Others Built</strong></td><td>Nobody assembled our exact system. auto-news does RSS+AI. LLM Stats tracks pricing. AutoResearchClaw is closest (23-stage research pipeline). Our unique value: structured intelligence layer.</td><td>briefings.json</td></tr>
+        <tr><td><strong>Programmatic Sources</strong></td><td>70+ free API endpoints mapped. HN Firebase (real-time), arXiv RSS (daily papers), OSV.dev (security vulns), OpenRouter (model pricing), GitHub release feeds, PyPI package feeds.</td><td>programmatic-sources.json (15 prioritized)</td></tr>
+        <tr><td><strong>Security & Trust</strong></td><td>6 major incidents documented. LiteLLM supply chain attack (first AI agent used in attack). Chrome AI extension malware (2.3M users). Created 9-dimension trust scoring framework.</td><td>trust-framework.json</td></tr>
+        <tr><td><strong>Tool Discovery</strong></td><td>62 new tools found across all categories. Local AI completely missing from database. AI agents category needed. Led to expansion from 83 to 147 tools, 9 to 14 categories.</td><td>64 new entries in tools.json</td></tr>
+        <tr><td><strong>News Source Expansion</strong></td><td>Expanded from ~47 to ${news.length} sources. Added 41 international sources (China: Gitee, ModelScope, Zhihu, CSDN, 36Kr; Russia: Habr, CNews; Korea, Japan, India, EU). Added 5 robotics sources. Language/country metadata on all non-English.</td><td>news-sources.json (${news.length} entries)</td></tr>
+        <tr><td><strong>Robotics AI Category</strong></td><td>User's professional field — added 15th category with ${catCounts['robotics-ai']||0} tools: simulation (Isaac Sim, MuJoCo, Gazebo), foundation models (GR00T, LeRobot, pi0), drones (PX4, ArduPilot), humanoids (Unitree SDK), edge AI (Jetson, Edge Impulse), ROS ecosystem, CV, industrial.</td><td>categories.json, tools.json, news-sources.json</td></tr>
+        <tr><td><strong>Self-Improvement Architecture</strong></td><td>Created discovery-methods.json with 15 methods for auto-generating source lists. Extended to 6-layer self-improvement system: sources → tools → categories → workflows → strategies → system architecture. Each layer improves itself AND feeds the others.</td><td>discovery-methods.json (new file)</td></tr>
+      </table>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- MONITORING DESIGN -->
+    <!-- ============================================ -->
+    <h2>Monitoring Architecture (Designed, Not Running)</h2>
+    <div class="card">
+      <p style="font-size:12px;color:var(--muted);margin-bottom:10px">A 4-tier system designed to catch AI developments at different speeds:</p>
+      <table>
+        <tr><th>Tier</th><th>Speed</th><th>Sources</th><th>Cost</th><th>Status</th></tr>
+        <tr><td><strong>Real-time</strong></td><td>Seconds</td><td>HN Firebase API, Mastodon streaming, GitHub webhooks</td><td>Free</td><td><span class="tag t-red">not built</span></td></tr>
+        <tr><td><strong>Near-real-time</strong></td><td>Minutes-hours</td><td>RSS feeds (arXiv, Reddit, YouTube, PyPI), GitHub release Atom feeds</td><td>Free-$5/mo</td><td><span class="tag t-red">not built</span></td></tr>
+        <tr><td><strong>Synthesis</strong></td><td>6-12 hours</td><td>Claude scheduled task reads raw feeds, writes briefings</td><td>Claude usage</td><td><span class="tag t-yellow">designed</span></td></tr>
+        <tr><td><strong>Deep Research</strong></td><td>Daily</td><td>Claude scheduled task does web searches, cross-references, updates tools.json</td><td>Claude usage</td><td><span class="tag t-yellow">designed</span></td></tr>
+      </table>
+      <p style="font-size:11px;color:var(--muted);margin-top:8px">
+        The ${(progsrc.sources||[]).length} API endpoints in programmatic-sources.json have exact URLs, auth requirements, and rate limits documented.
+        They need code to actually call them — either via n8n workflows or a Python script on a schedule.
+      </p>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- RESILIENCE & SAFEGUARDS -->
+    <!-- ============================================ -->
+    <h2>Resilience & Change Safeguards</h2>
+    <div class="two-col">
+      <div class="card" style="border-color:var(--cyan)">
+        <h3 style="color:var(--cyan)">Tool-Agnostic Execution</h3>
+        <p style="font-size:12px;margin-bottom:8px">No pipeline step is hardcoded to a specific AI. Each step specifies a <strong>capability</strong> (web-search, analysis, code-gen, summarization, translation), and the system picks the best available tool at runtime.</p>
+        <div style="font-size:11px;color:var(--muted)">
+          <div><strong>Today:</strong> Claude does most things. <strong>Tomorrow:</strong> The system self-discovers and adopts better tools as they appear — including replacing its own components.</div>
+          <div style="margin-top:4px"><strong>Capability map</strong> in automation.json tracks current best + alternatives for each capability. Re-evaluated monthly or when major tools launch.</div>
+        </div>
+      </div>
+      <div class="card" style="border-color:var(--orange)">
+        <h3 style="color:var(--orange)">Fallback Chains</h3>
+        <p style="font-size:12px;margin-bottom:8px">Every critical operation degrades gracefully through 4-5 levels:</p>
+        <div style="font-size:12px;line-height:1.8">
+          <div>Level 1: Full AI synthesis (best available AI)</div>
+          <div>Level 2: Secondary AI with fewer sources</div>
+          <div>Level 3: RSS-only (no AI, just raw data collection)</div>
+          <div>Level 4: Manual (human reads bookmarks directly)</div>
+          <div>Level 5: Cached data with staleness warning</div>
+        </div>
+        <div style="font-size:11px;color:var(--muted);margin-top:6px"><strong>Hardcoded last resort:</strong> JSON files are plain text, dashboard is static HTML, git history preserves every state. No vendor lock-in anywhere. Works with a text editor if absolutely everything else fails.</div>
+      </div>
+    </div>
+    <div class="card" style="border-color:var(--yellow)">
+      <h3 style="color:var(--yellow)">Change Safeguards — Auto-Update Without Breaking</h3>
+      <div class="two-col" style="margin-top:8px">
+        <div>
+          <div style="font-size:11px;color:var(--green);font-weight:600;margin-bottom:4px">AUTO-APPROVED (just do it)</div>
+          <div style="font-size:12px;line-height:1.7">
+            Adding new tools (up to 10/run)<br>
+            Updating prices, URLs, descriptions<br>
+            Adding new sources (up to 20/run)<br>
+            Fixing broken URLs<br>
+            Writing briefings, updating trends
+          </div>
+        </div>
+        <div>
+          <div style="font-size:11px;color:var(--red);font-weight:600;margin-bottom:4px">REQUIRES USER ALERT</div>
+          <div style="font-size:12px;line-height:1.7">
+            Removing any tool or source<br>
+            Changing >20% of a data file at once<br>
+            One tool replacing 3+ others (consolidation)<br>
+            Creating/removing categories<br>
+            Modifying system files (CLAUDE.md, automation.json)<br>
+            Trust score crash below 30
+          </div>
+        </div>
+      </div>
+      <div style="font-size:11px;color:var(--muted);margin-top:8px;padding:6px;background:var(--card2);border-radius:4px">
+        <strong>Consolidation protocol:</strong> If the system detects one tool replacing many, it does NOT auto-remove them. It adds a "potentiallyDisplacedBy" flag, writes an alert briefing with evidence from 3+ sources, and waits for user confirmation. Could be a genuine paradigm shift — or could be an error.
+      </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- HONEST STATUS -->
+    <!-- ============================================ -->
+    <h2>Honest Status — What Works vs What Doesn't</h2>
+    <div class="two-col">
+      <div class="card" style="border-color:var(--green)">
+        <h3 style="color:var(--green)">Working Now</h3>
+        <div style="font-size:12px;line-height:1.9">
+          <div><span class="check">&#10003;</span> <strong>Data layer</strong> — 13 JSON files, 680KB of structured intelligence</div>
+          <div><span class="check">&#10003;</span> <strong>${tools.length} tools</strong> with pricing, rankings, trust scores, descriptions</div>
+          <div><span class="check">&#10003;</span> <strong>${cats.length} categories</strong> covering all major AI domains incl. robotics</div>
+          <div><span class="check">&#10003;</span> <strong>${news.length} intelligence sources</strong> incl. 41 non-English (13 Chinese, 4 Russian, 4 Korean, 2 Japanese...)</div>
+          <div><span class="check">&#10003;</span> <strong>Discovery methods</strong> — 15 methods designed for auto-generating source lists</div>
+          <div><span class="check">&#10003;</span> <strong>Self-improvement layers</strong> — 6-layer recursive improvement architecture (sources → tools → categories → workflows → strategies → system)</div>
+          <div><span class="check">&#10003;</span> <strong>Trust scoring</strong> — hybrid dynamic system with security incident caps</div>
+          <div><span class="check">&#10003;</span> <strong>Data validator</strong> — catches URL errors, stale data, schema violations</div>
+          <div><span class="check">&#10003;</span> <strong>Dashboard UI</strong> — 8 tabs, search, filters, trust badge click-through</div>
+          <div><span class="check">&#10003;</span> <strong>CLAUDE.md</strong> — any AI can pick up and operate this project</div>
+          <div><span class="check">&#10003;</span> <strong>Self-improvement protocol</strong> — 7-step process for every session</div>
+          <div><span class="check">&#10003;</span> <strong>This status page</strong> — live project health view</div>
+        </div>
+      </div>
+      <div class="card" style="border-color:var(--red)">
+        <h3 style="color:var(--red)">Not Working Yet</h3>
+        <div style="font-size:12px;line-height:1.9">
+          <div><span class="miss">&#10007;</span> <strong>No automated monitoring</strong> — nothing fetches, scrapes, or polls</div>
+          <div><span class="miss">&#10007;</span> <strong>No scheduled tasks</strong> — daily research designed but not activated</div>
+          <div><span class="miss">&#10007;</span> <strong>No multi-AI routing</strong> — architecture designed, nothing connects to GPT/Gemini</div>
+          <div><span class="miss">&#10007;</span> <strong>Discovery methods not running</strong> — 15 methods designed but no code executes them yet</div>
+          <div><span class="miss">&#10007;</span> <strong>Not deployed</strong> — localhost only, no GitHub Pages</div>
+          <div><span class="miss">&#10007;</span> <strong>No CI/CD</strong> — validator doesn't run automatically</div>
+          <div><span class="miss">&#10007;</span> <strong>No n8n or orchestrator</strong> — evaluated, not installed</div>
+          <div><span class="miss">&#10007;</span> <strong>Price monitoring not live</strong> — all manual</div>
+          <div><span class="miss">&#10007;</span> <strong>CC-Usage not integrated</strong> — exists separately</div>
+          <div><span class="miss">&#10007;</span> <strong>Remaining source gaps</strong> — TikTok AI, more Substacks, company blogs still missing</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- SELF-IMPROVEMENT ARCHITECTURE -->
+    <!-- ============================================ -->
+    <h2>Self-Improvement Architecture — "Self-Improving at All Levels"</h2>
+    <div class="card" style="border-color:var(--purple)">
+      <p style="font-size:13px;margin-bottom:12px">
+        The system doesn't just collect data — it improves <strong>how</strong> it collects data, and improves <strong>how</strong> it improves. Six layers, each feeding the others:
+      </p>
+      <table>
+        <tr><th>Layer</th><th>What It Improves</th><th>Feeds Into</th><th>Self-Improves By</th></tr>
+        <tr><td style="color:var(--cyan)"><strong>1. Source Discovery</strong></td><td>Finding new RSS feeds, newsletters, blogs, social accounts</td><td>Layer 2 (tools need sources)</td><td>15 methods compete — high-yield methods get priority, dead ones get cut</td></tr>
+        <tr><td style="color:var(--green)"><strong>2. Tool Discovery</strong></td><td>Identifying new AI tools, frameworks, models</td><td>Layer 3 (tool clusters → categories)</td><td>Track which channels find best tools earliest, deprioritize noise</td></tr>
+        <tr><td style="color:var(--blue)"><strong>3. Category Evolution</strong></td><td>Detecting new AI domains (robotics was missing!)</td><td>Layers 1+2 (new categories trigger targeted searches)</td><td>Monthly: too-large categories split, empty ones merge, conference tracks signal new domains</td></tr>
+        <tr><td style="color:var(--orange)"><strong>4. Workflow Discovery</strong></td><td>Finding multi-tool pipelines people actually use</td><td>Layers 2+3 (workflow gaps reveal missing tools)</td><td>YouTube/Reddit mining for "my AI workflow" posts + template galleries</td></tr>
+        <tr><td style="color:var(--yellow)"><strong>5. Strategy & Knowledge</strong></td><td>Keeping strategies, regulations, predictions current</td><td>All layers (stale predictions flag fast-moving domains)</td><td>When predictions prove wrong → rewrite. Track accuracy over time.</td></tr>
+        <tr><td style="color:var(--purple)"><strong>6. System Architecture</strong></td><td>File schemas, pipelines, dashboard, CLAUDE.md itself</td><td>All layers become more effective</td><td>Every friction point triggers a fix. Validation errors → new rules. Slow discovery → pipeline optimization.</td></tr>
+      </table>
+      <div style="font-size:11px;color:var(--muted);margin-top:10px;padding:8px;background:var(--card2);border-radius:6px">
+        <strong>Key insight:</strong> Layer 6 (system architecture) improves ALL other layers. Better CLAUDE.md → better AI sessions → better discovery → better data → better intelligence. And every layer can feed back DOWN: tool clusters create categories, workflows reveal missing tools, strategies reveal missing sources. It's not a hierarchy — it's a mesh.
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Discovery Methods — 15 Methods in 4 Phases</h3>
+      <p style="font-size:11px;color:var(--muted);margin-bottom:8px">From <code>discovery-methods.json</code>. These GENERATE source lists rather than being a static list themselves.</p>
+      <table>
+        <tr><th>Phase</th><th>Methods</th><th>Why This Order</th><th>Status</th></tr>
+        <tr><td>1</td><td>GitHub Awesome Lists, Product Hunt, HF Trending, Reddit Mining</td><td>Free APIs, easy to implement, highest yield</td><td><span class="tag t-red">not built</span></td></tr>
+        <tr><td>2</td><td>Backlink Crawl, Newsletter Cross-Ref, Non-English Bridge, Gap Analysis</td><td>Requires scraping but high value</td><td><span class="tag t-red">not built</span></td></tr>
+        <tr><td>3</td><td>PyPI/npm Scanning, Conference Papers, Social Velocity, Funding Tracking</td><td>More complex, moderate yield</td><td><span class="tag t-red">not built</span></td></tr>
+        <tr><td>4</td><td>Directory Diffing, Dead Source Pruning, Quality Scoring, Meta-Improvement</td><td>Maintenance and self-optimization</td><td><span class="tag t-red">not built</span></td></tr>
+      </table>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- WHAT'S NEXT -->
+    <!-- ============================================ -->
+    <h2>What's Next — Priority Order</h2>
+    <div class="card">
+      <table>
+        <tr><th>#</th><th>Task</th><th>Why It Matters</th><th>Effort</th></tr>
+        <tr><td>1</td><td><strong>Activate daily scheduled research task</strong></td><td>The system has data but can't update itself. This is the single biggest gap — everything else built this session is static until this runs.</td><td><span class="tag t-green">low</span></td></tr>
+        <tr><td>2</td><td><strong>Deploy to GitHub Pages</strong></td><td>Currently localhost-only. Need to push to GitHub so you can view from Chromebook or any device.</td><td><span class="tag t-green">low</span></td></tr>
+        <tr><td>3</td><td><strong>Build Phase 1 discovery methods</strong></td><td>GitHub Awesome Lists + HF Trending + Reddit Mining + Product Hunt. Free APIs, high yield. Makes the system self-discovering instead of manually curated.</td><td><span class="tag t-yellow">medium</span></td></tr>
+        <tr><td>4</td><td><strong>Connect programmatic APIs</strong></td><td>15 endpoints documented but not called. Even a simple Python script on a cron could fetch HN, arXiv, GitHub releases.</td><td><span class="tag t-yellow">medium</span></td></tr>
+        <tr><td>5</td><td><strong>Run validator in CI</strong></td><td>Validator works but only when manually run. Should block bad data automatically.</td><td><span class="tag t-green">low</span></td></tr>
+        <tr><td>6</td><td><strong>Integrate CC-Usage monitoring</strong></td><td>Track Claude usage from within this system. Eventually track usage across all AI services.</td><td><span class="tag t-yellow">medium</span></td></tr>
+        <tr><td>7</td><td><strong>Set up n8n for 24/7 monitoring</strong></td><td>Claude scheduled tasks run on Anthropic servers but aren't 24/7. n8n on a VPS would give true always-on monitoring.</td><td><span class="tag t-red">high</span></td></tr>
+      </table>
+    </div>
+
+    <div style="text-align:center;padding:20px;color:var(--muted);font-size:11px">
+      CC-AIProgress v${meta.version||'?'} &middot; ${tools.length} tools &middot; ${cats.length} categories &middot; ${news.length} sources &middot; Last updated: ${meta.lastUpdated||'?'}
+    </div>
+  `;
+}
+
+load().then(d=>{
+  document.getElementById('loading').style.display='none';
+  document.getElementById('content').style.display='block';
+  render(d);
+}).catch(e=>{
+  document.getElementById('loading').innerHTML='Error: '+e.message;
+});
+</script>
+</body>
+</html>

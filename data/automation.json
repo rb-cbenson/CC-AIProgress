@@ -1,0 +1,678 @@
+{
+  "pipelines": [
+    {
+      "id": "daily-research",
+      "name": "Daily AI Research Sweep",
+      "description": "Automated daily scan of AI news sources, tool launches, and industry developments. Reads current project state, searches the web for changes, and produces a synthesized briefing entry in briefings.json.",
+      "schedule": "On-demand (user-initiated) — schedulable later via Claude scheduled tasks, GitHub Actions, or n8n",
+      "status": "ready",
+      "engine": "claude-scheduled",
+      "steps": [
+        {
+          "order": 1,
+          "action": "Read project state",
+          "tool": "claude-code",
+          "details": "Read tools.json, meta.json, and latest briefings.json entry to understand current baseline and avoid duplicate reporting"
+        },
+        {
+          "order": 2,
+          "action": "Search for AI news",
+          "capability": "web-search",
+          "tool": "best-available (see executionPrinciples.toolAgnostic.capabilityMap)",
+          "details": "Query TechCrunch AI, The Verge AI, Hacker News (Show HN: AI), Reddit r/artificial, r/LocalLLaMA for developments in the last 24 hours"
+        },
+        {
+          "order": 3,
+          "action": "Check for tool updates",
+          "capability": "web-search",
+          "tool": "best-available",
+          "details": "Search for pricing changes, new model releases, and shutdown announcements for tracked tools"
+        },
+        {
+          "order": 4,
+          "action": "Synthesize findings",
+          "capability": "analysis",
+          "tool": "best-available",
+          "details": "Analyze all gathered information, cross-reference with existing tool database, identify what matters and what is noise. If primary AI unavailable, fall back per fallbackChains."
+        },
+        {
+          "order": 5,
+          "action": "Write briefing",
+          "capability": "code-generation",
+          "tool": "best-available",
+          "details": "Append new briefing entry to briefings.json following the established schema. Flag high-impact items for alert briefings. Validate output against schema before writing."
+        },
+        {
+          "order": 6,
+          "action": "Update data files",
+          "tool": "claude-code",
+          "details": "If tool changes detected, update tools.json entries. Update meta.json lastUpdated timestamp."
+        }
+      ],
+      "outputs": [
+        "data/briefings.json",
+        "data/tools.json",
+        "data/meta.json"
+      ],
+      "lastRun": "2026-03-27",
+      "nextRun": "2026-03-28"
+    },
+    {
+      "id": "weekly-deep-dive",
+      "name": "Weekly Deep Dive & Tool Discovery",
+      "description": "Comprehensive weekly research: full pricing audit of all 83+ tools, systematic search for new tools not yet tracked, category ranking review, and trend analysis. Produces a weekly synthesis briefing.",
+      "schedule": "Every Sunday at 9:00 AM ET",
+      "status": "planned",
+      "engine": "claude-scheduled",
+      "steps": [
+        {
+          "order": 1,
+          "action": "Full pricing audit",
+          "tool": "web-search",
+          "details": "Visit pricing pages for all tools with lastVerified older than 14 days. Compare against stored values."
+        },
+        {
+          "order": 2,
+          "action": "New tool discovery",
+          "tool": "web-search",
+          "details": "Search Product Hunt, GitHub Trending, AI directories (There's An AI For That, Future Tools) for tools launched in the past week"
+        },
+        {
+          "order": 3,
+          "action": "Category ranking review",
+          "tool": "claude",
+          "details": "Re-evaluate inCategory rankings based on accumulated weekly data: new features, benchmark results, user sentiment"
+        },
+        {
+          "order": 4,
+          "action": "Trend analysis",
+          "tool": "claude",
+          "details": "Update trend fields (rising/stable/declining) based on 4-week trajectory. Flag tools showing sudden shifts."
+        },
+        {
+          "order": 5,
+          "action": "Generate weekly synthesis",
+          "tool": "claude-code",
+          "details": "Write comprehensive weekly briefing covering all categories, major themes, and forward-looking predictions"
+        },
+        {
+          "order": 6,
+          "action": "Update all data files",
+          "tool": "claude-code",
+          "details": "Batch update tools.json, meta.json, briefings.json. Commit changes with descriptive message."
+        }
+      ],
+      "outputs": [
+        "data/briefings.json",
+        "data/tools.json",
+        "data/meta.json",
+        "data/regulations.json"
+      ],
+      "lastRun": null,
+      "nextRun": "2026-03-29"
+    },
+    {
+      "id": "tool-price-monitor",
+      "name": "Tool Price Monitor",
+      "description": "Dedicated pipeline for checking pricing pages of all tracked tools. Compares current prices against stored values and flags any changes as alert briefings. Runs mid-week to complement the weekly deep dive.",
+      "schedule": "Every Wednesday at 10:00 AM ET",
+      "status": "planned",
+      "engine": "claude-scheduled",
+      "steps": [
+        {
+          "order": 1,
+          "action": "Load current pricing data",
+          "tool": "claude-code",
+          "details": "Read all pricingCAD entries from tools.json and the current exchange rate from meta.json"
+        },
+        {
+          "order": 2,
+          "action": "Check pricing pages",
+          "tool": "web-search",
+          "details": "For each tool, search '[tool name] pricing 2026' and compare against stored values. Prioritize tools with trend=rising or recent funding."
+        },
+        {
+          "order": 3,
+          "action": "Check exchange rate",
+          "tool": "web-search",
+          "details": "Get current USD to CAD rate. If drift exceeds 2% from stored rate, recalculate all CAD prices."
+        },
+        {
+          "order": 4,
+          "action": "Generate price change report",
+          "tool": "claude-code",
+          "details": "If changes detected, create alert briefing. Update tools.json with new prices and set lastVerified to today."
+        }
+      ],
+      "outputs": [
+        "data/briefings.json",
+        "data/tools.json",
+        "data/meta.json"
+      ],
+      "lastRun": null,
+      "nextRun": "2026-04-01"
+    },
+    {
+      "id": "news-aggregation",
+      "name": "RSS & News Aggregation Pipeline",
+      "description": "Automated RSS feed scraping from 30+ AI news sources, filtered and summarized by AI. Feeds into the daily research pipeline as pre-processed input, reducing the search burden on Claude scheduled tasks.",
+      "schedule": "Every 6 hours",
+      "status": "concept",
+      "engine": "n8n",
+      "steps": [
+        {
+          "order": 1,
+          "action": "Fetch RSS feeds",
+          "tool": "n8n-rss-node",
+          "details": "Pull from TechCrunch AI, The Verge AI, Ars Technica, MIT Technology Review, AI-specific newsletters with RSS"
+        },
+        {
+          "order": 2,
+          "action": "Deduplicate and filter",
+          "tool": "n8n-function-node",
+          "details": "Remove duplicate stories, filter to AI-relevant content using keyword matching and relevance scoring"
+        },
+        {
+          "order": 3,
+          "action": "AI summarization",
+          "tool": "claude-api",
+          "details": "Send filtered articles to Claude API for one-paragraph summaries with impact assessment"
+        },
+        {
+          "order": 4,
+          "action": "Store processed feed",
+          "tool": "n8n-file-node",
+          "details": "Write summaries to data/news-feed.json for consumption by daily-research pipeline"
+        }
+      ],
+      "outputs": [
+        "data/news-feed.json"
+      ],
+      "lastRun": null,
+      "nextRun": null
+    },
+    {
+      "id": "multi-ai-router",
+      "name": "Multi-AI Task Router",
+      "description": "Intelligent routing layer that sends tasks to the best AI for the job. Research questions go to Perplexity, analysis to Claude, creative tasks to ChatGPT, code to Claude Code. Includes cost optimization and fallback logic.",
+      "schedule": "On-demand (triggered by other pipelines)",
+      "status": "concept",
+      "engine": "n8n",
+      "steps": [
+        {
+          "order": 1,
+          "action": "Classify incoming task",
+          "tool": "n8n-function-node",
+          "details": "Analyze task type: research, analysis, creative, code, summarization, translation. Check cost budget."
+        },
+        {
+          "order": 2,
+          "action": "Select optimal AI",
+          "tool": "n8n-switch-node",
+          "details": "Route based on task type and budget: Perplexity for real-time search, Claude for analysis/judgment, GPT-5 Turbo for bulk processing, Gemini for Google ecosystem tasks"
+        },
+        {
+          "order": 3,
+          "action": "Execute with fallback",
+          "tool": "n8n-http-node",
+          "details": "Call selected AI API. If rate limited or error, fall back to next-best option. Track cost per query."
+        },
+        {
+          "order": 4,
+          "action": "Log and learn",
+          "tool": "n8n-function-node",
+          "details": "Record which AI handled which task, response quality score, cost, and latency. Feed into routing optimization."
+        }
+      ],
+      "outputs": [
+        "data/ai-routing-log.json"
+      ],
+      "lastRun": null,
+      "nextRun": null
+    },
+    {
+      "id": "github-trending-scanner",
+      "name": "GitHub Trending AI Scanner",
+      "description": "Scans GitHub Trending daily for AI-related repositories. Identifies new open-source tools, significant updates to tracked projects, and emerging frameworks before they hit mainstream news.",
+      "schedule": "Every day at 6:00 AM ET (before daily-research)",
+      "status": "planned",
+      "engine": "github-actions",
+      "steps": [
+        {
+          "order": 1,
+          "action": "Scrape GitHub Trending",
+          "tool": "github-actions-script",
+          "details": "Fetch trending repos for Python, JavaScript, and Rust. Filter by AI/ML keywords in description and topics."
+        },
+        {
+          "order": 2,
+          "action": "Cross-reference with tracked tools",
+          "tool": "github-actions-script",
+          "details": "Compare trending repos against tools.json. Flag repos from known tool developers or repos that match tracked tool names."
+        },
+        {
+          "order": 3,
+          "action": "Assess significance",
+          "tool": "claude-api",
+          "details": "Send filtered results to Claude for significance assessment: Is this a new tool worth tracking? An update to an existing one? A research breakthrough?"
+        },
+        {
+          "order": 4,
+          "action": "Write discoveries file",
+          "tool": "github-actions-script",
+          "details": "Append significant findings to data/github-discoveries.json for consumption by daily-research pipeline"
+        }
+      ],
+      "outputs": [
+        "data/github-discoveries.json"
+      ],
+      "lastRun": null,
+      "nextRun": null
+    },
+    {
+      "id": "community-monitor",
+      "name": "Community & Social Monitor",
+      "description": "Monitors Reddit (r/artificial, r/LocalLLaMA, r/MachineLearning), Discord servers, and X/Twitter AI lists for tool announcements, user complaints about outages/price hikes, and emerging consensus about tool quality.",
+      "schedule": "Every 12 hours",
+      "status": "concept",
+      "engine": "n8n",
+      "steps": [
+        {
+          "order": 1,
+          "action": "Scrape Reddit",
+          "tool": "n8n-http-node",
+          "details": "Fetch top and hot posts from AI subreddits via Reddit JSON API (append .json to subreddit URLs \u00e2\u20ac\u201d no API key needed)"
+        },
+        {
+          "order": 2,
+          "action": "Filter and rank",
+          "tool": "n8n-function-node",
+          "details": "Score posts by relevance: mentions of tracked tools, pricing keywords, launch/shutdown language, high engagement signals"
+        },
+        {
+          "order": 3,
+          "action": "Sentiment analysis",
+          "tool": "claude-api",
+          "details": "Analyze sentiment around tool mentions. Detect patterns: widespread complaints may signal reliability issues, excitement may signal breakthroughs."
+        },
+        {
+          "order": 4,
+          "action": "Generate community pulse",
+          "tool": "n8n-function-node",
+          "details": "Write structured community pulse data to data/community-pulse.json. Flag high-engagement items for alert briefings."
+        }
+      ],
+      "outputs": [
+        "data/community-pulse.json"
+      ],
+      "lastRun": null,
+      "nextRun": null
+    }
+  ],
+  "aiAccounts": [
+    {
+      "service": "Claude (Anthropic)",
+      "purpose": "Primary analysis engine, scheduled tasks, Claude Code for file operations. Powers daily-research and weekly-deep-dive pipelines.",
+      "loginNeeded": true,
+      "status": "active"
+    },
+    {
+      "service": "ChatGPT (OpenAI)",
+      "purpose": "Secondary analysis, creative tasks, bulk processing via GPT-5 Turbo API. Fallback for Claude rate limits.",
+      "loginNeeded": true,
+      "status": "pending-setup"
+    },
+    {
+      "service": "Gemini (Google)",
+      "purpose": "Google ecosystem integration, multilingual tasks, long document analysis. API access for multi-AI router.",
+      "loginNeeded": true,
+      "status": "pending-setup"
+    },
+    {
+      "service": "Perplexity",
+      "purpose": "Real-time web search with citations. Primary tool for fact-checking and source verification in research pipelines.",
+      "loginNeeded": true,
+      "status": "pending-setup"
+    },
+    {
+      "service": "n8n",
+      "purpose": "Workflow automation engine for RSS aggregation, multi-AI routing, and community monitoring. Self-hosted or cloud.",
+      "loginNeeded": true,
+      "status": "pending-setup"
+    },
+    {
+      "service": "GitHub",
+      "purpose": "Repository hosting, GitHub Actions for CI/CD and scheduled scanning, GitHub Pages for dashboard deployment.",
+      "loginNeeded": true,
+      "status": "active"
+    }
+  ],
+  "automationGoals": [
+    {
+      "level": 0,
+      "name": "Manual Baseline",
+      "description": "All research, updates, and analysis done manually by human. Data files edited by hand or via Claude Code sessions. This is where the project started.",
+      "currentProgress": "100%",
+      "blockers": [],
+      "nextSteps": [
+        "Completed \u00e2\u20ac\u201d this was the starting state"
+      ]
+    },
+    {
+      "level": 1,
+      "name": "Scheduled Research",
+      "description": "Claude Scheduled Task runs daily, searches the web for AI news, and writes structured briefings. Human reviews briefings and approves changes. Semi-autonomous with human oversight.",
+      "currentProgress": "40%",
+      "blockers": [
+        "Scheduled task prompt needs testing and iteration",
+        "Briefing quality depends on web search reliability"
+      ],
+      "nextSteps": [
+        "Deploy daily-research prompt as a Claude Scheduled Task",
+        "Run for 1 week and assess briefing quality",
+        "Iterate on prompt based on output quality",
+        "Add error handling for failed searches"
+      ]
+    },
+    {
+      "level": 2,
+      "name": "Multi-Pipeline Automation",
+      "description": "Multiple pipelines running: daily research, weekly deep dive, price monitoring, GitHub scanning. Data files auto-update with human review via pull requests. Dashboard reflects near-real-time intelligence.",
+      "currentProgress": "10%",
+      "blockers": [
+        "n8n account not yet set up",
+        "GitHub Actions workflow needs testing",
+        "Need to establish PR-based review flow for auto-updates"
+      ],
+      "nextSteps": [
+        "Stand up weekly-deep-dive and tool-price-monitor scheduled tasks",
+        "Create GitHub Actions workflow for github-trending-scanner",
+        "Set up n8n account and prototype news-aggregation pipeline",
+        "Implement PR-based review: automation creates PRs, human merges"
+      ]
+    },
+    {
+      "level": 3,
+      "name": "Multi-AI Orchestration",
+      "description": "Intelligent routing sends tasks to the best AI. Perplexity searches, Claude analyzes, GPT handles bulk work, Gemini processes Google data. Cost-optimized with fallback chains. Community monitoring active.",
+      "currentProgress": "0%",
+      "blockers": [
+        "Requires API keys for OpenAI, Google, Perplexity",
+        "n8n infrastructure needed for routing logic",
+        "Cost management system not designed yet",
+        "Need enough historical data to optimize routing decisions"
+      ],
+      "nextSteps": [
+        "Set up API accounts for all 4 AI providers",
+        "Design routing decision matrix (task type -> best AI)",
+        "Prototype multi-AI router in n8n",
+        "Build cost tracking dashboard"
+      ]
+    },
+    {
+      "level": 4,
+      "name": "Predictive Intelligence",
+      "description": "The system predicts tool trajectories, market shifts, and optimal adoption timing. It proposes new projects based on emerging capabilities. Fully autonomous research with human-in-the-loop for strategic decisions only.",
+      "currentProgress": "0%",
+      "blockers": [
+        "Requires months of historical data for trend modeling",
+        "Prediction quality depends on Level 2-3 data collection maturity",
+        "No training data for prediction validation yet"
+      ],
+      "nextSteps": [
+        "Begin collecting weekly snapshots for historical trend data",
+        "Design prediction model: inputs (signals) -> outputs (forecasts)",
+        "Wait for 8+ weeks of automated data before attempting predictions",
+        "Build forecast accuracy tracking to improve over time"
+      ]
+    }
+  ],
+  "monitoringArchitecture": {
+    "tiers": [
+      {
+        "tier": 1,
+        "name": "Real-Time Detection",
+        "speed": "seconds to minutes",
+        "cost": "free",
+        "engine": "cloudflare-worker OR polling",
+        "sources": [
+          {
+            "name": "HN Firebase API",
+            "endpoint": "https://hacker-news.firebaseio.com/v0/newstories.json",
+            "type": "api",
+            "latency": "sub-second",
+            "free": true
+          },
+          {
+            "name": "Mastodon Streaming",
+            "endpoint": "wss://sigmoid.social/api/v1/streaming",
+            "type": "websocket",
+            "latency": "sub-second",
+            "free": true
+          },
+          {
+            "name": "GitHub Security Advisories",
+            "endpoint": "https://api.github.com/advisories",
+            "type": "api",
+            "latency": "hours",
+            "free": true
+          },
+          {
+            "name": "CISA Alerts RSS",
+            "endpoint": "https://www.cisa.gov/cybersecurity-advisories/all.xml",
+            "type": "rss",
+            "latency": "hours",
+            "free": true
+          }
+        ],
+        "alertsTo": "discord-webhook"
+      },
+      {
+        "tier": 2,
+        "name": "Near-Real-Time Monitoring",
+        "speed": "15-60 minutes",
+        "cost": "$0-5/month",
+        "engine": "n8n OR claude-scheduled",
+        "sources": [
+          {
+            "name": "RSS feeds (50+)",
+            "type": "rss",
+            "interval": "15min"
+          },
+          {
+            "name": "GitHub Atom release feeds",
+            "type": "atom",
+            "interval": "15min"
+          },
+          {
+            "name": "PyPI package feeds",
+            "type": "rss",
+            "interval": "15min"
+          },
+          {
+            "name": "Reddit subreddit RSS",
+            "type": "rss",
+            "interval": "15min"
+          },
+          {
+            "name": "Google Alerts",
+            "type": "email",
+            "interval": "as-it-happens"
+          },
+          {
+            "name": "arXiv daily digest",
+            "type": "rss",
+            "interval": "daily"
+          }
+        ],
+        "alertsTo": "discord-webhook + data-queue"
+      },
+      {
+        "tier": 3,
+        "name": "AI Synthesis",
+        "speed": "every 6-12 hours",
+        "cost": "free (Max plan)",
+        "engine": "claude-scheduled",
+        "tasks": [
+          "Read accumulated alerts",
+          "Cross-reference and deduplicate",
+          "Update tools.json",
+          "Write briefing to briefings.json",
+          "Flag stale recommendations"
+        ]
+      },
+      {
+        "tier": 4,
+        "name": "Deep Research",
+        "speed": "daily",
+        "cost": "free (Max plan)",
+        "engine": "claude-scheduled",
+        "tasks": [
+          "Comprehensive web search",
+          "Verify all tool pricing",
+          "Check community sentiment",
+          "Update strategies",
+          "Full intelligence briefing"
+        ]
+      }
+    ],
+    "immediateSetup": [
+      {
+        "action": "Create 10 Google Alerts for AI keywords",
+        "cost": "free",
+        "time": "5 min"
+      },
+      {
+        "action": "Create Discord server with alert channels",
+        "cost": "free",
+        "time": "10 min"
+      },
+      {
+        "action": "Install Distill.io browser extension for pricing pages",
+        "cost": "free",
+        "time": "5 min"
+      },
+      {
+        "action": "Create Mastodon account on sigmoid.social",
+        "cost": "free",
+        "time": "10 min"
+      }
+    ],
+    "futureSetup": [
+      {
+        "action": "n8n on $5/mo VPS for 24/7 monitoring",
+        "cost": "$5/month",
+        "prerequisite": "Phase 1 research complete"
+      },
+      {
+        "action": "Cloudflare Worker for sub-minute critical monitoring",
+        "cost": "free-$5/month",
+        "prerequisite": "Discord alerts working"
+      },
+      {
+        "action": "Multi-AI routing for research tasks",
+        "cost": "varies",
+        "prerequisite": "API keys for multiple providers"
+      }
+    ]
+  },
+
+  "executionPrinciples": {
+    "toolAgnostic": {
+      "principle": "No pipeline step is hardcoded to a specific AI or service. Each step specifies a CAPABILITY (web-search, analysis, code-generation, summarization, translation), and the system selects the best available tool at runtime. The best tool today may not be the best tool tomorrow.",
+      "capabilityMap": {
+        "web-search": {"current": "claude-web-search", "alternatives": ["perplexity-api", "google-gemini", "tavily-api", "serper-api", "raw-rss-only"], "lastEvaluated": "2026-03-27"},
+        "analysis": {"current": "claude", "alternatives": ["gpt-5", "gemini-2.5-pro", "grok-4", "local-llm-via-ollama"], "lastEvaluated": "2026-03-27"},
+        "code-generation": {"current": "claude-code", "alternatives": ["cursor", "github-copilot", "gemini-code-assist", "windsurf"], "lastEvaluated": "2026-03-27"},
+        "summarization": {"current": "claude", "alternatives": ["gpt-5-turbo", "gemini-flash", "local-llm-via-ollama"], "lastEvaluated": "2026-03-27"},
+        "translation": {"current": "claude", "alternatives": ["deepl-api", "google-translate-api", "gpt-5"], "lastEvaluated": "2026-03-27"},
+        "rss-fetching": {"current": "n8n-rss-node", "alternatives": ["python-feedparser", "github-actions-script", "cloudflare-worker"], "lastEvaluated": "2026-03-27"},
+        "data-validation": {"current": "python-script", "alternatives": ["github-actions", "n8n-function-node", "any-json-validator"], "lastEvaluated": "2026-03-27"}
+      },
+      "selectionCriteria": ["accuracy", "cost", "speed", "availability", "context-window-size"],
+      "reEvaluationFrequency": "monthly — or immediately when a new major model/tool launches"
+    },
+
+    "fallbackChains": {
+      "principle": "Every critical operation has a degradation path. Total failure should be impossible — the system degrades gracefully from AI-powered to manual-capable.",
+      "chains": [
+        {
+          "capability": "intelligence-briefing",
+          "levels": [
+            {"level": 1, "method": "Full AI synthesis — best available AI analyzes all sources, writes structured briefing", "quality": "high"},
+            {"level": 2, "method": "Reduced AI synthesis — secondary AI with fewer sources (if primary is down)", "quality": "medium"},
+            {"level": 3, "method": "RSS-only collection — no AI synthesis, just raw headlines/links from RSS feeds collected automatically", "quality": "low-but-functional"},
+            {"level": 4, "method": "Manual review — human reads news-sources.json bookmarks directly in browser", "quality": "manual-fallback"},
+            {"level": 5, "method": "Cached data — dashboard shows last known good data with staleness warning", "quality": "stale-but-available"}
+          ]
+        },
+        {
+          "capability": "tool-discovery",
+          "levels": [
+            {"level": 1, "method": "AI-powered discovery — runs all 15 discovery methods with AI filtering", "quality": "high"},
+            {"level": 2, "method": "API-only discovery — GitHub API, HF API, PyPI RSS without AI scoring", "quality": "medium"},
+            {"level": 3, "method": "RSS-only monitoring — catches announcements but no cross-referencing", "quality": "low"},
+            {"level": 4, "method": "Manual — human checks GitHub trending, Product Hunt, HN manually", "quality": "manual-fallback"}
+          ]
+        },
+        {
+          "capability": "data-validation",
+          "levels": [
+            {"level": 1, "method": "Full validation — validate-data.py with URL checking + AI review of anomalies", "quality": "high"},
+            {"level": 2, "method": "Schema validation only — JSON structure checks, no URL testing", "quality": "medium"},
+            {"level": 3, "method": "JSON parse test — just verify files aren't corrupted", "quality": "minimal"},
+            {"level": 4, "method": "Git diff review — human reviews changes before merge", "quality": "manual-fallback"}
+          ]
+        }
+      ]
+    },
+
+    "changeSafeguards": {
+      "principle": "The system SHOULD auto-update aggressively. But major changes need human confirmation — they could be evolution or errors.",
+      "autoApproved": [
+        "Adding new tools (up to 10 per run)",
+        "Updating prices, URLs, descriptions of existing tools",
+        "Adding new sources (up to 20 per run)",
+        "Updating lastVerified dates",
+        "Fixing broken URLs",
+        "Writing new briefings",
+        "Updating trend directions"
+      ],
+      "requiresUserAlert": [
+        "Removing any tool or source (mark as 'deprecated' instead, let human confirm removal)",
+        "Changing >20% of a data file in one update",
+        "One tool being flagged as replacing 3+ other tools (consolidation event)",
+        "A new category being created or an existing one being removed",
+        "Any change to CLAUDE.md, automation.json, or discovery-methods.json (system-level files)",
+        "Trust score dropping below 30 for a previously trusted tool",
+        "Security incident detection for any tracked tool"
+      ],
+      "alertFormat": {
+        "where": "briefings.json entry with type 'alert'",
+        "includes": ["what changed", "why the system thinks this is correct", "evidence/sources", "what happens if it's wrong", "recommended action"],
+        "userAction": "User reviews alert in dashboard Command Center tab and approves/rejects"
+      },
+      "consolidationProtocol": {
+        "description": "When one tool appears to replace many, this could be a genuine paradigm shift OR a hallucination/error. Handle carefully.",
+        "steps": [
+          "Document evidence from 3+ independent sources",
+          "Do NOT remove displaced tools — add 'potentiallyDisplacedBy' field instead",
+          "Create alert briefing with full reasoning",
+          "Wait for user confirmation before any removal",
+          "If confirmed: move displaced tools to 'archived' status (don't delete — they may come back)"
+        ]
+      }
+    },
+
+    "hardcodedLastResort": {
+      "principle": "Even if every AI, every API, and every automation engine goes down simultaneously, the system still works at a basic level.",
+      "guarantees": [
+        "JSON data files are plain text — readable and editable with any text editor",
+        "Dashboard is static HTML — opens in any browser with no server",
+        "Git history preserves every previous state — any version is recoverable",
+        "news-sources.json contains direct URLs — human can visit them manually",
+        "No encryption, no proprietary formats, no vendor lock-in anywhere"
+      ]
+    }
+  }
+}

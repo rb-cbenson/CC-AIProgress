@@ -1,0 +1,173 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-03-27",
+  "description": "Programmatic data sources for automated AI landscape monitoring",
+  "sourceCount": 15,
+  "tiers": {
+    "tier1": "Free, high signal - implement first",
+    "tier2": "Free, needs setup - implement next",
+    "tier3": "Some cost/complexity - when ready",
+    "tier4": "Paid/difficult - future"
+  },
+  "sources": [
+    {
+      "id": "hn-firebase",
+      "name": "Hacker News Firebase API",
+      "tier": 1,
+      "category": "real-time",
+      "endpoint": "https://hacker-news.firebaseio.com/v0/newstories.json",
+      "algolia": "https://hn.algolia.com/api/v1/search?query={q}&tags=story",
+      "auth": "none",
+      "cost": "free",
+      "latency": "sub-second"
+    },
+    {
+      "id": "huggingface-hub",
+      "name": "Hugging Face Hub API",
+      "tier": 1,
+      "category": "models",
+      "endpoint": "https://huggingface.co/api/models?sort=lastModified&direction=-1&limit=50",
+      "auth": "none",
+      "cost": "free",
+      "latency": "minutes"
+    },
+    {
+      "id": "arxiv-rss",
+      "name": "arXiv RSS",
+      "tier": 1,
+      "category": "research",
+      "endpoints": {
+        "csAI": "https://rss.arxiv.org/rss/cs.AI",
+        "csCL": "https://rss.arxiv.org/rss/cs.CL",
+        "csLG": "https://rss.arxiv.org/rss/cs.LG"
+      },
+      "auth": "none",
+      "cost": "free",
+      "latency": "daily"
+    },
+    {
+      "id": "github-releases",
+      "name": "GitHub Release Feeds",
+      "tier": 1,
+      "category": "packages",
+      "format": "https://github.com/{owner}/{repo}/releases.atom",
+      "security": "https://api.github.com/advisories?ecosystem=pip",
+      "auth": "PAT recommended",
+      "cost": "free",
+      "latency": "minutes"
+    },
+    {
+      "id": "pypi-feeds",
+      "name": "PyPI Feeds",
+      "tier": 1,
+      "category": "packages",
+      "newPkgs": "https://pypi.org/rss/packages.xml",
+      "updates": "https://pypi.org/rss/updates.xml",
+      "pkgInfo": "https://pypi.org/pypi/{name}/json",
+      "auth": "none",
+      "cost": "free",
+      "latency": "minutes"
+    },
+    {
+      "id": "osv-dev",
+      "name": "OSV.dev Vulnerabilities",
+      "tier": 1,
+      "category": "security",
+      "endpoint": "https://api.osv.dev/v1/query",
+      "auth": "none",
+      "cost": "free",
+      "latency": "near-realtime"
+    },
+    {
+      "id": "openrouter-models",
+      "name": "OpenRouter Models API",
+      "tier": 1,
+      "category": "pricing",
+      "endpoint": "https://openrouter.ai/api/v1/models",
+      "auth": "none",
+      "cost": "free",
+      "latency": "realtime"
+    },
+    {
+      "id": "mastodon",
+      "name": "Mastodon Streaming",
+      "tier": 2,
+      "category": "real-time",
+      "stream": "wss://sigmoid.social/api/v1/streaming/hashtag?tag=machinelearning",
+      "auth": "bearer token (free)",
+      "cost": "free",
+      "latency": "sub-second"
+    },
+    {
+      "id": "reddit-rss",
+      "name": "Reddit RSS",
+      "tier": 2,
+      "category": "community",
+      "format": "https://www.reddit.com/r/{sub}/new/.rss",
+      "auth": "none",
+      "cost": "free",
+      "latency": "5-15min"
+    },
+    {
+      "id": "semantic-scholar",
+      "name": "Semantic Scholar",
+      "tier": 2,
+      "category": "research",
+      "endpoint": "https://api.semanticscholar.org/graph/v1/paper/search?query={q}&fields=title,abstract,citationCount,tldr",
+      "auth": "free key",
+      "cost": "free",
+      "latency": "near-realtime"
+    },
+    {
+      "id": "nvd-cve",
+      "name": "NVD/CVE Database",
+      "tier": 2,
+      "category": "security",
+      "endpoint": "https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch={q}",
+      "cisa": "https://www.cisa.gov/cybersecurity-advisories/all.xml",
+      "auth": "free key",
+      "cost": "free",
+      "latency": "1-48h"
+    },
+    {
+      "id": "sec-edgar",
+      "name": "SEC EDGAR",
+      "tier": 2,
+      "category": "financial",
+      "endpoint": "https://efts.sec.gov/LATEST/search-index?q=%22artificial+intelligence%22&forms=10-K,10-Q,8-K",
+      "auth": "User-Agent header",
+      "cost": "free",
+      "latency": "4 business days"
+    },
+    {
+      "id": "youtube-rss",
+      "name": "YouTube Channel RSS",
+      "tier": 2,
+      "category": "multimedia",
+      "format": "https://www.youtube.com/feeds/videos.xml?channel_id={id}",
+      "auth": "none",
+      "cost": "free",
+      "latency": "minutes"
+    },
+    {
+      "id": "patents-view",
+      "name": "USPTO PatentsView",
+      "tier": 3,
+      "category": "financial",
+      "endpoint": "https://api.patentsview.org/patents/query",
+      "auth": "none",
+      "cost": "free",
+      "latency": "18mo publication delay"
+    },
+    {
+      "id": "product-hunt",
+      "name": "Product Hunt",
+      "tier": 3,
+      "category": "launches",
+      "rss": "https://www.producthunt.com/feed",
+      "auth": "none for RSS",
+      "cost": "free",
+      "latency": "launch day"
+    }
+  ]
+}

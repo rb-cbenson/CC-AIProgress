@@ -1,0 +1,10 @@
+{
+  "name": "AI Progress Dashboard",
+  "short_name": "AI Progress",
+  "description": "Track AI tools, news, regulations, and workflows",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f8f9fc",
+  "theme_color": "#4361ee",
+  "icons": []
+}

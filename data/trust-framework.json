@@ -1,0 +1,173 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-03-27",
+  "description": "Trust and security scoring framework for AI tools",
+  "scoringDimensions": [
+    {
+      "name": "Company Stability",
+      "weight": 0.15,
+      "description": "Funding, team, revenue, years operating"
+    },
+    {
+      "name": "Code Transparency",
+      "weight": 0.15,
+      "description": "Open source, license type, auditability"
+    },
+    {
+      "name": "Security Track Record",
+      "weight": 0.15,
+      "description": "Past incidents, response quality, vuln disclosure"
+    },
+    {
+      "name": "Data Handling",
+      "weight": 0.15,
+      "description": "What data accessed, storage, retention, encryption"
+    },
+    {
+      "name": "Dependency Chain",
+      "weight": 0.1,
+      "description": "Dependencies audited, pinned, SBOM available"
+    },
+    {
+      "name": "Community & Adoption",
+      "weight": 0.1,
+      "description": "GitHub stars, enterprise adoption, reviews"
+    },
+    {
+      "name": "Permission Scope",
+      "weight": 0.1,
+      "description": "Least privilege, justified access requests"
+    },
+    {
+      "name": "Independent Audits",
+      "weight": 0.05,
+      "description": "Third-party audits, SOC2, pen tests"
+    },
+    {
+      "name": "Incident Recovery",
+      "weight": 0.05,
+      "description": "How past incidents were handled"
+    }
+  ],
+  "tiers": [
+    {
+      "range": "80-100",
+      "name": "TRUSTED",
+      "action": "Use normally. Monitor for changes."
+    },
+    {
+      "range": "60-79",
+      "name": "USE WITH CAUTION",
+      "action": "Sandbox. No sensitive data."
+    },
+    {
+      "range": "40-59",
+      "name": "ELEVATED RISK",
+      "action": "Isolated environments only."
+    },
+    {
+      "range": "20-39",
+      "name": "HIGH RISK",
+      "action": "Avoid unless fully sandboxed."
+    },
+    {
+      "range": "0-19",
+      "name": "AVOID",
+      "action": "Do not install. Remove if present."
+    }
+  ],
+  "knownIncidents": [
+    {
+      "tool": "litellm",
+      "date": "2026-03-24",
+      "type": "supply-chain-attack",
+      "severity": "critical",
+      "description": "Compromised CI/CD pipeline, malicious PyPI versions 1.82.7/1.82.8 exfiltrated credentials. First known use of AI agent in supply chain attack.",
+      "status": "remediation-underway",
+      "trustScoreImpact": -30
+    },
+    {
+      "tool": "moltbook",
+      "date": "2026-02-03",
+      "type": "scam-security-disaster",
+      "severity": "critical",
+      "description": "1.5M API tokens exposed via client-side Supabase key. 88:1 fake-to-real user ratio. Malware in ClawHub marketplace.",
+      "status": "acquired-by-meta",
+      "trustScoreImpact": -80
+    },
+    {
+      "tool": "chatgpt",
+      "date": "2025-11-09",
+      "type": "data-breach",
+      "severity": "medium",
+      "description": "Mixpanel breach exposed user profiles, emails, browser details. OpenAI severed Mixpanel relationship.",
+      "status": "resolved",
+      "trustScoreImpact": -5
+    },
+    {
+      "tool": "hugging-face",
+      "date": "2025-02",
+      "type": "malicious-models",
+      "severity": "high",
+      "description": "352K suspicious issues across 51.7K models. Pickle file exploits evading scanners.",
+      "status": "ongoing-monitoring",
+      "trustScoreImpact": -15
+    },
+    {
+      "tool": "chrome-ai-extensions",
+      "date": "2025-12",
+      "type": "malware",
+      "severity": "critical",
+      "description": "2.3M users affected by fake AI extensions. One received Google Featured badge. Stole ChatGPT/DeepSeek conversations.",
+      "status": "ongoing-campaigns",
+      "trustScoreImpact": -50
+    },
+    {
+      "tool": "amazon-q-vscode",
+      "date": "2025-12",
+      "type": "compromise",
+      "severity": "high",
+      "description": "Compromised extension passed Amazon verification. Planted prompt to wipe local files and disrupt AWS.",
+      "status": "resolved",
+      "trustScoreImpact": -20
+    }
+  ],
+  "exampleScores": [
+    {
+      "tool": "claude",
+      "score": 85,
+      "tier": "TRUSTED",
+      "notes": "Well-funded, sandbox available, transparent data policies"
+    },
+    {
+      "tool": "chatgpt",
+      "score": 82,
+      "tier": "TRUSTED",
+      "notes": "Massive adoption but Mixpanel incident docks points"
+    },
+    {
+      "tool": "github-copilot",
+      "score": 83,
+      "tier": "TRUSTED",
+      "notes": "Microsoft backing, enterprise adoption"
+    },
+    {
+      "tool": "hugging-face",
+      "score": 65,
+      "tier": "USE WITH CAUTION",
+      "notes": "Great ecosystem but 352K suspicious models"
+    },
+    {
+      "tool": "litellm",
+      "score": 55,
+      "tier": "ELEVATED RISK",
+      "notes": "Major supply chain attack. Monitor recovery before re-adopting."
+    },
+    {
+      "tool": "moltbook",
+      "score": 12,
+      "tier": "AVOID",
+      "notes": "Exposed database, fake users, malware ecosystem"
+    }
+  ]
+}

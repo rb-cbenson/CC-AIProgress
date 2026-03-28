@@ -1,0 +1,81 @@
+[
+  {
+    "id": "content-creation",
+    "name": "Content Creation Pipeline",
+    "description": "Create polished blog posts, articles, or social media content using AI for writing, images, and editing",
+    "category": "content",
+    "difficulty": "beginner",
+    "steps": [
+      { "toolId": "chatgpt", "action": "Draft the content with outline and key points", "order": 1 },
+      { "toolId": "claude", "action": "Refine tone, check accuracy, and improve structure", "order": 2 },
+      { "toolId": "midjourney", "action": "Generate accompanying images and graphics", "order": 3 },
+      { "toolId": "grammarly", "action": "Final grammar, clarity, and style polish", "order": 4 }
+    ]
+  },
+  {
+    "id": "code-development",
+    "name": "AI-Assisted Code Development",
+    "description": "Plan, implement, review, and ship code faster using multiple AI coding tools together",
+    "category": "development",
+    "difficulty": "intermediate",
+    "steps": [
+      { "toolId": "claude", "action": "Plan architecture and design decisions", "order": 1 },
+      { "toolId": "cursor", "action": "Implement code with AI-assisted editing", "order": 2 },
+      { "toolId": "claude-code", "action": "Review, test, and refactor across the full repo", "order": 3 },
+      { "toolId": "github-copilot", "action": "CI/CD assistance and documentation", "order": 4 }
+    ]
+  },
+  {
+    "id": "video-production",
+    "name": "AI Video Production",
+    "description": "Create professional videos from concept to final cut using AI at every step",
+    "category": "media",
+    "difficulty": "intermediate",
+    "steps": [
+      { "toolId": "chatgpt", "action": "Write the script and storyboard", "order": 1 },
+      { "toolId": "elevenlabs", "action": "Generate voiceover narration", "order": 2 },
+      { "toolId": "midjourney", "action": "Create visual assets and backgrounds", "order": 3 },
+      { "toolId": "runway", "action": "Generate video clips from images and prompts", "order": 4 },
+      { "toolId": "suno", "action": "Create background music", "order": 5 }
+    ]
+  },
+  {
+    "id": "research-synthesis",
+    "name": "Research & Knowledge Synthesis",
+    "description": "Research a topic thoroughly using AI search, organize findings, and produce a comprehensive summary",
+    "category": "research",
+    "difficulty": "beginner",
+    "steps": [
+      { "toolId": "perplexity", "action": "Research with citations — gather facts and sources", "order": 1 },
+      { "toolId": "claude", "action": "Synthesize findings into structured analysis", "order": 2 },
+      { "toolId": "google-notebooklm", "action": "Organize sources and generate audio summary", "order": 3 },
+      { "toolId": "notion-ai", "action": "Store, organize, and share the final output", "order": 4 }
+    ]
+  },
+  {
+    "id": "music-production",
+    "name": "AI Music Production",
+    "description": "Create original music tracks with vocals, mix, and prepare for distribution",
+    "category": "media",
+    "difficulty": "beginner",
+    "steps": [
+      { "toolId": "chatgpt", "action": "Write lyrics and describe the musical style", "order": 1 },
+      { "toolId": "suno", "action": "Generate the full song with vocals", "order": 2 },
+      { "toolId": "udio", "action": "Fine-tune and edit specific sections (inpainting)", "order": 3 },
+      { "toolId": "elevenlabs", "action": "Generate alternative vocal tracks or voice effects", "order": 4 }
+    ]
+  },
+  {
+    "id": "business-automation",
+    "name": "Business Process Automation",
+    "description": "Automate repetitive business tasks using AI-powered workflow tools",
+    "category": "business",
+    "difficulty": "intermediate",
+    "steps": [
+      { "toolId": "chatgpt", "action": "Map out the process and identify automation points", "order": 1 },
+      { "toolId": "zapier", "action": "Connect apps and create automated workflows (Zaps)", "order": 2 },
+      { "toolId": "notion-ai", "action": "Set up project tracking and documentation", "order": 3 },
+      { "toolId": "grammarly", "action": "Auto-polish all outgoing communications", "order": 4 }
+    ]
+  }
+]

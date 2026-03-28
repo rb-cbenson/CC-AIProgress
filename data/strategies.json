@@ -1,0 +1,868 @@
+[
+  {
+    "id": "session-context-management",
+    "category": "session-limits",
+    "title": "Context Window Management for Long Sessions",
+    "description": "Claude Code and similar AI coding tools have finite context windows (200K tokens for Claude). When context fills up, the AI loses track of earlier conversation. Strategic context management extends effective session length dramatically.",
+    "currentState": "Claude Code supports 200K token context windows. Sessions can run for hours on focused tasks but hit limits on sprawling projects. CLAUDE.md files persist instructions across sessions automatically.",
+    "strategies": [
+      {
+        "name": "CLAUDE.md as Persistent Brain",
+        "how": "Create a CLAUDE.md file at the project root with architecture decisions, conventions, file locations, and current project state. Claude Code reads this automatically at session start. Update it as the project evolves. Include schemas, key file paths, and active task context.",
+        "tools": ["claude-code"],
+        "difficulty": "beginner",
+        "cost": "free"
+      },
+      {
+        "name": "Session Summary Handoff",
+        "how": "Before context runs out, ask the AI to write a detailed continuation prompt summarizing: what was accomplished, what remains, current file states, and exact next steps. Save this to a file like .claude/session-handoff.md. Start the next session by feeding it this summary.",
+        "tools": ["claude-code"],
+        "difficulty": "beginner",
+        "cost": "free"
+      },
+      {
+        "name": "Task Decomposition",
+        "how": "Break large projects into focused subtasks that each fit within a single session. Instead of 'build the whole dashboard,' use 'implement the chart component,' then 'add the data fetching layer,' etc. Each session has a clear, bounded scope.",
+        "tools": ["claude-code"],
+        "difficulty": "beginner",
+        "cost": "free"
+      },
+      {
+        "name": "Git as Session Memory",
+        "how": "Commit frequently with descriptive messages during a session. When starting a new session, run 'git log --oneline -20' and 'git diff' to reconstruct context. The commit history becomes a narrative of what was done and why.",
+        "tools": ["claude-code", "github-copilot"],
+        "difficulty": "beginner",
+        "cost": "free"
+      }
+    ],
+    "futureState": "Context windows are growing rapidly (Gemini already offers 1M+ tokens). Within 1-2 years, context limits will be a non-issue for most projects. Until then, structured handoffs remain essential.",
+    "relevantTools": ["claude-code", "claude", "chatgpt", "gemini"]
+  },
+  {
+    "id": "subscription-vs-api",
+    "category": "session-limits",
+    "title": "Subscription vs API: Choosing the Right Access Model",
+    "description": "AI subscriptions offer flat-rate convenience but impose usage caps. API access charges per token with no hard limits, which can be cheaper or more expensive depending on usage patterns. Understanding the breakpoint is critical for heavy users.",
+    "currentState": "Claude Max subscription is ~$140 CAD/month with generous but finite usage. Claude API charges ~$0.02 CAD/1K input tokens and ~$0.10 CAD/1K output tokens for Opus. For heavy coding sessions, API can cost $5-50/day depending on intensity. GPT-4o API is similar. Gemini API has a generous free tier.",
+    "strategies": [
+      {
+        "name": "Free Tier Stacking for Light Use",
+        "how": "Use Claude free tier for code review, ChatGPT free for research and brainstorming, Gemini free for Google Workspace integration and long-context tasks, Perplexity free for web research. Rotate between them when one hits limits. Combined, this provides substantial daily capacity at zero cost.",
+        "tools": ["claude", "chatgpt", "gemini", "perplexity"],
+        "difficulty": "beginner",
+        "cost": "free"
+      },
+      {
+        "name": "Claude Code with Max Subscription",
+        "how": "Claude Max at ~$140 CAD/month includes Claude Code usage. For daily coding use, this is typically cheaper than API. The subscription covers interactive sessions with generous limits. Best for users who code with AI 2+ hours daily.",
+        "tools": ["claude-code", "claude"],
+        "difficulty": "beginner",
+        "cost": "medium"
+      },
+      {
+        "name": "API for Automated Pipelines",
+        "how": "Use API access when building automated systems that run without human interaction. Set up billing alerts at $10, $25, $50 thresholds. Use cheaper models (Claude Haiku at ~$0.001/1K tokens) for simple tasks and reserve Opus/Sonnet for complex reasoning. API is essential for programmatic access in scripts and workflows.",
+        "tools": ["claude", "chatgpt", "gemini"],
+        "difficulty": "intermediate",
+        "cost": "low"
+      },
+      {
+        "name": "Hybrid Approach",
+        "how": "Use subscription for interactive daily work (Claude Code for coding, ChatGPT Plus for research). Use API for automated background tasks (scheduled data updates, batch processing). Use free tiers for overflow and experimentation. This optimizes cost while maximizing capability.",
+        "tools": ["claude-code", "chatgpt", "gemini", "claude"],
+        "difficulty": "intermediate",
+        "cost": "medium"
+      }
+    ],
+    "futureState": "Competition is driving prices down fast. Gemini's free API tier already offers substantial capacity. Expect API costs to drop 50-80% within 18 months, making API-first approaches increasingly attractive.",
+    "relevantTools": ["claude-code", "claude", "chatgpt", "gemini", "perplexity", "deepseek"]
+  },
+  {
+    "id": "parallel-sessions",
+    "category": "session-limits",
+    "title": "Running Multiple AI Sessions in Parallel",
+    "description": "A single AI session is a bottleneck. Running multiple sessions simultaneously across different terminal windows, browsers, or tools multiplies throughput. This is the simplest form of AI parallelism.",
+    "currentState": "Claude Code can run in multiple terminal windows simultaneously, each with its own context. Different browser tabs can run ChatGPT, Claude.ai, and Gemini concurrently. Subscription limits apply per-account, not per-session, so parallel sessions share the same quota.",
+    "strategies": [
+      {
+        "name": "Multi-Terminal Claude Code",
+        "how": "Open 2-3 terminal windows, each running Claude Code on different subtasks of the same project. One handles frontend, another handles backend, a third handles tests. Use git branches to avoid file conflicts. Merge when each task is complete.",
+        "tools": ["claude-code"],
+        "difficulty": "intermediate",
+        "cost": "free"
+      },
+      {
+        "name": "Cross-AI Parallel Work",
+        "how": "Run Claude Code in the terminal for implementation while simultaneously using ChatGPT in a browser for research and architecture planning, and Gemini for reviewing documentation. Each AI works on a different aspect of the same project concurrently.",
+        "tools": ["claude-code", "chatgpt", "gemini"],
+        "difficulty": "beginner",
+        "cost": "free"
+      },
+      {
+        "name": "Worktree-Based Isolation",
+        "how": "Use 'git worktree' to create multiple working copies of a repository. Each Claude Code instance operates in its own worktree on its own branch, completely isolated. No file conflicts possible. Merge branches when work is complete.",
+        "tools": ["claude-code"],
+        "difficulty": "advanced",
+        "cost": "free"
+      },
+      {
+        "name": "Background Task Execution",
+        "how": "Use Claude Code's background mode or scheduled tasks to run long-running operations (data processing, test suites, research compilation) while you interactively work in another session. Check results when notified of completion.",
+        "tools": ["claude-code"],
+        "difficulty": "intermediate",
+        "cost": "free"
+      }
+    ],
+    "futureState": "AI tools are adding native multi-agent capabilities. Claude Code already supports worktrees for parallel execution. Expect first-class support for spawning and coordinating parallel AI workers within a single interface by late 2026.",
+    "relevantTools": ["claude-code", "claude", "chatgpt", "gemini", "cursor", "windsurf"]
+  },
+  {
+    "id": "session-handoff-protocols",
+    "category": "session-limits",
+    "title": "Session Handoff: Seamless AI Continuity",
+    "description": "When a session ends (context limit, timeout, or interruption), work should not be lost. Structured handoff protocols ensure the next session picks up exactly where the last one left off, with no repeated work or lost context.",
+    "currentState": "CLAUDE.md provides automatic context loading. Memory files in .claude/ persist across sessions. Git commits preserve code state. But handoff is still mostly manual -- the user must remember to ask for a summary before context runs out.",
+    "strategies": [
+      {
+        "name": "Structured Continuation Prompts",
+        "how": "When nearing session end, ask: 'Write a continuation prompt I can paste into the next session. Include: what was done, what files were changed, what remains, any blockers found, and the exact next step to take.' Save the output to .claude/plans/ directory.",
+        "tools": ["claude-code"],
+        "difficulty": "beginner",
+        "cost": "free"
+      },
+      {
+        "name": "Auto-Memory via CLAUDE.md Updates",
+        "how": "Configure CLAUDE.md to include a 'Current Task' section. Ask the AI to update this section throughout the session. Next session automatically loads this context. Add a 'Last Session Summary' section that gets overwritten each session.",
+        "tools": ["claude-code"],
+        "difficulty": "beginner",
+        "cost": "free"
+      },
+      {
+        "name": "Plan Files for Multi-Session Projects",
+        "how": "For large projects, maintain a plan file (.claude/plans/project-name.md) with phases, checkboxes, and status. Each session checks the plan, works on the next unchecked item, and updates the plan before ending. The plan file is the coordination mechanism.",
+        "tools": ["claude-code"],
+        "difficulty": "intermediate",
+        "cost": "free"
+      },
+      {
+        "name": "Scheduled Tasks for Autonomous Continuation",
+        "how": "Use Claude scheduled tasks to set up recurring operations. The scheduled task reads the plan file, executes the next phase, commits results, and updates the plan. This enables AI work to continue even when you are away from the computer.",
+        "tools": ["claude-code"],
+        "difficulty": "advanced",
+        "cost": "low"
+      }
+    ],
+    "futureState": "Anthropic is building persistent agent memory and long-running tasks directly into Claude. The goal is seamless multi-session continuity where the AI genuinely remembers prior context without manual handoff. This is partially available today via memory files and approaching full automation.",
+    "relevantTools": ["claude-code", "claude"]
+  },
+  {
+    "id": "ai-strength-routing",
+    "category": "multi-ai-coordination",
+    "title": "Routing Tasks to the Right AI",
+    "description": "No single AI excels at everything. Claude leads in code and careful reasoning, GPT in breadth and creative tasks, Gemini in Google integration and long context, Perplexity in real-time web research. Routing tasks to the right AI maximizes quality and efficiency.",
+    "currentState": "Manual routing is the norm: users choose which AI to ask based on experience. Some tools like Poe and OpenRouter provide multi-model access in a single interface. Claude Code is best for coding, ChatGPT for general research, Perplexity for current events, Gemini for Google Workspace tasks.",
+    "strategies": [
+      {
+        "name": "Capability-Based Manual Routing",
+        "how": "Develop a personal routing table: Code generation/review -> Claude Code. General research/brainstorming -> ChatGPT. Real-time web search -> Perplexity. Google Docs/Sheets integration -> Gemini. Image generation -> ChatGPT or Midjourney. Video -> Runway/Kling. Keep this as a reference card.",
+        "tools": ["claude-code", "chatgpt", "gemini", "perplexity", "midjourney", "runway"],
+        "difficulty": "beginner",
+        "cost": "free"
+      },
+      {
+        "name": "OpenRouter as Universal Gateway",
+        "how": "Use OpenRouter (openrouter.ai) to access 100+ models through a single API. Route requests programmatically based on task type. Pay only for what you use. Compare model outputs for critical decisions. OpenRouter supports Claude, GPT, Gemini, Llama, Mistral, and dozens more.",
+        "tools": ["openrouter"],
+        "difficulty": "intermediate",
+        "cost": "low"
+      },
+      {
+        "name": "Poe for Interactive Multi-Model",
+        "how": "Poe (poe.com) provides access to Claude, GPT, Gemini, Llama, and custom bots in one interface. Useful for quick comparisons and when you need different model perspectives. Subscription at ~$30 CAD/month gives generous access to all models.",
+        "tools": ["poe"],
+        "difficulty": "beginner",
+        "cost": "low"
+      },
+      {
+        "name": "Specialized AI for Specialized Tasks",
+        "how": "Use domain-specific AIs for domain tasks: ElevenLabs for voice, Suno/Udio for music, Runway/Kling for video, Meshy/Tripo for 3D, Elicit/Consensus for academic research. These purpose-built tools outperform general-purpose AIs in their domains.",
+        "tools": ["elevenlabs", "suno", "udio", "runway", "kling", "meshy-ai", "tripo-ai", "elicit", "consensus"],
+        "difficulty": "beginner",
+        "cost": "low"
+      }
+    ],
+    "futureState": "AI routing will become automatic. Orchestration frameworks will analyze the task and select the best model/tool without user intervention. Some early versions exist (LangChain routing chains, semantic routers) but they are not yet reliable enough for production use.",
+    "relevantTools": ["claude-code", "chatgpt", "gemini", "perplexity", "openrouter", "poe"]
+  },
+  {
+    "id": "multi-agent-frameworks",
+    "category": "multi-ai-coordination",
+    "title": "Multi-Agent Orchestration Frameworks",
+    "description": "Frameworks like CrewAI, AutoGen, and LangChain enable multiple AI agents to collaborate on complex tasks. One agent researches, another writes code, a third reviews -- coordinated automatically. This is the foundation of autonomous AI pipelines.",
+    "currentState": "CrewAI, AutoGen (Microsoft), and LangGraph are production-ready frameworks for multi-agent orchestration. They require Python programming to set up. CrewAI is the most accessible, AutoGen is the most flexible, LangGraph offers the most control. All use LLM APIs under the hood.",
+    "strategies": [
+      {
+        "name": "CrewAI for Role-Based Teams",
+        "how": "Install CrewAI (pip install crewai). Define agents with specific roles (Researcher, Writer, Reviewer). Define tasks with expected outputs. CrewAI handles delegation, conversation, and task completion. Start with 2-3 agents and simple linear workflows. Costs depend on underlying API usage.",
+        "tools": ["crew-ai"],
+        "difficulty": "intermediate",
+        "cost": "low"
+      },
+      {
+        "name": "AutoGen for Complex Conversations",
+        "how": "Install AutoGen (pip install autogen-agentchat). Define agents that can converse with each other. AutoGen excels at multi-turn debates and iterative refinement. One agent proposes, another critiques, a third synthesizes. Supports human-in-the-loop at any point.",
+        "tools": ["chatgpt", "claude"],
+        "difficulty": "advanced",
+        "cost": "low"
+      },
+      {
+        "name": "Dify for No-Code Agent Building",
+        "how": "Use Dify.ai to build multi-agent workflows visually without writing code. Drag-and-drop agent creation, tool integration, and workflow design. Self-hostable or cloud-hosted. Good for non-developers who want agent orchestration.",
+        "tools": ["dify"],
+        "difficulty": "intermediate",
+        "cost": "free"
+      },
+      {
+        "name": "Claude Code as Meta-Coordinator",
+        "how": "Use Claude Code itself to write and run orchestration scripts. Have it create a Python script that calls multiple AI APIs, aggregates results, and produces a final output. Claude Code can write the code, test it, debug it, and run it -- all in one session.",
+        "tools": ["claude-code"],
+        "difficulty": "intermediate",
+        "cost": "low"
+      }
+    ],
+    "futureState": "Multi-agent orchestration is rapidly maturing. Expect drag-and-drop agent builders, standardized inter-agent protocols (like Model Context Protocol), and AI teams that self-organize around complex goals. Within 2 years, setting up an AI team will be as simple as describing the goal.",
+    "relevantTools": ["crew-ai", "dify", "claude-code", "chatgpt", "claude", "openrouter"]
+  },
+  {
+    "id": "automation-workflows",
+    "category": "multi-ai-coordination",
+    "title": "No-Code AI Automation Chains",
+    "description": "Tools like n8n, Make, and Zapier connect AI services into automated workflows without programming. Trigger an AI analysis when a file is uploaded, send results to another AI for review, then post to Slack. These are the plumbing of AI automation.",
+    "currentState": "n8n (self-hosted, free), Make (cloud, freemium), and Zapier (cloud, paid) all support AI node types. They can call Claude API, OpenAI API, and Gemini API as workflow steps. n8n is the most flexible and cost-effective for power users. Zapier is easiest for beginners.",
+    "strategies": [
+      {
+        "name": "n8n for Self-Hosted AI Pipelines",
+        "how": "Install n8n locally (npm install -g n8n) or via Docker. Build workflows that chain AI calls: trigger on schedule -> fetch data -> send to Claude API for analysis -> format results -> save to JSON file -> commit to git. Free, unlimited, private. Requires initial setup effort.",
+        "tools": ["n8n"],
+        "difficulty": "intermediate",
+        "cost": "free"
+      },
+      {
+        "name": "Zapier for Quick AI Automations",
+        "how": "Use Zapier's AI actions to connect services. Example: new email arrives -> extract key info with GPT -> create task in project manager -> notify via Slack. Zapier handles authentication, retries, and scheduling. Free tier allows 100 tasks/month.",
+        "tools": ["zapier"],
+        "difficulty": "beginner",
+        "cost": "free"
+      },
+      {
+        "name": "Make for Visual Complex Workflows",
+        "how": "Make.com offers visual workflow builder with branching, loops, and error handling. Build multi-step AI pipelines with conditional logic. Better than Zapier for complex flows, more visual than n8n. Free tier allows 1,000 operations/month.",
+        "tools": ["make"],
+        "difficulty": "intermediate",
+        "cost": "free"
+      },
+      {
+        "name": "GitHub Actions for Code-Adjacent Automation",
+        "how": "Use GitHub Actions to trigger AI operations on code events. On push: run AI code review. On schedule: update data files with fresh AI research. On issue creation: auto-triage with AI. Free for public repos, 2,000 minutes/month for private.",
+        "tools": ["claude-code", "github-copilot"],
+        "difficulty": "intermediate",
+        "cost": "free"
+      }
+    ],
+    "futureState": "No-code AI automation is converging with multi-agent frameworks. Soon, you will describe a workflow in natural language and the platform will build, test, and deploy it. Make and n8n are already adding AI-powered workflow generation.",
+    "relevantTools": ["n8n", "make", "zapier", "claude-code"]
+  },
+  {
+    "id": "coordinator-pattern",
+    "category": "multi-ai-coordination",
+    "title": "The AI Coordinator Pattern",
+    "description": "One AI acts as the planner and coordinator, breaking down complex goals into subtasks and delegating them to specialized AIs or tools. This mirrors how a human manager operates, but the manager is also an AI.",
+    "currentState": "This pattern works today using Claude Code as coordinator. Claude Code can write scripts that call other AI APIs, analyze results, and decide next steps. CrewAI and AutoGen formalize this with 'manager' agent roles. The main limitation is reliability -- coordinators sometimes lose track of the overall plan.",
+    "strategies": [
+      {
+        "name": "Claude Code as Project Manager",
+        "how": "Give Claude Code the full project plan in CLAUDE.md. Ask it to break down the current goal into subtasks. For each subtask, it either executes directly (coding) or writes a prompt for another AI (research, design). Collect results and have Claude Code synthesize them.",
+        "tools": ["claude-code"],
+        "difficulty": "intermediate",
+        "cost": "low"
+      },
+      {
+        "name": "Plan-Execute-Verify Loop",
+        "how": "Step 1: AI creates a detailed plan with numbered steps. Step 2: Execute each step (AI or human). Step 3: AI verifies each step's output against expected results. Step 4: AI adjusts the plan if something failed. This structured loop prevents drift and ensures quality.",
+        "tools": ["claude-code", "chatgpt"],
+        "difficulty": "intermediate",
+        "cost": "free"
+      },
+      {
+        "name": "CrewAI Manager Mode",
+        "how": "In CrewAI, set process=Process.hierarchical and designate a manager_llm. The manager agent receives the goal, creates tasks, assigns them to worker agents, reviews outputs, and requests revisions. Fully automated coordination with human oversight optional.",
+        "tools": ["crew-ai"],
+        "difficulty": "advanced",
+        "cost": "low"
+      }
+    ],
+    "futureState": "The coordinator pattern will become the default way to interact with AI. Users will describe goals to a coordinator AI that manages a team of specialist AIs. Anthropic's Claude agent SDK and OpenAI's agent framework are building this directly into their platforms.",
+    "relevantTools": ["claude-code", "crew-ai", "dify", "chatgpt"]
+  },
+  {
+    "id": "automation-level-0-1",
+    "category": "automation-levels",
+    "title": "Level 0-1: From Manual to AI-Assisted",
+    "description": "Level 0 is doing everything yourself. Level 1 is asking AI for suggestions and acting on them manually. This is where most people start, and it already provides 2-5x productivity gains for knowledge work.",
+    "currentState": "Level 1 is fully achievable today with free tools. ChatGPT suggests, you implement. Claude reviews your code, you fix it. Perplexity researches, you synthesize. The AI is an advisor; you are the executor. No setup required beyond creating accounts.",
+    "strategies": [
+      {
+        "name": "AI as Research Assistant",
+        "how": "Before starting any task, ask an AI to research the topic, outline approaches, identify pitfalls, and suggest tools. Use Perplexity for current information, ChatGPT for broad knowledge, Claude for technical depth. Act on the research manually.",
+        "tools": ["perplexity", "chatgpt", "claude"],
+        "difficulty": "beginner",
+        "cost": "free"
+      },
+      {
+        "name": "AI as Code Reviewer",
+        "how": "Write code yourself, then paste it into Claude or ChatGPT for review. Ask for bugs, performance issues, security concerns, and improvements. Apply the suggestions manually. This catches issues a solo developer would miss.",
+        "tools": ["claude", "chatgpt"],
+        "difficulty": "beginner",
+        "cost": "free"
+      },
+      {
+        "name": "AI as Writing Partner",
+        "how": "Draft content yourself, then use AI to improve clarity, fix grammar, suggest restructuring. Or give AI an outline and have it draft, then you edit. Grammarly for real-time suggestions, ChatGPT for substantial rewrites.",
+        "tools": ["grammarly", "chatgpt", "claude"],
+        "difficulty": "beginner",
+        "cost": "free"
+      }
+    ],
+    "futureState": "Level 1 will become the minimum baseline. AI assistance will be embedded in every application, making it impossible to work without some AI involvement. The question will not be 'should I use AI?' but 'how much autonomy should I give it?'",
+    "relevantTools": ["chatgpt", "claude", "perplexity", "grammarly", "gemini"]
+  },
+  {
+    "id": "automation-level-2",
+    "category": "automation-levels",
+    "title": "Level 2: Supervised Automation (AI Acts, You Approve)",
+    "description": "At Level 2, the AI proposes and executes changes, but waits for human approval at key checkpoints. Claude Code operates at this level by default -- it writes code and asks permission before running commands or modifying files.",
+    "currentState": "Claude Code, Cursor, and Windsurf all operate at Level 2 for coding tasks. They write code, create files, run tests, and make commits -- but ask permission for destructive or ambiguous actions. This is the sweet spot for most professional work today.",
+    "strategies": [
+      {
+        "name": "Claude Code Default Mode",
+        "how": "Use Claude Code as-is. Describe what you want built. It writes the code, creates files, runs commands. You review the proposed changes and approve. For trusted operations, grant blanket permissions in .claude/settings.json to reduce approval prompts.",
+        "tools": ["claude-code"],
+        "difficulty": "beginner",
+        "cost": "low"
+      },
+      {
+        "name": "AI-Driven Development with Review Gates",
+        "how": "Let the AI implement an entire feature, then review the diff before committing. Use 'git diff' to see all changes. Ask the AI to explain its choices. Approve, request changes, or reject. This is faster than pair programming but maintains quality control.",
+        "tools": ["claude-code", "cursor", "windsurf"],
+        "difficulty": "intermediate",
+        "cost": "low"
+      },
+      {
+        "name": "Automated Testing as Approval",
+        "how": "Write comprehensive tests (or have AI write them). Let the AI make any changes it wants. If tests pass, changes are approved automatically. If tests fail, AI must fix until green. The test suite becomes your approval mechanism.",
+        "tools": ["claude-code", "github-copilot"],
+        "difficulty": "intermediate",
+        "cost": "free"
+      }
+    ],
+    "futureState": "Level 2 will get smarter about when to ask for approval. AI will learn your preferences and only interrupt for genuinely novel or risky decisions. Expect 90% of routine approvals to become automatic within 18 months.",
+    "relevantTools": ["claude-code", "cursor", "windsurf", "github-copilot"]
+  },
+  {
+    "id": "automation-level-3",
+    "category": "automation-levels",
+    "title": "Level 3: Autonomous Operation (AI Acts Independently)",
+    "description": "At Level 3, the AI executes complex multi-step tasks without human intervention, reporting results after completion. This requires high trust in the AI's judgment and robust guardrails to prevent catastrophic errors.",
+    "currentState": "Partially achievable today with Claude scheduled tasks, GitHub Actions, and n8n workflows. The AI can autonomously update data files, run analyses, and commit results on a schedule. Full autonomy for complex creative or strategic tasks is not yet reliable enough for production.",
+    "strategies": [
+      {
+        "name": "Scheduled Autonomous Tasks",
+        "how": "Set up Claude scheduled tasks to run daily/weekly. Example: 'Every Monday, research new AI tool launches, update tools.json with any new findings, and commit changes.' The AI runs independently on schedule and pushes results to git for your review.",
+        "tools": ["claude-code"],
+        "difficulty": "intermediate",
+        "cost": "low"
+      },
+      {
+        "name": "GitHub Actions AI Pipeline",
+        "how": "Create GitHub Actions workflows that trigger AI operations. On schedule: run a Python script that calls AI APIs to research and update data files, then auto-commit. On PR: run AI code review and post comments. Fully autonomous with results visible in git history.",
+        "tools": ["claude-code", "github-copilot"],
+        "difficulty": "advanced",
+        "cost": "free"
+      },
+      {
+        "name": "Guardrailed Autonomy",
+        "how": "Give the AI autonomy but with constraints: only modify files in specific directories, only commit to non-main branches, only spend below a token budget, always write a summary of actions taken. Review the summary and merge if satisfied.",
+        "tools": ["claude-code", "n8n"],
+        "difficulty": "advanced",
+        "cost": "low"
+      },
+      {
+        "name": "Autonomous Data Pipeline",
+        "how": "Build a pipeline where AI autonomously: (1) fetches data from APIs/websites, (2) analyzes and structures it, (3) updates JSON data files, (4) validates against schemas, (5) commits and pushes. The entire CC-AIProgress data refresh can run this way.",
+        "tools": ["claude-code", "n8n", "make"],
+        "difficulty": "advanced",
+        "cost": "low"
+      }
+    ],
+    "futureState": "Level 3 is the near-term frontier. Anthropic's long-running agents, OpenAI's Operator, and Google's Project Mariner are all building toward reliable autonomous operation. Expect production-grade autonomy for well-defined tasks by late 2026.",
+    "relevantTools": ["claude-code", "n8n", "make", "zapier"]
+  },
+  {
+    "id": "automation-level-4",
+    "category": "automation-levels",
+    "title": "Level 4: Self-Improving AI Systems",
+    "description": "At Level 4, the AI not only acts autonomously but identifies gaps in its own capabilities, finds solutions, and improves itself. It notices when data is stale, discovers new tools, proposes new projects, and expands its own scope.",
+    "currentState": "Early prototypes exist. A Claude scheduled task can be instructed to: check for new AI launches, evaluate if they should be added to the tracker, add them if they meet criteria, and report what it found. But true self-improvement (rewriting its own prompts, optimizing its own workflows) is experimental.",
+    "strategies": [
+      {
+        "name": "Self-Monitoring Data Freshness",
+        "how": "Build a scheduled task that checks lastVerified dates across all JSON files. If any entry is older than 30 days, autonomously research current state and update. Flag entries where the tool has shut down or changed significantly. This keeps the knowledge base evergreen.",
+        "tools": ["claude-code"],
+        "difficulty": "advanced",
+        "cost": "low"
+      },
+      {
+        "name": "Autonomous Tool Discovery",
+        "how": "Schedule an AI task to monitor Product Hunt, Hacker News, and AI newsletters for new tool launches. When a relevant tool is found, create a draft entry following the tools.json schema. Submit as a PR for human review. Over time, reduce the review requirement for routine additions.",
+        "tools": ["claude-code", "perplexity"],
+        "difficulty": "advanced",
+        "cost": "low"
+      },
+      {
+        "name": "Feedback Loop Optimization",
+        "how": "Track which AI-generated outputs get accepted vs. rejected by the human. Use this signal to refine prompts and approaches. Store successful patterns in CLAUDE.md. Discard patterns that consistently produce rejected outputs. The system learns your preferences over time.",
+        "tools": ["claude-code"],
+        "difficulty": "advanced",
+        "cost": "free"
+      }
+    ],
+    "futureState": "Level 4 is the ultimate goal: AI systems that genuinely improve themselves. Current AI cannot modify its own weights, but it can modify its prompts, tools, and workflows. Within 3-5 years, expect AI systems that continuously optimize their own performance without human guidance.",
+    "relevantTools": ["claude-code", "crew-ai", "dify", "n8n"]
+  },
+  {
+    "id": "free-tier-stacking",
+    "category": "cost-optimization",
+    "title": "Free Tier Stacking: Maximum AI at Zero Cost",
+    "description": "Every major AI provider offers a free tier. By strategically combining them, you can access substantial AI capacity without spending a cent. The key is knowing each provider's limits and rotating between them.",
+    "currentState": "Claude free tier: ~30 messages/day with Sonnet. ChatGPT free: GPT-4o with daily limits. Gemini free: generous usage including 1M token context. Perplexity free: 5 Pro searches/day plus unlimited basic. DeepSeek: very cheap API. Combined, this covers most daily AI needs.",
+    "strategies": [
+      {
+        "name": "Structured Rotation Schedule",
+        "how": "Morning: Start with Claude for coding (freshest context). Midday: Switch to ChatGPT for research and planning. Afternoon: Use Gemini for documentation and Google integration. Evening: Perplexity for web research on tomorrow's tasks. Each AI's free tier refreshes daily.",
+        "tools": ["claude", "chatgpt", "gemini", "perplexity"],
+        "difficulty": "beginner",
+        "cost": "free"
+      },
+      {
+        "name": "Task-Matched Free Tiers",
+        "how": "Route tasks to whichever free tier handles them best: Code -> Claude. General questions -> ChatGPT. Current events -> Perplexity. Long documents -> Gemini (1M context). Image generation -> ChatGPT (DALL-E included free). This maximizes quality while staying free.",
+        "tools": ["claude", "chatgpt", "gemini", "perplexity"],
+        "difficulty": "beginner",
+        "cost": "free"
+      },
+      {
+        "name": "Free API Tiers for Automation",
+        "how": "Gemini API offers a free tier with generous rate limits. DeepSeek API is extremely cheap (~$0.002/1K tokens). Use these for automated pipelines where you need API access but want minimal cost. Reserve paid APIs for tasks requiring top-tier model quality.",
+        "tools": ["gemini", "deepseek", "openrouter"],
+        "difficulty": "intermediate",
+        "cost": "free"
+      }
+    ],
+    "futureState": "Free tiers will remain as customer acquisition tools but may become more restrictive as AI costs stabilize. Lock in current generous limits while they last. The real cost savings will come from plummeting API prices making paid tiers unnecessary.",
+    "relevantTools": ["claude", "chatgpt", "gemini", "perplexity", "deepseek", "grok"]
+  },
+  {
+    "id": "api-cost-comparison",
+    "category": "cost-optimization",
+    "title": "API Pricing Deep Dive and Optimization",
+    "description": "API pricing varies dramatically across providers and models. Choosing the right model for each task can reduce costs by 10-100x. The most expensive model is rarely the right choice for routine tasks.",
+    "currentState": "As of March 2026 (CAD, approximate): Claude Opus ~$0.03/1K input, $0.15/1K output. Claude Sonnet ~$0.005/1K input, $0.025/1K output. Claude Haiku ~$0.001/1K input, $0.005/1K output. GPT-4o ~$0.005/1K input, $0.02/1K output. Gemini 2.0 Flash ~$0.001/1K input. DeepSeek V3 ~$0.002/1K input.",
+    "strategies": [
+      {
+        "name": "Model Tiering Strategy",
+        "how": "Use cheap/fast models (Haiku, Flash, DeepSeek) for: classification, formatting, simple extraction, summarization. Use mid-tier models (Sonnet, GPT-4o) for: code generation, analysis, writing. Use top-tier models (Opus, o3) only for: complex reasoning, novel architecture decisions, critical code review.",
+        "tools": ["claude", "chatgpt", "gemini", "deepseek"],
+        "difficulty": "intermediate",
+        "cost": "low"
+      },
+      {
+        "name": "Prompt Caching to Cut Costs",
+        "how": "Claude and GPT APIs support prompt caching. For repeated operations with the same system prompt or context, cached tokens cost 90% less. Structure your API calls to maximize cacheable prefix content. Essential for batch operations.",
+        "tools": ["claude", "chatgpt"],
+        "difficulty": "advanced",
+        "cost": "low"
+      },
+      {
+        "name": "Local Models for Unlimited Free Use",
+        "how": "Install Ollama (ollama.ai) or LM Studio. Download open-source models like Llama 3.3 70B, Mistral, DeepSeek-Coder, or Qwen 2.5. Run locally with zero API costs. Quality is 70-90% of top commercial models for most tasks. Requires decent hardware (16GB+ RAM, GPU recommended).",
+        "tools": ["hugging-face"],
+        "difficulty": "intermediate",
+        "cost": "free"
+      },
+      {
+        "name": "Batch API for Bulk Processing",
+        "how": "Both Claude and OpenAI offer batch APIs at 50% discount. Submit large batches of requests (1000+) and get results within 24 hours. Perfect for: updating all tools.json entries, bulk content generation, mass data analysis.",
+        "tools": ["claude", "chatgpt"],
+        "difficulty": "advanced",
+        "cost": "low"
+      }
+    ],
+    "futureState": "API prices are in freefall. Each year brings 5-10x cost reduction. By 2027, today's Opus-level quality will likely cost what Haiku costs today. Local models are improving rapidly and will match commercial quality within 2 years for most tasks.",
+    "relevantTools": ["claude", "chatgpt", "gemini", "deepseek", "openrouter", "hugging-face"]
+  },
+  {
+    "id": "local-model-strategy",
+    "category": "cost-optimization",
+    "title": "Local Models: Unlimited AI with Zero Ongoing Cost",
+    "description": "Open-source models running locally provide unlimited, private AI usage with no API costs. Quality has reached the point where local models handle 80%+ of routine tasks competently. The trade-off is hardware requirements and setup complexity.",
+    "currentState": "Ollama makes local model deployment trivial (one command install). LM Studio provides a GUI. Models like Llama 3.3 70B, DeepSeek-Coder-V2, and Qwen 2.5-Coder rival commercial APIs for coding. Need 16GB RAM minimum for useful models, 32GB+ recommended. GPU (8GB+ VRAM) dramatically improves speed.",
+    "strategies": [
+      {
+        "name": "Ollama Quick Start",
+        "how": "Install Ollama from ollama.ai. Run 'ollama pull llama3.3' for general tasks or 'ollama pull deepseek-coder-v2' for coding. Use 'ollama run <model>' for chat or the API at localhost:11434 for integration. Models download once and run forever at zero cost.",
+        "tools": ["hugging-face"],
+        "difficulty": "beginner",
+        "cost": "free"
+      },
+      {
+        "name": "Local + Cloud Hybrid",
+        "how": "Use local models for: drafting, formatting, simple coding, data processing, privacy-sensitive tasks. Use cloud APIs for: complex reasoning, creative work, tasks requiring latest knowledge. This cuts cloud API costs by 60-80% while maintaining quality where it matters.",
+        "tools": ["hugging-face", "claude", "chatgpt"],
+        "difficulty": "intermediate",
+        "cost": "low"
+      },
+      {
+        "name": "Local Models in Automation Pipelines",
+        "how": "Connect Ollama to n8n via the HTTP node (localhost:11434/api/generate). Use local models for high-volume, low-stakes pipeline steps: data formatting, classification, extraction. Reserve API calls for steps requiring top quality. Zero marginal cost for volume.",
+        "tools": ["n8n", "hugging-face"],
+        "difficulty": "advanced",
+        "cost": "free"
+      }
+    ],
+    "futureState": "Local models are improving faster than cloud models in capability-per-parameter. Apple, Qualcomm, and Intel are building AI accelerators into consumer hardware. Within 2 years, running a Claude-Sonnet-equivalent model locally on a mid-range laptop will be routine.",
+    "relevantTools": ["hugging-face", "n8n"]
+  },
+  {
+    "id": "cross-session-memory",
+    "category": "persistence-and-memory",
+    "title": "Building Persistent AI Memory Across Sessions",
+    "description": "AI sessions are ephemeral by default -- each new conversation starts from scratch. Building a persistent memory layer means the AI accumulates knowledge over time, remembering project context, user preferences, past decisions, and lessons learned.",
+    "currentState": "Claude Code reads CLAUDE.md automatically, supports memory files in .claude/memory/, and can read/write arbitrary files. This provides functional persistence. ChatGPT has built-in memory. Gemini remembers across Google Workspace. But none have true long-term memory -- all use file/context tricks.",
+    "strategies": [
+      {
+        "name": "Layered Memory Architecture",
+        "how": "Create a memory hierarchy: CLAUDE.md for project-level context (architecture, conventions). .claude/memory/ for user preferences and cross-project knowledge. .claude/plans/ for active task tracking. data/*.json for structured knowledge. Each layer serves a different persistence need.",
+        "tools": ["claude-code"],
+        "difficulty": "beginner",
+        "cost": "free"
+      },
+      {
+        "name": "JSON as Structured Long-Term Memory",
+        "how": "Store knowledge in structured JSON files that the AI can read and update. tools.json is knowledge about AI tools. strategies.json (this file) is knowledge about approaches. The AI reads these at session start and updates them as it learns. Schema enforcement prevents drift.",
+        "tools": ["claude-code"],
+        "difficulty": "beginner",
+        "cost": "free"
+      },
+      {
+        "name": "Git as Temporal Memory",
+        "how": "Every git commit is a timestamped snapshot. The AI can 'git log' to see what it did previously, 'git diff' to see what changed, and 'git blame' to understand why. Commit messages serve as a narrative log. Tag important milestones for quick reference.",
+        "tools": ["claude-code"],
+        "difficulty": "beginner",
+        "cost": "free"
+      },
+      {
+        "name": "Decision Log for Institutional Memory",
+        "how": "Maintain a decisions.md file where the AI records: what decision was made, why, what alternatives were considered, and what the expected outcome was. This prevents relitigating past decisions and helps future sessions understand historical context.",
+        "tools": ["claude-code"],
+        "difficulty": "beginner",
+        "cost": "free"
+      }
+    ],
+    "futureState": "True persistent memory is the most-wanted AI feature. Anthropic, OpenAI, and Google are all building real memory systems. Within 1-2 years, expect AI that genuinely remembers all past interactions, learns from them, and improves over time -- without manual file management.",
+    "relevantTools": ["claude-code", "claude", "chatgpt", "gemini", "notion-ai"]
+  },
+  {
+    "id": "scheduled-autonomous-ops",
+    "category": "persistence-and-memory",
+    "title": "Scheduled Tasks for Autonomous Background Operation",
+    "description": "Scheduled tasks enable AI to work without you being present. Set up a recurring task and the AI executes it on schedule -- researching, updating data, running analyses, and committing results. This is the bridge between assisted and autonomous operation.",
+    "currentState": "Claude scheduled tasks can run on cron schedules. GitHub Actions provides free scheduled workflows. n8n supports scheduled triggers with AI nodes. Combined, these enable a fully autonomous data refresh pipeline that runs daily/weekly without human intervention.",
+    "strategies": [
+      {
+        "name": "Daily Data Freshness Check",
+        "how": "Create a Claude scheduled task that runs daily: check news-sources.json for broken URLs, verify tool pricing hasn't changed, look for new AI tool launches on major platforms. Update JSON files with findings. Commit changes with descriptive messages.",
+        "tools": ["claude-code"],
+        "difficulty": "intermediate",
+        "cost": "low"
+      },
+      {
+        "name": "Weekly Intelligence Digest",
+        "how": "Schedule a weekly task that: scrapes AI newsletters and news sites, compiles a summary of the week's developments, identifies items relevant to tracked tools and projects, updates relevant JSON files, and generates a digest report in a markdown file.",
+        "tools": ["claude-code", "perplexity"],
+        "difficulty": "advanced",
+        "cost": "low"
+      },
+      {
+        "name": "GitHub Actions Weekly Update",
+        "how": "Create a .github/workflows/update.yml that runs weekly. It executes a Python script that calls AI APIs to research updates, validates JSON schemas, updates meta.json timestamps, and auto-commits. Free for public repos on GitHub.",
+        "tools": ["claude-code"],
+        "difficulty": "intermediate",
+        "cost": "free"
+      }
+    ],
+    "futureState": "Scheduled tasks will evolve into always-on AI agents that monitor continuously rather than running on fixed schedules. They will react to events in real-time: a new tool launches and is added within hours, a pricing change is detected and updated immediately.",
+    "relevantTools": ["claude-code", "n8n", "make", "zapier"]
+  },
+  {
+    "id": "obstacle-rate-limits",
+    "category": "obstacle-patterns",
+    "title": "Overcoming Rate Limits and Usage Caps",
+    "description": "Every AI service imposes rate limits -- messages per hour, tokens per day, requests per minute. These are the most common obstacles to sustained AI work. Multiple proven strategies exist to work within or around these limits.",
+    "currentState": "Claude free: ~30 messages/day. Claude Pro: ~100+ messages/5hr depending on model. ChatGPT free: varies daily. APIs have per-minute and per-day token limits. Rate limits are the single most common complaint from power users.",
+    "strategies": [
+      {
+        "name": "Provider Rotation",
+        "how": "When one provider hits rate limits, switch to another. Keep 3-4 AI tabs open (Claude, ChatGPT, Gemini, Perplexity). Transfer your current context by copy-pasting the key question/code. Each provider has independent limits.",
+        "tools": ["claude", "chatgpt", "gemini", "perplexity"],
+        "difficulty": "beginner",
+        "cost": "free"
+      },
+      {
+        "name": "Efficient Prompting",
+        "how": "Reduce token usage per interaction: be specific and concise, provide only relevant context, ask for targeted outputs rather than open-ended responses. One well-crafted prompt can replace five vague ones. Use CLAUDE.md to provide context without repeating it in every message.",
+        "tools": ["claude-code", "claude", "chatgpt"],
+        "difficulty": "beginner",
+        "cost": "free"
+      },
+      {
+        "name": "API with Higher Limits",
+        "how": "Subscription rate limits are typically lower than API limits. API access lets you control rate and burst. Claude API Tier 4 allows 4,000 requests/minute. Costs more per-token but removes the friction of hitting caps during critical work sessions.",
+        "tools": ["claude", "chatgpt", "gemini"],
+        "difficulty": "intermediate",
+        "cost": "medium"
+      },
+      {
+        "name": "Batch and Cache",
+        "how": "Batch similar requests together rather than sending them one at a time. Cache AI responses for repeated queries (store in local files or a database). Use batch APIs (50% cheaper) for non-urgent bulk processing. This halves your effective rate limit consumption.",
+        "tools": ["claude", "chatgpt", "n8n"],
+        "difficulty": "intermediate",
+        "cost": "low"
+      }
+    ],
+    "futureState": "Rate limits will relax as AI inference costs drop. But they will never fully disappear -- they serve as both cost controls and abuse prevention. The most effective long-term strategy is building efficient workflows that accomplish more with fewer AI calls.",
+    "relevantTools": ["claude", "chatgpt", "gemini", "perplexity", "openrouter"]
+  },
+  {
+    "id": "obstacle-context-window",
+    "category": "obstacle-patterns",
+    "title": "Working Within Context Window Limits",
+    "description": "Every AI has a maximum context window -- the amount of text it can consider at once. When your project exceeds this, the AI literally cannot see all the relevant information. Strategic context management is essential for large projects.",
+    "currentState": "Claude: 200K tokens (~500 pages). Gemini: 1M+ tokens (~2,500 pages). GPT-4o: 128K tokens (~320 pages). Most projects fit within these limits, but large codebases and multi-file systems can exceed them. Quality degrades well before the hard limit.",
+    "strategies": [
+      {
+        "name": "Focused Context Loading",
+        "how": "Do not dump entire codebases into context. Instead, tell the AI which specific files are relevant to the current task. Use CLAUDE.md to describe the architecture so the AI knows where to look. Let the AI request files as needed rather than preloading everything.",
+        "tools": ["claude-code"],
+        "difficulty": "beginner",
+        "cost": "free"
+      },
+      {
+        "name": "Hierarchical Summarization",
+        "how": "For large projects, maintain summary files at each level: project-level summary in CLAUDE.md, module-level summaries in each directory, file-level docstrings. The AI reads high-level summaries first and drills into details only as needed.",
+        "tools": ["claude-code", "chatgpt"],
+        "difficulty": "intermediate",
+        "cost": "free"
+      },
+      {
+        "name": "Gemini for Large Context Tasks",
+        "how": "When a task genuinely requires massive context (analyzing an entire codebase, processing long documents, reviewing all files), route it to Gemini with its 1M+ token window. Use Claude or GPT for the focused implementation that follows.",
+        "tools": ["gemini"],
+        "difficulty": "beginner",
+        "cost": "free"
+      },
+      {
+        "name": "RAG (Retrieval-Augmented Generation)",
+        "how": "For truly large knowledge bases, implement RAG: embed your documents into a vector database (Chroma, Pinecone), then retrieve only the relevant chunks when asking AI a question. This scales to millions of documents. Requires setup but handles unlimited knowledge.",
+        "tools": ["hugging-face"],
+        "difficulty": "advanced",
+        "cost": "low"
+      }
+    ],
+    "futureState": "Context windows are growing exponentially. Gemini already handles 1M+ tokens. Within 2 years, 10M+ token contexts will be common, making context management less critical. But efficient context use will always improve speed and reduce costs.",
+    "relevantTools": ["claude-code", "gemini", "chatgpt", "claude"]
+  },
+  {
+    "id": "obstacle-multi-step-reliability",
+    "category": "obstacle-patterns",
+    "title": "Making Multi-Step AI Tasks Reliable",
+    "description": "AI excels at single-step tasks but can lose coherence over long, multi-step processes. Steps get skipped, context drifts, and errors compound. Structured approaches dramatically improve reliability for complex task sequences.",
+    "currentState": "Claude Code handles 5-10 step tasks reliably. Beyond that, explicit checkpointing and verification become necessary. CrewAI and similar frameworks add structure. The main failure mode is the AI 'forgetting' earlier steps or diverging from the plan.",
+    "strategies": [
+      {
+        "name": "Explicit Checklists",
+        "how": "Before starting a multi-step task, write out every step as a numbered checklist. Include expected outputs for each step. Have the AI mark each step complete as it goes. If the AI drifts, point it back to the checklist. Store the checklist in a file for persistence.",
+        "tools": ["claude-code"],
+        "difficulty": "beginner",
+        "cost": "free"
+      },
+      {
+        "name": "Step-by-Step Verification",
+        "how": "After each step, verify the output before proceeding. Run tests, check file contents, validate data. Do not let the AI batch steps together if reliability matters. This is slower but catches errors before they compound.",
+        "tools": ["claude-code"],
+        "difficulty": "intermediate",
+        "cost": "free"
+      },
+      {
+        "name": "Checkpoint and Resume Pattern",
+        "how": "After each major step, save state to a checkpoint file (JSON with completed steps, current state, pending steps). If the session fails or context runs out, the next session reads the checkpoint and resumes from the last completed step. Never re-do completed work.",
+        "tools": ["claude-code"],
+        "difficulty": "intermediate",
+        "cost": "free"
+      },
+      {
+        "name": "Pipeline Architecture",
+        "how": "Instead of one AI doing 20 steps, build a pipeline where each step is an independent operation. Step 1 produces output file A. Step 2 reads A and produces B. Each step can be retried independently. n8n or Make can orchestrate this with error handling and retries.",
+        "tools": ["n8n", "make", "claude-code"],
+        "difficulty": "advanced",
+        "cost": "free"
+      }
+    ],
+    "futureState": "Multi-step reliability is improving rapidly with better planning capabilities (o3, Claude with extended thinking). Agentic frameworks are adding automatic verification and retry. Within 1-2 years, expect AI to handle 50+ step processes reliably with minimal human oversight.",
+    "relevantTools": ["claude-code", "n8n", "make", "crew-ai"]
+  },
+  {
+    "id": "obstacle-nothing-is-a-wall",
+    "category": "obstacle-patterns",
+    "title": "The 'Nothing Is a Brick Wall' Playbook",
+    "description": "When an AI tool says it cannot do something, that is not the end -- it is the beginning of finding an alternative path. Every limitation has a workaround: another tool, a different approach, a creative combination, or a manual bridge between automated steps.",
+    "currentState": "The AI landscape is broad enough that almost any task has at least one viable path. If Claude cannot access the web, Perplexity can. If ChatGPT cannot edit files, Claude Code can. If no AI can do a task directly, an AI can write a script that does it. The key is knowing the full landscape.",
+    "strategies": [
+      {
+        "name": "Tool Substitution Matrix",
+        "how": "Maintain a mental (or actual) matrix: for each capability, know 2-3 tools that can do it. Web search: Perplexity, ChatGPT, Gemini. Code execution: Claude Code, Replit, Google Colab. Image generation: DALL-E, Midjourney, Flux. When one tool fails, switch to the next.",
+        "tools": ["claude-code", "chatgpt", "gemini", "perplexity", "replit"],
+        "difficulty": "beginner",
+        "cost": "free"
+      },
+      {
+        "name": "AI-Written Bridges",
+        "how": "When an AI cannot perform an action directly, have it write a script that does. Claude Code cannot call a specific API? Have it write a Python script that does and run it. ChatGPT cannot edit your files? Have it generate the code and paste it into Claude Code.",
+        "tools": ["claude-code", "chatgpt"],
+        "difficulty": "intermediate",
+        "cost": "free"
+      },
+      {
+        "name": "Human-in-the-Loop Bridge",
+        "how": "Some steps genuinely require human action (CAPTCHA, physical verification, signing into a service). Instead of blocking, have the AI prepare everything before and after the human step. AI generates the content, human pastes it into the form, AI verifies the result.",
+        "tools": ["claude-code"],
+        "difficulty": "beginner",
+        "cost": "free"
+      },
+      {
+        "name": "Capability Gap Tracking",
+        "how": "When you hit a genuine limitation (no tool can do X), document it in a 'gaps' tracker. Check back monthly -- AI capabilities expand weekly. What was impossible in January may be trivial by March. This file (strategies.json) and tests.json serve this purpose.",
+        "tools": ["claude-code"],
+        "difficulty": "beginner",
+        "cost": "free"
+      }
+    ],
+    "futureState": "The number of genuine brick walls is shrinking rapidly. Every month, capabilities that were impossible become merely difficult, and difficult ones become easy. The mindset of persistent problem-solving is more valuable than any specific workaround.",
+    "relevantTools": ["claude-code", "chatgpt", "gemini", "perplexity", "openrouter", "poe", "n8n"]
+  },
+  {
+    "id": "video-length-limits",
+    "category": "obstacle-patterns",
+    "title": "Video Generation Length Limits",
+    "description": "Most AI video generators cap output at 5-10 seconds per generation, making longer content seem impossible. Multiple workaround strategies exist for producing minutes of coherent AI video.",
+    "currentState": "Runway Gen-3 maxes at 10s, Kling at 5-10s, Veo at 8s. No single tool generates minutes of coherent video.",
+    "strategies": [
+      {
+        "name": "Scene-by-scene stitching",
+        "how": "Generate individual scenes separately, then combine in a video editor (CapCut, DaVinci Resolve). Use consistent style prompts and end-frame-to-start-frame continuity.",
+        "tools": ["runway", "kling", "veo"],
+        "difficulty": "intermediate",
+        "cost": "low"
+      },
+      {
+        "name": "Extend with img2vid",
+        "how": "Take the last frame of a generated clip, use it as the starting image for the next generation. Runway and Kling both support image-to-video for continuity.",
+        "tools": ["runway", "kling"],
+        "difficulty": "beginner",
+        "cost": "medium"
+      },
+      {
+        "name": "AI + stock footage hybrid",
+        "how": "Use AI for hero shots and creative sequences, fill gaps with stock footage or screen recordings. Most viewers won't notice the mix.",
+        "tools": ["runway", "pika"],
+        "difficulty": "beginner",
+        "cost": "low"
+      }
+    ],
+    "futureState": "Expect 30-60 second generation within 6 months as Veo 3 and Runway Gen-4 compete on length.",
+    "relevantTools": ["runway", "kling", "pika", "veo"]
+  },
+  {
+    "id": "ai-music-vocal-quality",
+    "category": "obstacle-patterns",
+    "title": "AI Music Vocal Realism",
+    "description": "AI-generated vocals can sound robotic or lack emotional nuance, especially on complex melodies. Cherry-picking, post-processing, and hybrid approaches produce professional results.",
+    "currentState": "Suno v4.5 and Udio v2 produce decent vocals but struggle with subtle emotion, breathing, and dynamic range.",
+    "strategies": [
+      {
+        "name": "Cherry-pick and regenerate",
+        "how": "Generate 10+ variations of the same song, pick the best vocal take from each section, splice together in a DAW.",
+        "tools": ["suno", "udio"],
+        "difficulty": "intermediate",
+        "cost": "free"
+      },
+      {
+        "name": "AI vocals + human touch-up",
+        "how": "Use AI for the base vocal, then apply pitch correction, EQ, and reverb in a DAW to add warmth and presence.",
+        "tools": ["suno", "udio", "elevenlabs"],
+        "difficulty": "advanced",
+        "cost": "low"
+      },
+      {
+        "name": "Use instrumentals only",
+        "how": "Generate instrumental tracks with AI (higher quality than vocals), add real vocals or use text-to-speech for narration instead.",
+        "tools": ["suno", "udio", "elevenlabs"],
+        "difficulty": "beginner",
+        "cost": "free"
+      }
+    ],
+    "futureState": "Suno v5 reportedly has major vocal improvements. ElevenLabs singing voice tech may merge with music generation.",
+    "relevantTools": ["suno", "udio", "elevenlabs"]
+  },
+  {
+    "id": "image-gen-text-rendering",
+    "category": "obstacle-patterns",
+    "title": "Text in AI-Generated Images",
+    "description": "AI image generators consistently produce garbled, misspelled, or unreadable text in images. Post-production text overlay and specialized tools solve this reliably.",
+    "currentState": "DALL-E 3 improved but still fails on long text. Midjourney v6 better but inconsistent. Ideogram leads but has style limits.",
+    "strategies": [
+      {
+        "name": "Add text in post-production",
+        "how": "Generate the image without text, then add text using Canva, Photoshop, or even CSS overlays. Clean and reliable every time.",
+        "tools": ["dalle", "midjourney"],
+        "difficulty": "beginner",
+        "cost": "free"
+      },
+      {
+        "name": "Use Ideogram for text-heavy images",
+        "how": "Ideogram specializes in text rendering. Generate there, then upscale or style-transfer with another tool if needed.",
+        "tools": ["ideogram"],
+        "difficulty": "beginner",
+        "cost": "free"
+      },
+      {
+        "name": "Inpainting correction",
+        "how": "Generate the image, then use inpainting to mask the text area and regenerate just that region with a focused text prompt.",
+        "tools": ["stable-diffusion", "dalle"],
+        "difficulty": "intermediate",
+        "cost": "low"
+      }
+    ],
+    "futureState": "Flux and DALL-E teams actively working on text rendering. Expect reliable 2-3 word rendering by mid-2026.",
+    "relevantTools": ["dalle", "midjourney", "ideogram", "stable-diffusion", "flux"]
+  }
+]

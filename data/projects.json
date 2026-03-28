@@ -1,0 +1,772 @@
+[
+  {
+    "id": "ai-progress-v2",
+    "name": "AI-Progress v2: Self-Evolving Intelligence System",
+    "status": "in-progress",
+    "ambition": "high",
+    "description": "Transform this dashboard from a static tracker into a living system that researches, learns, proposes, and acts autonomously. Multi-AI orchestration where the system picks the best AI for each task.",
+    "currentState": "v0.4 — 46 tools tracked, 6 tabs, JSON data, manual updates",
+    "targetState": "Self-updating system that discovers tools before you hear about them, tests them automatically, and briefs you on what matters",
+    "phases": [
+      {
+        "phase": 1,
+        "name": "Multi-AI Data Pipeline",
+        "status": "planned",
+        "description": "Connect to multiple AI APIs (Claude, OpenAI, Gemini, Perplexity) to cross-verify information. Each AI has strengths — Perplexity for real-time search, Claude for analysis, GPT for breadth, Gemini for Google ecosystem data.",
+        "tasks": [
+          "Create API integration layer (Python scripts in /scripts)",
+          "Map each AI's free tier limits and API costs",
+          "Build cross-verification: ask 3 AIs the same question, flag disagreements",
+          "Auto-select best AI per task type (research → Perplexity, analysis → Claude, code → Claude Code)",
+          "Store API responses in data/ai-responses/ for audit trail"
+        ],
+        "aiTools": ["claude-api", "openai-api", "gemini-api", "perplexity-api"],
+        "estimatedCost": "Free tier covers most — Claude free API, GPT free tier, Gemini free, Perplexity free searches",
+        "blockers": ["API keys needed", "Rate limits on free tiers"],
+        "workarounds": ["Rotate between AIs to stay within limits", "Cache responses to avoid redundant calls", "Use browser automation as fallback when APIs hit limits"]
+      },
+      {
+        "phase": 2,
+        "name": "Autonomous Research Agent",
+        "status": "planned",
+        "description": "Scheduled system that runs daily: scans news sources, checks for new tools, verifies pricing, detects shutdowns, and generates a daily briefing.",
+        "tasks": [
+          "Claude scheduled task: daily research sweep",
+          "Web scraping fallback for sources without APIs",
+          "Auto-generate new test entries when tools launch",
+          "Dead tool detection (check URLs, look for shutdown announcements)",
+          "Daily briefing generation: 'Here's what changed in AI today'",
+          "Auto-commit data changes to GitHub with detailed diffs"
+        ],
+        "aiTools": ["claude-scheduled-tasks", "github-actions", "web-scraping"],
+        "estimatedCost": "Free (Claude scheduled tasks + GitHub Actions free tier)",
+        "blockers": ["Some sites block scraping"],
+        "workarounds": ["Use RSS feeds where available", "Use AI to read pages via browser automation", "Perplexity API as search proxy"]
+      },
+      {
+        "phase": 3,
+        "name": "Browser Automation Testing",
+        "status": "planned",
+        "description": "AI opens browser, navigates to tools, runs comparison tests, takes screenshots, generates reports. Uses Claude's MCP browser tools or Puppeteer.",
+        "tasks": [
+          "Auto-open tool URLs and capture screenshots",
+          "Run side-by-side comparisons (same prompt to 3 tools, compare outputs)",
+          "CAPTCHA handling via browser automation tools",
+          "Screenshot comparison: visual diff of tool outputs",
+          "Generate test report cards automatically",
+          "Video recording of test sessions for review"
+        ],
+        "aiTools": ["claude-browser-mcp", "puppeteer", "playwright"],
+        "estimatedCost": "Free (runs on your Windows PC)",
+        "blockers": ["CAPTCHAs on some tools", "Login requirements"],
+        "workarounds": ["Store session cookies", "Use tools' APIs instead of UI where available", "AI vision to solve simple CAPTCHAs"]
+      },
+      {
+        "phase": 4,
+        "name": "Predictive Intelligence",
+        "status": "concept",
+        "description": "Use historical data + AI reasoning to predict: which tools will dominate, which will die, what new categories will emerge, what you should learn next.",
+        "tasks": [
+          "Build historical data tracking (weekly snapshots of rankings/pricing)",
+          "Trend analysis: trajectory of each tool over time",
+          "Predict shutdowns (signs: price hikes, declining updates, competitor surge)",
+          "Predict breakouts (signs: rapid user growth, funding announcements, viral demos)",
+          "Personalized recommendations based on your test history and interests",
+          "Weekly 'AI Forecast' briefing"
+        ],
+        "aiTools": ["claude-api", "data-analysis"],
+        "estimatedCost": "Free (analysis on local data)",
+        "blockers": ["Need historical data first — takes weeks of collection"],
+        "workarounds": ["Backfill from web archives where possible", "Start collecting now, predictions improve over time"]
+      }
+    ],
+    "biggestRisk": "API rate limits on free tiers",
+    "mitigation": "Multi-AI rotation, aggressive caching, browser automation fallback",
+    "lastUpdated": "2026-03-27"
+  },
+  {
+    "id": "idea-machine",
+    "name": "Idea Machine: AI Virtual Assistant",
+    "status": "concept",
+    "ambition": "moonshot",
+    "description": "A personal AI assistant app that lives on your phone, connects to your computer remotely, and can DO things — not just answer questions. Generates images, videos, programs, websites. Talks to you via voice. Orchestrates multiple AIs behind the scenes.",
+    "currentState": "Concept — no code yet",
+    "targetState": "Smartphone app with voice interface that connects to a home server running AI orchestration, capable of generating any digital content on command",
+    "phases": [
+      {
+        "phase": 1,
+        "name": "Voice-First Local Server",
+        "status": "concept",
+        "description": "Set up a local server on your Windows PC that accepts voice commands via a web app. Uses text-to-speech (ElevenLabs or free alternatives) and speech-to-text (Whisper). Accessible from phone via local network or tunnel.",
+        "tasks": [
+          "Install Python + FastAPI on Windows PC as local server",
+          "Integrate Whisper (free, local) for speech-to-text",
+          "Integrate TTS: ElevenLabs API (free tier: limited) or Coqui TTS (free, local, unlimited)",
+          "Create mobile-friendly web interface (PWA — installable on phone)",
+          "Set up Cloudflare Tunnel or Tailscale for remote access from phone outside home",
+          "Basic conversation loop: speak → transcribe → AI processes → TTS response"
+        ],
+        "aiTools": ["whisper", "elevenlabs", "coqui-tts", "fastapi", "cloudflare-tunnel"],
+        "estimatedCost": "Free (Whisper is free, Coqui TTS is free, Cloudflare tunnel is free)",
+        "blockers": ["PC must be running", "Network setup for remote access"],
+        "workarounds": ["Wake-on-LAN to start PC remotely", "Tailscale for zero-config VPN", "Fallback to cloud TTS when local unavailable"]
+      },
+      {
+        "phase": 2,
+        "name": "Multi-AI Orchestrator",
+        "status": "concept",
+        "description": "The assistant routes tasks to the best AI automatically. Image request → Midjourney/DALL-E. Code request → Claude Code. Research → Perplexity. Music → Suno. The user just describes what they want.",
+        "tasks": [
+          "Task classifier: analyze user intent and route to best AI",
+          "API integrations: OpenAI (images + chat), Claude (analysis + code), Perplexity (search), Suno (music), Runway (video)",
+          "Fallback chains: if primary AI fails or hits limit, try next best",
+          "Result aggregation: combine outputs from multiple AIs into one response",
+          "Cost tracking: monitor API usage, prefer free tiers, warn before paid calls",
+          "Plugin architecture: easy to add new AI tools as they launch"
+        ],
+        "aiTools": ["openai-api", "claude-api", "perplexity-api", "suno-api", "runway-api", "midjourney"],
+        "estimatedCost": "Mostly free tiers — paid APIs only for heavy use ($5-20/month estimated)",
+        "blockers": ["Some tools have no API (Midjourney)", "Rate limits"],
+        "workarounds": ["Browser automation for tools without APIs", "Queue system to respect rate limits", "Local models (Stable Diffusion, DeepSeek) as unlimited fallbacks"]
+      },
+      {
+        "phase": 3,
+        "name": "Content Generation Engine",
+        "status": "concept",
+        "description": "Generate any digital content on demand: images, videos, music, websites, programs, documents. All from voice commands.",
+        "tasks": [
+          "Image generation pipeline: prompt → Stable Diffusion (local, free) or DALL-E API",
+          "Video generation: Runway/Kling API or local Stable Video Diffusion",
+          "Music generation: Suno API or Udio API",
+          "Website generation: Claude Code generates HTML/CSS/JS, auto-deploys to GitHub Pages",
+          "Program generation: describe what you want → AI writes, tests, and packages it",
+          "Document generation: reports, presentations, spreadsheets from voice description"
+        ],
+        "aiTools": ["stable-diffusion-local", "dall-e-api", "runway-api", "suno-api", "claude-code", "github-pages"],
+        "estimatedCost": "Local generation is free. API calls: $0-20/month depending on usage",
+        "blockers": ["GPU needed for local image/video generation", "Quality varies"],
+        "workarounds": ["Use cloud APIs when local GPU insufficient", "Chain multiple AIs for quality improvement", "Human review step for important outputs"]
+      },
+      {
+        "phase": 4,
+        "name": "Autonomous Agent Mode",
+        "status": "concept",
+        "description": "The assistant doesn't just respond — it proactively suggests, plans, and executes multi-step projects. It can install software, configure tools, and manage its own capabilities.",
+        "tasks": [
+          "Self-installation: assistant can pip install packages, download models, configure APIs",
+          "Project planning: break big ideas into steps, estimate time/cost, execute sequentially",
+          "Inter-AI conversations: one AI reviews another AI's output for quality",
+          "Memory system: remember past conversations, preferences, project context",
+          "Proactive suggestions: 'I noticed a new image AI launched — want me to test it?'",
+          "Error recovery: when something fails, automatically try alternative approaches"
+        ],
+        "aiTools": ["all-available"],
+        "estimatedCost": "Varies by usage — mostly free with occasional API costs",
+        "blockers": ["Trust/safety — autonomous actions need guardrails", "Complex error handling"],
+        "workarounds": ["Confirmation prompts for destructive actions", "Sandbox environments for testing", "Rollback capability for every action"]
+      }
+    ],
+    "biggestRisk": "Scope — this is a massive project",
+    "mitigation": "Phase 1 is achievable in days. Each phase works standalone. Build incrementally.",
+    "lastUpdated": "2026-03-27"
+  },
+  {
+    "id": "ai-boundary-pusher",
+    "name": "Boundary Pusher: What's Actually Possible Right Now",
+    "status": "concept",
+    "ambition": "moonshot",
+    "description": "A systematic effort to find the actual limits of current AI by combining tools in ways nobody has tried. Not theoretical — actually do it, document what works, document what fails, and publish the results.",
+    "currentState": "Concept — we know individual tool capabilities but not combined limits",
+    "targetState": "A living document of 'what AI can actually do today' based on real experiments, with auto-detection of when limits expand",
+    "phases": [
+      {
+        "phase": 1,
+        "name": "Capability Mapping",
+        "status": "concept",
+        "description": "Systematically test what each AI tool can and cannot do. Not marketing claims — actual tested limits. Document failure modes.",
+        "tasks": [
+          "Create standardized test suite for each category (text, image, video, code, audio)",
+          "Run identical prompts across all tools, score results",
+          "Document exact failure points: where does each tool break?",
+          "Test edge cases: very long inputs, complex instructions, multi-step reasoning",
+          "Test combination workflows: output of one AI as input to another",
+          "Publish results as structured data in this dashboard"
+        ],
+        "aiTools": ["all-tracked-tools"],
+        "estimatedCost": "Free (using free tiers of all tools)",
+        "blockers": ["Time-intensive", "Free tier limits"],
+        "workarounds": ["Automate testing via browser automation", "Prioritize most impactful comparisons first"]
+      },
+      {
+        "phase": 2,
+        "name": "Combination Experiments",
+        "status": "concept",
+        "description": "What happens when you chain 5 AIs together? Claude writes a script → GPT reviews it → Gemini tests it → Perplexity fact-checks the output → Claude summarizes. Find powerful combinations nobody has tried.",
+        "tasks": [
+          "Design 20 multi-AI pipeline experiments",
+          "Build automated pipeline runner (input → AI1 → AI2 → AI3 → output)",
+          "Test creative chains: Claude writes lyrics → Suno generates song → ElevenLabs creates voice intro",
+          "Test code chains: Claude Code writes app → GPT writes tests → Gemini reviews security",
+          "Test research chains: Perplexity searches → Claude analyzes → GPT generates report → Claude critiques",
+          "Score each pipeline: quality, speed, cost, reliability"
+        ],
+        "aiTools": ["all-available"],
+        "estimatedCost": "Mostly free tiers — some API costs for heavy chains",
+        "blockers": ["Complex orchestration", "Error propagation between AIs"],
+        "workarounds": ["Start with 2-tool chains, scale up", "Error handling at each stage", "Human checkpoint for expensive operations"]
+      },
+      {
+        "phase": 3,
+        "name": "Impossible Task Attempts",
+        "status": "concept",
+        "description": "Take tasks that are 'impossible' today and throw everything at them. Full movie from a text prompt. Complete business plan with financial projections. Functional mobile app from a sentence. See how close we get.",
+        "tasks": [
+          "Define 10 'impossible' challenges with clear success criteria",
+          "Challenge 1: Generate a 5-minute short film with consistent characters, plot, and soundtrack — entirely AI-generated",
+          "Challenge 2: Build and deploy a functional mobile app from a one-sentence description",
+          "Challenge 3: Create a complete online course (video, quizzes, slides) on any topic in under 1 hour",
+          "Challenge 4: Generate a 50-page research report with verified citations on a novel topic",
+          "Challenge 5: Create an original album (10 tracks, cover art, liner notes) in one session",
+          "Document exactly where each attempt succeeds, fails, and what would fix it",
+          "Re-attempt monthly as tools improve — track progress toward 'impossible'"
+        ],
+        "aiTools": ["all-available"],
+        "estimatedCost": "Variable — some challenges may require paid tiers",
+        "blockers": ["Current tool limitations", "Quality ceilings"],
+        "workarounds": ["Human-in-the-loop for quality gaps", "Mix AI and manual steps, document the ratio", "Track which steps will be automatable next"]
+      },
+      {
+        "phase": 4,
+        "name": "Publish & Automate Discovery",
+        "status": "concept",
+        "description": "Automatically re-run capability tests when tools update. Detect when a previously 'impossible' task becomes possible. Alert you immediately.",
+        "tasks": [
+          "Automated regression testing of all tool capabilities (weekly)",
+          "Version tracking: when tools update, re-run relevant tests",
+          "Breakthrough detection: flag when test scores improve significantly",
+          "Public results page: share findings so others benefit",
+          "Community contribution: accept test submissions from others",
+          "Monthly 'State of AI Capability' report — auto-generated"
+        ],
+        "aiTools": ["github-actions", "claude-scheduled-tasks", "browser-automation"],
+        "estimatedCost": "Free (automated via GitHub Actions + scheduled tasks)",
+        "blockers": ["Scale — lots of tests to maintain"],
+        "workarounds": ["Prioritize high-impact tests", "AI generates and maintains test scripts"]
+      }
+    ],
+    "biggestRisk": "Scope creep — there are infinite things to test",
+    "mitigation": "Strict prioritization: test what matters most to YOU first. Expand from there.",
+    "lastUpdated": "2026-03-27"
+  },
+  {
+    "id": "text-to-3d-print",
+    "name": "Text to Physical Object: AI 3D Design → Print Pipeline",
+    "status": "planned",
+    "ambition": "moonshot",
+    "description": "Go from a text description to a physical 3D-printed object using only AI tools. No CAD skills. Test every tool in the chain, document what works, what breaks, and build the most reliable pipeline possible. Then extend to mechanical parts, assemblies, and eventually functional products.",
+    "currentState": "Research complete — Meshy (97% slicer pass, 55% watertight), Zoo (only parametric CAD AI), PrintPal (print-optimized). No single tool does it end-to-end reliably.",
+    "targetState": "Reliable pipeline: describe an object → AI generates print-ready model → auto-repair → slice → send to printer. Works for both organic (figurines) and mechanical (gears, enclosures) parts.",
+    "phases": [
+      {
+        "phase": 1,
+        "name": "Tool Testing: Organic Models",
+        "status": "planned",
+        "description": "Test Meshy, Tripo, PrintPal with identical prompts. Print the results. Score: mesh quality, watertight percentage, print success rate, time to printable file.",
+        "tasks": [
+          "Create 10 standardized test prompts (figurine, vase, phone case, chess piece, etc.)",
+          "Generate each prompt in Meshy, Tripo, PrintPal — document results",
+          "Export STL/3MF from each, run through mesh analysis (Blender 3D Print Toolbox)",
+          "Score watertight %, non-manifold edges, polygon count, file size",
+          "Slice in Bambu Studio/OrcaSlicer — note any errors",
+          "Print top 3 results, photograph and document quality",
+          "Build comparison database in data/3d-tests.json"
+        ],
+        "aiTools": ["meshy-ai", "tripo-ai", "printpal", "blender"],
+        "estimatedCost": "Free tiers + filament cost (~$5-10 in PLA per test batch)",
+        "blockers": ["Need access to a 3D printer", "Free tier generation limits"],
+        "workarounds": ["Use online print services (JLCPCB 3D printing, Shapeways) if no local printer", "Rotate between tools to stay within free limits"]
+      },
+      {
+        "phase": 2,
+        "name": "Tool Testing: Mechanical Parts",
+        "status": "planned",
+        "description": "Test Zoo's text-to-CAD for mechanical parts that need dimensional accuracy. Can AI generate a gear, enclosure, bracket that actually works?",
+        "tasks": [
+          "Create 10 mechanical test prompts (gear, enclosure, bracket, hinge, snap-fit, threaded bolt)",
+          "Generate in Zoo (KCL/API) — the only parametric CAD AI",
+          "Export STEP files, open in Fusion 360 or FreeCAD",
+          "Measure dimensional accuracy vs specification",
+          "Print mechanical parts, test fit and function",
+          "Compare Zoo output to manual CAD for same parts",
+          "Document where AI CAD fails vs succeeds"
+        ],
+        "aiTools": ["zoo-cad", "fusion-360", "freecad"],
+        "estimatedCost": "Zoo API: ~$5-10 for testing. FreeCAD is free.",
+        "blockers": ["Zoo is still early — complex parts may fail", "Mechanical parts need tight tolerances"],
+        "workarounds": ["Use Zoo for initial geometry, manual CAD cleanup for tolerances", "Backflip AI for mesh-to-parametric conversion if needed"]
+      },
+      {
+        "phase": 3,
+        "name": "Automated Pipeline",
+        "status": "concept",
+        "description": "Build a script that chains: text prompt → AI generation → mesh repair → slicing → G-code output. Minimal human intervention.",
+        "tasks": [
+          "Python script: send prompt to Meshy/Zoo API",
+          "Auto-repair: Blender Python API for manifold fixes",
+          "Auto-scale: detect model size, scale to target dimensions",
+          "Auto-slice: OrcaSlicer CLI for G-code generation",
+          "Quality check: automated mesh analysis before slicing",
+          "Output: print-ready G-code with estimated time and material",
+          "Web interface: paste description → get G-code"
+        ],
+        "aiTools": ["meshy-ai", "zoo-cad", "blender-python", "orcaslicer-cli"],
+        "estimatedCost": "API costs only — ~$0.50-2 per model",
+        "blockers": ["Mesh repair automation is imperfect", "Slicing parameters depend on printer/material"],
+        "workarounds": ["Conservative repair settings (better to over-repair than under)", "Printer profile presets for common setups"]
+      },
+      {
+        "phase": 4,
+        "name": "Full Product Pipeline",
+        "status": "concept",
+        "description": "Extend beyond single parts: multi-part assemblies, functional products, custom packaging, and direct-to-manufacturer ordering.",
+        "tasks": [
+          "Multi-part assembly: AI generates parts that fit together",
+          "Tolerance management: automatic clearance for moving parts",
+          "Material selection: AI recommends PLA/PETG/TPU based on function",
+          "Color/texture: multi-material printing support",
+          "Direct ordering: API integration with JLCPCB 3D printing or Shapeways",
+          "Cost estimation: material + print time + shipping",
+          "Product listing: auto-generate product photos and descriptions"
+        ],
+        "aiTools": ["meshy-ai", "zoo-cad", "jlcpcb-api", "claude-api"],
+        "estimatedCost": "Variable — $1-50 per product depending on complexity and manufacturing",
+        "blockers": ["Multi-part assemblies are hard — tolerance stacking", "No AI handles assemblies well yet"],
+        "workarounds": ["Start with simple 2-part assemblies", "Human review for critical dimensions", "Iterate: print, measure, adjust, reprint"]
+      }
+    ],
+    "biggestRisk": "Mesh quality — 45% of AI-generated meshes aren't watertight",
+    "mitigation": "Automated repair pipeline + multiple generation attempts + quality scoring before printing",
+    "lastUpdated": "2026-03-27"
+  },
+  {
+    "id": "ai-electronics-lab",
+    "name": "AI Electronics Lab: Text to PCB to Manufactured Board",
+    "status": "planned",
+    "ambition": "moonshot",
+    "description": "Design electronic circuits using AI — from text description through schematic, PCB layout, to ordering manufactured boards from JLCPCB. Test every AI EDA tool, find the gaps, and bridge them. Target: a non-engineer should be able to describe what they want and get a working PCB.",
+    "currentState": "Research complete — Quilter (layout, free beta), Flux.ai (full ECAD), CircuitMind (schematic from block diagram), DeepPCB (routing). No end-to-end text-to-PCB pipeline exists. Analog/RF/power design has ZERO AI tools.",
+    "targetState": "Describe a circuit in plain English → AI generates schematic → AI layouts PCB → auto-validate against manufacturer DRC → one-click order from JLCPCB/PCBWay. Initially for digital circuits, eventually analog.",
+    "phases": [
+      {
+        "phase": 1,
+        "name": "Tool Testing: Simple Digital Boards",
+        "status": "planned",
+        "description": "Test Quilter, Flux.ai, DeepPCB with identical simple projects (LED blinker, USB-C breakout, ESP32 dev board). Score: time, quality, DRC pass rate, ordering readiness.",
+        "tasks": [
+          "Design 5 test projects of increasing complexity (1-layer through 4-layer)",
+          "Test each in Quilter, Flux.ai, DeepPCB — document results and time",
+          "Run DRC against JLCPCB manufacturing rules",
+          "Export Gerbers from each tool, verify in online Gerber viewer",
+          "Order 1-2 boards from JLCPCB to verify manufacturability",
+          "Solder and test: does the board actually work?",
+          "Build comparison database in data/pcb-tests.json"
+        ],
+        "aiTools": ["quilter-ai", "flux-ai", "deeppcb"],
+        "estimatedCost": "Free tool tiers + ~$5-15 per PCB order from JLCPCB (minimum 5 boards)",
+        "blockers": ["Need soldering equipment for testing", "Component sourcing and assembly"],
+        "workarounds": ["JLCPCB offers SMT assembly service", "Start with through-hole components (easier to solder)", "Use EasyEDA (free, integrated with JLCPCB) as baseline comparison"]
+      },
+      {
+        "phase": 2,
+        "name": "Schematic Generation: CircuitMind + LLM",
+        "status": "planned",
+        "description": "Test CircuitMind ACE for schematic generation from block diagrams. Use Claude/GPT to generate the block diagrams from text descriptions. Bridge the gap.",
+        "tasks": [
+          "Use Claude to convert text requirements into block diagrams",
+          "Feed block diagrams to CircuitMind ACE",
+          "Evaluate component selection quality and cost optimization",
+          "Test handoff: CircuitMind schematic → Quilter/Flux layout",
+          "Document where the chain breaks (analog, power, RF)",
+          "Build LLM prompt templates for electronics requirements"
+        ],
+        "aiTools": ["circuitmind", "claude-api", "quilter-ai", "flux-ai"],
+        "estimatedCost": "CircuitMind pricing TBD + Claude API (~$1-5 per session)",
+        "blockers": ["CircuitMind doesn't do power/analog circuits", "Handoff between tools requires manual steps"],
+        "workarounds": ["Design power sections manually in KiCad (free)", "Use LLMs to generate KiCad schematic files for analog portions", "Human review at every handoff point"]
+      },
+      {
+        "phase": 3,
+        "name": "The Analog Gap: Can We Bridge It?",
+        "status": "concept",
+        "description": "Analog/RF/power design has NO AI tools. This is the biggest gap in electronics AI. Can we use LLMs + SPICE simulation to partially fill it?",
+        "tasks": [
+          "Test Claude/GPT ability to generate SPICE netlists for common circuits",
+          "Run LLM-generated circuits in LTspice (free) and evaluate correctness",
+          "Build a library of verified analog building blocks (voltage regulators, amplifiers, filters)",
+          "Test if LLMs can select appropriate components from datasheets",
+          "Explore: can we train a custom model on open-source analog designs?",
+          "Document exactly what analog AI CAN'T do — this is the research gap"
+        ],
+        "aiTools": ["claude-api", "openai-api", "ltspice"],
+        "estimatedCost": "LTspice is free. API costs minimal for testing.",
+        "blockers": ["Analog design is fundamentally harder for AI — noise, parasitics, non-idealities", "Safety concerns for power circuits"],
+        "workarounds": ["Start with low-power, low-frequency circuits where mistakes are safe", "Cross-verify between multiple LLMs", "Always simulate before manufacturing"]
+      },
+      {
+        "phase": 4,
+        "name": "One-Click Manufacturing",
+        "status": "concept",
+        "description": "Automate the ordering process: AI validates design, generates manufacturing files, estimates cost, and places order with JLCPCB/PCBWay API.",
+        "tasks": [
+          "JLCPCB API integration for automated ordering",
+          "Auto-generate BOM with verified in-stock components",
+          "Cost estimation: PCB fabrication + components + assembly + shipping",
+          "Design-for-manufacturing checks (minimum trace width, drill sizes, etc.)",
+          "Assembly file generation (pick-and-place, BOM mapping)",
+          "Tracking: order status, delivery estimation",
+          "Full pipeline: text description → manufactured board in mailbox within 2 weeks"
+        ],
+        "aiTools": ["flux-ai", "jlcpcb-api", "claude-api"],
+        "estimatedCost": "PCB orders: $5-50 depending on complexity. Assembly: $20-200.",
+        "blockers": ["Component availability changes daily", "Assembly errors from AI-generated pick-and-place files"],
+        "workarounds": ["Use JLCPCB's verified component library", "Order extra boards for testing", "Start with simple 2-layer boards"]
+      }
+    ],
+    "biggestRisk": "AI cannot design analog circuits — this limits what boards can be fully automated",
+    "mitigation": "Start with digital-only boards. Add manual analog sections as needed. Track when analog AI tools appear.",
+    "lastUpdated": "2026-03-27"
+  },
+  {
+    "id": "workplace-automation",
+    "name": "Workplace Automation: AI Handles Your Daily Computer Tasks",
+    "status": "concept",
+    "ambition": "high",
+    "description": "Systematically identify, analyze, and automate daily workplace computer tasks. Not just 'use ChatGPT' — actually observe what you do, map the workflows, find where AI can take over, build the automations, and measure time saved. Start with observation, end with an AI that handles routine work autonomously.",
+    "currentState": "Concept — need to identify actual daily tasks first",
+    "targetState": "AI assistant that knows your workflows, handles routine tasks autonomously, and proposes optimizations for complex ones. Phone answering, email triage, document generation, data entry — all AI-handled.",
+    "phases": [
+      {
+        "phase": 1,
+        "name": "Task Discovery & Mapping",
+        "status": "planned",
+        "description": "Before automating anything, we need to know what you actually do. No giant prompt needed — AI observes and maps. Use screen recording + AI analysis, or just a structured interview.",
+        "tasks": [
+          "Option A: Install a time-tracking tool (RescueTime, Toggl — free tiers) for 1 week",
+          "Option B: Claude interviews you about your daily tasks (15 min structured session)",
+          "Option C: Screen recording of a typical day → AI analyzes the workflow",
+          "Map every task: what software, how often, how long, how repetitive",
+          "Categorize: fully automatable / partially automatable / requires human judgment",
+          "Identify the top 10 time-wasters that AI could handle",
+          "Create data/workplace-tasks.json with the complete task map"
+        ],
+        "aiTools": ["claude-api", "rescuetime", "toggl"],
+        "estimatedCost": "Free (all tools have free tiers)",
+        "blockers": ["Privacy: screen recording captures sensitive work data", "Need your cooperation for accurate mapping"],
+        "workarounds": ["Option B avoids screen recording entirely", "Task mapping can be done conversationally", "Start with non-sensitive tasks only"]
+      },
+      {
+        "phase": 2,
+        "name": "Quick Wins: Immediate Automation",
+        "status": "concept",
+        "description": "Automate the easiest, most repetitive tasks first. Email templates, file organization, meeting summaries, form filling. These are solved problems — just need setup.",
+        "tasks": [
+          "Email: auto-draft replies for common patterns (Outlook + Power Automate or Gmail + Zapier)",
+          "Calendar: AI schedules meetings, resolves conflicts, sends reminders",
+          "Documents: template generation for common reports/emails (Claude API + templates)",
+          "File organization: auto-sort downloads, rename files by content",
+          "Meeting notes: auto-transcribe and summarize (Otter.ai, Whisper local)",
+          "Data entry: AI reads documents and fills forms/spreadsheets",
+          "Browser automation: auto-fill forms, auto-login, auto-download reports"
+        ],
+        "aiTools": ["zapier", "make", "power-automate", "otter-ai", "whisper", "claude-api"],
+        "estimatedCost": "Zapier free tier (100 tasks/mo), Make free tier (1000 ops/mo), Otter.ai free (300 min/mo)",
+        "blockers": ["Workplace IT policies may restrict tool installation", "Some tasks need admin access"],
+        "workarounds": ["Use browser-based tools that don't need installation", "Portable Python scripts that run without admin", "Start with personal tasks, expand to work tasks after proving value"]
+      },
+      {
+        "phase": 3,
+        "name": "AI Phone Assistant",
+        "status": "concept",
+        "description": "AI answers your phone, transcribes the call, looks up relevant information, drafts a response or takes action. This already exists in pieces — we need to connect them.",
+        "tasks": [
+          "Speech-to-text: Whisper (free, local) or Google Speech API",
+          "Intent detection: Claude/GPT analyzes what the caller wants",
+          "Information lookup: search your files, CRM, knowledge base for relevant data",
+          "Response generation: AI drafts a response or escalates to you",
+          "Text-to-speech: ElevenLabs (limited free) or Coqui TTS (free, local, unlimited)",
+          "Phone integration: Twilio ($1/mo + per-minute) for actual phone connectivity",
+          "Voicemail alternative: AI takes the call, texts you a summary with suggested action",
+          "Full loop: caller speaks → AI understands → looks up info → responds → logs the call"
+        ],
+        "aiTools": ["whisper", "claude-api", "elevenlabs", "coqui-tts", "twilio"],
+        "estimatedCost": "Twilio: ~$1/mo + $0.013/min. Whisper: free. TTS: free (Coqui) or $5/mo (ElevenLabs)",
+        "blockers": ["Latency — caller may notice AI delay", "Complex queries need human judgment", "Phone number porting"],
+        "workarounds": ["Start as voicemail replacement (no real-time pressure)", "AI asks clarifying questions to buy time", "Escalation: 'Let me connect you with Cole' for complex calls"]
+      },
+      {
+        "phase": 4,
+        "name": "Deep Automation: Custom AI Agents",
+        "status": "concept",
+        "description": "Build custom AI agents for your specific workflows. An agent that knows your job, your tools, your preferences, and can execute multi-step tasks autonomously.",
+        "tasks": [
+          "Build task-specific agents using Claude API or OpenAI Assistants API",
+          "Agent memory: store your preferences, past decisions, common patterns",
+          "Multi-step execution: agent completes 5-step task from single instruction",
+          "Tool integration: agent can use your software (browser automation, API calls)",
+          "Proactive suggestions: 'You usually send this report on Fridays — want me to draft it?'",
+          "Error handling: agent detects when it's unsure and asks you instead of guessing",
+          "Dashboard: track what the agent did, time saved, accuracy",
+          "Continuous improvement: agent learns from your corrections"
+        ],
+        "aiTools": ["claude-api", "openai-assistants-api", "browser-automation", "zapier"],
+        "estimatedCost": "API costs: $5-30/month depending on usage volume",
+        "blockers": ["Trust — hard to trust AI with important work tasks initially", "Error rate needs to be very low"],
+        "workarounds": ["Start in 'suggest mode' — AI proposes, you approve", "Gradual autonomy: approve first 10 times, then auto-execute", "Undo capability for every action"]
+      }
+    ],
+    "biggestRisk": "Workplace IT policies may restrict what tools can be installed",
+    "mitigation": "Start with personal workflow automation. Use browser-based and portable tools. Prove ROI before requesting IT exceptions.",
+    "lastUpdated": "2026-03-27"
+  },
+  {
+    "id": "ai-film-studio",
+    "name": "Solo AI Film Studio: Complete Video Production",
+    "status": "concept",
+    "ambition": "moonshot",
+    "description": "Produce a complete short film — script, storyboard, visuals, video, voice acting, music, sound effects, editing, color grading — using only AI tools. Zero camera, zero crew, zero budget. Two AI films premiered at Sundance 2026. A solo creator got a World Records India certification. This is real and happening now.",
+    "currentState": "Proven possible — Sundance 2026 films, World Records India certified AI music video, MIT AI Film Hack showing 3-year progression. Pipeline: ChatGPT→Midjourney→Runway→ElevenLabs→Descript.",
+    "targetState": "Repeatable pipeline that produces watchable 5-10 minute short films. Documented quality at each stage. Published on YouTube. Potentially monetizable.",
+    "phases": [
+      {
+        "phase": 1,
+        "name": "60-Second Test Film",
+        "status": "concept",
+        "description": "Produce a 60-second short using the proven pipeline. Learn the tools, find the bottlenecks, document the quality.",
+        "tasks": [
+          "Script: ChatGPT or Claude writes a simple 60-second narrative",
+          "Storyboard: Midjourney or FLUX generates key frames",
+          "Video: Runway Gen-4 or Kling animates storyboard frames",
+          "Voice: ElevenLabs generates narration/dialogue",
+          "Music: Suno generates background score",
+          "Sound effects: ElevenLabs Sound Effects or Freesound.org",
+          "Edit: Descript or DaVinci Resolve (free) for assembly",
+          "Grade: Colourlab AI for color correction",
+          "Total time target: under 4 hours for 60 seconds"
+        ],
+        "aiTools": ["chatgpt", "midjourney", "runway", "elevenlabs", "suno", "descript"],
+        "estimatedCost": "Free tiers of most tools. Midjourney: ~$14 CAD/mo minimum.",
+        "blockers": ["Character consistency across frames", "Lip sync for dialogue", "Temporal coherence in video"],
+        "workarounds": ["Narration-driven (no lip sync needed)", "Consistent character via Midjourney style reference", "Short cuts (2-3 sec) to hide temporal artifacts"]
+      },
+      {
+        "phase": 2,
+        "name": "5-Minute Short Film",
+        "status": "concept",
+        "description": "Scale up to a real short film with plot, characters, dialogue. Apply lessons from Phase 1.",
+        "tasks": [
+          "Multi-character script with dialogue and plot arc",
+          "Character sheets: consistent character design across all scenes",
+          "Shot list: 40-60 shots with camera angles and transitions",
+          "Generate, assemble, and polish all elements",
+          "Sound design: layered audio (dialogue + music + SFX + ambience)",
+          "Publish to YouTube, measure audience response",
+          "Document total time and cost"
+        ],
+        "aiTools": ["chatgpt", "claude", "midjourney", "runway", "kling", "elevenlabs", "suno", "davinci-resolve"],
+        "estimatedCost": "$20-50 in AI tool subscriptions for one month",
+        "blockers": ["Character consistency over 5 minutes is much harder", "Quality expectations rise with length"],
+        "workarounds": ["Mixed media: combine AI animation with motion graphics", "Use consistent art style (anime, watercolor) to mask inconsistencies"]
+      }
+    ],
+    "biggestRisk": "Character consistency — AI can't maintain the same character across many scenes",
+    "mitigation": "Use style references, character sheets, and choose art styles that are more forgiving of variation (illustration, anime, abstract).",
+    "lastUpdated": "2026-03-27"
+  },
+  {
+    "id": "medical-ai-research",
+    "name": "Medical AI Research Assistant: Deep Condition Analysis",
+    "status": "concept",
+    "ambition": "moonshot",
+    "description": "Use AI to do deep research on specific medical conditions — not just search, but systematic literature analysis, treatment comparison, clinical trial tracking, imaging analysis, and finding specialists. Example: given 'pancreatic cancer', AI should find the latest treatments, experimental therapies, relevant clinical trials, AI tools that can analyze scans, and produce a comprehensive research package you can bring to a doctor.",
+    "currentState": "AI can search and summarize medical information (Perplexity, Claude, GPT). Specialized medical AI tools exist but are fragmented: radiology AI (Aidoc, Viz.ai), drug discovery AI (Insilico Medicine), clinical trial matching. No unified research assistant combines them.",
+    "targetState": "Given a condition name, produce a comprehensive research package: latest treatment options, experimental therapies, relevant clinical trials accepting patients, AI imaging tools for that condition, top specialists, patient communities, and a timeline of recent research breakthroughs. Updated weekly.",
+    "phases": [
+      {
+        "phase": 1,
+        "name": "Multi-Source Medical Literature Search",
+        "status": "concept",
+        "description": "Go beyond Google. Systematic search across PubMed, Google Scholar, clinical trial registries, preprint servers, and patient communities. Use multiple AIs to cross-verify medical claims.",
+        "tasks": [
+          "PubMed API integration: search for recent papers on any condition",
+          "ClinicalTrials.gov API: find active trials accepting patients by condition + location",
+          "Google Scholar scraping: find cited reviews and meta-analyses",
+          "Perplexity: real-time search with source citations for latest developments",
+          "Claude + GPT: analyze and summarize papers at different reading levels",
+          "Cross-verify: run claims through multiple AIs, flag disagreements",
+          "Create structured output: evidence quality ratings for each finding",
+          "Output: comprehensive report with sections for patient, for doctor, for researcher"
+        ],
+        "aiTools": ["perplexity-api", "claude-api", "openai-api", "pubmed-api", "clinicaltrials-api"],
+        "estimatedCost": "APIs mostly free for research-level queries. PubMed: free. ClinicalTrials.gov: free.",
+        "blockers": ["Medical accuracy is critical — AI hallucinations could be dangerous", "Paywalled papers"],
+        "workarounds": ["Always cite primary sources — never present AI summary as medical advice", "Use Unpaywall API for free paper access", "Cross-verify EVERY claim with at least 2 sources", "Include disclaimer: this is research aid, not medical advice"]
+      },
+      {
+        "phase": 2,
+        "name": "Medical Imaging AI Discovery",
+        "status": "concept",
+        "description": "For a given condition, find which AI tools can analyze relevant scans (MRI, CT, PET, pathology slides). If tools don't exist for this condition, identify research models that could be adapted.",
+        "tasks": [
+          "Map existing FDA-approved AI radiology tools by condition (Aidoc, Viz.ai, Paige AI, PathAI)",
+          "Map research models: papers where AI achieved diagnostic accuracy for this condition",
+          "For pancreatic cancer specifically: find pancreatic mass detection AI, IPMN classification AI",
+          "Identify open-source models on Hugging Face for medical imaging",
+          "Assessment: which tools are clinically available vs research-only vs theoretical",
+          "If no tool exists: identify the gap, find relevant training datasets (TCIA, Kaggle medical)",
+          "Document how to request AI-assisted analysis from radiology departments"
+        ],
+        "aiTools": ["claude-api", "perplexity-api", "hugging-face"],
+        "estimatedCost": "Research only — no cost beyond API queries",
+        "blockers": ["Most medical AI is clinical-only (not available to patients)", "FDA approval limits tool availability"],
+        "workarounds": ["Focus on what you can bring to your doctor as questions", "Identify clinical trials USING imaging AI that you could enroll in", "Open-source models can be explored for educational purposes"]
+      },
+      {
+        "phase": 3,
+        "name": "Treatment Landscape Mapping",
+        "status": "concept",
+        "description": "For any condition, map the complete treatment landscape: standard of care, emerging therapies, experimental treatments, immunotherapy options, genetic/targeted therapy, clinical trials, and where AI is being used in treatment planning.",
+        "tasks": [
+          "Standard of care: NCCN guidelines, UpToDate, MDCalc protocols",
+          "Emerging therapies: papers published in last 12 months showing significant results",
+          "Clinical trials: active trials by phase (I, II, III), location, eligibility",
+          "Immunotherapy: checkpoint inhibitors, CAR-T, tumor vaccines for this condition",
+          "Genetic markers: which genetic tests could guide treatment selection",
+          "AI in treatment planning: radiation planning AI, drug interaction AI, dosage optimization",
+          "Cost and access: treatment costs in Canada, provincial coverage, compassionate use programs",
+          "Create visual treatment decision tree"
+        ],
+        "aiTools": ["claude-api", "perplexity-api", "openai-api"],
+        "estimatedCost": "API costs minimal — mostly research compilation",
+        "blockers": ["Treatment landscape changes rapidly", "Regional availability varies"],
+        "workarounds": ["Date-stamp everything", "Focus on Canadian availability first", "Weekly automated refresh for active clinical trials"]
+      },
+      {
+        "phase": 4,
+        "name": "Automated Condition Monitor",
+        "status": "concept",
+        "description": "Set up automated monitoring: when a new paper is published, new clinical trial opens, or breakthrough is announced for a tracked condition, get notified immediately.",
+        "tasks": [
+          "PubMed alerts: automated search for new papers on condition keywords",
+          "ClinicalTrials.gov watch: new trials matching condition + location",
+          "Google Scholar alerts: citation tracking for key papers",
+          "News monitoring: AI scans health news for breakthrough announcements",
+          "Weekly digest: AI summarizes all new developments",
+          "Urgency detection: flag potential breakthroughs vs routine publications",
+          "Integration with AI-Progress dashboard: tracked conditions as a data file"
+        ],
+        "aiTools": ["claude-scheduled-tasks", "pubmed-api", "clinicaltrials-api", "google-scholar-alerts"],
+        "estimatedCost": "Free (PubMed alerts free, Scholar alerts free, scheduled tasks free)",
+        "blockers": ["Information overload — many papers are incremental", "AI may over-flag routine publications as breakthroughs"],
+        "workarounds": ["AI filters by impact factor, citation count, and novelty", "Human review of weekly digest", "Configurable urgency thresholds"]
+      }
+    ],
+    "biggestRisk": "Medical misinformation — AI hallucinations in a medical context could be harmful",
+    "mitigation": "NEVER present as medical advice. Always cite primary sources. Cross-verify with multiple AIs. Include 'discuss with your doctor' on every output. Focus on being a research AID that helps you ask better questions.",
+    "lastUpdated": "2026-03-27"
+  },
+  {
+    "id": "ai-feature-film",
+    "name": "Full AI Feature Film: 60-Minute Movie Production",
+    "status": "concept",
+    "ambition": "moonshot",
+    "description": "Push beyond short films. Produce a complete 60-minute feature using AI tools for every stage. This is the hardest creative challenge in AI right now. Two AI shorts made Sundance 2026, but nobody has done a full hour of coherent, watchable AI film. We document exactly where the technology breaks and build workarounds.",
+    "currentState": "60-second AI films are achievable (2-3 hours work). 5-minute shorts are hard but proven. Character consistency, temporal coherence, and narrative structure are the unsolved problems at feature length.",
+    "targetState": "A watchable 60-minute film produced 90%+ by AI tools, with documented time, cost, and quality at each stage. Published on YouTube. Honest quality assessment — not claiming it's Hollywood, documenting what AI can and can't do at feature length.",
+    "phases": [
+      {
+        "phase": 1,
+        "name": "Capability Assessment: What's the Longest Coherent AI Video Today?",
+        "status": "concept",
+        "description": "Before attempting 60 minutes, we need to find the actual ceiling. What's the longest piece of coherent AI-generated video that exists? What techniques were used? Where does coherence break?",
+        "tasks": [
+          "Research: find the longest existing AI-generated videos with consistent characters",
+          "Analyze Sundance 2026 AI films: techniques, tools, human intervention points",
+          "Test Runway Gen-4 maximum coherent clip length (currently 4-16 seconds per generation)",
+          "Test Kling maximum coherent clip length",
+          "Test character consistency: how many consecutive scenes can maintain the same character?",
+          "Test scene transitions: can AI handle cuts, dissolves, camera angle changes?",
+          "Document exact failure points with screenshots and timestamps",
+          "Publish findings as capability report in dashboard"
+        ],
+        "aiTools": ["runway", "kling", "pika", "midjourney", "veo"],
+        "estimatedCost": "Free tiers for initial testing. ~$30-60 in subscriptions for thorough testing.",
+        "blockers": ["Current max clip length is 4-16 seconds per generation", "Character drift across regenerations"],
+        "workarounds": ["Segment approach: treat each scene as independent, maintain consistency through art style", "Use LoRA/style references aggressively", "Limit character close-ups where drift is most visible"]
+      },
+      {
+        "phase": 2,
+        "name": "Narrative Design for AI Limitations",
+        "status": "concept",
+        "description": "Design a story specifically built around AI limitations. Narration-driven, episodic structure, art style that masks inconsistency, minimal dialogue. The script IS the workaround.",
+        "tasks": [
+          "Story format: anthology (3-4 loosely connected 15-min segments)",
+          "Narration-heavy: avoid lip-sync entirely",
+          "Art style: stylized illustration or anime (not photorealistic — too unforgiving)",
+          "Character design: simple, distinctive silhouettes (easier to maintain across scenes)",
+          "Scene structure: short cuts (3-5 sec), montage-heavy, atmospheric",
+          "Script written by AI, reviewed and edited by human",
+          "Storyboard every scene with Midjourney before any video generation",
+          "Estimated 400-600 shots for 60 minutes"
+        ],
+        "aiTools": ["claude", "chatgpt", "midjourney"],
+        "estimatedCost": "Midjourney: ~$14 CAD/mo. AI writing: free tiers.",
+        "blockers": ["400+ shots is a massive organizational challenge", "Story quality matters — bad script = bad movie regardless of visuals"],
+        "workarounds": ["Project management tool for shot tracking", "Multiple script drafts with AI peer review", "Test audience feedback after first segment before committing to full film"]
+      },
+      {
+        "phase": 3,
+        "name": "Production: Generate, Assemble, Polish",
+        "status": "concept",
+        "description": "Generate all 400-600 video clips. Full audio production. Assembly editing. Color grading. Sound design.",
+        "tasks": [
+          "Batch generation: Midjourney for all keyframes (2-3 days of generation time)",
+          "Video generation: Runway/Kling for all clips (1-2 weeks of generation + iteration)",
+          "Voice: ElevenLabs for all narration and character voices",
+          "Music: Suno for full 60-minute score (multiple tracks for different moods)",
+          "Sound design: layered ambient audio, foley, transitions",
+          "Assembly: DaVinci Resolve for timeline management at feature length",
+          "Color grading: Colourlab AI for consistent look across segments",
+          "Quality control: review every shot, regenerate failures",
+          "Estimated total production time: 2-4 weeks"
+        ],
+        "aiTools": ["midjourney", "runway", "kling", "elevenlabs", "suno", "davinci-resolve"],
+        "estimatedCost": "$50-150 in tool subscriptions over 1-2 months",
+        "blockers": ["Sheer volume of generation — 400+ clips", "Consistency across weeks of production", "Storage: 60min of footage + source files = hundreds of GB"],
+        "workarounds": ["Batch processing scripts to automate generation queues", "Version control for all assets", "Regular quality checkpoints every 15 minutes of assembled footage"]
+      },
+      {
+        "phase": 4,
+        "name": "Publish and Document",
+        "status": "concept",
+        "description": "Publish the finished film. Document the entire process: time, cost, tools used, where human intervention was needed, quality assessment, and honest review of what AI filmmaking can and can't do in 2026.",
+        "tasks": [
+          "Final export: 1080p or 4K",
+          "Upload to YouTube",
+          "Create behind-the-scenes documentary showing the AI production process",
+          "Detailed blog post: tools, techniques, costs, time breakdown",
+          "Side-by-side comparison: AI output vs what a human team could produce",
+          "Community feedback collection",
+          "Capability report update in AI-Progress dashboard",
+          "Plan for next attempt with improved tools (re-attempt in 6 months)"
+        ],
+        "aiTools": ["youtube", "claude"],
+        "estimatedCost": "Free (YouTube is free, writing is free)",
+        "blockers": ["Copyright concerns with AI-generated content on YouTube", "Quality may not meet watchability threshold"],
+        "workarounds": ["YouTube allows AI content with disclosure", "If full film quality is too low, publish as 'AI filmmaking experiment' documentary format", "Be honest about quality — the process documentation IS the value"]
+      }
+    ],
+    "biggestRisk": "It might not be watchable. 60 minutes of AI-generated video might be unwatchable no matter how good the tools are in March 2026.",
+    "mitigation": "Anthology format — each 15-minute segment stands alone. If the full 60 minutes doesn't work, 2-3 good 15-minute shorts still work. Fail gracefully.",
+    "lastUpdated": "2026-03-27"
+  }
+]

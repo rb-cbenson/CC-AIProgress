@@ -1,0 +1,2451 @@
+[
+  {
+    "id": "the-rundown-ai",
+    "name": "The Rundown AI",
+    "type": "newsletter",
+    "url": "https://www.therundown.ai/",
+    "frequency": "Daily",
+    "description": "The largest AI newsletter with 2M+ subscribers. Each issue breaks down the top AI stories of the day, explains why they matter, and includes a practical section on how to apply new tools and techniques. Strong signal-to-noise ratio — skips the hype and focuses on what actually changed.",
+    "free": true,
+    "tags": [
+      "news",
+      "tools",
+      "beginner-friendly",
+      "free"
+    ]
+  },
+  {
+    "id": "superhuman-ai",
+    "name": "Superhuman AI",
+    "type": "newsletter",
+    "url": "https://www.superhuman.ai/",
+    "frequency": "Daily (3-minute read)",
+    "description": "Founded by Zain Kahn, read by 1M+ subscribers. Every issue includes a tool of the day with a quick tutorial, a prompt of the day you can copy-paste, and 3-4 news items. The 3-minute format makes it the fastest daily AI intake — you get one actionable thing per day without committing serious time.",
+    "free": true,
+    "tags": [
+      "tools",
+      "beginner-friendly",
+      "free"
+    ]
+  },
+  {
+    "id": "bens-bites",
+    "name": "Ben's Bites",
+    "type": "newsletter",
+    "url": "https://www.bensbites.com/",
+    "frequency": "Twice weekly (Tue/Thu)",
+    "description": "120K+ subscribers focused on the AI startup and builder ecosystem. Ben Tossell covers new product launches, funding rounds, and what people are actually building with AI. Less news aggregation, more curation of what's worth your attention if you're trying to build something or pick the right tools.",
+    "free": true,
+    "tags": [
+      "launches",
+      "tools",
+      "community",
+      "free"
+    ]
+  },
+  {
+    "id": "the-neuron",
+    "name": "The Neuron",
+    "type": "newsletter",
+    "url": "https://www.theneurondaily.com/",
+    "frequency": "Daily (3-minute read)",
+    "description": "500K+ subscribers including employees at Microsoft, Apple, and Tesla. Covers the business and strategic side of AI — who's shipping what, which companies are winning, and what the moves mean. Less technical than most AI newsletters, more focused on the industry chess game.",
+    "free": true,
+    "tags": [
+      "news",
+      "enterprise",
+      "beginner-friendly",
+      "free"
+    ]
+  },
+  {
+    "id": "one-useful-thing",
+    "name": "One Useful Thing (Ethan Mollick)",
+    "type": "newsletter",
+    "url": "https://www.oneusefulthing.org/",
+    "frequency": "Weekly",
+    "description": "The gold standard for honest AI capability assessment. Ethan Mollick is a Wharton professor who actually tests every claim — he runs AI through real teaching scenarios, writing tasks, and research workflows, then reports what worked and what didn't. No hype, no doom. If you only read one AI source, make it this one.",
+    "free": true,
+    "tags": [
+      "research",
+      "beginner-friendly",
+      "free"
+    ]
+  },
+  {
+    "id": "simon-willison",
+    "name": "Simon Willison's Weblog",
+    "type": "newsletter",
+    "url": "https://simonwillison.net/",
+    "frequency": "Multiple times per week",
+    "description": "Independent researcher and developer who does constant hands-on experiments with every new model and tool the day it drops. His write-ups are detailed, reproducible, and unsponsored. Particularly valuable for understanding what LLMs can actually do vs. what the marketing claims — he'll show you the exact prompts and outputs.",
+    "free": true,
+    "tags": [
+      "technical",
+      "tools",
+      "open-source",
+      "free"
+    ]
+  },
+  {
+    "id": "tldr-ai",
+    "name": "TLDR AI",
+    "type": "newsletter",
+    "url": "https://tldr.tech/ai",
+    "frequency": "Daily (5-minute read)",
+    "description": "A concise daily digest of technical AI developments, research papers, and industry news. Each item gets 2-3 sentences — enough to know if you should click through. Leans more technical than The Rundown or Superhuman, covering papers and model releases that other newsletters skip.",
+    "free": true,
+    "tags": [
+      "technical",
+      "research",
+      "news",
+      "free"
+    ]
+  },
+  {
+    "id": "the-batch",
+    "name": "The Batch (Andrew Ng)",
+    "type": "newsletter",
+    "url": "https://www.deeplearning.ai/the-batch/",
+    "frequency": "Weekly",
+    "description": "Andrew Ng's weekly newsletter from DeepLearning.AI. Each issue includes his personal editorial on an AI trend, plus curated research summaries and industry analysis. Ng is one of the most respected voices in AI — his takes carry weight because he's been building and teaching ML for decades, not just commenting on it.",
+    "free": true,
+    "tags": [
+      "research",
+      "news",
+      "free"
+    ]
+  },
+  {
+    "id": "future-tools-newsletter",
+    "name": "Future Tools (Matt Wolfe)",
+    "type": "newsletter",
+    "url": "https://www.futuretools.io/newsletter",
+    "frequency": "Weekly",
+    "description": "Matt Wolfe curates the best new AI tools each week for 300K+ subscribers. What sets this apart is that he actually demos many of them on his YouTube channel, so you can see the tool in action before committing time to it. Covers creative AI tools especially well — image, video, audio, and writing.",
+    "free": true,
+    "tags": [
+      "tools",
+      "launches",
+      "beginner-friendly",
+      "free"
+    ]
+  },
+  {
+    "id": "practical-ai-newsletter",
+    "name": "Practical AI Newsletter",
+    "type": "newsletter",
+    "url": "https://practicalai.podia.com/",
+    "frequency": "Weekly",
+    "description": "Focused entirely on case studies and step-by-step implementation guides. While most AI newsletters tell you what's new, this one shows you how to use it — with specific workflows, prompt templates, and automation recipes you can follow along with. Best for people who want to do, not just read.",
+    "free": true,
+    "tags": [
+      "tools",
+      "beginner-friendly",
+      "free"
+    ]
+  },
+  {
+    "id": "ai-tool-report",
+    "name": "AI Tool Report",
+    "type": "newsletter",
+    "url": "https://aitoolreport.com/",
+    "frequency": "Daily",
+    "description": "A daily newsletter focused on AI tool discovery and practical use cases. Each edition spotlights a handful of tools with quick-start guides and use-case breakdowns. Particularly good for non-technical professionals who want to integrate AI into their existing workflows without a steep learning curve.",
+    "free": true,
+    "tags": [
+      "tools",
+      "beginner-friendly",
+      "free"
+    ]
+  },
+  {
+    "id": "importai",
+    "name": "Import AI (Jack Clark)",
+    "type": "newsletter",
+    "url": "https://importai.substack.com/",
+    "frequency": "Weekly",
+    "description": "Written by Jack Clark, co-founder of Anthropic and former policy director at OpenAI. Covers AI policy, safety research, and capability advances with genuine insider perspective. Each issue ends with a short fiction piece imagining near-future AI scenarios. One of the few newsletters that takes both capabilities and risks seriously.",
+    "free": true,
+    "tags": [
+      "research",
+      "news",
+      "free"
+    ]
+  },
+  {
+    "id": "davis-summarizes-papers",
+    "name": "Davis Summarizes Papers",
+    "type": "newsletter",
+    "url": "https://dblalock.substack.com/",
+    "frequency": "Weekly",
+    "description": "Davis Blalock reads and summarizes the most important ML research papers each week so you don't have to. His summaries cut through the academic jargon and tell you what the paper actually found, why it matters, and whether the results are likely to hold up. Essential if you want to stay current on research without reading full papers.",
+    "free": true,
+    "tags": [
+      "research",
+      "technical",
+      "free"
+    ]
+  },
+  {
+    "id": "matt-brown-yt",
+    "name": "Matt Brown",
+    "type": "youtube",
+    "url": "https://www.youtube.com/@mattbrwn",
+    "frequency": "Multiple times per week",
+    "description": "Covers AI news and tool releases with clear, no-fluff video breakdowns. Good at explaining what new releases actually mean for everyday users rather than just recapping press releases. Useful as a video complement to newsletter reading when you want to see tools in context.",
+    "free": true,
+    "tags": [
+      "news",
+      "tools",
+      "beginner-friendly",
+      "free"
+    ]
+  },
+  {
+    "id": "skill-leap-ai",
+    "name": "Skill Leap AI (Saj Adib)",
+    "type": "youtube",
+    "url": "https://www.youtube.com/@SkillLeapAI",
+    "frequency": "Multiple times per week",
+    "description": "Hands-on tutorial channel where Saj walks through practical AI workflows step by step. Heavy focus on productivity tools — ChatGPT, Midjourney, automation platforms. Each video is a mini-course: he shows his screen, explains his thinking, and gives you a workflow you can replicate immediately.",
+    "free": true,
+    "tags": [
+      "tools",
+      "beginner-friendly",
+      "free"
+    ]
+  },
+  {
+    "id": "the-ai-grid",
+    "name": "The AI Grid",
+    "type": "youtube",
+    "url": "https://www.youtube.com/@TheAiGrid",
+    "frequency": "Multiple times per week",
+    "description": "In-depth tool demonstrations and AI news analysis. Goes deeper than most YouTube channels on individual tools — showing not just the basics but advanced features and edge cases. Good for deciding whether a tool is worth your time before you sign up and start experimenting.",
+    "free": true,
+    "tags": [
+      "tools",
+      "news",
+      "free"
+    ]
+  },
+  {
+    "id": "matt-wolfe-yt",
+    "name": "Matt Wolfe",
+    "type": "youtube",
+    "url": "https://www.youtube.com/@maboroshi",
+    "frequency": "Weekly",
+    "description": "Companion channel to the Future Tools newsletter. Matt does long-form reviews and comparisons of AI tools, especially for creative work — image generation, video creation, music AI. His weekly news roundup videos are one of the best ways to catch up if you missed a week of AI developments.",
+    "free": true,
+    "tags": [
+      "tools",
+      "news",
+      "beginner-friendly",
+      "free"
+    ]
+  },
+  {
+    "id": "mattvidpro",
+    "name": "MattVidPro AI",
+    "type": "youtube",
+    "url": "https://www.youtube.com/@MattVidPro",
+    "frequency": "Multiple times per week",
+    "description": "Focused on AI storytelling, voice synthesis, video generation, and creative monetization. Goes beyond just reviewing tools — shows how to chain them together for complete creative projects. Particularly useful if you're interested in AI-generated video content, voice cloning, or building a creative workflow.",
+    "free": true,
+    "tags": [
+      "tools",
+      "niche-tools",
+      "free"
+    ]
+  },
+  {
+    "id": "cyberjungle",
+    "name": "Cyberjungle",
+    "type": "youtube",
+    "url": "https://www.youtube.com/@cyberjungle",
+    "frequency": "Weekly",
+    "description": "Pushes the boundaries of AI video generation — Runway, Pika, Kling, and other video AI tools. Shows advanced techniques that most channels skip: camera control, consistent characters across scenes, combining multiple AI tools for production-quality output. The place to watch if AI video is your focus.",
+    "free": true,
+    "tags": [
+      "tools",
+      "niche-tools",
+      "free"
+    ]
+  },
+  {
+    "id": "two-minute-papers",
+    "name": "Two Minute Papers",
+    "type": "youtube",
+    "url": "https://www.youtube.com/@TwoMinutePapers",
+    "frequency": "Multiple times per week",
+    "description": "Karoly Zsolnai-Feher breaks down cutting-edge AI research papers into visual, accessible 5-10 minute videos. Heavy focus on visual AI — simulation, rendering, image generation, video synthesis. His genuine excitement is infectious, and he consistently picks the papers that end up mattering months later.",
+    "free": true,
+    "tags": [
+      "research",
+      "beginner-friendly",
+      "free"
+    ]
+  },
+  {
+    "id": "black-mixture",
+    "name": "Black Mixture",
+    "type": "youtube",
+    "url": "https://www.youtube.com/@BlackMixture",
+    "frequency": "Regular uploads",
+    "description": "Where machine learning meets creative practice. Covers the intersection of AI and art, music, and design — not just tool tutorials but conceptual approaches to using AI as a creative medium. Good for understanding how artists and designers are actually integrating AI into serious creative work.",
+    "free": true,
+    "tags": [
+      "tools",
+      "niche-tools",
+      "free"
+    ]
+  },
+  {
+    "id": "fireship",
+    "name": "Fireship",
+    "type": "youtube",
+    "url": "https://www.youtube.com/@Fireship",
+    "frequency": "Multiple times per week",
+    "description": "Jeff Delaney's rapid-fire tech explainers are legendary for a reason. His '100 seconds' format distills complex AI concepts into digestible bites, while his longer videos cover AI coding tools, model comparisons, and developer workflows. The humor and pacing make dense technical content genuinely entertaining to consume.",
+    "free": true,
+    "tags": [
+      "technical",
+      "beginner-friendly",
+      "free"
+    ]
+  },
+  {
+    "id": "ai-explained",
+    "name": "AI Explained",
+    "type": "youtube",
+    "url": "https://www.youtube.com/@AIExplained-official",
+    "frequency": "Weekly",
+    "description": "Philip does meticulous deep dives into AI benchmark results, model capabilities, and research papers. Unlike channels that just relay press releases, he reads the actual papers, checks the benchmarks, and points out what the companies aren't telling you. The best source for understanding whether a new model is genuinely better or just marketing.",
+    "free": true,
+    "tags": [
+      "research",
+      "technical",
+      "free"
+    ]
+  },
+  {
+    "id": "all-about-ai",
+    "name": "All About AI",
+    "type": "youtube",
+    "url": "https://www.youtube.com/@AllAboutAI",
+    "frequency": "Multiple times per week",
+    "description": "Practical demos of local AI setups, open-source models, and developer-focused AI tools. Strong coverage of running models locally, comparing open-source alternatives to commercial tools, and building AI-powered applications. Especially useful for those who want to avoid cloud dependencies.",
+    "free": true,
+    "tags": [
+      "tools",
+      "open-source",
+      "technical",
+      "free"
+    ]
+  },
+  {
+    "id": "bycloud",
+    "name": "bycloud",
+    "type": "youtube",
+    "url": "https://www.youtube.com/@bycloudAI",
+    "frequency": "Weekly",
+    "description": "Research-focused AI channel that explains new papers and model releases with clear visuals and honest assessment. Particularly good at covering open-source model releases and comparing them head-to-head against commercial alternatives. The benchmarking videos are data-driven rather than opinion-driven.",
+    "free": true,
+    "tags": [
+      "research",
+      "open-source",
+      "technical",
+      "free"
+    ]
+  },
+  {
+    "id": "techcrunch-ai",
+    "name": "TechCrunch AI",
+    "type": "news-site",
+    "url": "https://techcrunch.com/category/artificial-intelligence/",
+    "frequency": "Multiple daily",
+    "description": "Breaking AI news with a business and startup lens. Strong on funding rounds, acquisitions, and product launches — you'll often see news here before it hits newsletters. The reporting is original, not just aggregated, and their AI reporters have good sources inside the major labs.",
+    "free": true,
+    "tags": [
+      "news",
+      "launches",
+      "free"
+    ]
+  },
+  {
+    "id": "mit-tech-review",
+    "name": "MIT Technology Review AI",
+    "type": "news-site",
+    "url": "https://www.technologyreview.com/topic/artificial-intelligence/",
+    "frequency": "Multiple weekly",
+    "description": "In-depth analysis from MIT's media arm. Goes far beyond press releases — their reporters dig into the implications of AI developments, interview researchers, and provide context you won't find elsewhere. Paywall limits access, but the free articles alone are worth bookmarking. Best for understanding the 'so what' of AI news.",
+    "free": false,
+    "tags": [
+      "research",
+      "news"
+    ]
+  },
+  {
+    "id": "ai-news-site",
+    "name": "AI News",
+    "type": "news-site",
+    "url": "https://www.artificialintelligence-news.com/",
+    "frequency": "Daily",
+    "description": "A dedicated AI news site covering enterprise AI, industry applications, and technology developments. Less flashy than TechCrunch but more consistent in its daily coverage. Good for keeping up with the steady drumbeat of AI adoption across industries rather than just the headline-grabbing launches.",
+    "free": true,
+    "tags": [
+      "news",
+      "enterprise",
+      "free"
+    ]
+  },
+  {
+    "id": "the-verge-ai",
+    "name": "The Verge AI",
+    "type": "news-site",
+    "url": "https://www.theverge.com/ai-artificial-intelligence",
+    "frequency": "Multiple daily",
+    "description": "Consumer-focused AI coverage with strong editorial voice. The Verge excels at explaining what AI developments mean for regular people — new features in products you use, policy changes that affect you, and honest assessments of whether the latest AI tool is actually useful or just impressive demos.",
+    "free": true,
+    "tags": [
+      "news",
+      "beginner-friendly",
+      "free"
+    ]
+  },
+  {
+    "id": "ars-technica-ai",
+    "name": "Ars Technica AI",
+    "type": "news-site",
+    "url": "https://arstechnica.com/ai/",
+    "frequency": "Multiple daily",
+    "description": "Technical deep dives written for a sophisticated audience. Ars reporters actually understand the technology they're writing about — their coverage of model architectures, benchmark results, and safety research is among the most accurate in mainstream tech media. Essential if you want to understand how things work, not just what shipped.",
+    "free": true,
+    "tags": [
+      "news",
+      "technical",
+      "free"
+    ]
+  },
+  {
+    "id": "ieee-spectrum-ai",
+    "name": "IEEE Spectrum AI",
+    "type": "news-site",
+    "url": "https://spectrum.ieee.org/topic/artificial-intelligence/",
+    "frequency": "Multiple weekly",
+    "description": "AI coverage from the engineering perspective, backed by IEEE's technical authority. Covers robotics, embedded AI, hardware advances, and engineering applications that other sites ignore. Particularly strong on the physical-world side of AI — autonomous systems, sensors, and real-world deployment challenges.",
+    "free": true,
+    "tags": [
+      "news",
+      "technical",
+      "research",
+      "free"
+    ]
+  },
+  {
+    "id": "venturebeat-ai",
+    "name": "VentureBeat AI",
+    "type": "news-site",
+    "url": "https://venturebeat.com/ai/",
+    "frequency": "Multiple daily",
+    "description": "Enterprise AI and startup coverage with a business strategy focus. Strong on reporting how large companies are actually deploying AI — not just pilot projects but production systems. Their Transform conference coverage and exclusive interviews with AI executives provide insider perspective on where the industry is heading.",
+    "free": true,
+    "tags": [
+      "news",
+      "enterprise",
+      "free"
+    ]
+  },
+  {
+    "id": "wired-ai",
+    "name": "Wired AI",
+    "type": "news-site",
+    "url": "https://www.wired.com/tag/artificial-intelligence/",
+    "frequency": "Multiple weekly",
+    "description": "Long-form journalism about AI's intersection with culture, society, and everyday life. Wired's AI coverage goes beyond product launches to explore how AI is changing creative industries, healthcare, education, and politics. The feature stories provide depth and narrative context that other outlets rarely match.",
+    "free": false,
+    "tags": [
+      "news",
+      "beginner-friendly"
+    ]
+  },
+  {
+    "id": "the-information-ai",
+    "name": "The Information AI",
+    "type": "news-site",
+    "url": "https://www.theinformation.com/technology/artificial-intelligence",
+    "frequency": "Multiple weekly",
+    "description": "Premium tech journalism with some of the best inside sources in Silicon Valley. Their AI coverage breaks stories about internal company decisions, executive moves, and strategic pivots days or weeks before other outlets. Expensive paywall, but the scoops justify it if you need to stay ahead of the industry curve.",
+    "free": false,
+    "tags": [
+      "news",
+      "enterprise"
+    ]
+  },
+  {
+    "id": "bloomberg-ai",
+    "name": "Bloomberg AI",
+    "type": "news-site",
+    "url": "https://www.bloomberg.com/technology",
+    "frequency": "Multiple daily",
+    "description": "Financial and market-focused AI coverage from Bloomberg's massive reporting team. Covers the business side that tech outlets miss — stock movements, M&A activity, enterprise adoption data, and regulatory impacts on AI companies. Essential reading if you care about the economic forces shaping AI development.",
+    "free": false,
+    "tags": [
+      "news",
+      "enterprise"
+    ]
+  },
+  {
+    "id": "the-decoder",
+    "name": "The Decoder",
+    "type": "news-site",
+    "url": "https://the-decoder.com/",
+    "frequency": "Multiple daily",
+    "description": "Focused exclusively on AI with particularly strong coverage of model releases, benchmarks, and capability demonstrations. Their reporting bridges the gap between technical papers and general audience news — detailed enough to be informative, clear enough to be accessible. One of the fastest sites to cover new model releases.",
+    "free": true,
+    "tags": [
+      "news",
+      "tools",
+      "free"
+    ]
+  },
+  {
+    "id": "r-machinelearning",
+    "name": "r/MachineLearning",
+    "type": "reddit",
+    "url": "https://www.reddit.com/r/MachineLearning/",
+    "frequency": "Continuous",
+    "description": "2.7M+ members. The most technically rigorous AI community on Reddit. Research papers get real peer discussion here — actual ML engineers and researchers comment on methodology, point out flaws, and share reproduction attempts. The signal-to-noise ratio is high because low-effort posts get downvoted fast.",
+    "free": true,
+    "tags": [
+      "technical",
+      "research",
+      "community",
+      "free"
+    ]
+  },
+  {
+    "id": "r-artificial",
+    "name": "r/artificial",
+    "type": "reddit",
+    "url": "https://www.reddit.com/r/artificial/",
+    "frequency": "Continuous",
+    "description": "500K+ members discussing AI broadly — news, ethics, implications, and societal impact. Less technical than r/MachineLearning, more focused on what AI means for the world. Good for getting diverse perspectives on AI developments and understanding how different communities react to new capabilities.",
+    "free": true,
+    "tags": [
+      "news",
+      "community",
+      "beginner-friendly",
+      "free"
+    ]
+  },
+  {
+    "id": "r-chatgpt",
+    "name": "r/ChatGPT",
+    "type": "reddit",
+    "url": "https://www.reddit.com/r/ChatGPT/",
+    "frequency": "Continuous",
+    "description": "9M+ members sharing practical use cases, creative prompts, and project showcases. The real value is in the comments — people share what actually worked, what failed, and clever workarounds. Sort by top/weekly to find the most useful discoveries. Heavy on practical application, light on theory.",
+    "free": true,
+    "tags": [
+      "tools",
+      "community",
+      "beginner-friendly",
+      "free"
+    ]
+  },
+  {
+    "id": "r-stablediffusion",
+    "name": "r/StableDiffusion",
+    "type": "reddit",
+    "url": "https://www.reddit.com/r/StableDiffusion/",
+    "frequency": "Continuous",
+    "description": "The hub for open-source image generation. Members share workflows, prompt techniques, ControlNet setups, and model fine-tuning results. Particularly valuable for ComfyUI and Automatic1111 workflows — people post their exact node graphs and settings so you can reproduce their results.",
+    "free": true,
+    "tags": [
+      "open-source",
+      "community",
+      "niche-tools",
+      "free"
+    ]
+  },
+  {
+    "id": "r-localllama",
+    "name": "r/LocalLLaMA",
+    "type": "reddit",
+    "url": "https://www.reddit.com/r/LocalLLaMA/",
+    "frequency": "Continuous",
+    "description": "The community for running AI models on your own hardware. Covers local model deployment, quantization, fine-tuning, and hardware recommendations. If you want to run LLMs without sending data to the cloud, or you're curious what's possible on consumer GPUs, this is where the knowledge lives.",
+    "free": true,
+    "tags": [
+      "open-source",
+      "technical",
+      "community",
+      "free"
+    ]
+  },
+  {
+    "id": "r-midjourney",
+    "name": "r/midjourney",
+    "type": "reddit",
+    "url": "https://www.reddit.com/r/midjourney/",
+    "frequency": "Continuous",
+    "description": "Art showcases paired with technique discussion. Unlike pure gallery subreddits, members here share their prompts, settings, and iteration process. Good for learning prompt engineering by seeing what others achieved and how they got there. The weekly megathreads are especially useful for beginners.",
+    "free": true,
+    "tags": [
+      "tools",
+      "community",
+      "beginner-friendly",
+      "free"
+    ]
+  },
+  {
+    "id": "r-generativeai",
+    "name": "r/generativeAI",
+    "type": "reddit",
+    "url": "https://www.reddit.com/r/generativeAI/",
+    "frequency": "Continuous",
+    "description": "Cross-domain creative AI discussion spanning text, image, audio, video, and code generation. Less siloed than tool-specific subreddits — people share projects that combine multiple AI tools and discuss the creative process. Good for discovering connections between different AI capabilities you might not have considered.",
+    "free": true,
+    "tags": [
+      "tools",
+      "community",
+      "free"
+    ]
+  },
+  {
+    "id": "r-singularity",
+    "name": "r/singularity",
+    "type": "reddit",
+    "url": "https://www.reddit.com/r/singularity/",
+    "frequency": "Continuous",
+    "description": "800K+ members tracking the trajectory of AI capabilities toward superintelligence. Often the fastest place on Reddit to surface new benchmark results, model releases, and capability surprises. The discussions can be speculative, but sorting by top/week consistently surfaces genuinely important developments before mainstream coverage.",
+    "free": true,
+    "tags": [
+      "news",
+      "community",
+      "free"
+    ]
+  },
+  {
+    "id": "r-agi",
+    "name": "r/agi",
+    "type": "reddit",
+    "url": "https://www.reddit.com/r/agi/",
+    "frequency": "Continuous",
+    "description": "A more focused community discussing artificial general intelligence research, timelines, and implications. Discussions tend to be more grounded than r/singularity, with frequent contributions from researchers and engineers. Good for tracking the longer-term trajectory of AI capabilities beyond the next product launch cycle.",
+    "free": true,
+    "tags": [
+      "research",
+      "community",
+      "free"
+    ]
+  },
+  {
+    "id": "r-claudeai",
+    "name": "r/ClaudeAI",
+    "type": "reddit",
+    "url": "https://www.reddit.com/r/ClaudeAI/",
+    "frequency": "Continuous",
+    "description": "The community hub for Claude users sharing prompts, workflows, API tricks, and capability discoveries. Members post detailed comparisons with other models, creative use cases, and workarounds for common limitations. Particularly valuable for learning advanced Claude prompting techniques from power users.",
+    "free": true,
+    "tags": [
+      "tools",
+      "community",
+      "free"
+    ]
+  },
+  {
+    "id": "r-sideproject",
+    "name": "r/SideProject",
+    "type": "reddit",
+    "url": "https://www.reddit.com/r/SideProject/",
+    "frequency": "Continuous",
+    "description": "Developers showcasing their side projects, many of which are AI-powered tools and applications. A good source for discovering indie AI tools before they hit Product Hunt or the major directories. The feedback threads reveal real user reactions and feature requests that shape early-stage AI products.",
+    "free": true,
+    "tags": [
+      "launches",
+      "tools",
+      "community",
+      "free"
+    ]
+  },
+  {
+    "id": "r-openai",
+    "name": "r/OpenAI",
+    "type": "reddit",
+    "url": "https://www.reddit.com/r/OpenAI/",
+    "frequency": "Continuous",
+    "description": "3M+ members tracking every OpenAI release, API change, and capability update. When GPT models get quiet updates or capability changes, this community notices first. The discussions around new feature rollouts provide practical context that official announcements often skip.",
+    "free": true,
+    "tags": [
+      "tools",
+      "news",
+      "community",
+      "free"
+    ]
+  },
+  {
+    "id": "midjourney-discord",
+    "name": "Midjourney Discord",
+    "type": "discord",
+    "url": "https://discord.gg/midjourney",
+    "frequency": "Continuous",
+    "description": "The official Midjourney community with millions of members. The showcase and prompt-craft channels are where you learn by osmosis — watching thousands of generations with their prompts visible. The prompt feedback channels where experienced users critique and improve your prompts are genuinely educational.",
+    "free": true,
+    "tags": [
+      "tools",
+      "community",
+      "beginner-friendly",
+      "free"
+    ]
+  },
+  {
+    "id": "hugging-face-discord",
+    "name": "Hugging Face Discord",
+    "type": "discord",
+    "url": "https://discord.gg/huggingface",
+    "frequency": "Continuous",
+    "description": "The open-source AI community hub. Discussion covers model releases, fine-tuning techniques, dataset curation, and the Transformers library. Direct access to Hugging Face staff and prolific open-source contributors. Best for staying current with the open-source model ecosystem and getting help with implementation.",
+    "free": true,
+    "tags": [
+      "open-source",
+      "technical",
+      "community",
+      "free"
+    ]
+  },
+  {
+    "id": "anthropic-discord",
+    "name": "Anthropic Discord",
+    "type": "discord",
+    "url": "https://discord.gg/anthropic",
+    "frequency": "Continuous",
+    "description": "Official community for Claude users and developers. Channels cover Claude capabilities, API development, prompt engineering, and project showcases. Useful for learning advanced Claude techniques from power users and getting answers to specific Claude questions faster than documentation alone.",
+    "free": true,
+    "tags": [
+      "tools",
+      "community",
+      "free"
+    ]
+  },
+  {
+    "id": "langchain-discord",
+    "name": "LangChain Discord",
+    "type": "discord",
+    "url": "https://discord.gg/langchain",
+    "frequency": "Continuous",
+    "description": "The developer community for the LangChain framework, which is widely used for building AI-powered applications. Members share code patterns, debug integration issues, and showcase projects. Particularly useful if you're building anything that chains multiple AI calls together or needs retrieval-augmented generation.",
+    "free": true,
+    "tags": [
+      "technical",
+      "community",
+      "open-source",
+      "free"
+    ]
+  },
+  {
+    "id": "stable-diffusion-discord",
+    "name": "Stable Diffusion Discord",
+    "type": "discord",
+    "url": "https://discord.gg/stablediffusion",
+    "frequency": "Continuous",
+    "description": "Official Stability AI community covering Stable Diffusion models, ComfyUI workflows, and image generation techniques. The support channels help with installation and troubleshooting, while the showcase channels demonstrate what the community is achieving. Good for both beginners getting started and advanced users pushing boundaries.",
+    "free": true,
+    "tags": [
+      "open-source",
+      "community",
+      "niche-tools",
+      "free"
+    ]
+  },
+  {
+    "id": "cursor-discord",
+    "name": "Cursor Discord",
+    "type": "discord",
+    "url": "https://discord.gg/cursor",
+    "frequency": "Continuous",
+    "description": "The community for Cursor AI code editor users. Members share coding workflows, prompt strategies, and productivity tips specific to AI-assisted development. A fast-moving channel that surfaces new features and capabilities as they ship, often before official documentation catches up.",
+    "free": true,
+    "tags": [
+      "tools",
+      "community",
+      "technical",
+      "free"
+    ]
+  },
+  {
+    "id": "futurepedia",
+    "name": "Futurepedia",
+    "type": "directory",
+    "url": "https://www.futurepedia.io/",
+    "frequency": "Updated daily",
+    "description": "The largest AI tool directory with 5,000+ tools across 50+ categories. Used by teams at Harvard, Nvidia, and Meta. Each tool listing includes pricing, features, and user ratings. The category browsing is the real value — when you need an AI tool for a specific task, this is the fastest way to find and compare options.",
+    "free": true,
+    "tags": [
+      "tools",
+      "niche-tools",
+      "free"
+    ]
+  },
+  {
+    "id": "theresanaiforthat",
+    "name": "There's an AI for That",
+    "type": "directory",
+    "url": "https://theresanaiforthat.com/",
+    "frequency": "Updated daily",
+    "description": "Searchable database of 12,000+ AI tools organized by use case. The search is the killer feature — describe what you want to do in plain language and it surfaces relevant tools. Tracks new launches daily and shows trending tools. Less curated than Futurepedia but broader coverage, especially for niche and new tools.",
+    "free": true,
+    "tags": [
+      "tools",
+      "niche-tools",
+      "free"
+    ]
+  },
+  {
+    "id": "topai-tools",
+    "name": "TopAI.tools",
+    "type": "directory",
+    "url": "https://topai.tools/",
+    "frequency": "Updated daily",
+    "description": "Curated AI tool directory with detailed feature comparisons, pricing breakdowns, and user reviews. More selective than the mega-directories — they focus on tools that are actually good rather than listing everything. The comparison pages that put similar tools side by side are particularly useful for decision-making.",
+    "free": true,
+    "tags": [
+      "tools",
+      "niche-tools",
+      "free"
+    ]
+  },
+  {
+    "id": "toolify",
+    "name": "Toolify.ai",
+    "type": "directory",
+    "url": "https://www.toolify.ai/",
+    "frequency": "Updated daily",
+    "description": "AI tool directory with strong traffic analytics — you can see which tools are actually gaining users vs. which are just marketing loudly. Covers 10,000+ tools with category rankings based on real usage data. The trending section surfaces tools with genuine momentum rather than just paid placements.",
+    "free": true,
+    "tags": [
+      "tools",
+      "niche-tools",
+      "free"
+    ]
+  },
+  {
+    "id": "futuretools-dir",
+    "name": "Future Tools Directory",
+    "type": "directory",
+    "url": "https://www.futuretools.io/",
+    "frequency": "Updated weekly",
+    "description": "Matt Wolfe's curated directory companion to his newsletter and YouTube channel. Smaller and more selective than the mega-directories — every tool listed has been at least briefly reviewed. The filtering by pricing (free, freemium, paid) and the 'verified' badges help you avoid wasting time on abandoned projects.",
+    "free": true,
+    "tags": [
+      "tools",
+      "niche-tools",
+      "free"
+    ]
+  },
+  {
+    "id": "product-hunt-ai",
+    "name": "Product Hunt AI",
+    "type": "directory",
+    "url": "https://www.producthunt.com/topics/artificial-intelligence",
+    "frequency": "Daily launches",
+    "description": "Where new AI tools launch and get their first real user feedback. The comment sections are gold — early adopters share honest first impressions, founders respond to questions, and you can spot promising tools before they hit the newsletters. Check the daily AI launches to stay ahead of the curve.",
+    "free": true,
+    "tags": [
+      "launches",
+      "tools",
+      "free"
+    ]
+  },
+  {
+    "id": "ai-parabellum",
+    "name": "AI Parabellum",
+    "type": "directory",
+    "url": "https://aiparabellum.com/",
+    "frequency": "Updated regularly",
+    "description": "A well-organized AI tool directory that categorizes tools by specific business functions — marketing, sales, HR, legal, finance. Unlike general directories that organize by technology type, this one organizes by what you're trying to accomplish. Particularly useful for professionals looking to AI-enable specific job functions.",
+    "free": true,
+    "tags": [
+      "tools",
+      "enterprise",
+      "free"
+    ]
+  },
+  {
+    "id": "hunt0",
+    "name": "Hunt0",
+    "type": "directory",
+    "url": "https://hunt0.com/",
+    "frequency": "Updated daily",
+    "description": "An AI-focused alternative to Product Hunt that tracks new tool launches with community voting and reviews. The interface is cleaner and more AI-focused than PH's broad tech scope. Good for catching launches that don't make it to the top of Product Hunt's general-purpose rankings.",
+    "free": true,
+    "tags": [
+      "launches",
+      "tools",
+      "free"
+    ]
+  },
+  {
+    "id": "easy-with-ai",
+    "name": "Easy With AI",
+    "type": "directory",
+    "url": "https://easywithai.com/",
+    "frequency": "Updated weekly",
+    "description": "Beginner-focused AI tool directory that emphasizes ease of use and practical applications. Each listing includes a difficulty rating and use-case examples written for non-technical users. The 'best free AI tools' collections are particularly well-curated and regularly updated.",
+    "free": true,
+    "tags": [
+      "tools",
+      "beginner-friendly",
+      "free"
+    ]
+  },
+  {
+    "id": "aidirs",
+    "name": "AI Dirs",
+    "type": "directory",
+    "url": "https://aidirs.com/",
+    "frequency": "Updated regularly",
+    "description": "A meta-directory that aggregates listings from multiple AI tool directories, giving you a broader view of the landscape. Useful when you want to cross-reference tool recommendations across different sources. The deduplication and unified search save time compared to checking multiple directories individually.",
+    "free": true,
+    "tags": [
+      "tools",
+      "niche-tools",
+      "free"
+    ]
+  },
+  {
+    "id": "aiboom-tools",
+    "name": "AIBoom",
+    "type": "directory",
+    "url": "https://aiboom.tools/",
+    "frequency": "Updated regularly",
+    "description": "AI tool directory focused on discoverability through detailed tagging and categorization. Tools are organized by function, industry, pricing model, and integration capabilities. The filtering system lets you narrow down quickly — for example, finding only free tools with API access in a specific category.",
+    "free": true,
+    "tags": [
+      "tools",
+      "niche-tools",
+      "free"
+    ]
+  },
+  {
+    "id": "mango-ai",
+    "name": "Mango AI Directory",
+    "type": "directory",
+    "url": "https://www.mangoai.co/",
+    "frequency": "Updated regularly",
+    "description": "A community-driven AI tool directory where users submit and rate tools. The reviews tend to be more honest than directories where listings are paid placements. Smaller than Futurepedia or TAAFT but the curation quality is higher — tools with consistently negative feedback get removed.",
+    "free": true,
+    "tags": [
+      "tools",
+      "community",
+      "free"
+    ]
+  },
+  {
+    "id": "dang-ai",
+    "name": "Dang AI",
+    "type": "directory",
+    "url": "https://dang.ai/",
+    "frequency": "Updated daily",
+    "description": "A fast-growing AI tool directory with a clean interface and strong search. Tracks pricing changes, feature updates, and user sentiment over time. The 'just launched' feed is useful for catching brand-new tools, and the pricing comparison feature helps you find the best value in crowded categories.",
+    "free": true,
+    "tags": [
+      "tools",
+      "launches",
+      "free"
+    ]
+  },
+  {
+    "id": "aichief-dir",
+    "name": "AI Chief Directory",
+    "type": "directory",
+    "url": "https://www.aichief.com/",
+    "frequency": "Updated regularly",
+    "description": "Curated AI tool directory that focuses on quality over quantity. Each tool gets a brief editorial review covering strengths, weaknesses, and ideal use cases. The weekly roundup of new additions helps you stay current without checking the directory daily.",
+    "free": true,
+    "tags": [
+      "tools",
+      "niche-tools",
+      "free"
+    ]
+  },
+  {
+    "id": "stackviv",
+    "name": "StackViv",
+    "type": "directory",
+    "url": "https://stackviv.com/",
+    "frequency": "Updated regularly",
+    "description": "AI tool directory with an emphasis on developer and enterprise tools. Goes deeper on API capabilities, integration options, and technical specifications than consumer-focused directories. Useful for evaluating AI tools for professional deployment rather than casual personal use.",
+    "free": true,
+    "tags": [
+      "tools",
+      "enterprise",
+      "technical",
+      "free"
+    ]
+  },
+  {
+    "id": "insidr-ai",
+    "name": "Insidr.ai",
+    "type": "directory",
+    "url": "https://www.insidr.ai/ai-tools/",
+    "frequency": "Updated regularly",
+    "description": "AI tool directory with a strong editorial layer. Tools are grouped by practical use case with opinionated 'best of' picks rather than just listing everything. The guides explain when to use which tool and how they compare, making it more like a buying guide than a raw directory.",
+    "free": true,
+    "tags": [
+      "tools",
+      "beginner-friendly",
+      "free"
+    ]
+  },
+  {
+    "id": "arxiv-ai",
+    "name": "arXiv AI/ML",
+    "type": "research",
+    "url": "https://arxiv.org/list/cs.AI/recent",
+    "frequency": "Daily",
+    "description": "The primary preprint server where almost all AI research papers appear first, often months before journal publication. The cs.AI and cs.LG (machine learning) sections get dozens of new papers daily. Not curated — you need to filter aggressively — but this is where every major breakthrough first appears in written form.",
+    "free": true,
+    "tags": [
+      "research",
+      "technical",
+      "free"
+    ]
+  },
+  {
+    "id": "papers-with-code",
+    "name": "Papers With Code",
+    "type": "research",
+    "url": "https://paperswithcode.com/",
+    "frequency": "Daily",
+    "description": "Pairs research papers with their actual implementation code and benchmark results. The trending papers page is one of the best ways to see what's gaining attention in the research community this week. The state-of-the-art leaderboards show which methods actually perform best, cutting through paper claims.",
+    "free": true,
+    "tags": [
+      "research",
+      "technical",
+      "open-source",
+      "free"
+    ]
+  },
+  {
+    "id": "semantic-scholar",
+    "name": "Semantic Scholar",
+    "type": "research",
+    "url": "https://www.semanticscholar.org/",
+    "frequency": "Continuous",
+    "description": "AI-powered academic search engine from the Allen Institute. Its AI features surface relevant papers you might miss with keyword search alone — it understands concepts, not just words. The citation graph visualization helps you trace ideas through the research literature and find the foundational papers behind current work.",
+    "free": true,
+    "tags": [
+      "research",
+      "technical",
+      "free"
+    ]
+  },
+  {
+    "id": "connected-papers",
+    "name": "Connected Papers",
+    "type": "research",
+    "url": "https://www.connectedpapers.com/",
+    "frequency": "Continuous",
+    "description": "Builds visual graphs showing how research papers relate to each other. Enter any AI paper and see its intellectual neighborhood — what it builds on, what builds on it, and sibling papers exploring similar ideas. The best tool for mapping a research area when you find one interesting paper and want to go deeper.",
+    "free": true,
+    "tags": [
+      "research",
+      "technical",
+      "free"
+    ]
+  },
+  {
+    "id": "research-rabbit",
+    "name": "Research Rabbit",
+    "type": "research",
+    "url": "https://www.researchrabbit.ai/",
+    "frequency": "Continuous",
+    "description": "A research discovery tool that learns your interests and recommends papers. Add papers to collections and it finds related work you haven't seen. Particularly useful for staying current in specific AI subfields without manually checking arXiv every day. The collaborative features let you share research collections with teams.",
+    "free": true,
+    "tags": [
+      "research",
+      "technical",
+      "automated",
+      "free"
+    ]
+  },
+  {
+    "id": "elicit",
+    "name": "Elicit",
+    "type": "research",
+    "url": "https://elicit.com/",
+    "frequency": "Continuous",
+    "description": "An AI research assistant that helps you find, read, and synthesize academic papers. Ask a research question in plain language and it finds relevant papers, extracts key findings, and helps you identify consensus and disagreements. Dramatically speeds up literature reviews — what took hours now takes minutes.",
+    "free": true,
+    "tags": [
+      "research",
+      "tools",
+      "free"
+    ]
+  },
+  {
+    "id": "hn-firebase-api",
+    "name": "Hacker News API",
+    "type": "api-source",
+    "url": "https://github.com/HackerNews/API",
+    "frequency": "Real-time",
+    "description": "Free, no-auth Firebase API for Hacker News data. Exposes every story, comment, and user in real-time. Particularly useful for programmatically monitoring 'Show HN' posts about AI tools, tracking which AI topics gain traction with the developer community, and building custom feeds filtered to AI content.",
+    "free": true,
+    "tags": [
+      "api",
+      "automated",
+      "free"
+    ]
+  },
+  {
+    "id": "github-trending",
+    "name": "GitHub Trending",
+    "type": "api-source",
+    "url": "https://github.com/trending",
+    "frequency": "Daily",
+    "description": "GitHub's trending repositories page, filterable by language and time range. AI and ML repos frequently dominate the daily and weekly trends. Monitoring this programmatically (via unofficial APIs or scraping) surfaces open-source AI tools, model implementations, and libraries as they gain real developer adoption.",
+    "free": true,
+    "tags": [
+      "open-source",
+      "tools",
+      "automated",
+      "free"
+    ]
+  },
+  {
+    "id": "product-hunt-api",
+    "name": "Product Hunt API",
+    "type": "api-source",
+    "url": "https://api.producthunt.com/v2/docs",
+    "frequency": "Real-time",
+    "description": "GraphQL API for accessing Product Hunt launch data, votes, and comments. Allows programmatic monitoring of new AI tool launches, filtering by topic and time. Useful for building automated pipelines that surface the most upvoted AI launches each day without manually browsing the site.",
+    "free": true,
+    "tags": [
+      "api",
+      "launches",
+      "automated",
+      "free"
+    ]
+  },
+  {
+    "id": "reddit-api",
+    "name": "Reddit API",
+    "type": "api-source",
+    "url": "https://www.reddit.com/dev/api/",
+    "frequency": "Real-time",
+    "description": "Reddit's official API provides access to posts, comments, and voting data across all AI subreddits. Enables building custom monitoring dashboards for AI discussions, tracking sentiment shifts around tool releases, and surfacing the most-discussed topics across multiple subreddits simultaneously.",
+    "free": true,
+    "tags": [
+      "api",
+      "community",
+      "automated",
+      "free"
+    ]
+  },
+  {
+    "id": "google-trends-ai",
+    "name": "Google Trends AI",
+    "type": "api-source",
+    "url": "https://trends.google.com/trends/explore?cat=1299",
+    "frequency": "Continuous",
+    "description": "Google Trends data filtered to the AI and machine learning category. Shows real search interest over time, geographic distribution, and related queries. Invaluable for distinguishing tools with genuine user adoption from those with only media buzz — search volume is a more honest signal than press coverage.",
+    "free": true,
+    "tags": [
+      "automated",
+      "free"
+    ]
+  },
+  {
+    "id": "ised-canada",
+    "name": "ISED Canada AI Ecosystem",
+    "type": "regulation",
+    "url": "https://ised-isde.canada.ca/site/ised/en/artificial-intelligence-ecosystem",
+    "frequency": "Updated periodically",
+    "description": "Innovation, Science and Economic Development Canada's official AI page. The central hub for Canadian federal AI policy, linking to safety frameworks, funding programs, and regulatory proposals. Essential for understanding what rules may affect AI use in Canada — particularly relevant for workplace AI adoption.",
+    "free": true,
+    "tags": [
+      "canadian",
+      "free"
+    ]
+  },
+  {
+    "id": "pan-canadian-ai",
+    "name": "Pan-Canadian AI Strategy",
+    "type": "regulation",
+    "url": "https://ised-isde.canada.ca/site/ai-strategy/en/pan-canadian-artificial-intelligence-strategy",
+    "frequency": "Updated periodically",
+    "description": "Canada's national framework for AI development and governance, with over 11,300 participants submitting feedback in Q1 2026. Covers funding for AI research institutes (Mila, Vector, Amii), compute infrastructure plans, and responsible AI guidelines. Important context for how Canada is positioning itself in the global AI landscape.",
+    "free": true,
+    "tags": [
+      "canadian",
+      "free"
+    ]
+  },
+  {
+    "id": "caisi",
+    "name": "Canadian AI Safety Institute (CAISI)",
+    "type": "regulation",
+    "url": "https://ised-isde.canada.ca/site/ised/en/canadian-artificial-intelligence-safety-institute",
+    "frequency": "Updated periodically",
+    "description": "The Canadian government's AI safety research arm, focused on evaluating frontier model risks and developing safety testing methodologies. Publishes research on responsible AI development and collaborates with international safety institutes. Tracks the regulatory side of AI that most newsletters ignore.",
+    "free": true,
+    "tags": [
+      "canadian",
+      "research",
+      "free"
+    ]
+  },
+  {
+    "id": "canada-ai-directory",
+    "name": "Canada AI Directory",
+    "type": "directory",
+    "url": "https://www.amii.ca/ai-ecosystem/",
+    "frequency": "Updated quarterly",
+    "description": "Maintained by Amii (Alberta Machine Intelligence Institute), this directory maps the Canadian AI ecosystem — companies, research labs, accelerators, and talent. Useful for finding Canadian AI tools and services, connecting with local AI communities, and understanding where Canadian AI strengths are concentrated geographically.",
+    "free": true,
+    "tags": [
+      "canadian",
+      "tools",
+      "community",
+      "free"
+    ]
+  },
+  {
+    "id": "next-ai-accelerator",
+    "name": "Next AI Accelerator",
+    "type": "community",
+    "url": "https://www.nextcanada.com/next-ai/",
+    "frequency": "Updated periodically",
+    "description": "Canada's leading AI startup accelerator, supporting early-stage AI ventures across the country. Their portfolio page showcases Canadian AI tools and companies you won't find in US-centric directories. Useful for tracking Canadian AI innovation and finding locally-built tools that may suit Canadian regulatory requirements.",
+    "free": true,
+    "tags": [
+      "canadian",
+      "launches",
+      "community",
+      "free"
+    ]
+  },
+  {
+    "id": "vector-institute",
+    "name": "Vector Institute",
+    "type": "research",
+    "url": "https://vectorinstitute.ai/",
+    "frequency": "Updated regularly",
+    "description": "Toronto-based AI research institute focused on responsible AI and healthcare applications. Their research publications, events, and talent programs are among the best in Canada. Tracks AI developments with particular relevance to Canadian industry applications and policy frameworks.",
+    "free": true,
+    "tags": [
+      "canadian",
+      "research",
+      "free"
+    ]
+  },
+  {
+    "id": "eu-ai-act-tracker",
+    "name": "EU AI Act Tracker",
+    "type": "regulation",
+    "url": "https://artificialintelligenceact.eu/",
+    "frequency": "Updated as legislation evolves",
+    "description": "The most comprehensive tracker for the EU AI Act, the world's first major AI regulation. Breaks down the law by risk category, compliance requirements, and implementation timelines. Even if you're not in the EU, this legislation is shaping how AI companies worldwide build their products.",
+    "free": true,
+    "tags": [
+      "free"
+    ]
+  },
+  {
+    "id": "uk-ai-safety",
+    "name": "UK AI Safety Institute",
+    "type": "regulation",
+    "url": "https://www.aisi.gov.uk/",
+    "frequency": "Updated regularly",
+    "description": "The UK government's AI safety research body, which conducts pre-deployment testing of frontier models and publishes evaluation results. Their reports on model capabilities and safety assessments provide a rare government perspective on what AI systems can actually do. Important for understanding the regulatory direction of AI safety globally.",
+    "free": true,
+    "tags": [
+      "research",
+      "free"
+    ]
+  },
+  {
+    "id": "us-ai-policy",
+    "name": "US AI Policy Hub",
+    "type": "regulation",
+    "url": "https://www.ai.gov/",
+    "frequency": "Updated regularly",
+    "description": "The US government's central AI policy hub, tracking executive orders, agency guidance, and legislative proposals related to AI. Covers NIST AI Risk Management Framework, federal AI use policies, and procurement guidelines. Essential for understanding how the largest AI market is approaching regulation.",
+    "free": true,
+    "tags": [
+      "free"
+    ]
+  },
+  {
+    "id": "zapier-blog",
+    "name": "Zapier AI Blog",
+    "type": "blog",
+    "url": "https://zapier.com/blog/ai/",
+    "frequency": "Multiple times per week",
+    "description": "Show-don't-tell automation guides you can actually copy. Zapier's team writes detailed walkthroughs of AI workflows — connecting ChatGPT to your email, automating content pipelines, building AI-powered internal tools. Every article includes step-by-step instructions with screenshots. The most practical 'how to actually use AI at work' resource available.",
+    "free": true,
+    "tags": [
+      "tools",
+      "beginner-friendly",
+      "free"
+    ]
+  },
+  {
+    "id": "towards-data-science",
+    "name": "Towards Data Science",
+    "type": "blog",
+    "url": "https://towardsdatascience.com/",
+    "frequency": "Multiple daily",
+    "description": "Medium's largest AI/ML publication with thousands of contributors. Quality varies — some articles are excellent technical deep dives, others are beginner overviews. Best used by searching for specific topics rather than reading the feed. Strong on tutorials, explanations of paper implementations, and career advice.",
+    "free": false,
+    "tags": [
+      "technical",
+      "research"
+    ]
+  },
+  {
+    "id": "hugging-face-blog",
+    "name": "Hugging Face Blog",
+    "type": "blog",
+    "url": "https://huggingface.co/blog",
+    "frequency": "Multiple times per week",
+    "description": "Official blog from the open-source AI platform. Covers new model releases, library updates, and technical guides written by the people building the tools. When a significant open-source model drops, their blog post is usually the most informative first resource — better than the paper abstract, more honest than the press release.",
+    "free": true,
+    "tags": [
+      "open-source",
+      "technical",
+      "tools",
+      "free"
+    ]
+  },
+  {
+    "id": "openai-blog",
+    "name": "OpenAI Blog",
+    "type": "blog",
+    "url": "https://openai.com/blog",
+    "frequency": "Multiple times per month",
+    "description": "Official announcements and research from OpenAI. This is where GPT model releases, API changes, and safety research appear first. The technical reports that accompany major releases contain details that never make it into the press coverage. Subscribe to the RSS feed to catch announcements immediately.",
+    "free": true,
+    "tags": [
+      "news",
+      "research",
+      "free"
+    ]
+  },
+  {
+    "id": "anthropic-blog",
+    "name": "Anthropic Blog",
+    "type": "blog",
+    "url": "https://www.anthropic.com/news",
+    "frequency": "Multiple times per month",
+    "description": "Anthropic's official research and product blog. Covers Claude model releases, constitutional AI research, safety papers, and interpretability work. Their research publications are unusually detailed and transparent about methodology and limitations. Essential reading for understanding the safety-first approach to AI development.",
+    "free": true,
+    "tags": [
+      "news",
+      "research",
+      "free"
+    ]
+  },
+  {
+    "id": "google-ai-blog",
+    "name": "Google AI Blog",
+    "type": "blog",
+    "url": "https://blog.google/technology/ai/",
+    "frequency": "Multiple times per week",
+    "description": "Google's AI research and product announcements. Covers Gemini model releases, Google DeepMind breakthroughs, and AI integrations across Google products. The research posts often include interactive demos you can try. Important for tracking how AI capabilities are being embedded into the tools billions of people use daily.",
+    "free": true,
+    "tags": [
+      "news",
+      "research",
+      "free"
+    ]
+  },
+  {
+    "id": "meta-ai-blog",
+    "name": "Meta AI Blog",
+    "type": "blog",
+    "url": "https://ai.meta.com/blog/",
+    "frequency": "Multiple times per month",
+    "description": "Meta's AI research division publishes some of the most impactful open-source AI work — LLaMA models, Segment Anything, and other widely-adopted tools started here. Their blog posts explain the research behind releases and often include code, models, and datasets. Critical source for the open-source AI ecosystem.",
+    "free": true,
+    "tags": [
+      "research",
+      "open-source",
+      "free"
+    ]
+  },
+  {
+    "id": "microsoft-ai-blog",
+    "name": "Microsoft AI Blog",
+    "type": "blog",
+    "url": "https://blogs.microsoft.com/ai/",
+    "frequency": "Multiple times per week",
+    "description": "Covers Microsoft's AI integrations across Office, Azure, GitHub Copilot, and enterprise products. Important for tracking how AI is being embedded into workplace tools that millions of companies already use. The enterprise deployment stories provide practical context for organizational AI adoption.",
+    "free": true,
+    "tags": [
+      "enterprise",
+      "news",
+      "free"
+    ]
+  },
+  {
+    "id": "nvidia-ai-blog",
+    "name": "NVIDIA AI Blog",
+    "type": "blog",
+    "url": "https://blogs.nvidia.com/blog/category/deep-learning/",
+    "frequency": "Multiple times per week",
+    "description": "NVIDIA's deep learning and AI blog covers the hardware and infrastructure side that most AI sources skip. GPU announcements, CUDA optimizations, and inference benchmarks directly impact what AI models you can run and how fast. Essential context for understanding why certain models are practical and others remain research-only.",
+    "free": true,
+    "tags": [
+      "technical",
+      "research",
+      "free"
+    ]
+  },
+  {
+    "id": "a16z-ai-blog",
+    "name": "a16z AI Blog",
+    "type": "blog",
+    "url": "https://a16z.com/ai/",
+    "frequency": "Multiple times per month",
+    "description": "Andreessen Horowitz's AI investment team publishes analysis of AI market trends, startup opportunities, and technology shifts. Their 'AI Canon' reading list is a widely-referenced resource for understanding AI fundamentals. The VC perspective reveals which AI applications are attracting serious investment and why.",
+    "free": true,
+    "tags": [
+      "enterprise",
+      "news",
+      "free"
+    ]
+  },
+  {
+    "id": "lex-fridman",
+    "name": "Lex Fridman Podcast",
+    "type": "podcast",
+    "url": "https://lexfridman.com/podcast/",
+    "frequency": "1-2 per week",
+    "description": "Long-form interviews with AI researchers, tech leaders, and scientists. Lex's interviews with figures like Sam Altman, Dario Amodei, Yann LeCun, and Demis Hassabis provide unfiltered access to the thinking of the people building AI. The 2-4 hour format allows conversations to go deep where shorter interviews stay surface-level.",
+    "free": true,
+    "tags": [
+      "research",
+      "beginner-friendly",
+      "free"
+    ]
+  },
+  {
+    "id": "practical-ai-pod",
+    "name": "Practical AI Podcast",
+    "type": "podcast",
+    "url": "https://changelog.com/practicalai",
+    "frequency": "Weekly",
+    "description": "A Changelog podcast focused on making AI practical and accessible. Hosts Daniel Whitenack and Chris Benson interview practitioners about real-world AI deployment — what works, what doesn't, and what they learned. The discussions cover the unglamorous but essential topics like data quality, deployment challenges, and maintenance that hype-focused media ignores.",
+    "free": true,
+    "tags": [
+      "beginner-friendly",
+      "free"
+    ]
+  },
+  {
+    "id": "gradient-dissent",
+    "name": "Gradient Dissent",
+    "type": "podcast",
+    "url": "https://wandb.ai/fully-connected/gradient-dissent",
+    "frequency": "Weekly",
+    "description": "Produced by Weights & Biases, this podcast features interviews with ML engineers and researchers about their actual workflows. The technical depth is higher than most AI podcasts — guests discuss specific architectures, training challenges, and evaluation methods. Best for understanding how professional ML teams actually work.",
+    "free": true,
+    "tags": [
+      "technical",
+      "research",
+      "free"
+    ]
+  },
+  {
+    "id": "latent-space",
+    "name": "Latent Space",
+    "type": "podcast",
+    "url": "https://www.latent.space/",
+    "frequency": "Weekly",
+    "description": "Hosted by swyx and Alessio Fanelli, covering AI engineering — the emerging discipline of building products with AI. Guests are often the founders and lead engineers of AI-native companies. The discussions focus on the practical challenges of shipping AI products: reliability, cost, latency, and user experience.",
+    "free": true,
+    "tags": [
+      "technical",
+      "tools",
+      "free"
+    ]
+  },
+  {
+    "id": "cognitive-revolution",
+    "name": "The Cognitive Revolution",
+    "type": "podcast",
+    "url": "https://www.cognitiverevolution.ai/",
+    "frequency": "Twice weekly",
+    "description": "Nathan Labenz interviews AI researchers, policy experts, and builders about the rapidly changing AI landscape. Covers both the capability frontier and the safety/governance side. Nathan's preparation is notably thorough — he reads the papers, tries the tools, and comes with informed questions rather than generic prompts.",
+    "free": true,
+    "tags": [
+      "research",
+      "news",
+      "free"
+    ]
+  },
+  {
+    "id": "no-priors",
+    "name": "No Priors",
+    "type": "podcast",
+    "url": "https://www.no-priors.com/",
+    "frequency": "Weekly",
+    "description": "Hosted by Sarah Guo and Elad Gil, two prominent AI investors who interview founders, researchers, and executives at the frontier of AI. The conversations often reveal strategic thinking and insider perspectives that don't appear in blog posts or press coverage. Particularly strong on the business and product side of AI.",
+    "free": true,
+    "tags": [
+      "enterprise",
+      "news",
+      "free"
+    ]
+  },
+  {
+    "id": "kaggle",
+    "name": "Kaggle",
+    "type": "community",
+    "url": "https://www.kaggle.com/",
+    "frequency": "Continuous",
+    "description": "The world's largest data science and ML competition platform. Beyond competitions, the discussion forums, shared notebooks, and datasets are invaluable learning resources. Kaggle notebooks let you run ML experiments for free in the browser. The community's collective solutions to competition problems represent some of the best practical ML knowledge available.",
+    "free": true,
+    "tags": [
+      "technical",
+      "community",
+      "free"
+    ]
+  },
+  {
+    "id": "stack-overflow-ai",
+    "name": "Stack Overflow AI",
+    "type": "community",
+    "url": "https://stackoverflow.com/questions/tagged/artificial-intelligence",
+    "frequency": "Continuous",
+    "description": "Stack Overflow's AI-tagged questions cover practical implementation problems — API integration issues, model deployment bugs, prompt engineering challenges. The Q&A format means questions get specific, tested answers rather than general advice. When you're stuck on a specific AI coding problem, this is where you find solutions.",
+    "free": true,
+    "tags": [
+      "technical",
+      "community",
+      "free"
+    ]
+  },
+  {
+    "id": "indie-hackers-ai",
+    "name": "Indie Hackers AI",
+    "type": "community",
+    "url": "https://www.indiehackers.com/",
+    "frequency": "Continuous",
+    "description": "Solo founders and small teams sharing their experiences building AI-powered products. The revenue transparency is the key differentiator — makers share actual numbers, growth metrics, and what's working. Good for understanding which AI product ideas have real market demand vs. which are saturated.",
+    "free": true,
+    "tags": [
+      "launches",
+      "community",
+      "free"
+    ]
+  },
+  {
+    "id": "betalist-ai",
+    "name": "BetaList AI",
+    "type": "community",
+    "url": "https://betalist.com/topics/artificial-intelligence",
+    "frequency": "Daily",
+    "description": "Where AI startups go to find their first beta testers. Every listing is a pre-launch or early-stage product seeking feedback. You get early access to tools months before they're publicly available, and your feedback actually shapes the product direction. A pipeline for discovering tomorrow's AI tools today.",
+    "free": true,
+    "tags": [
+      "launches",
+      "tools",
+      "community",
+      "free"
+    ]
+  },
+  {
+    "id": "hacker-news",
+    "name": "Hacker News",
+    "type": "community",
+    "url": "https://news.ycombinator.com/",
+    "frequency": "Continuous",
+    "description": "Y Combinator's community forum is one of the most influential surfaces for AI tool launches and research discussion. Show HN posts about AI tools get immediate, informed feedback from developers and founders. The comment sections on AI research posts feature genuine expertise — researchers and engineers often weigh in directly.",
+    "free": true,
+    "tags": [
+      "news",
+      "community",
+      "technical",
+      "free"
+    ]
+  },
+  {
+    "id": "feeder",
+    "name": "Feeder.co",
+    "type": "rss",
+    "url": "https://feeder.co/discover/ai",
+    "frequency": "Continuous",
+    "description": "RSS feed aggregator with an AI discovery section. Lets you combine multiple AI blogs, news sites, and research feeds into a single stream. The discovery feature helps you find niche AI feeds you wouldn't stumble on otherwise. Free tier covers most use cases.",
+    "free": true,
+    "tags": [
+      "automated",
+      "free"
+    ]
+  },
+  {
+    "id": "inoreader",
+    "name": "Inoreader",
+    "type": "rss",
+    "url": "https://www.inoreader.com/",
+    "frequency": "Continuous",
+    "description": "Power RSS reader with AI-powered features like smart summaries, keyword monitoring, and automated rules. The best option for building a custom AI news pipeline — you can set up feeds from every source in this list that offers RSS, then filter and prioritize with rules. The free tier is generous.",
+    "free": true,
+    "tags": [
+      "automated",
+      "free"
+    ]
+  },
+  {
+    "id": "openai-twitter-list",
+    "name": "AI Researchers Twitter List",
+    "type": "twitter-list",
+    "url": "https://x.com/i/lists/1585430245762441216",
+    "frequency": "Continuous",
+    "description": "A curated Twitter/X list of prominent AI researchers, lab leaders, and independent commentators. Following this list gives you a real-time feed of model releases, research previews, and insider commentary. Many researchers share results and reactions on Twitter hours before formal announcements or paper releases.",
+    "free": true,
+    "tags": [
+      "news",
+      "research",
+      "free"
+    ]
+  },
+  {
+    "id": "ai-builders-twitter-list",
+    "name": "AI Builders Twitter List",
+    "type": "twitter-list",
+    "url": "https://x.com/i/lists/1722310578289975296",
+    "frequency": "Continuous",
+    "description": "A curated list of AI tool builders, indie hackers, and product makers on Twitter/X. These are the people shipping AI products weekly — their threads about what they're building, how they're using AI APIs, and what's selling provide ground-level intelligence on the AI tool market that curated newsletters miss.",
+    "free": true,
+    "tags": [
+      "tools",
+      "launches",
+      "community",
+      "free"
+    ]
+  },
+  {
+    "id": "ml-street-talk",
+    "name": "ML Street Talk Twitter",
+    "type": "twitter-list",
+    "url": "https://x.com/MLStreetTalk",
+    "frequency": "Multiple times per week",
+    "description": "The ML Street Talk team shares technical commentary, paper breakdowns, and interviews with leading researchers. Their Twitter presence complements their YouTube channel and podcast with quicker takes and links to important papers. A good account to follow for technically-grounded hot takes on AI news.",
+    "free": true,
+    "tags": [
+      "research",
+      "technical",
+      "free"
+    ]
+  },
+  {
+    "id": "github-awesome-llm",
+    "name": "Awesome LLM (GitHub)",
+    "type": "github",
+    "url": "https://github.com/Hannibal046/Awesome-LLM",
+    "frequency": "Updated weekly",
+    "description": "A community-maintained GitHub repository cataloging the most important LLM resources — papers, models, tools, and datasets. The curation is excellent, with resources organized by milestone papers, training resources, and practical tools. One of the best starting points for understanding the LLM landscape systematically.",
+    "free": true,
+    "tags": [
+      "research",
+      "open-source",
+      "technical",
+      "free"
+    ]
+  },
+  {
+    "id": "github-awesome-generative-ai",
+    "name": "Awesome Generative AI (GitHub)",
+    "type": "github",
+    "url": "https://github.com/steven2358/awesome-generative-ai",
+    "frequency": "Updated regularly",
+    "description": "Comprehensive GitHub list covering generative AI tools, models, and resources across text, image, audio, video, and code. Each entry includes a brief description and relevant links. Unlike directories that focus on commercial tools, this list includes open-source projects, research implementations, and developer tools.",
+    "free": true,
+    "tags": [
+      "tools",
+      "open-source",
+      "free"
+    ]
+  },
+  {
+    "id": "github-awesome-chatgpt-prompts",
+    "name": "Awesome ChatGPT Prompts (GitHub)",
+    "type": "github",
+    "url": "https://github.com/f/awesome-chatgpt-prompts",
+    "frequency": "Updated regularly",
+    "description": "A crowd-sourced collection of effective ChatGPT prompts with 100K+ stars. The prompts range from practical (coding assistant, writing editor) to creative (game master, philosopher). Each prompt is a reusable template that works across most LLMs, not just ChatGPT. Good starting point for learning prompt engineering by example.",
+    "free": true,
+    "tags": [
+      "tools",
+      "beginner-friendly",
+      "open-source",
+      "free"
+    ]
+  },
+  {
+    "id": "github-open-llm-leaderboard",
+    "name": "Open LLM Leaderboard (GitHub/HF)",
+    "type": "github",
+    "url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+    "frequency": "Updated continuously",
+    "description": "Hugging Face's open benchmark for comparing LLM performance across standardized tests. Shows exactly how every open-source model performs on reasoning, knowledge, and instruction-following tasks. The most objective way to compare models — cuts through marketing claims with reproducible benchmark scores.",
+    "free": true,
+    "tags": [
+      "research",
+      "open-source",
+      "technical",
+      "free"
+    ]
+  },
+  {
+    "id": "github-llm-app-stack",
+    "name": "LLM App Stack (GitHub)",
+    "type": "github",
+    "url": "https://github.com/a16z-infra/llm-app-stack",
+    "frequency": "Updated periodically",
+    "description": "a16z's reference architecture for building LLM-powered applications. Maps out the emerging technology stack — embedding models, vector databases, orchestration frameworks, and deployment tools. Essential reading for understanding how AI applications are actually built in production, beyond just calling an API.",
+    "free": true,
+    "tags": [
+      "technical",
+      "open-source",
+      "free"
+    ]
+  },
+  {
+    "id": "gitee",
+    "name": "Gitee",
+    "type": "github-equivalent",
+    "url": "https://gitee.com",
+    "frequency": "Continuous",
+    "description": "China's government-backed GitHub alternative. Backed by Huawei, Tencent, top universities via OpenAtom Foundation. Designated by Ministry of Industry as official open-source code hosting platform. Essential for tracking Chinese open-source AI projects that never appear on GitHub.",
+    "free": true,
+    "tags": [
+      "code",
+      "open-source",
+      "chinese-ai"
+    ],
+    "language": "zh",
+    "country": "China"
+  },
+  {
+    "id": "modelscope",
+    "name": "ModelScope (Alibaba)",
+    "type": "model-hub",
+    "url": "https://www.modelscope.cn",
+    "frequency": "Continuous",
+    "description": "China's largest AI model community with 5M+ developers and 5,000+ models. Alibaba-backed equivalent of Hugging Face. Many Chinese AI models (Qwen, etc.) release here first or simultaneously. English version available.",
+    "free": true,
+    "tags": [
+      "models",
+      "open-source",
+      "chinese-ai"
+    ],
+    "language": "zh+en",
+    "country": "China"
+  },
+  {
+    "id": "zhihu",
+    "name": "Zhihu (知乎)",
+    "type": "community",
+    "url": "https://www.zhihu.com",
+    "frequency": "Continuous",
+    "description": "China's Quora equivalent with 220M+ monthly users. Epicenter of AI knowledge-sharing and technical debate. Where Chinese AI researchers announce findings and share insights. Critical for early signals on Chinese AI developments.",
+    "free": true,
+    "tags": [
+      "community",
+      "research",
+      "chinese-ai"
+    ],
+    "language": "zh",
+    "country": "China"
+  },
+  {
+    "id": "csdn",
+    "name": "CSDN",
+    "type": "community",
+    "url": "https://www.csdn.net",
+    "frequency": "Continuous",
+    "description": "China's largest developer community — combination of Stack Overflow and tech blog network. Hosts forums, tutorials, technical articles. One of China's oldest and most established developer platforms.",
+    "free": true,
+    "tags": [
+      "developer",
+      "community",
+      "chinese-ai"
+    ],
+    "language": "zh",
+    "country": "China"
+  },
+  {
+    "id": "xiaohongshu",
+    "name": "Xiaohongshu / RedNote (小红书)",
+    "type": "community",
+    "url": "https://www.xiaohongshu.com",
+    "frequency": "Continuous",
+    "description": "Surprisingly, AI on Xiaohongshu has 16.15M posts — surpassing makeup (10.06M). Originally beauty/lifestyle, now hosts more AI content than cosmetics. Academics from elite universities contribute AMAs. Unique early-signal source for how Chinese consumers adopt AI tools.",
+    "free": true,
+    "tags": [
+      "consumer",
+      "community",
+      "chinese-ai"
+    ],
+    "language": "zh",
+    "country": "China"
+  },
+  {
+    "id": "bilibili",
+    "name": "Bilibili (哔哩哔哩)",
+    "type": "youtube-equivalent",
+    "url": "https://www.bilibili.com",
+    "frequency": "Continuous",
+    "description": "China's YouTube equivalent with 348M users. Extensive AI tutorial content, tech explainers, developer knowledge sharing. Unique bullet comment (danmu) system for real-time engagement. Increasingly an AI education hub.",
+    "free": true,
+    "tags": [
+      "video",
+      "tutorials",
+      "chinese-ai"
+    ],
+    "language": "zh",
+    "country": "China"
+  },
+  {
+    "id": "weibo",
+    "name": "Weibo (微博)",
+    "type": "community",
+    "url": "https://weibo.com",
+    "frequency": "Continuous",
+    "description": "China's Twitter equivalent with 587M users. Where Chinese AI companies make announcements and researchers share quick takes. News and public AI discussions.",
+    "free": true,
+    "tags": [
+      "social",
+      "news",
+      "chinese-ai"
+    ],
+    "language": "zh",
+    "country": "China"
+  },
+  {
+    "id": "36kr",
+    "name": "36Kr (36氪)",
+    "type": "news-site",
+    "url": "https://36kr.com",
+    "frequency": "Daily",
+    "description": "China's TechCrunch. Primary source for major Chinese AI industry stories — ChinaTalk translated their DeepSeek CEO interview. Covers AI companies, funding, product launches. English edition at eu.36kr.com/en.",
+    "free": true,
+    "tags": [
+      "news",
+      "startups",
+      "chinese-ai"
+    ],
+    "language": "zh+en",
+    "country": "China"
+  },
+  {
+    "id": "jiqizhixin",
+    "name": "Jiqizhixin / Synced (机器之心)",
+    "type": "news-site",
+    "url": "https://www.jiqizhixin.com",
+    "frequency": "Daily",
+    "description": "China's leading AI-focused media outlet. News, analysis, deep-dive coverage of AI research papers. English counterpart at syncedreview.com. Critical for tracking Chinese AI research developments.",
+    "free": true,
+    "tags": [
+      "research",
+      "news",
+      "chinese-ai"
+    ],
+    "language": "zh+en",
+    "country": "China"
+  },
+  {
+    "id": "chinaxiv",
+    "name": "ChinaXiv",
+    "type": "research",
+    "url": "https://chinaxiv.org",
+    "frequency": "Continuous",
+    "description": "China's arXiv equivalent. Developed by National Science Library of Chinese Academy of Sciences. Accepts multilingual submissions. Cooperates with 50+ research institutions.",
+    "free": true,
+    "tags": [
+      "research",
+      "papers",
+      "chinese-ai"
+    ],
+    "language": "zh+en",
+    "country": "China"
+  },
+  {
+    "id": "baidu-scholar",
+    "name": "Baidu Scholar (百度学术)",
+    "type": "research",
+    "url": "https://xueshu.baidu.com",
+    "frequency": "Continuous",
+    "description": "China's Google Scholar equivalent. Indexes 400M+ literature resources across Chinese and international academic sites. Particularly useful for Chinese-language AI research.",
+    "free": true,
+    "tags": [
+      "research",
+      "academic",
+      "chinese-ai"
+    ],
+    "language": "zh",
+    "country": "China"
+  },
+  {
+    "id": "wechat-public",
+    "name": "WeChat Public Accounts (微信公众号)",
+    "type": "community",
+    "url": "https://mp.weixin.qq.com",
+    "frequency": "Continuous",
+    "description": "Major channel for developer knowledge sharing in China. AI companies and researchers maintain public accounts for announcements. Closed newsletter ecosystem within WeChat. Hard to access externally but extremely influential.",
+    "free": true,
+    "tags": [
+      "newsletter",
+      "walled-garden",
+      "chinese-ai"
+    ],
+    "language": "zh",
+    "country": "China"
+  },
+  {
+    "id": "chinatalk",
+    "name": "ChinaTalk",
+    "type": "newsletter",
+    "url": "https://chinatalk.media",
+    "frequency": "Regular",
+    "description": "Hybrid think tank/media with 65K+ subscribers. Translates and analyzes Chinese-language AI sources. Read by 200+ journalists at NYT, WSJ, FT. Essential English bridge for Chinese AI primary sources.",
+    "free": true,
+    "tags": [
+      "china-bridge",
+      "translation",
+      "analysis"
+    ],
+    "language": "en",
+    "country": "USA (China focus)"
+  },
+  {
+    "id": "chinai-newsletter",
+    "name": "ChinAI Newsletter",
+    "type": "newsletter",
+    "url": "https://chinai.substack.com",
+    "frequency": "Weekly",
+    "description": "Weekly translations of Chinese-language AI writings by Jeffrey Ding (GWU professor). Benchmarks, safety, open-source, corporate dynamics. The most rigorous English translation of Chinese AI discourse.",
+    "free": true,
+    "tags": [
+      "china-bridge",
+      "translation",
+      "academic"
+    ],
+    "language": "en",
+    "country": "USA (China focus)"
+  },
+  {
+    "id": "gitee-ai",
+    "name": "Gitee AI",
+    "type": "model-hub",
+    "url": "https://ai.gitee.com",
+    "frequency": "Continuous",
+    "description": "Gitee's dedicated AI model hosting platform. One-stop service for model experience, inference, training, deployment. Government-backed with academic credit incentives.",
+    "free": true,
+    "tags": [
+      "models",
+      "chinese-ai"
+    ],
+    "language": "zh",
+    "country": "China"
+  },
+  {
+    "id": "habr",
+    "name": "Habr",
+    "type": "community",
+    "url": "https://habr.com",
+    "frequency": "Continuous",
+    "description": "Russia's combined Hacker News + Stack Overflow + dev blog platform. Largest developer community in Europe (DA 92). Active AI/ML discussions, LLM comparisons. English section at habr.com/en.",
+    "free": true,
+    "tags": [
+      "developer",
+      "community",
+      "russian-ai"
+    ],
+    "language": "ru+en",
+    "country": "Russia"
+  },
+  {
+    "id": "cnews-ru",
+    "name": "CNews",
+    "type": "news-site",
+    "url": "https://cnews.ru",
+    "frequency": "Daily",
+    "description": "Largest publication for corporate IT in Russia and CIS countries. Covers tech innovations, implementation projects, industry trends from the Russian tech sector.",
+    "free": true,
+    "tags": [
+      "enterprise",
+      "news",
+      "russian-ai"
+    ],
+    "language": "ru",
+    "country": "Russia"
+  },
+  {
+    "id": "tadviser",
+    "name": "TAdviser",
+    "type": "news-site",
+    "url": "https://tadviser.com",
+    "frequency": "Regular",
+    "description": "Tracks the Russian AI market — 540+ AI companies, market segments (NLP 61.3%, data analysis 33.6%). Has English articles. Essential for understanding Russia's AI industry structure.",
+    "free": true,
+    "tags": [
+      "market-research",
+      "enterprise",
+      "russian-ai"
+    ],
+    "language": "ru+en",
+    "country": "Russia"
+  },
+  {
+    "id": "hi-news-ru",
+    "name": "Hi-News.ru",
+    "type": "news-site",
+    "url": "https://hi-news.ru",
+    "frequency": "Daily",
+    "description": "Covers AI, technology, space in accessible Russian-language format. Consumer-oriented tech coverage.",
+    "free": true,
+    "tags": [
+      "news",
+      "consumer",
+      "russian-ai"
+    ],
+    "language": "ru",
+    "country": "Russia"
+  },
+  {
+    "id": "geeknews-kr",
+    "name": "GeekNews (긴뉴스)",
+    "type": "community",
+    "url": "https://news.hada.io",
+    "frequency": "Continuous",
+    "description": "Korea's Hacker News equivalent. Users submit and discuss tech/dev/startup news. Ad-free, built specifically as Korean HN.",
+    "free": true,
+    "tags": [
+      "community",
+      "developer",
+      "korean-ai"
+    ],
+    "language": "ko",
+    "country": "South Korea"
+  },
+  {
+    "id": "okky",
+    "name": "OKKY",
+    "type": "community",
+    "url": "https://okky.kr",
+    "frequency": "Continuous",
+    "description": "Korea's largest developer platform (170K+ members). Q&A, discussions, study groups. Established 2000 — Korea's Stack Overflow equivalent.",
+    "free": true,
+    "tags": [
+      "developer",
+      "community",
+      "korean-ai"
+    ],
+    "language": "ko",
+    "country": "South Korea"
+  },
+  {
+    "id": "korea-herald-tech",
+    "name": "The Korea Herald (Tech)",
+    "type": "news-site",
+    "url": "https://www.koreaherald.com",
+    "frequency": "Daily",
+    "description": "Major English-language Korean newspaper. Tracks Naver, Kakao, Samsung AI, sovereign AI initiatives, startup ecosystem.",
+    "free": true,
+    "tags": [
+      "news",
+      "korea-bridge"
+    ],
+    "language": "en",
+    "country": "South Korea"
+  },
+  {
+    "id": "korea-tech-today",
+    "name": "Korea Tech Today",
+    "type": "news-site",
+    "url": "https://koreatechtoday.com",
+    "frequency": "Regular",
+    "description": "English-language Korean tech coverage. Naver, Kakao, Samsung AI competition, LLM development, agentic AI.",
+    "free": true,
+    "tags": [
+      "news",
+      "korea-bridge"
+    ],
+    "language": "en",
+    "country": "South Korea"
+  },
+  {
+    "id": "qiita",
+    "name": "Qiita",
+    "type": "community",
+    "url": "https://qiita.com",
+    "frequency": "Continuous",
+    "description": "Japan's largest developer knowledge-sharing platform. Engineers share tips, know-how, tutorials. Strong AI/ML content. Japan's Stack Overflow + dev blog hybrid.",
+    "free": true,
+    "tags": [
+      "developer",
+      "community",
+      "japanese-ai"
+    ],
+    "language": "ja",
+    "country": "Japan"
+  },
+  {
+    "id": "zenn",
+    "name": "Zenn",
+    "type": "community",
+    "url": "https://zenn.dev",
+    "frequency": "Continuous",
+    "description": "Growing competitor to Qiita with 9.51M monthly visits. Developer articles and books. Strong AI/ML content. Newer, cleaner platform gaining momentum.",
+    "free": true,
+    "tags": [
+      "developer",
+      "community",
+      "japanese-ai"
+    ],
+    "language": "ja",
+    "country": "Japan"
+  },
+  {
+    "id": "journal-du-net",
+    "name": "Journal du Net",
+    "type": "news-site",
+    "url": "https://www.journaldunet.com",
+    "frequency": "Daily",
+    "description": "Major French tech/business news site. Covers AI, startups, digital transformation. Tracks Mistral AI, French Tech ecosystem.",
+    "free": true,
+    "tags": [
+      "news",
+      "startups",
+      "french-ai"
+    ],
+    "language": "fr",
+    "country": "France"
+  },
+  {
+    "id": "mybusinessfuture",
+    "name": "MyBusinessFuture",
+    "type": "news-site",
+    "url": "https://mybusinessfuture.com",
+    "frequency": "Regular",
+    "description": "German AI startup ecosystem coverage. 935 active AI startups in Germany (36% YoY growth). Tracks funding, trends, scientific spin-offs.",
+    "free": true,
+    "tags": [
+      "startups",
+      "market-research",
+      "german-ai"
+    ],
+    "language": "de",
+    "country": "Germany"
+  },
+  {
+    "id": "calcalist-tech",
+    "name": "Calcalist Tech (CTech)",
+    "type": "news-site",
+    "url": "https://www.calcalistech.com",
+    "frequency": "Daily",
+    "description": "English tech section of Calcalist, top Israeli business publication. Israeli high-tech funding rounds, AI startup coverage. Reported on Nvidia-AI21 Labs acquisition talks.",
+    "free": true,
+    "tags": [
+      "news",
+      "startups",
+      "israeli-ai"
+    ],
+    "language": "en",
+    "country": "Israel"
+  },
+  {
+    "id": "startup-nation-finder",
+    "name": "Startup Nation Finder",
+    "type": "directory",
+    "url": "https://finder.startupnationcentral.org",
+    "frequency": "Continuous",
+    "description": "Searchable database of the Israeli tech ecosystem including AI startups. Profiles companies, tracks funding, maps the ecosystem.",
+    "free": true,
+    "tags": [
+      "directory",
+      "startups",
+      "israeli-ai"
+    ],
+    "language": "en",
+    "country": "Israel"
+  },
+  {
+    "id": "indiaai",
+    "name": "IndiaAI",
+    "type": "government",
+    "url": "https://indiaai.gov.in",
+    "frequency": "Regular",
+    "description": "Official Indian government AI portal. AI technologies news, government initiatives, India AI Impact Summit. Tracks India AI Mission, sovereign AI model development (Sarvam AI).",
+    "free": true,
+    "tags": [
+      "government",
+      "policy",
+      "indian-ai"
+    ],
+    "language": "en",
+    "country": "India"
+  },
+  {
+    "id": "inc42",
+    "name": "Inc42",
+    "type": "news-site",
+    "url": "https://inc42.com",
+    "frequency": "Daily",
+    "description": "India's #1 startup media. Covers AI startup funding, government policies, ecosystem developments. Krutrim, AI startup valuations.",
+    "free": true,
+    "tags": [
+      "startups",
+      "news",
+      "indian-ai"
+    ],
+    "language": "en",
+    "country": "India"
+  },
+  {
+    "id": "analytics-india",
+    "name": "Analytics India Magazine",
+    "type": "news-site",
+    "url": "https://analyticsindiamag.com",
+    "frequency": "Daily",
+    "description": "India's leading AI and analytics publication. Indian AI companies, tools, research, policy.",
+    "free": true,
+    "tags": [
+      "news",
+      "research",
+      "indian-ai"
+    ],
+    "language": "en",
+    "country": "India"
+  },
+  {
+    "id": "tii-uae",
+    "name": "Technology Innovation Institute (TII)",
+    "type": "research",
+    "url": "https://www.tii.ae",
+    "frequency": "Regular",
+    "description": "Abu Dhabi's applied research arm. Develops Falcon AI models (Falcon-H1 Arabic). Open-source models topping Arabic language benchmarks. Critical for tracking sovereign Arabic AI.",
+    "free": true,
+    "tags": [
+      "research",
+      "models",
+      "middle-east-ai"
+    ],
+    "language": "en+ar",
+    "country": "UAE"
+  },
+  {
+    "id": "middle-east-ai-news",
+    "name": "Middle East AI News",
+    "type": "newsletter",
+    "url": "https://www.middleeastainews.com",
+    "frequency": "Regular",
+    "description": "AI across the Middle East — Saudi Arabia's Year of AI 2026, UAE Falcon models, regional AI competitions.",
+    "free": true,
+    "tags": [
+      "news",
+      "middle-east-ai"
+    ],
+    "language": "en",
+    "country": "Middle East"
+  },
+  {
+    "id": "betakit",
+    "name": "BetaKit",
+    "type": "news-site",
+    "url": "https://betakit.com",
+    "frequency": "Daily",
+    "description": "Canadian tech media covering AI predictions, startup developments, VC ecosystem. Strong community voice in Canadian AI.",
+    "free": true,
+    "tags": [
+      "news",
+      "startups",
+      "canadian-ai"
+    ],
+    "language": "en",
+    "country": "Canada"
+  },
+  {
+    "id": "aigs-canada",
+    "name": "AIGS Canada",
+    "type": "research",
+    "url": "https://aigs.ca",
+    "frequency": "Regular",
+    "description": "AI Governance and Safety Canada. Nonpartisan nonprofit. Published 'Preparing for the AI Crisis: A Plan for Canada.' Tracks Canadian AI governance.",
+    "free": true,
+    "tags": [
+      "policy",
+      "safety",
+      "canadian-ai"
+    ],
+    "language": "en",
+    "country": "Canada"
+  },
+  {
+    "id": "eu-ai-act-portal",
+    "name": "EU AI Act Portal",
+    "type": "regulation",
+    "url": "https://artificialintelligenceact.eu",
+    "frequency": "Regular",
+    "description": "Up-to-date EU AI Act developments and analysis. AI Act Explorer tool, implementation timeline. Key: August 2, 2026 = high-risk AI rules take effect.",
+    "free": true,
+    "tags": [
+      "regulation",
+      "policy",
+      "eu-ai"
+    ],
+    "language": "en",
+    "country": "EU"
+  },
+  {
+    "id": "ellis-network",
+    "name": "ELLIS Network",
+    "type": "research",
+    "url": "https://ellis.eu",
+    "frequency": "Regular",
+    "description": "Pan-European AI network — 41 units, 15 countries, 1,000+ AI scientists, 171 ERC grant winners. OpenEuroLLM and ELLIOT projects (EUR25M).",
+    "free": true,
+    "tags": [
+      "research",
+      "network",
+      "eu-ai"
+    ],
+    "language": "en",
+    "country": "EU"
+  },
+  {
+    "id": "digitimes",
+    "name": "DIGITIMES",
+    "type": "news-site",
+    "url": "https://www.digitimes.com",
+    "frequency": "Daily",
+    "description": "Premier source for Taiwan's tech and semiconductor industry. TSMC, AI chip developments, Taiwan AI strategy. Essential for tracking the AI hardware supply chain.",
+    "free": true,
+    "tags": [
+      "hardware",
+      "semiconductor",
+      "taiwanese-ai"
+    ],
+    "language": "zh+en",
+    "country": "Taiwan"
+  },
+  {
+    "id": "ai-singapore",
+    "name": "AI Singapore (AISG)",
+    "type": "research",
+    "url": "https://aisingapore.org",
+    "frequency": "Regular",
+    "description": "Singapore's national AI program. Developed SEA-LION (Southeast Asian LLMs), AI Verify Testing Framework. S$1.6B government commitment.",
+    "free": true,
+    "tags": [
+      "research",
+      "government",
+      "sea-ai"
+    ],
+    "language": "en",
+    "country": "Singapore"
+  },
+  {
+    "id": "rsshub",
+    "name": "RSSHub",
+    "type": "tool",
+    "url": "https://rsshub.app",
+    "frequency": "Continuous",
+    "description": "ESSENTIAL: 5,000+ route handlers generating RSS from Zhihu, Bilibili, Weibo, 36Kr, and more. Self-hostable. Turns any Chinese/global platform into an RSS feed. Has MCP integration. THE key to automating non-English intelligence gathering.",
+    "free": true,
+    "tags": [
+      "infrastructure",
+      "rss",
+      "automation"
+    ],
+    "language": "en+zh",
+    "country": "Global"
+  },
+  {
+    "id": "robot-report",
+    "name": "The Robot Report",
+    "type": "news-site",
+    "url": "https://www.therobotreport.com/",
+    "frequency": "Daily",
+    "description": "Industry news, company profiles, reviews across all robotics domains. Essential robotics-specific source.",
+    "free": true,
+    "tags": [
+      "robotics",
+      "news",
+      "industry"
+    ],
+    "language": "en",
+    "country": "Global"
+  },
+  {
+    "id": "arxiv-cs-ro",
+    "name": "arXiv cs.RO (Robotics)",
+    "type": "research",
+    "url": "https://arxiv.org/list/cs.RO/recent",
+    "frequency": "Daily",
+    "description": "Daily robotics research preprints. Where robot learning, manipulation, SLAM, planning papers appear first.",
+    "free": true,
+    "tags": [
+      "robotics",
+      "research",
+      "papers"
+    ],
+    "language": "en",
+    "country": "Global"
+  },
+  {
+    "id": "robotics-automation-news",
+    "name": "Robotics & Automation News",
+    "type": "news-site",
+    "url": "https://roboticsandautomationnews.com/",
+    "frequency": "Daily",
+    "description": "Industry perspective on robotics, manufacturing automation, warehouse robotics, and AI integration.",
+    "free": true,
+    "tags": [
+      "robotics",
+      "industrial",
+      "news"
+    ],
+    "language": "en",
+    "country": "Global"
+  },
+  {
+    "id": "hf-robotics-hub",
+    "name": "Hugging Face Robotics Hub",
+    "type": "community",
+    "url": "https://huggingface.co/collections/huggingface/lerobot-papers-and-resources-65eef90a8c874f3a92a47513",
+    "frequency": "Continuous",
+    "description": "Fastest-growing robotics dataset/model community. LeRobot datasets grew from 1,145 to 26,991 in one year. VLA models, simulation environments.",
+    "free": true,
+    "tags": [
+      "robotics",
+      "models",
+      "datasets"
+    ],
+    "language": "en",
+    "country": "Global"
+  },
+  {
+    "id": "embodied-ai-papers",
+    "name": "Embodied AI Paper TopConf (GitHub)",
+    "type": "github",
+    "url": "https://github.com/topics/embodied-ai",
+    "frequency": "Regular",
+    "description": "Curated robotics AI paper collections from top venues (ICRA, RSS, CoRL, IROS). Tracks VLA models, world models, physical AI.",
+    "free": true,
+    "tags": [
+      "robotics",
+      "research",
+      "papers"
+    ],
+    "language": "en",
+    "country": "Global"
+  }
+]

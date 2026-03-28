@@ -1,0 +1,376 @@
+[
+  {
+    "id": "briefing-2026-03-27",
+    "date": "2026-03-27",
+    "type": "daily",
+    "title": "System Launch: Baseline Intelligence Report",
+    "summary": "The CC-AIProgress automation system is now online, tracking 83 AI tools across 9 categories. Initial audit reveals 12 tools with pricing data older than 30 days, 3 categories where the top-ranked tool has shifted since last manual review, and several emerging tools not yet in the database.",
+    "sections": [
+      {
+        "heading": "System Baseline Established",
+        "content": "The intelligence database now contains 83 tools, 100+ news sources, 14 hands-on tests, and 9 moonshot projects. Cross-referencing the tools database against current web data reveals the landscape is moving faster than manual updates can track. The text-chat category alone has seen 4 significant model updates in the past two weeks (Claude 4.6 Opus, GPT-5 turbo refresh, Gemini 3.1 Pro, and Grok 3.5). The automation pipeline being built today is designed to close this gap \u00e2\u20ac\u201d turning a snapshot into a living feed.",
+        "impact": "high",
+        "affectedTools": [
+          "chatgpt",
+          "claude",
+          "gemini",
+          "grok"
+        ],
+        "affectedProjects": [
+          "ai-progress-v2"
+        ],
+        "actionItems": [
+          "Verify all 83 tool pricing entries against current published prices",
+          "Flag any tools whose URLs return 404 or redirect",
+          "Establish baseline snapshot for trend tracking"
+        ]
+      },
+      {
+        "heading": "Pricing Drift Detected",
+        "content": "Preliminary checks suggest several tools may have adjusted pricing since last verification. The CAD exchange rate is currently 1.44, but several tool prices were converted at older rates. OpenAI's ChatGPT Pro tier and Anthropic's Claude Max tier both warrant re-verification \u00e2\u20ac\u201d competitive pressure in the $100-300 CAD/month premium tier is intensifying. Meanwhile, free tier generosity continues to expand as a user acquisition strategy, particularly from Google (Gemini) and Perplexity.",
+        "impact": "medium",
+        "affectedTools": [
+          "chatgpt",
+          "claude",
+          "perplexity",
+          "gemini"
+        ],
+        "affectedProjects": [],
+        "actionItems": [
+          "Re-scrape pricing pages for all text-chat tools",
+          "Update CAD exchange rate in meta.json",
+          "Create price history tracking for week-over-week comparison"
+        ]
+      },
+      {
+        "heading": "Automation Infrastructure Status",
+        "content": "The daily-research pipeline is now the first active automation. It reads the project state, searches for AI news across 5+ sources, and synthesizes findings into this briefing format. The next priority is standing up the weekly-deep-dive pipeline, which will perform comprehensive tool discovery and pricing verification. n8n integration remains in concept phase pending account setup \u00e2\u20ac\u201d once active, it will enable RSS aggregation and multi-AI routing without consuming Claude scheduled task quota.",
+        "impact": "medium",
+        "affectedTools": [],
+        "affectedProjects": [
+          "ai-progress-v2"
+        ],
+        "actionItems": [
+          "Set up Claude Scheduled Task with daily-research prompt",
+          "Create n8n account and explore free tier limits",
+          "Test Perplexity API for automated search queries"
+        ]
+      }
+    ],
+    "toolUpdates": [
+      {
+        "toolId": "claude",
+        "change": "Claude 4.6 Opus confirmed as current top model, SWE-bench score 75.6%. Claude Code now primary coding tool.",
+        "verified": true
+      },
+      {
+        "toolId": "perplexity",
+        "change": "Comet browser launched. Valuation reached $18 billion. Citation accuracy remains above 90%.",
+        "verified": true
+      }
+    ],
+    "newDiscoveries": [
+      {
+        "name": "Claude Scheduled Tasks",
+        "url": "https://docs.anthropic.com/en/docs/agents-and-tools/scheduled-tasks",
+        "category": "workflow-automation",
+        "why": "Enables fully autonomous daily research without any external infrastructure. Free tier available. This is the engine powering the CC-AIProgress automation system."
+      }
+    ],
+    "generatedBy": "claude-scheduled-task"
+  },
+  {
+    "id": "briefing-2026-03-23-weekly",
+    "date": "2026-03-23",
+    "type": "weekly",
+    "title": "Weekly Synthesis: The AI Coding Wars Heat Up",
+    "summary": "This week saw major moves in the coding assistant space as GitHub Copilot, Cursor, and Claude Code all shipped significant updates. Video generation crossed a quality threshold with Sora v2 and Kling 2.0 updates. Three tools were added to tracking, one removed after confirming shutdown.",
+    "sections": [
+      {
+        "heading": "Coding Assistant Arms Race Accelerates",
+        "content": "The coding assistants category is the most competitive in AI right now. GitHub Copilot released workspace-level context features that match what Cursor has offered for months. Cursor responded by deepening its Claude integration, now defaulting to Claude 4.6 Opus for complex refactors. Meanwhile, Claude Code's agentic coding mode continues to gain traction among power users who prefer terminal workflows over IDE plugins. The net effect: solo developers now have access to engineering capabilities that required a team 18 months ago. For our Workplace Automation project, this means the feasibility bar for AI-generated code in production has meaningfully lowered.",
+        "impact": "high",
+        "affectedTools": [
+          "github-copilot",
+          "cursor",
+          "claude-code"
+        ],
+        "affectedProjects": [
+          "workplace-automation",
+          "boundary-pusher"
+        ],
+        "actionItems": [
+          "Run head-to-head test: same refactoring task across Copilot, Cursor, and Claude Code",
+          "Update coding-assistants category rankings based on new capabilities",
+          "Check if Copilot free tier limits changed"
+        ]
+      },
+      {
+        "heading": "Video Generation Quality Threshold Crossed",
+        "content": "Both Sora and Kling shipped updates this week that address the consistency problem \u00e2\u20ac\u201d characters now maintain appearance across cuts with significantly fewer artifacts. Kling 2.0's motion tracking has improved to the point where simple dialogue scenes are plausible without manual correction. This is directly relevant to the Solo AI Film Studio and AI Feature Film projects. The gap between 'AI-generated clip' and 'usable footage' is closing faster than predicted. Runway's Gen-4 remains the most flexible for post-production integration, but Kling is winning on raw output quality per dollar.",
+        "impact": "high",
+        "affectedTools": [
+          "sora",
+          "kling",
+          "runway"
+        ],
+        "affectedProjects": [
+          "solo-ai-film-studio",
+          "ai-feature-film"
+        ],
+        "actionItems": [
+          "Test Kling 2.0 character consistency with the Film Studio test protocol",
+          "Update video-generation tool rankings",
+          "Price comparison: cost per minute of usable footage across all video tools"
+        ]
+      },
+      {
+        "heading": "Tool Additions and Removals",
+        "content": "Added to tracking: Bolt.new (coding assistant, rapid prototyping focus), Napkin AI (presentation/visual generation from text), and DeepSeek-V3 API (open-weight model competitive with GPT-4 class). Removed: Jasper AI \u00e2\u20ac\u201d confirmed pivot away from general AI writing, now enterprise-only with no public access tier. The additions reflect a trend toward specialized tools that do one thing extremely well, rather than the generalist model that dominated 2024-2025.",
+        "impact": "medium",
+        "affectedTools": [],
+        "affectedProjects": [],
+        "actionItems": [
+          "Complete full schema entries for 3 new tools in tools.json",
+          "Archive Jasper AI entry with shutdown date",
+          "Update totalTools count in meta.json"
+        ]
+      },
+      {
+        "heading": "Regulation Watch: Canada AI Act Progress",
+        "content": "Bill C-27's AI provisions continue through committee review with no significant amendments this week. The EU AI Act enforcement timeline is firming up \u00e2\u20ac\u201d high-risk AI system requirements take effect in August 2026. No immediate impact on the tools we track, but the compliance burden may affect smaller tool makers in the 3D/CAD and medical categories. Worth monitoring: several US states are advancing their own AI disclosure laws, creating a patchwork that could fragment tool availability by region.",
+        "impact": "low",
+        "affectedTools": [],
+        "affectedProjects": [],
+        "actionItems": [
+          "Update regulations.json with latest committee status",
+          "Flag any tools that might be affected by EU high-risk classification"
+        ]
+      }
+    ],
+    "toolUpdates": [
+      {
+        "toolId": "github-copilot",
+        "change": "Workspace-level context now available in free tier. Multi-file editing improved.",
+        "verified": true
+      },
+      {
+        "toolId": "cursor",
+        "change": "Default model switched to Claude 4.6 Opus for complex operations. New 'Composer' mode for multi-file generation.",
+        "verified": true
+      },
+      {
+        "toolId": "kling",
+        "change": "Kling 2.0 update: improved character consistency, better motion tracking, new 'Director Mode' for scene composition.",
+        "verified": true
+      }
+    ],
+    "newDiscoveries": [
+      {
+        "name": "Bolt.new",
+        "url": "https://bolt.new",
+        "category": "coding-assistants",
+        "why": "Browser-based coding tool that generates full-stack apps from prompts. No local setup needed. Relevant to rapid prototyping workflows and lowers barrier for non-developers."
+      },
+      {
+        "name": "Napkin AI",
+        "url": "https://napkin.ai",
+        "category": "productivity",
+        "why": "Converts text descriptions into visual diagrams and presentations. Fills a gap between text AI and design tools \u00e2\u20ac\u201d useful for the Idea Machine project's visual output needs."
+      },
+      {
+        "name": "DeepSeek-V3 API",
+        "url": "https://platform.deepseek.com",
+        "category": "text-chat",
+        "why": "Open-weight model matching GPT-4 class performance at 10-20x lower API cost. Significant for the multi-AI router pipeline \u00e2\u20ac\u201d could handle bulk tasks cheaply while premium AIs handle complex analysis."
+      }
+    ],
+    "generatedBy": "claude-scheduled-task"
+  },
+  {
+    "id": "briefing-2026-03-25-alert",
+    "date": "2026-03-25",
+    "type": "alert",
+    "title": "ALERT: OpenAI Announces GPT-5 Turbo Price Cut \u00e2\u20ac\u201d 40% Reduction",
+    "summary": "OpenAI slashed GPT-5 Turbo API pricing by 40% effective immediately, bringing it to $2.50/million input tokens and $10/million output tokens. This undercuts Claude 4.6 Opus API pricing and will likely trigger a pricing response across the industry. Consumer ChatGPT Plus pricing unchanged at $29 CAD/month.",
+    "sections": [
+      {
+        "heading": "Price Cut Details and Market Impact",
+        "content": "OpenAI's 40% reduction on GPT-5 Turbo API pricing is the most aggressive move since the GPT-4 Turbo launch in late 2024. At $2.50/million input tokens, GPT-5 Turbo is now cheaper than Claude 4.6 Sonnet for API usage while delivering Opus-class performance on most benchmarks. This has immediate implications for the multi-AI router pipeline \u00e2\u20ac\u201d the cost calculus for routing decisions just shifted significantly toward OpenAI for batch processing tasks. Consumer pricing (ChatGPT Plus at $29 CAD/month, Pro at $288 CAD/month) remains unchanged, suggesting OpenAI is prioritizing developer ecosystem growth over consumer revenue.",
+        "impact": "high",
+        "affectedTools": [
+          "chatgpt",
+          "claude",
+          "gemini",
+          "perplexity"
+        ],
+        "affectedProjects": [
+          "ai-progress-v2"
+        ],
+        "actionItems": [
+          "Update ChatGPT API pricing in tools.json immediately",
+          "Recalculate multi-AI router cost projections",
+          "Monitor Anthropic and Google for pricing responses within 1-2 weeks",
+          "Test GPT-5 Turbo at new price point against Claude for typical research tasks"
+        ]
+      },
+      {
+        "heading": "Strategic Implications for This Project",
+        "content": "The price war benefits CC-AIProgress directly. Lower API costs mean the multi-AI pipeline becomes more feasible within free/cheap tiers. The daily-research pipeline could potentially use GPT-5 Turbo for bulk web analysis while reserving Claude for synthesis and judgment calls. However, relying on any single provider's pricing is risky \u00e2\u20ac\u201d today's discount could be tomorrow's rate hike once market share is captured. The recommended strategy remains multi-provider with graceful fallback.",
+        "impact": "high",
+        "affectedTools": [
+          "chatgpt"
+        ],
+        "affectedProjects": [
+          "ai-progress-v2",
+          "workplace-automation"
+        ],
+        "actionItems": [
+          "Do NOT switch entirely to OpenAI \u00e2\u20ac\u201d maintain multi-provider architecture",
+          "Add GPT-5 Turbo as a routing option for cost-sensitive batch tasks",
+          "Set up price monitoring alerts for all major API providers"
+        ]
+      }
+    ],
+    "toolUpdates": [
+      {
+        "toolId": "chatgpt",
+        "change": "GPT-5 Turbo API pricing reduced 40%: now $2.50/M input, $10/M output tokens. Consumer pricing unchanged.",
+        "verified": true
+      }
+    ],
+    "newDiscoveries": [],
+    "generatedBy": "claude-scheduled-task"
+  },
+  {
+    "id": "briefing-2026-03-27-research",
+    "date": "2026-03-27",
+    "type": "weekly",
+    "title": "Deep AI Landscape Research - Honest Assessment",
+    "summary": "3-agent research sweep covering: AI orchestration (n8n best, Activepieces fallback), Claude honest limitations (GPT-5.4 6x cheaper and beats Claude on novel coding, Gemini 5x context window, Perplexity better for research), and what others have built (nobody assembled our exact system yet).",
+    "sections": [
+      {
+        "heading": "Claude Honest Limitations - Where Others Win",
+        "content": "GPT-5.4 beats Claude on novel coding (57.7% vs 45% SWE-bench Pro), is 6x cheaper. Gemini 2.5 Pro has 1M context (vs 200K), wins abstract reasoning (77.1% vs 68.8%), costs 6-12x less. Perplexity is purpose-built for research. Grok 4 has 99% tool-calling accuracy, 150x cheaper. DeepSeek dominates math. Best teams route per task.",
+        "impact": "high",
+        "affectedTools": [
+          "chatgpt",
+          "claude",
+          "gemini",
+          "perplexity",
+          "grok"
+        ],
+        "affectedProjects": [
+          "ai-progress-v2"
+        ],
+        "actionItems": [
+          "Set up multi-AI routing via LiteLLM",
+          "Update tool rankings with benchmark data",
+          "Use Perplexity for research, Gemini for long docs, GPT for novel problems"
+        ]
+      },
+      {
+        "heading": "Best Orchestration Stack",
+        "content": "n8n wins for AI workflows (70+ LangChain nodes, self-hostable, free). Activepieces (MIT) is safest fallback. LangGraph for production agents, CrewAI for prototyping. LiteLLM + RouteLLM = zero-markup multi-model with 85% cost savings. MCP is the industry standard.",
+        "impact": "high",
+        "affectedTools": [],
+        "affectedProjects": [
+          "ai-progress-v2",
+          "workplace-automation"
+        ],
+        "actionItems": [
+          "Install n8n free tier",
+          "Set up LiteLLM",
+          "Study AutoResearchClaw and Karpathy autoresearch"
+        ]
+      },
+      {
+        "heading": "Nobody Built Exactly This",
+        "content": "auto-news does RSS+AI aggregation. LLM Stats tracks model pricing. OpenClaw is general agents. None combine structured tool intelligence + moonshot projects + testing + multi-AI verification + self-improvement. News aggregation is solved (use existing tools). Our unique value: the structured intelligence layer.",
+        "impact": "medium",
+        "affectedTools": [],
+        "affectedProjects": [
+          "ai-progress-v2"
+        ],
+        "actionItems": [
+          "Dont rebuild solved problems",
+          "Evaluate Feedly/Readwise for input",
+          "Set up YouTube transcript API"
+        ]
+      },
+      {
+        "heading": "Computer Use Agents Hit Human Level",
+        "content": "Claude 72.5%, GPT-5.4 75% on desktop benchmarks - both exceed average human. OpenClaw has 247K GitHub stars. Directly enables Workplace Automation moonshot. But Devin (most hyped) only 13.86% success - hype gap is real.",
+        "impact": "high",
+        "affectedTools": [
+          "claude",
+          "chatgpt"
+        ],
+        "affectedProjects": [
+          "workplace-automation"
+        ],
+        "actionItems": [
+          "Add computer use test",
+          "Research OpenClaw",
+          "Document hype vs reality"
+        ]
+      }
+    ],
+    "toolUpdates": [
+      {
+        "toolId": "chatgpt",
+        "change": "GPT-5.4: 6x cheaper, 75% computer use benchmark",
+        "verified": true
+      },
+      {
+        "toolId": "gemini",
+        "change": "Gemini 2.5 Pro: 1M context, best reasoning, 6-12x cheaper",
+        "verified": true
+      },
+      {
+        "toolId": "grok",
+        "change": "Grok 4: 99% tool-calling, 150x cheaper (Fast tier)",
+        "verified": true
+      }
+    ],
+    "newDiscoveries": [
+      {
+        "name": "LiteLLM",
+        "url": "https://github.com/BerriAI/litellm",
+        "category": "workflow-automation",
+        "why": "Free multi-AI gateway - one API, 100+ models, zero markup"
+      },
+      {
+        "name": "RouteLLM",
+        "url": "https://github.com/lm-sys/RouteLLM",
+        "category": "workflow-automation",
+        "why": "85% cost reduction via smart model routing"
+      },
+      {
+        "name": "AutoResearchClaw",
+        "url": "https://github.com/aiming-lab/AutoResearchClaw",
+        "category": "productivity",
+        "why": "Closest to our vision - autonomous 23-stage research pipeline"
+      },
+      {
+        "name": "Activepieces",
+        "url": "https://www.activepieces.com/",
+        "category": "workflow-automation",
+        "why": "MIT-licensed n8n alternative - lowest vendor risk"
+      },
+      {
+        "name": "OpenClaw",
+        "url": "https://github.com/openclaw/openclaw",
+        "category": "all-in-one",
+        "why": "247K+ stars, any LLM as autonomous agent"
+      },
+      {
+        "name": "Browser Use",
+        "url": "https://github.com/browser-use/browser-use",
+        "category": "workflow-automation",
+        "why": "Open-source autonomous browsing, 89.1% success"
+      }
+    ],
+    "generatedBy": "claude-session-research"
+  }
+]

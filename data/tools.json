@@ -1,0 +1,6615 @@
+[
+  {
+    "id": "chatgpt",
+    "name": "ChatGPT",
+    "category": "text-chat",
+    "developer": "OpenAI",
+    "url": "https://chat.openai.com/",
+    "description": "The most widely used AI chatbot with 60% market share. GPT-4o/GPT-5 models for text, code, image understanding, and generation. Extensive plugin ecosystem.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "GPT-4o with daily limits, image generation, web browsing",
+      "paidPlans": [
+        {
+          "name": "Plus",
+          "priceCAD": 29,
+          "period": "month",
+          "details": "Higher limits, GPT-5, advanced voice, DALL-E"
+        },
+        {
+          "name": "Pro",
+          "priceCAD": 288,
+          "period": "month",
+          "details": "Unlimited access, o1/o3 reasoning models, highest limits"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 1,
+      "inCategory": 1,
+      "trend": "stable"
+    },
+    "pros": [
+      "Largest ecosystem and plugin library",
+      "Best all-rounder for general tasks",
+      "Strong image generation (GPT Image 1.5)",
+      "Frequent updates and new features"
+    ],
+    "cons": [
+      "Premium tier very expensive ($288 CAD/mo)",
+      "Can be verbose",
+      "Privacy concerns for sensitive data"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 82
+  },
+  {
+    "id": "claude",
+    "name": "Claude",
+    "category": "text-chat",
+    "developer": "Anthropic",
+    "url": "https://claude.ai/",
+    "description": "Fastest-growing AI assistant (14.2% quarterly growth). Claude 4.6 Opus scores 75.6% on SWE-bench. Known for nuanced analysis, long documents, and safety. 1M context window (beta).",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Claude Sonnet with daily limits",
+      "paidPlans": [
+        {
+          "name": "Pro",
+          "priceCAD": 29,
+          "period": "month",
+          "details": "More usage, Claude Opus, priority access"
+        },
+        {
+          "name": "Max",
+          "priceCAD": 144,
+          "period": "month",
+          "details": "Highest usage limits, all models"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 2,
+      "inCategory": 2,
+      "trend": "rising"
+    },
+    "pros": [
+      "Best for analysis and formal documents",
+      "Longest context window (1M tokens beta)",
+      "Strong safety and honesty focus",
+      "Claude Code is top coding tool"
+    ],
+    "cons": [
+      "Smaller plugin ecosystem than ChatGPT",
+      "Can be overly cautious on some topics",
+      "Image generation less mature"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 85
+  },
+  {
+    "id": "gemini",
+    "name": "Gemini",
+    "category": "text-chat",
+    "developer": "Google",
+    "url": "https://gemini.google.com/",
+    "description": "Google's AI assistant with deep Google ecosystem integration. Gemini 3.1 Pro scores 77.1% on ARC-AGI-2. Excellent for multilingual tasks and Google Workspace users.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Gemini Pro with generous limits, Google integration",
+      "paidPlans": [
+        {
+          "name": "Advanced (Google One AI Premium)",
+          "priceCAD": 29,
+          "period": "month",
+          "details": "Gemini Ultra, 2TB storage, Workspace integration"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 3,
+      "inCategory": 3,
+      "trend": "stable"
+    },
+    "pros": [
+      "Best Google Workspace integration",
+      "Strong multilingual support",
+      "Generous free tier",
+      "Good at long documents and research"
+    ],
+    "cons": [
+      "Responses can feel generic",
+      "Less creative than ChatGPT/Claude",
+      "Ecosystem lock-in with Google"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 80
+  },
+  {
+    "id": "perplexity",
+    "name": "Perplexity",
+    "category": "text-chat",
+    "developer": "Perplexity AI",
+    "url": "https://www.perplexity.ai/",
+    "description": "AI-powered search engine with 90%+ citation accuracy. Best for research â€” provides sources for every claim. Valued at $18 billion. Launched Comet browser.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Basic search with limited Pro queries per day",
+      "paidPlans": [
+        {
+          "name": "Pro",
+          "priceCAD": 29,
+          "period": "month",
+          "details": "Unlimited Pro searches, file upload, API access"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 5,
+      "inCategory": 4,
+      "trend": "rising"
+    },
+    "pros": [
+      "Best citation accuracy (90%+)",
+      "Excellent for research and fact-checking",
+      "Clean, focused interface",
+      "Comet browser integration"
+    ],
+    "cons": [
+      "Less creative than ChatGPT/Claude",
+      "Not ideal for long-form writing",
+      "Pro needed for best experience"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 78
+  },
+  {
+    "id": "grok",
+    "name": "Grok",
+    "category": "text-chat",
+    "developer": "xAI",
+    "url": "https://grok.x.ai/",
+    "description": "xAI's chatbot with deep reasoning and real-time X (Twitter) integration. Known for unfiltered responses and humor.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Limited free access via X",
+      "paidPlans": [
+        {
+          "name": "SuperGrok",
+          "priceCAD": 43,
+          "period": "month",
+          "details": "Unlimited access, priority, deep reasoning"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 10,
+      "inCategory": 7,
+      "trend": "stable"
+    },
+    "pros": [
+      "Real-time X/Twitter data access",
+      "Unfiltered responses",
+      "Strong reasoning capabilities"
+    ],
+    "cons": [
+      "Expensive for performance level",
+      "Benchmarks below GPT-5/Claude on most tasks",
+      "Tied to X ecosystem"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 72
+  },
+  {
+    "id": "deepseek",
+    "name": "DeepSeek",
+    "category": "text-chat",
+    "developer": "DeepSeek AI",
+    "url": "https://www.deepseek.com/",
+    "description": "Chinese AI lab producing competitive open-source models. DeepSeek-V3 rivals top Western models at significantly lower cost. Strong at coding and math.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Free web chat, open-source models for self-hosting",
+      "paidPlans": [
+        {
+          "name": "API",
+          "priceCAD": 0.4,
+          "period": "per million tokens",
+          "details": "Extremely cheap API pricing"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 7,
+      "inCategory": 6,
+      "trend": "rising"
+    },
+    "pros": [
+      "Extremely low cost",
+      "Open-source models available",
+      "Strong coding and math",
+      "Competitive with top Western models"
+    ],
+    "cons": [
+      "Chinese company â€” data sovereignty concerns",
+      "Smaller ecosystem",
+      "Less polished interface"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 65
+  },
+  {
+    "id": "kimi",
+    "name": "Kimi",
+    "category": "text-chat",
+    "developer": "Moonshot AI",
+    "url": "https://www.kimi.com/",
+    "description": "Chinese AI assistant with very long context window. Good for processing lengthy documents and research. Growing international user base.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Free tier with generous context length",
+      "paidPlans": []
+    },
+    "ranking": {
+      "overall": 15,
+      "inCategory": 9,
+      "trend": "rising"
+    },
+    "pros": [
+      "Very long context window",
+      "Good at document analysis",
+      "Free to use",
+      "Improving rapidly"
+    ],
+    "cons": [
+      "Less well-known outside Asia",
+      "English support improving but not top-tier",
+      "Limited integrations"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 55
+  },
+  {
+    "id": "qwen",
+    "name": "Qwen",
+    "category": "text-chat",
+    "developer": "Alibaba Cloud",
+    "url": "https://qwen.ai/",
+    "description": "Alibaba's AI assistant. Qwen series models are competitive on benchmarks and available as open-source. Strong multilingual support including Chinese/English.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Free web chat and open-source models",
+      "paidPlans": [
+        {
+          "name": "API",
+          "priceCAD": 0.58,
+          "period": "per million tokens",
+          "details": "Competitive API pricing via Alibaba Cloud"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 12,
+      "inCategory": 8,
+      "trend": "rising"
+    },
+    "pros": [
+      "Open-source models available",
+      "Strong multilingual support",
+      "Competitive benchmarks",
+      "Very affordable API"
+    ],
+    "cons": [
+      "Alibaba ecosystem",
+      "Less polished than Western alternatives",
+      "Smaller English-speaking community"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 60
+  },
+  {
+    "id": "copilot-chat",
+    "name": "Microsoft Copilot",
+    "category": "text-chat",
+    "developer": "Microsoft",
+    "url": "https://copilot.microsoft.com/",
+    "description": "Microsoft's AI assistant built on OpenAI models. Deep integration with Windows, Edge, Bing, and Microsoft 365. Ideal for enterprise Microsoft users.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Free in Bing, Edge, Windows, and basic Microsoft 365",
+      "paidPlans": [
+        {
+          "name": "Copilot Pro",
+          "priceCAD": 29,
+          "period": "month",
+          "details": "Priority access, GPT-4 in all M365 apps"
+        },
+        {
+          "name": "M365 Copilot",
+          "priceCAD": 43,
+          "period": "month/user",
+          "details": "Full enterprise integration, admin controls"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 6,
+      "inCategory": 5,
+      "trend": "stable"
+    },
+    "pros": [
+      "Built into Windows and Edge",
+      "Deep Microsoft 365 integration",
+      "Generous free tier",
+      "Enterprise-ready"
+    ],
+    "cons": [
+      "Powered by OpenAI (not unique models)",
+      "Can feel corporate/generic",
+      "Best features require M365 subscription"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 80
+  },
+  {
+    "id": "zai",
+    "name": "Z.ai",
+    "category": "text-chat",
+    "developer": "Zhipu AI",
+    "url": "https://chat.z.ai/",
+    "description": "Conversational AI platform by Zhipu AI focused on natural, context-aware interactions.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Free web chat",
+      "paidPlans": []
+    },
+    "ranking": {
+      "overall": 25,
+      "inCategory": 10,
+      "trend": "stable"
+    },
+    "pros": [
+      "Free to use",
+      "Natural conversation style",
+      "Context-aware responses"
+    ],
+    "cons": [
+      "Smaller user base",
+      "Limited ecosystem",
+      "Less capable than top-tier models"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 45
+  },
+  {
+    "id": "midjourney",
+    "name": "Midjourney",
+    "category": "image-generation",
+    "developer": "Midjourney Inc.",
+    "url": "https://www.midjourney.com/",
+    "description": "Gold standard for artistic AI image generation. v7 released April 2025. Unmatched aesthetic quality with distinctive artistic style.",
+    "pricingCAD": {
+      "freeTier": false,
+      "freeTierDetails": "",
+      "paidPlans": [
+        {
+          "name": "Basic",
+          "priceCAD": 14,
+          "period": "month",
+          "details": "~200 images/month"
+        },
+        {
+          "name": "Standard",
+          "priceCAD": 43,
+          "period": "month",
+          "details": "15hr fast generation, unlimited relaxed"
+        },
+        {
+          "name": "Pro",
+          "priceCAD": 86,
+          "period": "month",
+          "details": "30hr fast, stealth mode"
+        },
+        {
+          "name": "Mega",
+          "priceCAD": 173,
+          "period": "month",
+          "details": "60hr fast, highest limits"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 4,
+      "inCategory": 1,
+      "trend": "stable"
+    },
+    "pros": [
+      "Best artistic quality and aesthetics",
+      "Distinctive style",
+      "Active community",
+      "Consistent high-quality output"
+    ],
+    "cons": [
+      "No free tier",
+      "Discord-based (web UI improving)",
+      "Less control over exact output",
+      "No API for automation"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 75
+  },
+  {
+    "id": "dalle",
+    "name": "DALL-E / GPT Image",
+    "category": "image-generation",
+    "developer": "OpenAI",
+    "url": "https://chat.openai.com/",
+    "description": "OpenAI's image generator, now GPT Image 1.5 â€” 4x faster than DALL-E 3. Unmatched at following complex text instructions. Built into ChatGPT.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Limited generations in free ChatGPT",
+      "paidPlans": [
+        {
+          "name": "Via ChatGPT Plus",
+          "priceCAD": 29,
+          "period": "month",
+          "details": "Generous image generation limits"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 8,
+      "inCategory": 2,
+      "trend": "stable"
+    },
+    "pros": [
+      "Best at following complex instructions",
+      "4x faster (GPT Image 1.5)",
+      "Integrated in ChatGPT",
+      "Good for text in images"
+    ],
+    "cons": [
+      "Less artistic than Midjourney",
+      "Requires ChatGPT subscription for best experience",
+      "Limited fine-tuning control"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 82
+  },
+  {
+    "id": "stable-diffusion",
+    "name": "Stable Diffusion",
+    "category": "image-generation",
+    "developer": "Stability AI",
+    "url": "https://stability.ai/",
+    "description": "Leading open-source image generation model (v3.5). Best for customization and privacy â€” can run entirely locally. Huge community of extensions and fine-tunes.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Free to download and run locally (requires GPU)",
+      "paidPlans": [
+        {
+          "name": "API / Cloud",
+          "priceCAD": 14,
+          "period": "month",
+          "details": "Cloud-hosted generation if no local GPU"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 11,
+      "inCategory": 3,
+      "trend": "stable"
+    },
+    "pros": [
+      "Open source â€” full control",
+      "Run locally for privacy",
+      "Massive community and extensions",
+      "Most customizable"
+    ],
+    "cons": [
+      "Requires GPU for local use",
+      "Steeper learning curve",
+      "Stability AI company had financial issues"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 78
+  },
+  {
+    "id": "flux",
+    "name": "Flux",
+    "category": "image-generation",
+    "developer": "Black Forest Labs",
+    "url": "https://blackforestlabs.ai/",
+    "description": "Leads in technical quality with 4.5-second generation. Flux 1.1 Pro ideal for photorealism and commercial work. From the creators of Stable Diffusion.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Flux Schnell free for personal use",
+      "paidPlans": [
+        {
+          "name": "Pay per image",
+          "priceCAD": 0.06,
+          "period": "per image",
+          "details": "Flux Pro ~$0.04-0.07 CAD per image via API"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 13,
+      "inCategory": 4,
+      "trend": "rising"
+    },
+    "pros": [
+      "Top photorealistic quality",
+      "Very fast (4.5 seconds)",
+      "From SD creators",
+      "Affordable per-image pricing"
+    ],
+    "cons": [
+      "Newer â€” smaller community",
+      "Less artistic range than Midjourney",
+      "Requires API for Pro model"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 70
+  },
+  {
+    "id": "adobe-firefly",
+    "name": "Adobe Firefly",
+    "category": "image-generation",
+    "developer": "Adobe",
+    "url": "https://www.adobe.com/products/firefly.html",
+    "description": "Adobe's AI image generator trained exclusively on licensed content. Safe for commercial use. Integrated into Photoshop, Illustrator, and other Adobe tools.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "25 free generative credits per month",
+      "paidPlans": [
+        {
+          "name": "Premium",
+          "priceCAD": 14,
+          "period": "month",
+          "details": "100 credits/month"
+        },
+        {
+          "name": "Via Creative Cloud",
+          "priceCAD": 79,
+          "period": "month",
+          "details": "All Adobe apps + generous Firefly credits"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 14,
+      "inCategory": 5,
+      "trend": "stable"
+    },
+    "pros": [
+      "Commercially safe â€” trained on licensed content",
+      "Adobe ecosystem integration",
+      "Free tier available",
+      "Good for design workflows"
+    ],
+    "cons": [
+      "Less creative than Midjourney",
+      "Credit system can run out quickly",
+      "Full potential requires Adobe subscription"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 85
+  },
+  {
+    "id": "craiyon",
+    "name": "Craiyon",
+    "category": "image-generation",
+    "developer": "Craiyon Inc.",
+    "url": "https://www.craiyon.com/",
+    "description": "Truly unlimited free AI image generation. No account required, no credit card, no daily limits. Lower quality than paid alternatives but completely free.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Unlimited free generation, no account needed",
+      "paidPlans": [
+        {
+          "name": "Supporter",
+          "priceCAD": 7,
+          "period": "month",
+          "details": "No ads, faster generation, higher quality"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 30,
+      "inCategory": 6,
+      "trend": "stable"
+    },
+    "pros": [
+      "Completely free and unlimited",
+      "No account required",
+      "Easy to use"
+    ],
+    "cons": [
+      "Lower quality than paid alternatives",
+      "Slower generation",
+      "Less control over output"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 55
+  },
+  {
+    "id": "runway",
+    "name": "Runway Gen-4",
+    "category": "video-generation",
+    "developer": "Runway ML",
+    "url": "https://runwayml.com/",
+    "description": "Best temporal consistency and motion control in AI video. Top choice for professional advertising and narrative content. Industry leader since Gen-1.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "125 credits (a few short clips)",
+      "paidPlans": [
+        {
+          "name": "Standard",
+          "priceCAD": 17,
+          "period": "month",
+          "details": "625 credits/month"
+        },
+        {
+          "name": "Pro",
+          "priceCAD": 43,
+          "period": "month",
+          "details": "2250 credits/month, higher resolution"
+        },
+        {
+          "name": "Unlimited",
+          "priceCAD": 108,
+          "period": "month",
+          "details": "Unlimited generations"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 9,
+      "inCategory": 1,
+      "trend": "stable"
+    },
+    "pros": [
+      "Best motion consistency",
+      "Professional quality output",
+      "Good editing tools",
+      "Active development"
+    ],
+    "cons": [
+      "Credits run out quickly",
+      "Expensive for heavy use",
+      "Short clip durations"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 72
+  },
+  {
+    "id": "kling",
+    "name": "Kling",
+    "category": "video-generation",
+    "developer": "Kuaishou",
+    "url": "https://klingai.com/",
+    "description": "Chinese AI video generator producing Runway-equivalent quality at 40% of the cost. Dominant for high-volume social media video production.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Daily free credits",
+      "paidPlans": [
+        {
+          "name": "Pro",
+          "priceCAD": 12,
+          "period": "month",
+          "details": "More credits, higher quality modes"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 16,
+      "inCategory": 2,
+      "trend": "rising"
+    },
+    "pros": [
+      "40% cheaper than Runway",
+      "Good quality for price",
+      "Free daily credits",
+      "Improving rapidly"
+    ],
+    "cons": [
+      "Chinese platform â€” data concerns",
+      "Less refined than Runway",
+      "Interface can be clunky"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 60
+  },
+  {
+    "id": "pika",
+    "name": "Pika",
+    "category": "video-generation",
+    "developer": "Pika Labs",
+    "url": "https://pika.art/",
+    "description": "Fastest AI video generation (15-30 seconds). Ideal for sub-10-second social media clips. Lower quality ceiling but unmatched speed.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Daily free generations",
+      "paidPlans": [
+        {
+          "name": "Standard",
+          "priceCAD": 12,
+          "period": "month",
+          "details": "700 credits/month"
+        },
+        {
+          "name": "Pro",
+          "priceCAD": 43,
+          "period": "month",
+          "details": "2000 credits/month, watermark removal"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 18,
+      "inCategory": 4,
+      "trend": "stable"
+    },
+    "pros": [
+      "Fastest generation speed",
+      "Good for social media clips",
+      "Free tier available",
+      "Easy to use"
+    ],
+    "cons": [
+      "Lower quality ceiling",
+      "Short clips only",
+      "Less control than Runway"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 58
+  },
+  {
+    "id": "veo",
+    "name": "Google Veo 3",
+    "category": "video-generation",
+    "developer": "Google DeepMind",
+    "url": "https://deepmind.google/technologies/veo/",
+    "description": "Google's AI video generator leading on physical realism. Includes native audio generation. Integrated into Google ecosystem.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Available via Google AI Studio with limited usage",
+      "paidPlans": [
+        {
+          "name": "Via Vertex AI",
+          "priceCAD": 0,
+          "period": "variable",
+          "details": "Enterprise pricing via Google Cloud"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 17,
+      "inCategory": 3,
+      "trend": "rising"
+    },
+    "pros": [
+      "Best physical realism",
+      "Native audio generation",
+      "Google ecosystem integration",
+      "Strong research backing"
+    ],
+    "cons": [
+      "Limited public availability",
+      "Enterprise-focused pricing",
+      "Fewer creative controls"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 78
+  },
+  {
+    "id": "heyGen",
+    "name": "HeyGen",
+    "category": "video-generation",
+    "developer": "HeyGen Inc.",
+    "url": "https://www.heygen.com/",
+    "description": "AI avatar video creation platform. 4K resolution with interactive avatars. Best for corporate videos, training content, and personalized messages.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "1 free credit (one short video)",
+      "paidPlans": [
+        {
+          "name": "Creator",
+          "priceCAD": 36,
+          "period": "month",
+          "details": "15 credits/month, custom avatars"
+        },
+        {
+          "name": "Business",
+          "priceCAD": 89,
+          "period": "month",
+          "details": "30 credits/month, API access, priority"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 20,
+      "inCategory": 5,
+      "trend": "rising"
+    },
+    "pros": [
+      "Best AI avatars",
+      "4K resolution",
+      "Good for corporate content",
+      "Interactive avatar responses"
+    ],
+    "cons": [
+      "Credits expensive for volume",
+      "Avatar-focused (not general video)",
+      "Can look uncanny"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 62
+  },
+  {
+    "id": "synthesia",
+    "name": "Synthesia",
+    "category": "video-generation",
+    "developer": "Synthesia Ltd.",
+    "url": "https://www.synthesia.io/",
+    "description": "Enterprise AI video platform with realistic digital avatars. Used by 50K+ companies for training videos, marketing, and internal comms. 230+ avatar options.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Free demo video",
+      "paidPlans": [
+        {
+          "name": "Starter",
+          "priceCAD": 29,
+          "period": "month",
+          "details": "10 minutes/month, 90+ avatars"
+        },
+        {
+          "name": "Creator",
+          "priceCAD": 65,
+          "period": "month",
+          "details": "30 minutes/month, 230+ avatars, custom branding"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 22,
+      "inCategory": 6,
+      "trend": "stable"
+    },
+    "pros": [
+      "Enterprise trusted (50K+ companies)",
+      "230+ avatar options",
+      "Multi-language support",
+      "Professional quality"
+    ],
+    "cons": [
+      "Avatar-focused only",
+      "Expensive for long content",
+      "Less creative flexibility"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 68
+  },
+  {
+    "id": "suno",
+    "name": "Suno",
+    "category": "audio-music",
+    "developer": "Suno Inc.",
+    "url": "https://suno.com/",
+    "description": "Quality benchmark for AI music with ELO score of 1,293. Best audio fidelity, musical structure, and vocal realism. Generates full songs from text prompts.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "10 songs per day, non-commercial use",
+      "paidPlans": [
+        {
+          "name": "Pro",
+          "priceCAD": 14,
+          "period": "month",
+          "details": "500 songs/month, commercial use"
+        },
+        {
+          "name": "Premier",
+          "priceCAD": 43,
+          "period": "month",
+          "details": "2000 songs/month, highest quality"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 19,
+      "inCategory": 1,
+      "trend": "rising"
+    },
+    "pros": [
+      "Highest audio quality (ELO 1,293)",
+      "Full song generation from text",
+      "Good vocal realism",
+      "Affordable pricing"
+    ],
+    "cons": [
+      "Copyright concerns for commercial use",
+      "Style control limited",
+      "Can sound formulaic"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 65
+  },
+  {
+    "id": "udio",
+    "name": "Udio",
+    "category": "audio-music",
+    "developer": "Udio Inc.",
+    "url": "https://www.udio.com/",
+    "description": "Producer's tool for AI music with surgical control and inpainting. Great for musicians who want to edit specific parts of generated songs.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Limited free generations per month",
+      "paidPlans": [
+        {
+          "name": "Pro",
+          "priceCAD": 43,
+          "period": "month",
+          "details": "API access, higher limits, commercial use"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 24,
+      "inCategory": 3,
+      "trend": "stable"
+    },
+    "pros": [
+      "Best editing control (inpainting)",
+      "Good for musicians/producers",
+      "Unique sound options"
+    ],
+    "cons": [
+      "Download functionality disabled since Oct 2025",
+      "Expensive Pro tier",
+      "Smaller community than Suno"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 60
+  },
+  {
+    "id": "elevenlabs",
+    "name": "ElevenLabs",
+    "category": "audio-music",
+    "developer": "ElevenLabs Inc.",
+    "url": "https://elevenlabs.io/",
+    "description": "Unmatched vocal realism and voice cloning. First AI music generator cleared for YouTube monetization. Eleven Music has licensing through Merlin Network and Kobalt.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "10,000 characters/month of voice generation",
+      "paidPlans": [
+        {
+          "name": "Starter",
+          "priceCAD": 7,
+          "period": "month",
+          "details": "30,000 characters, 3 custom voices"
+        },
+        {
+          "name": "Creator",
+          "priceCAD": 32,
+          "period": "month",
+          "details": "100K characters, 30 voices, commercial use"
+        },
+        {
+          "name": "Pro",
+          "priceCAD": 144,
+          "period": "month",
+          "details": "500K characters, 160 voices, API"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 21,
+      "inCategory": 2,
+      "trend": "rising"
+    },
+    "pros": [
+      "Best voice quality and cloning",
+      "First AI music cleared for YouTube monetization",
+      "Legitimate commercial licensing",
+      "Versatile â€” voice, music, sound effects"
+    ],
+    "cons": [
+      "Expensive at higher tiers",
+      "Music generation newer than Suno/Udio",
+      "Ethical concerns around voice cloning"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 75
+  },
+  {
+    "id": "github-copilot",
+    "name": "GitHub Copilot",
+    "category": "coding-assistants",
+    "developer": "GitHub / Microsoft",
+    "url": "https://github.com/features/copilot",
+    "description": "The enterprise standard. Used by 77K+ organizations and 400+ Fortune 500 companies. Generates 3B+ accepted code lines/month. Agent Mode for autonomous coding.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "2,000 completions/month, 50 chat messages/month",
+      "paidPlans": [
+        {
+          "name": "Pro",
+          "priceCAD": 14,
+          "period": "month",
+          "details": "Unlimited completions, chat, Agent Mode"
+        },
+        {
+          "name": "Business",
+          "priceCAD": 28,
+          "period": "month/user",
+          "details": "Admin controls, policy management"
+        },
+        {
+          "name": "Enterprise",
+          "priceCAD": 57,
+          "period": "month/user",
+          "details": "Fine-tuned models, knowledge bases"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 8,
+      "inCategory": 3,
+      "trend": "stable"
+    },
+    "pros": [
+      "Enterprise standard",
+      "Best IDE integration",
+      "Affordable pricing",
+      "Free tier available",
+      "55% faster task completion (GitHub study)"
+    ],
+    "cons": [
+      "Agent Mode less capable than Claude Code/Cursor",
+      "Can suggest incorrect patterns",
+      "Privacy concerns for enterprise code"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 83
+  },
+  {
+    "id": "cursor",
+    "name": "Cursor",
+    "category": "coding-assistants",
+    "developer": "Anysphere",
+    "url": "https://cursor.sh/",
+    "description": "AI-first code editor with 1M users and 360K+ paying subscribers. Valued at $9.9B. Deep VS Code integration with multi-file editing and Background Agents.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "2 weeks Pro trial, then limited free tier",
+      "paidPlans": [
+        {
+          "name": "Pro",
+          "priceCAD": 29,
+          "period": "month",
+          "details": "Unlimited completions, 500 fast requests"
+        },
+        {
+          "name": "Business",
+          "priceCAD": 58,
+          "period": "month/user",
+          "details": "Admin controls, centralized billing"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 6,
+      "inCategory": 2,
+      "trend": "rising"
+    },
+    "pros": [
+      "Best AI-native code editor",
+      "Multi-file editing",
+      "Background Agents",
+      "Familiar VS Code base",
+      "19% developer preference"
+    ],
+    "cons": [
+      "Requires switching from VS Code",
+      "Expensive for teams",
+      "Can be slow on large repos"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 72
+  },
+  {
+    "id": "claude-code",
+    "name": "Claude Code",
+    "category": "coding-assistants",
+    "developer": "Anthropic",
+    "url": "https://claude.ai/code",
+    "description": "Hit $1B ARR in 6 months â€” fastest-growing developer tool in history. 46% 'most loved' rating (highest). Terminal-based agentic coding with full repo understanding.",
+    "pricingCAD": {
+      "freeTier": false,
+      "freeTierDetails": "",
+      "paidPlans": [
+        {
+          "name": "Via Claude Pro",
+          "priceCAD": 29,
+          "period": "month",
+          "details": "Included with Claude Pro subscription"
+        },
+        {
+          "name": "Via Claude Max",
+          "priceCAD": 144,
+          "period": "month",
+          "details": "Higher usage limits"
+        },
+        {
+          "name": "API",
+          "priceCAD": 0,
+          "period": "per token",
+          "details": "Pay-per-use via Anthropic API"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 3,
+      "inCategory": 1,
+      "trend": "rising"
+    },
+    "pros": [
+      "Highest 'most loved' rating (46%)",
+      "Best agentic coding capabilities",
+      "Full repo understanding",
+      "Terminal-native workflow"
+    ],
+    "cons": [
+      "Terminal-based (not IDE-native)",
+      "Requires subscription or API",
+      "Newer than Copilot/Cursor"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 85
+  },
+  {
+    "id": "windsurf",
+    "name": "Windsurf",
+    "category": "coding-assistants",
+    "developer": "Codeium",
+    "url": "https://codeium.com/windsurf",
+    "description": "Budget-conscious AI code editor offering 80% of Cursor's functionality at lower cost. Generous free tier with Cascade agentic capabilities.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Generous free tier with AI completions",
+      "paidPlans": [
+        {
+          "name": "Pro",
+          "priceCAD": 22,
+          "period": "month",
+          "details": "Unlimited completions, more flows"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 15,
+      "inCategory": 4,
+      "trend": "rising"
+    },
+    "pros": [
+      "Best value coding assistant",
+      "Generous free tier",
+      "Cascade agentic features",
+      "Lower cost than Cursor"
+    ],
+    "cons": [
+      "Less mature than Cursor",
+      "Smaller community",
+      "Some features behind Cursor/Claude Code"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 68
+  },
+  {
+    "id": "gemini-code-assist",
+    "name": "Gemini Code Assist",
+    "category": "coding-assistants",
+    "developer": "Google",
+    "url": "https://cloud.google.com/gemini/docs/codeassist/overview",
+    "description": "Google's free coding assistant. No cost, no credit card required. Supports multiple IDEs and languages.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Completely free for individuals",
+      "paidPlans": [
+        {
+          "name": "Enterprise",
+          "priceCAD": 27,
+          "period": "month/user",
+          "details": "Custom models, admin controls"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 20,
+      "inCategory": 7,
+      "trend": "stable"
+    },
+    "pros": [
+      "Completely free",
+      "No credit card needed",
+      "Multi-IDE support",
+      "Google Cloud integration"
+    ],
+    "cons": [
+      "Less capable than paid alternatives",
+      "Google ecosystem focus",
+      "Newer â€” fewer features"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 78
+  },
+  {
+    "id": "tabnine",
+    "name": "Tabnine",
+    "category": "coding-assistants",
+    "developer": "Tabnine Ltd.",
+    "url": "https://www.tabnine.com/",
+    "description": "Established AI code completion tool focused on privacy. Can run models locally. Popular in enterprises with strict data policies.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Basic completions, limited AI chat",
+      "paidPlans": [
+        {
+          "name": "Pro",
+          "priceCAD": 17,
+          "period": "month",
+          "details": "Full AI chat, advanced completions"
+        },
+        {
+          "name": "Enterprise",
+          "priceCAD": 54,
+          "period": "month/user",
+          "details": "Private models, SSO, admin"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 26,
+      "inCategory": 8,
+      "trend": "declining"
+    },
+    "pros": [
+      "Strong privacy focus",
+      "Can run locally",
+      "Enterprise-friendly",
+      "Established track record"
+    ],
+    "cons": [
+      "Falling behind newer tools",
+      "Less capable than Cursor/Claude Code",
+      "Smaller community"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 70
+  },
+  {
+    "id": "notion-ai",
+    "name": "Notion AI",
+    "category": "productivity",
+    "developer": "Notion Labs",
+    "url": "https://www.notion.com/",
+    "description": "Native AI assistant built into Notion workspace. Excels at summaries, internal search, task extraction, and first drafts. AI Agents can automate Notion workflows.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Limited AI responses in free Notion plan",
+      "paidPlans": [
+        {
+          "name": "Plus",
+          "priceCAD": 14,
+          "period": "month",
+          "details": "Unlimited AI in Plus plan"
+        },
+        {
+          "name": "Business",
+          "priceCAD": 26,
+          "period": "month/user",
+          "details": "Advanced AI, admin controls, SAML SSO"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 14,
+      "inCategory": 2,
+      "trend": "stable"
+    },
+    "pros": [
+      "Best all-in-one workspace + AI",
+      "AI Agents for automation",
+      "Great for teams",
+      "Templates and databases"
+    ],
+    "cons": [
+      "AI quality varies by task",
+      "Can be overwhelming for simple notes",
+      "Pricing per user adds up"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 78
+  },
+  {
+    "id": "google-notebooklm",
+    "name": "Google NotebookLM",
+    "category": "productivity",
+    "developer": "Google",
+    "url": "https://notebooklm.google.com/",
+    "description": "Completely free AI research tool. 100 notebooks, 50 sources per notebook, 500K words per source. Generates audio summaries (podcast-style). No limits.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Completely free, unlimited use, no credit card",
+      "paidPlans": []
+    },
+    "ranking": {
+      "overall": 11,
+      "inCategory": 1,
+      "trend": "rising"
+    },
+    "pros": [
+      "Completely free and unlimited",
+      "Generates audio summaries",
+      "Great for research organization",
+      "50 sources per notebook"
+    ],
+    "cons": [
+      "Google account required",
+      "Less collaborative than Notion",
+      "Limited export options",
+      "No task management"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 82
+  },
+  {
+    "id": "grammarly",
+    "name": "Grammarly",
+    "category": "productivity",
+    "developer": "Grammarly Inc.",
+    "url": "https://www.grammarly.com/",
+    "description": "AI writing assistant for grammar, clarity, tone, and style. Works across browsers, apps, and email. 30M+ daily active users.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Basic grammar and spelling checks",
+      "paidPlans": [
+        {
+          "name": "Premium",
+          "priceCAD": 18,
+          "period": "month",
+          "details": "Full writing suggestions, tone, plagiarism"
+        },
+        {
+          "name": "Business",
+          "priceCAD": 22,
+          "period": "month/user",
+          "details": "Brand tones, style guides, admin"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 16,
+      "inCategory": 3,
+      "trend": "stable"
+    },
+    "pros": [
+      "Works everywhere (browser extension)",
+      "30M+ users",
+      "Great for non-native English",
+      "Tone detection"
+    ],
+    "cons": [
+      "AI generation less capable than ChatGPT/Claude",
+      "Premium needed for best features",
+      "Can be overly prescriptive"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 80
+  },
+  {
+    "id": "meetcody",
+    "name": "MeetCody",
+    "category": "productivity",
+    "developer": "MeetCody",
+    "url": "https://meetcody.ai/",
+    "description": "AI business assistant trained on your company data. Answers employee questions, helps with tasks, and integrates with company knowledge bases.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Limited free tier",
+      "paidPlans": [
+        {
+          "name": "Basic",
+          "priceCAD": 41,
+          "period": "month",
+          "details": "2,500 queries/month, 1 chatbot"
+        },
+        {
+          "name": "Premium",
+          "priceCAD": 144,
+          "period": "month",
+          "details": "Unlimited queries, 3 chatbots, API"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 35,
+      "inCategory": 5,
+      "trend": "stable"
+    },
+    "pros": [
+      "Trained on your company data",
+      "Good for internal knowledge",
+      "Easy to set up"
+    ],
+    "cons": [
+      "Expensive for small teams",
+      "Limited to business use case",
+      "Less versatile than general AI"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 50
+  },
+  {
+    "id": "craftnote",
+    "name": "CraftNote",
+    "category": "productivity",
+    "developer": "CraftNote",
+    "url": "https://www.craftnoteapp.com/",
+    "description": "AI note-taking focused on meeting transcription with speaker memory. Remembers context across meetings.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Limited transcription minutes",
+      "paidPlans": [
+        {
+          "name": "Pro",
+          "priceCAD": 14,
+          "period": "month",
+          "details": "Unlimited transcription, speaker memory"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 28,
+      "inCategory": 4,
+      "trend": "rising"
+    },
+    "pros": [
+      "Best meeting transcription",
+      "Speaker memory across meetings",
+      "Context-aware summaries"
+    ],
+    "cons": [
+      "Focused on meetings only",
+      "Less versatile than Notion",
+      "Smaller user base"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 55
+  },
+  {
+    "id": "adam-ai",
+    "name": "Adam AI",
+    "category": "3d-cad",
+    "developer": "Adam AI",
+    "url": "https://adam.new/",
+    "description": "Text-to-3D-model AI. Speak physical objects into existence â€” text prompts to print-ready 3D models in minutes. Launched January 2025.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Limited free generations",
+      "paidPlans": [
+        {
+          "name": "Pro",
+          "priceCAD": 29,
+          "period": "month",
+          "details": "Unlimited generations, export formats"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 32,
+      "inCategory": 5,
+      "trend": "rising"
+    },
+    "pros": [
+      "Text-to-3D in minutes",
+      "Print-ready models",
+      "Revolutionary for prototyping"
+    ],
+    "cons": [
+      "New â€” still maturing",
+      "Complex models need refinement",
+      "Limited material options"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 45
+  },
+  {
+    "id": "backflip-ai",
+    "name": "Backflip AI",
+    "category": "3d-cad",
+    "developer": "Backflip",
+    "url": "https://backflip.ai/",
+    "description": "Converts 3D scanner data into fully parametric CAD models. Emerged from stealth early 2025. Revolutionary for reverse engineering.",
+    "pricingCAD": {
+      "freeTier": false,
+      "freeTierDetails": "",
+      "paidPlans": [
+        {
+          "name": "Contact for pricing",
+          "priceCAD": 0,
+          "period": "custom",
+          "details": "Enterprise pricing, contact sales"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 38,
+      "inCategory": 10,
+      "trend": "rising"
+    },
+    "pros": [
+      "3D scan to parametric CAD",
+      "Great for reverse engineering",
+      "Saves enormous manual work"
+    ],
+    "cons": [
+      "Enterprise pricing (not public)",
+      "Requires 3D scanner input",
+      "New company"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 50
+  },
+  {
+    "id": "electrix-ai",
+    "name": "ELECTRIX AI (WSCAD)",
+    "category": "3d-cad",
+    "developer": "WSCAD / Bucher Automation",
+    "url": "https://www.wscad.com/",
+    "description": "Automates control cabinet design in compliance with standards. Up to 99% efficiency increase. Minutes instead of hours for electrical design.",
+    "pricingCAD": {
+      "freeTier": false,
+      "freeTierDetails": "",
+      "paidPlans": [
+        {
+          "name": "Contact for pricing",
+          "priceCAD": 0,
+          "period": "custom",
+          "details": "Enterprise pricing for electrical engineering firms"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 40,
+      "inCategory": 11,
+      "trend": "rising"
+    },
+    "pros": [
+      "99% efficiency increase claimed",
+      "Standards-compliant output",
+      "Specialized for electrical"
+    ],
+    "cons": [
+      "Enterprise pricing only",
+      "Highly specialized niche",
+      "Requires domain expertise"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 48
+  },
+  {
+    "id": "ida-pro",
+    "name": "IDA Pro",
+    "category": "3d-cad",
+    "developer": "Hex-Rays",
+    "url": "https://hex-rays.com/ida-pro",
+    "description": "Industry-standard disassembler and debugger for reverse engineering. Now incorporating AI for automated analysis. Essential tool for security researchers.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "IDA Free version available with limited features",
+      "paidPlans": [
+        {
+          "name": "Home",
+          "priceCAD": 577,
+          "period": "year",
+          "details": "Non-commercial license"
+        },
+        {
+          "name": "Professional",
+          "priceCAD": 2165,
+          "period": "year",
+          "details": "Full decompiler, all architectures"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 42,
+      "inCategory": 12,
+      "trend": "stable"
+    },
+    "pros": [
+      "Industry standard for RE",
+      "AI-assisted analysis",
+      "Comprehensive architecture support",
+      "Free version available"
+    ],
+    "cons": [
+      "Very expensive",
+      "Steep learning curve",
+      "Highly specialized"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 75
+  },
+  {
+    "id": "aymo-ai",
+    "name": "Aymo AI",
+    "category": "all-in-one",
+    "developer": "Aymo",
+    "url": "https://aymo.ai/",
+    "description": "Unified dashboard for Claude, GPT, Gemini 2.5, DeepSeek, and Mistral. Switch between models in a single interface.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Limited queries across models",
+      "paidPlans": [
+        {
+          "name": "Pro",
+          "priceCAD": 29,
+          "period": "month",
+          "details": "Unlimited access to all models"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 23,
+      "inCategory": 2,
+      "trend": "rising"
+    },
+    "pros": [
+      "Access multiple models in one place",
+      "Easy model comparison",
+      "Single subscription"
+    ],
+    "cons": [
+      "Dependent on upstream APIs",
+      "Less customizable than direct access",
+      "Newer platform"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 40
+  },
+  {
+    "id": "hugging-face",
+    "name": "Hugging Face",
+    "category": "all-in-one",
+    "developer": "Hugging Face Inc.",
+    "url": "https://huggingface.co/",
+    "description": "The GitHub of AI â€” largest open-source AI model hub. 500K+ models, datasets, and Spaces. Essential for anyone working with open-source AI.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Free model hosting, Spaces, and community features",
+      "paidPlans": [
+        {
+          "name": "Pro",
+          "priceCAD": 13,
+          "period": "month",
+          "details": "Private repos, enhanced compute"
+        },
+        {
+          "name": "Enterprise",
+          "priceCAD": 29,
+          "period": "month/user",
+          "details": "SSO, audit logs, priority support"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 10,
+      "inCategory": 1,
+      "trend": "rising"
+    },
+    "pros": [
+      "Largest AI model repository",
+      "Open source community",
+      "Free tier very generous",
+      "Essential for AI developers"
+    ],
+    "cons": [
+      "Technical â€” not for non-developers",
+      "Quality varies across models",
+      "Can be overwhelming"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 65
+  },
+  {
+    "id": "team-ai",
+    "name": "TeamAI",
+    "category": "all-in-one",
+    "developer": "TeamAI",
+    "url": "https://www.teamai.com/",
+    "description": "Team workspace for multiple AI models. Share conversations, create prompt libraries, and collaborate across AI tools.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Limited team features",
+      "paidPlans": [
+        {
+          "name": "Pro",
+          "priceCAD": 29,
+          "period": "month/user",
+          "details": "Unlimited access, shared workspaces, prompt library"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 30,
+      "inCategory": 3,
+      "trend": "stable"
+    },
+    "pros": [
+      "Multi-model team workspace",
+      "Shared prompt libraries",
+      "Good for team collaboration"
+    ],
+    "cons": [
+      "Per-user pricing adds up",
+      "Less powerful than direct tool access",
+      "Smaller ecosystem"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 50
+  },
+  {
+    "id": "zapier",
+    "name": "Zapier",
+    "category": "workflow-automation",
+    "developer": "Zapier Inc.",
+    "url": "https://zapier.com/",
+    "description": "The integration king â€” connects 7,000+ apps. Built-in AI for workflow building. Automate AI tools with Salesforce, Slack, HubSpot, email, and more.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "100 tasks/month, 5 zaps",
+      "paidPlans": [
+        {
+          "name": "Starter",
+          "priceCAD": 28,
+          "period": "month",
+          "details": "750 tasks/month, multi-step zaps"
+        },
+        {
+          "name": "Professional",
+          "priceCAD": 70,
+          "period": "month",
+          "details": "2,000 tasks/month, advanced logic"
+        },
+        {
+          "name": "Team",
+          "priceCAD": 106,
+          "period": "month",
+          "details": "Shared workspaces, premier support"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 7,
+      "inCategory": 1,
+      "trend": "stable"
+    },
+    "pros": [
+      "7,000+ app integrations",
+      "No-code automation",
+      "Built-in AI",
+      "Most popular automation tool"
+    ],
+    "cons": [
+      "Task limits on all plans",
+      "Complex workflows get expensive",
+      "Can be slow for real-time needs"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 82
+  },
+  {
+    "id": "make",
+    "name": "Make (Integromat)",
+    "category": "workflow-automation",
+    "developer": "Make (formerly Integromat)",
+    "url": "https://www.make.com/",
+    "description": "Visual drag-and-drop workflow builder. More flexible than Zapier for complex multi-branch automations. AI-powered scenario creation.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "1,000 operations/month, 2 active scenarios",
+      "paidPlans": [
+        {
+          "name": "Core",
+          "priceCAD": 13,
+          "period": "month",
+          "details": "10,000 operations, unlimited scenarios"
+        },
+        {
+          "name": "Pro",
+          "priceCAD": 24,
+          "period": "month",
+          "details": "10,000 operations, custom functions, priority"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 18,
+      "inCategory": 3,
+      "trend": "rising"
+    },
+    "pros": [
+      "Visual workflow builder",
+      "More flexible than Zapier",
+      "Cheaper for high-volume",
+      "AI scenario creation"
+    ],
+    "cons": [
+      "Steeper learning curve",
+      "Fewer integrations than Zapier",
+      "Can be overwhelming for beginners"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 78
+  },
+  {
+    "id": "n8n",
+    "name": "n8n",
+    "category": "workflow-automation",
+    "developer": "n8n GmbH",
+    "url": "https://n8n.io/",
+    "description": "Developer-friendly, open-source automation. 500+ integrations with AI agents, human approvals, and custom code nodes. Self-hostable for full control.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Free self-hosted (unlimited), cloud free tier available",
+      "paidPlans": [
+        {
+          "name": "Starter",
+          "priceCAD": 29,
+          "period": "month",
+          "details": "Cloud hosted, 2,500 executions"
+        },
+        {
+          "name": "Pro",
+          "priceCAD": 72,
+          "period": "month",
+          "details": "10,000 executions, advanced features"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 13,
+      "inCategory": 2,
+      "trend": "rising"
+    },
+    "pros": [
+      "Open source and self-hostable",
+      "AI agent support",
+      "Custom code nodes",
+      "No vendor lock-in"
+    ],
+    "cons": [
+      "Requires technical knowledge",
+      "Self-hosting needs maintenance",
+      "Smaller community than Zapier"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 75
+  },
+  {
+    "id": "meshy-ai",
+    "name": "Meshy AI",
+    "category": "3d-cad",
+    "developer": "Meshy",
+    "url": "https://www.meshy.ai",
+    "description": "Leading AI 3D model generator with direct 3D printing support. Text/image to 3D mesh with one-click Bambu Studio integration. 97% slicer pass rate on figurines.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Limited generations per month, watermarked exports",
+      "paidPlans": [
+        {
+          "name": "Pro",
+          "priceCAD": 20.88,
+          "period": "month",
+          "details": "200 credits/mo, STL/3MF export, no watermark"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 25,
+      "inCategory": 2,
+      "trend": "rising"
+    },
+    "pros": [
+      "Best 3D printing integration",
+      "97% slicer pass rate on figurines",
+      "Multiple export formats including STL/3MF",
+      "One-click Bambu Studio export"
+    ],
+    "cons": [
+      "Only 55% fully watertight meshes",
+      "Organic shapes only â€” no mechanical parts",
+      "Inconsistent quality between runs",
+      "No parametric/CAD output"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 58
+  },
+  {
+    "id": "tripo-ai",
+    "name": "Tripo AI",
+    "category": "3d-cad",
+    "developer": "Tripo",
+    "url": "https://www.tripo3d.ai",
+    "description": "AI 3D generator with quad-based topology and auto-repair for manifold issues. Strong for game characters and clean mesh output.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Limited generations, basic export",
+      "paidPlans": [
+        {
+          "name": "Pro",
+          "priceCAD": 17.28,
+          "period": "month",
+          "details": "Unlimited generations, all formats"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 28,
+      "inCategory": 3,
+      "trend": "rising"
+    },
+    "pros": [
+      "Quad-based topology (cleaner meshes)",
+      "Auto-repair for manifold issues",
+      "Good for game assets",
+      "STL export for printing"
+    ],
+    "cons": [
+      "Less printing-focused than Meshy",
+      "Complex models still need manual repair",
+      "No CAD output"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 55
+  },
+  {
+    "id": "zoo-cad",
+    "name": "Zoo (formerly KittyCAD)",
+    "category": "3d-cad",
+    "developer": "Zoo",
+    "url": "https://zoo.dev",
+    "description": "The ONLY AI that generates real parametric CAD (B-Rep surfaces, not meshes). Text-to-CAD via API. Open-source KCL language for code-driven CAD. STEP file output.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Open-source KCL language, limited API calls",
+      "paidPlans": [
+        {
+          "name": "API",
+          "priceCAD": 0.72,
+          "period": "minute",
+          "details": "Pay-per-use, STEP/STL/OBJ/GLTF export"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 22,
+      "inCategory": 1,
+      "trend": "rising"
+    },
+    "pros": [
+      "Only AI generating real parametric CAD",
+      "STEP file output (editable in any CAD)",
+      "Open-source KCL language",
+      "Mechanical parts, not just organic shapes"
+    ],
+    "cons": [
+      "Best for geometric/mechanical parts only",
+      "API pricing adds up for heavy use",
+      "Early stage â€” limited complexity",
+      "Requires some CAD knowledge to evaluate output"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 60
+  },
+  {
+    "id": "quilter-ai",
+    "name": "Quilter AI",
+    "category": "3d-cad",
+    "developer": "Quilter",
+    "url": "https://www.quilter.ai",
+    "description": "Physics-driven autonomous PCB layout using reinforcement learning. Imports from Altium/Cadence/KiCad, generates first layout in ~1 hour. $25M Series B.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Free during open beta, unlimited iterations",
+      "paidPlans": [
+        {
+          "name": "Pro",
+          "priceCAD": 0,
+          "period": "month",
+          "details": "Pricing by pin count (TBD, currently free beta)"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 30,
+      "inCategory": 4,
+      "trend": "rising"
+    },
+    "pros": [
+      "Physics-based, not pattern-matching",
+      "Imports from all major EDA tools",
+      "First layout in ~1 hour vs days",
+      "Free during beta"
+    ],
+    "cons": [
+      "Best for <1000 pins / <100 components",
+      "Does NOT recognize imported design rules",
+      "Layout only â€” no schematic design",
+      "Complex boards still beyond it"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 52
+  },
+  {
+    "id": "flux-ai",
+    "name": "Flux.ai",
+    "category": "3d-cad",
+    "developer": "Flux.ai",
+    "url": "https://www.flux.ai",
+    "description": "Browser-based full ECAD with AI copilot. Schematic + PCB + BOM in one workspace. Pre-configured DRC for JLCPCB/PCBWay. Gerber export.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "2-week free trial",
+      "paidPlans": [
+        {
+          "name": "Pro",
+          "priceCAD": 28.8,
+          "period": "month",
+          "details": "Full ECAD suite, AI copilot, manufacturer templates"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 32,
+      "inCategory": 6,
+      "trend": "rising"
+    },
+    "pros": [
+      "Full ECAD in browser â€” no install",
+      "AI copilot for part selection and wiring",
+      "Pre-built JLCPCB/PCBWay DRC templates",
+      "Gerber + drill + BOM export"
+    ],
+    "cons": [
+      "Cannot import existing layouts",
+      "Best for 2-4 layer boards",
+      "Requires intermediate PCB experience",
+      "AI output needs human review"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 48
+  },
+  {
+    "id": "circuitmind",
+    "name": "CircuitMind ACE",
+    "category": "3d-cad",
+    "developer": "CircuitMind",
+    "url": "https://www.circuitmind.io",
+    "description": "AI generates schematics and BOMs from block diagrams in ~60 seconds. Evaluates trillions of component combinations. Peer-reviewed by Los Alamos National Lab.",
+    "pricingCAD": {
+      "freeTier": false,
+      "freeTierDetails": "",
+      "paidPlans": [
+        {
+          "name": "Professional",
+          "priceCAD": 0,
+          "period": "month",
+          "details": "Contact for pricing â€” enterprise focused"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 34,
+      "inCategory": 8,
+      "trend": "rising"
+    },
+    "pros": [
+      "Block diagram to schematic in 60 seconds",
+      "Trillions of component combinations evaluated",
+      "Optimizes cost/size/power",
+      "Peer-reviewed by Los Alamos"
+    ],
+    "cons": [
+      "No power circuits or analog yet",
+      "Enterprise pricing",
+      "Digital blocks only",
+      "Not a replacement for datasheet review"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 50
+  },
+  {
+    "id": "lovable",
+    "name": "Lovable",
+    "category": "coding-assistants",
+    "developer": "Lovable",
+    "url": "https://lovable.dev",
+    "description": "AI app builder â€” describe what you want, get a working full-stack app. $200M ARR, $6.6B valuation. 'Vibe coding' pioneer. Non-developers building real products.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Limited projects and generations",
+      "paidPlans": [
+        {
+          "name": "Pro",
+          "priceCAD": 28.8,
+          "period": "month",
+          "details": "Unlimited projects, custom domains, GitHub sync"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 15,
+      "inCategory": 5,
+      "trend": "rising"
+    },
+    "pros": [
+      "Non-developers can build real apps",
+      "Full-stack output (frontend + backend + DB)",
+      "$200M ARR proves real adoption",
+      "GitHub integration"
+    ],
+    "cons": [
+      "Technical debt accumulates fast",
+      "Limited customization for complex apps",
+      "Vendor lock-in risk",
+      "Production quality requires developer review"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 65
+  },
+  {
+    "id": "replit",
+    "name": "Replit",
+    "category": "coding-assistants",
+    "developer": "Replit",
+    "url": "https://replit.com",
+    "description": "AI-powered IDE where 75% of users never write code. Agent builds full apps from descriptions. ARR went $10Mâ†’$100M in 9 months after Agent launch.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Free tier with limited compute and storage",
+      "paidPlans": [
+        {
+          "name": "Hacker",
+          "priceCAD": 10.08,
+          "period": "month",
+          "details": "More storage, compute, always-on apps"
+        },
+        {
+          "name": "Pro",
+          "priceCAD": 28.8,
+          "period": "month",
+          "details": "AI Agent, boosted compute, custom domains"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 16,
+      "inCategory": 6,
+      "trend": "rising"
+    },
+    "pros": [
+      "75% of users write zero code",
+      "Full IDE + hosting + deployment",
+      "Massive community",
+      "Agent mode builds complete apps"
+    ],
+    "cons": [
+      "Performance limits on free tier",
+      "Apps can be slow on shared hosting",
+      "Complex apps need developer knowledge",
+      "Lock-in to Replit hosting"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 72
+  },
+  {
+    "id": "deeppcb",
+    "name": "DeepPCB",
+    "category": "3d-cad",
+    "developer": "InstaDeep / Google Cloud",
+    "url": "https://deeppcb.ai",
+    "description": "Cloud-native AI PCB routing using reinforcement learning. Up to 8 layers, 1200 connections. Imports from KiCad/EasyEDA/Eagle/Altium. Cut 40-hour routing to 2 hours.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Free tier with limited AI credits",
+      "paidPlans": [
+        {
+          "name": "Pro",
+          "priceCAD": 0,
+          "period": "month",
+          "details": "Pay-as-you-go AI credits"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 35,
+      "inCategory": 9,
+      "trend": "rising"
+    },
+    "pros": [
+      "8-layer support",
+      "Imports from all major tools",
+      "40-hour routing cut to 2 hours (real case)",
+      "70% fewer prototypes needed"
+    ],
+    "cons": [
+      "Cloud-only â€” no offline",
+      "Best for simple-to-moderate boards",
+      "Complex designs need human oversight",
+      "Newer â€” less validation than Quilter"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 50
+  },
+  {
+    "id": "printpal",
+    "name": "PrintPal",
+    "category": "3d-cad",
+    "developer": "PrintPal",
+    "url": "https://printpal.io",
+    "description": "AI 3D generator specifically designed for 3D printing. STL/OBJ/GLB export in <60 seconds. Includes ball-joint cutters for articulated models.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Limited generations",
+      "paidPlans": [
+        {
+          "name": "Pro",
+          "priceCAD": 14.4,
+          "period": "month",
+          "details": "Unlimited generations, all export formats"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 33,
+      "inCategory": 7,
+      "trend": "rising"
+    },
+    "pros": [
+      "Built specifically for 3D printing",
+      "Ball-joint cutters for articulation",
+      "Export in under 60 seconds",
+      "Print-optimized output"
+    ],
+    "cons": [
+      "Newer tool â€” less community",
+      "Organic shapes primarily",
+      "Quality varies by complexity",
+      "Limited to printing use case"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 45
+  },
+  {
+    "id": "elicit",
+    "name": "Elicit",
+    "category": "data-analysis",
+    "developer": "Elicit Inc.",
+    "url": "https://elicit.com/",
+    "description": "AI research assistant that screens academic papers, extracts data, and synthesizes findings. Automates systematic literature reviews and saves researchers hundreds of hours.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Limited paper searches and data extractions per month",
+      "paidPlans": [
+        {
+          "name": "Plus",
+          "priceCAD": 14,
+          "period": "month",
+          "details": "More searches, bulk data extraction, export"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 42,
+      "inCategory": 6,
+      "trend": "rising"
+    },
+    "pros": [
+      "Automates literature review",
+      "Extracts structured data from papers",
+      "Saves hundreds of research hours",
+      "Free tier available"
+    ],
+    "cons": [
+      "Limited to academic/scientific content",
+      "Free tier restrictive for heavy use",
+      "Not a general-purpose AI assistant"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 75
+  },
+  {
+    "id": "consensus",
+    "name": "Consensus",
+    "category": "data-analysis",
+    "developer": "Consensus NLP Inc.",
+    "url": "https://consensus.app/",
+    "description": "AI-powered academic search engine that queries 200M+ peer-reviewed papers and synthesizes evidence-based answers with citations. Ideal for evidence-based decision-making.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Limited searches per month, basic summaries",
+      "paidPlans": [
+        {
+          "name": "Premium",
+          "priceCAD": 12,
+          "period": "month",
+          "details": "Unlimited searches, GPT-4 summaries, bookmarks"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 44,
+      "inCategory": 7,
+      "trend": "rising"
+    },
+    "pros": [
+      "200M+ academic papers searchable",
+      "Evidence-based answers with citations",
+      "Great for healthcare and science questions",
+      "Free tier available"
+    ],
+    "cons": [
+      "Academic papers only â€” no general web",
+      "Summaries can oversimplify nuance",
+      "Limited to English-language research"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 72
+  },
+  {
+    "id": "research-rabbit",
+    "name": "Research Rabbit",
+    "category": "data-analysis",
+    "developer": "Research Rabbit",
+    "url": "https://researchrabbit.ai/",
+    "description": "Completely free AI tool for discovering related academic papers through citation clustering and visual mapping. Called 'Spotify for research papers' by users.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Completely free â€” no paid tier",
+      "paidPlans": []
+    },
+    "ranking": {
+      "overall": 46,
+      "inCategory": 8,
+      "trend": "rising"
+    },
+    "pros": [
+      "Completely free forever",
+      "Visual citation mapping",
+      "Discovers papers you'd never find manually",
+      "Great complement to Google Scholar"
+    ],
+    "cons": [
+      "Discovery only â€” no full-text analysis",
+      "Requires seed papers to start",
+      "Limited to academic literature"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 68
+  },
+  {
+    "id": "spellbook-legal",
+    "name": "Spellbook",
+    "category": "productivity",
+    "developer": "Rally Legal",
+    "url": "https://www.spellbook.legal/",
+    "description": "AI contract drafting and review tool that works inside Microsoft Word. Trained on billions of legal data points. Suggests clauses, flags risks, and accelerates contract negotiation.",
+    "pricingCAD": {
+      "freeTier": false,
+      "freeTierDetails": "",
+      "paidPlans": [
+        {
+          "name": "Starter",
+          "priceCAD": 72,
+          "period": "month",
+          "details": "Core contract review and drafting"
+        },
+        {
+          "name": "Professional",
+          "priceCAD": 144,
+          "period": "month",
+          "details": "Full clause library, team features, priority support"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 55,
+      "inCategory": 13,
+      "trend": "rising"
+    },
+    "pros": [
+      "Works inside Microsoft Word",
+      "Trained on billions of legal data points",
+      "Flags risky clauses automatically",
+      "Accelerates contract negotiation"
+    ],
+    "cons": [
+      "No free tier â€” expensive",
+      "Legal-specific â€” not general purpose",
+      "Requires Microsoft Word"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 55
+  },
+  {
+    "id": "tradeeasy",
+    "name": "TradeEasy.ai",
+    "category": "productivity",
+    "developer": "TradeEasy",
+    "url": "https://tradeeasy.ai/",
+    "description": "Completely free AI financial news aggregator with real-time narrative analysis. Tracks market sentiment, identifies emerging trends, and provides context behind price movements.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Completely free â€” no paid tier",
+      "paidPlans": []
+    },
+    "ranking": {
+      "overall": 58,
+      "inCategory": 14,
+      "trend": "rising"
+    },
+    "pros": [
+      "Completely free",
+      "Real-time financial news analysis",
+      "Narrative-driven market insights",
+      "Good for tracking sentiment"
+    ],
+    "cons": [
+      "Not a trading platform â€” informational only",
+      "Newer tool â€” less track record",
+      "Financial news focus only"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 45
+  },
+  {
+    "id": "maket-ai",
+    "name": "Maket.ai",
+    "category": "3d-cad",
+    "developer": "Maket",
+    "url": "https://www.maket.ai/",
+    "description": "AI-powered residential floor plan and 3D rendering generator. Describe room layouts in text and get architectural plans and photorealistic renderings in minutes.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Limited floor plan generations",
+      "paidPlans": [
+        {
+          "name": "Pro",
+          "priceCAD": 43,
+          "period": "month",
+          "details": "Unlimited plans, 3D renderings, export to CAD"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 50,
+      "inCategory": 13,
+      "trend": "rising"
+    },
+    "pros": [
+      "Text to floor plan in minutes",
+      "3D renderings included",
+      "Great for early-stage architecture",
+      "Free tier available"
+    ],
+    "cons": [
+      "Residential focus â€” limited commercial",
+      "Output needs architect review",
+      "Less precise than traditional CAD"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 50
+  },
+  {
+    "id": "khanmigo",
+    "name": "Khanmigo",
+    "category": "productivity",
+    "developer": "Khan Academy",
+    "url": "https://www.khanmigo.ai/",
+    "description": "AI tutor by Khan Academy that guides students to answers through Socratic questioning rather than giving answers directly. Covers math, science, humanities, and test prep.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Free for students and teachers in the US, limited elsewhere",
+      "paidPlans": [
+        {
+          "name": "Khanmigo Premium",
+          "priceCAD": 13,
+          "period": "month",
+          "details": "Full access for families, all subjects, progress tracking"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 48,
+      "inCategory": 9,
+      "trend": "rising"
+    },
+    "pros": [
+      "Socratic method â€” teaches, not just answers",
+      "Backed by Khan Academy's reputation",
+      "Covers all major school subjects",
+      "Free for many users"
+    ],
+    "cons": [
+      "Best for K-12 and early college",
+      "Full free access limited by region",
+      "Not as flexible as general-purpose AI"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 78
+  },
+  {
+    "id": "be-my-eyes",
+    "name": "Be My Eyes",
+    "category": "productivity",
+    "developer": "Be My Eyes",
+    "url": "https://www.bemyeyes.com/",
+    "description": "AI-powered visual assistant for blind and low-vision users. Uses GPT-4 vision to describe surroundings, read text, identify objects, and navigate environments in real time.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Completely free â€” supported by volunteers and sponsors",
+      "paidPlans": []
+    },
+    "ranking": {
+      "overall": 52,
+      "inCategory": 11,
+      "trend": "stable"
+    },
+    "pros": [
+      "Completely free",
+      "Life-changing for blind/low-vision users",
+      "GPT-4 vision powered",
+      "Also connects to human volunteers"
+    ],
+    "cons": [
+      "Requires smartphone camera",
+      "AI descriptions not always perfect",
+      "Focused on accessibility use case"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 72
+  },
+  {
+    "id": "seeing-ai",
+    "name": "Microsoft Seeing AI",
+    "category": "productivity",
+    "developer": "Microsoft",
+    "url": "https://www.microsoft.com/seeing-ai",
+    "description": "Free AI app that narrates the visual world for blind and low-vision users. Reads text, identifies people, describes scenes, recognizes products, and detects currency.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Completely free â€” no paid tier",
+      "paidPlans": []
+    },
+    "ranking": {
+      "overall": 54,
+      "inCategory": 12,
+      "trend": "stable"
+    },
+    "pros": [
+      "Completely free by Microsoft",
+      "Multiple recognition modes (text, people, scenes)",
+      "Currency and product identification",
+      "Works offline for some features"
+    ],
+    "cons": [
+      "iOS only (no Android yet)",
+      "Accessibility-focused â€” limited general use",
+      "Requires good camera conditions"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 78
+  },
+  {
+    "id": "scenario-ai",
+    "name": "Scenario",
+    "category": "image-generation",
+    "developer": "Scenario Inc.",
+    "url": "https://www.scenario.com/",
+    "description": "Train custom AI models on your art style and generate unlimited consistent game assets. Used by game studios for characters, items, environments, and UI elements.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Limited generations and 1 custom model",
+      "paidPlans": [
+        {
+          "name": "Pro",
+          "priceCAD": 43,
+          "period": "month",
+          "details": "Unlimited generations, multiple custom models, API access"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 45,
+      "inCategory": 9,
+      "trend": "rising"
+    },
+    "pros": [
+      "Train on your own art style",
+      "Consistent asset generation",
+      "Built for game development",
+      "API for pipeline integration"
+    ],
+    "cons": [
+      "Game-focused â€” less general purpose",
+      "Custom training takes time",
+      "Pro tier needed for serious use"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 60
+  },
+  {
+    "id": "inworld-ai",
+    "name": "Inworld AI",
+    "category": "all-in-one",
+    "developer": "Inworld AI",
+    "url": "https://inworld.ai/",
+    "description": "AI-powered NPCs with dynamic conversation, memory, and contextual behavior for games and virtual worlds. Partners include Xbox, NetEase, and Niantic.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Free tier with limited API calls and characters",
+      "paidPlans": [
+        {
+          "name": "Pro",
+          "priceCAD": 29,
+          "period": "month",
+          "details": "More characters, higher API limits, custom voices"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 56,
+      "inCategory": 7,
+      "trend": "rising"
+    },
+    "pros": [
+      "Dynamic NPC conversations",
+      "NPCs remember past interactions",
+      "Major gaming partnerships (Xbox, Niantic)",
+      "Free tier available"
+    ],
+    "cons": [
+      "Gaming/virtual world focused",
+      "Requires developer integration",
+      "Quality varies by character complexity"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 58
+  },
+  {
+    "id": "off-script",
+    "name": "Off/Script",
+    "category": "image-generation",
+    "developer": "Off/Script",
+    "url": "https://offscript.io/",
+    "description": "AI-powered fashion design platform with crowdfunding. Create clothing concepts with AI, let the community vote on designs, and winning designs go into automated production.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Free to create and submit designs",
+      "paidPlans": []
+    },
+    "ranking": {
+      "overall": 60,
+      "inCategory": 10,
+      "trend": "rising"
+    },
+    "pros": [
+      "Free to create designs",
+      "Community voting validates demand",
+      "Automated production pipeline",
+      "Unique AI + crowdfunding model"
+    ],
+    "cons": [
+      "Fashion-specific niche",
+      "No guarantee designs get produced",
+      "Revenue depends on community votes"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 45
+  },
+  {
+    "id": "dishgen",
+    "name": "DishGen",
+    "category": "productivity",
+    "developer": "DishGen",
+    "url": "https://www.dishgen.com/",
+    "description": "AI recipe generator that creates custom recipes from any idea, ingredient list, or dietary requirement. Learns your taste preferences over time for personalized suggestions.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Limited recipe generations per month",
+      "paidPlans": [
+        {
+          "name": "Premium",
+          "priceCAD": 6,
+          "period": "month",
+          "details": "Unlimited recipes, meal planning, grocery lists"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 65,
+      "inCategory": 15,
+      "trend": "stable"
+    },
+    "pros": [
+      "Generate recipes from any ingredients",
+      "Learns your taste preferences",
+      "Handles dietary restrictions well",
+      "Very affordable"
+    ],
+    "cons": [
+      "Recipe-focused only",
+      "AI recipes may need tweaking",
+      "Smaller community than general cooking sites"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 40
+  },
+  {
+    "id": "cohere",
+    "name": "Cohere",
+    "category": "text-chat",
+    "developer": "Cohere Inc.",
+    "url": "https://cohere.com/",
+    "description": "Canadian enterprise LLM company (Toronto-based). One of Canada's most prominent AI companies. Offers NLP APIs for search, generation, and classification. Command R+ model competes with GPT-4.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Free trial API access with rate limits",
+      "paidPlans": [
+        {
+          "name": "Production",
+          "priceCAD": 0,
+          "period": "per token",
+          "details": "Pay-per-use API pricing, enterprise contracts available"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 40,
+      "inCategory": 11,
+      "trend": "rising"
+    },
+    "pros": [
+      "Canadian company (Toronto HQ)",
+      "Strong enterprise NLP capabilities",
+      "Command R+ competitive with GPT-4",
+      "Free trial available"
+    ],
+    "cons": [
+      "API-focused â€” no polished consumer chat UI",
+      "Less known than OpenAI/Anthropic",
+      "Enterprise-oriented pricing"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 75
+  },
+  {
+    "id": "poe",
+    "name": "Poe",
+    "category": "all-in-one",
+    "developer": "Quora",
+    "url": "https://poe.com/",
+    "description": "Access GPT-4, Claude, Gemini, Llama, and 50+ AI models in one interface. By Quora. Create custom bots, share them, and earn money from bot usage.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Limited daily messages across all models",
+      "paidPlans": [
+        {
+          "name": "Poe Premium",
+          "priceCAD": 29,
+          "period": "month",
+          "details": "Higher limits on all models, priority access"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 43,
+      "inCategory": 6,
+      "trend": "stable"
+    },
+    "pros": [
+      "50+ AI models in one place",
+      "Easy model comparison",
+      "Create and monetize custom bots",
+      "Free tier covers many models"
+    ],
+    "cons": [
+      "Message limits on free tier",
+      "Dependent on upstream model availability",
+      "Less customizable than direct API access"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 70
+  },
+  {
+    "id": "openrouter",
+    "name": "OpenRouter",
+    "category": "all-in-one",
+    "developer": "OpenRouter",
+    "url": "https://openrouter.ai/",
+    "description": "Unified API gateway to 100+ AI models (GPT-4, Claude, Gemini, Llama, Mistral, etc.) with transparent per-token pricing. Single API key, automatic fallback routing.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Free models available, pay-per-use for premium models",
+      "paidPlans": [
+        {
+          "name": "Pay-per-use",
+          "priceCAD": 0,
+          "period": "per token",
+          "details": "Transparent per-model pricing, no subscription needed"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 41,
+      "inCategory": 4,
+      "trend": "rising"
+    },
+    "pros": [
+      "100+ models through one API",
+      "Transparent per-token pricing",
+      "Automatic fallback routing",
+      "No subscription required"
+    ],
+    "cons": [
+      "Developer/API-focused â€” no chat UI",
+      "Adds small markup to model prices",
+      "Dependent on upstream providers"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 72
+  },
+  {
+    "id": "bolt-new",
+    "name": "Bolt.new",
+    "category": "coding-assistants",
+    "developer": "StackBlitz",
+    "url": "https://bolt.new/",
+    "description": "AI full-stack app builder that runs entirely in the browser. Describe what you want and get a working app with frontend, backend, and database. No local setup needed.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Limited daily tokens for AI generation",
+      "paidPlans": [
+        {
+          "name": "Pro",
+          "priceCAD": 29,
+          "period": "month",
+          "details": "10M tokens/month, unlimited projects, deploy to Netlify"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 40,
+      "inCategory": 9,
+      "trend": "rising"
+    },
+    "pros": [
+      "Full-stack apps entirely in browser",
+      "No local setup or install needed",
+      "By StackBlitz â€” proven web IDE tech",
+      "One-click deployment"
+    ],
+    "cons": [
+      "Token limits on free tier",
+      "Complex apps need developer refinement",
+      "Browser-based can be slower than local"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 65
+  },
+  {
+    "id": "v0-dev",
+    "name": "v0",
+    "category": "coding-assistants",
+    "developer": "Vercel",
+    "url": "https://v0.dev/",
+    "description": "AI UI component generator by Vercel. Describe a UI in natural language and get production-ready React/Next.js components with Tailwind CSS. Copy-paste into your project.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Limited generations per month",
+      "paidPlans": [
+        {
+          "name": "Premium",
+          "priceCAD": 29,
+          "period": "month",
+          "details": "More generations, priority access, private projects"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 43,
+      "inCategory": 10,
+      "trend": "rising"
+    },
+    "pros": [
+      "Production-ready React components",
+      "Natural language to UI",
+      "Tailwind CSS integration",
+      "By Vercel â€” trusted in React ecosystem"
+    ],
+    "cons": [
+      "React/Next.js focused only",
+      "Components may need customization",
+      "Limited to frontend UI generation"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 68
+  },
+  {
+    "id": "openclaw",
+    "name": "OpenClaw",
+    "category": "ai-agents",
+    "developer": "Community (Open Source)",
+    "url": "https://github.com/peterST/openclaw",
+    "description": "Open-source personal AI assistant with 210K+ GitHub stars â€” the fastest-growing open-source project in history. Modular agent framework for tasks, search, coding, and more.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Completely free and open source",
+      "paidPlans": []
+    },
+    "ranking": {
+      "overall": 42,
+      "inCategory": 5,
+      "trend": "rising"
+    },
+    "pros": [
+      "Completely free and open source",
+      "210K+ GitHub stars",
+      "Highly modular and extensible",
+      "Self-hostable for full privacy"
+    ],
+    "cons": [
+      "Requires technical setup",
+      "Community-maintained â€” variable quality",
+      "Needs your own API keys for LLM backends"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 55
+  },
+  {
+    "id": "crew-ai",
+    "name": "CrewAI",
+    "category": "ai-agents",
+    "developer": "CrewAI Inc.",
+    "url": "https://crewai.com/",
+    "description": "Multi-agent AI framework for orchestrating teams of AI agents that collaborate on complex tasks. Open-source core used by Fortune 500 companies for autonomous workflows.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Open-source framework â€” free to use and self-host",
+      "paidPlans": [
+        {
+          "name": "Enterprise",
+          "priceCAD": 0,
+          "period": "custom",
+          "details": "Enterprise support and managed hosting, contact for pricing"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 44,
+      "inCategory": 4,
+      "trend": "rising"
+    },
+    "pros": [
+      "Multi-agent collaboration",
+      "Open-source and free core",
+      "Used by Fortune 500",
+      "Flexible agent role design"
+    ],
+    "cons": [
+      "Requires Python knowledge",
+      "Agent orchestration is complex",
+      "Still maturing as a framework"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 65
+  },
+  {
+    "id": "dify",
+    "name": "Dify",
+    "category": "ai-agents",
+    "developer": "Dify.AI",
+    "url": "https://dify.ai/",
+    "description": "Open-source LLM app development platform with 130K+ GitHub stars. Visual workflow builder for AI agents, chatbots, and RAG pipelines. Self-hostable or cloud.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Free self-hosted (unlimited), cloud free tier with 200 messages",
+      "paidPlans": [
+        {
+          "name": "Professional",
+          "priceCAD": 86,
+          "period": "month",
+          "details": "5,000 messages, team workspace, priority support"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 45,
+      "inCategory": 5,
+      "trend": "rising"
+    },
+    "pros": [
+      "130K+ GitHub stars",
+      "Visual AI workflow builder",
+      "Self-hostable for full control",
+      "Supports RAG pipelines natively"
+    ],
+    "cons": [
+      "Cloud pricing can add up",
+      "Requires technical knowledge for self-hosting",
+      "Rapidly evolving â€” breaking changes possible"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 68
+  },
+  {
+    "id": "you-com",
+    "name": "You.com",
+    "category": "text-chat",
+    "developer": "You.com Inc.",
+    "url": "https://you.com/",
+    "description": "AI search engine that provides direct answers with citations and source links. Offers multiple AI modes including research, writing, and coding assistance.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Free AI search with citations, unlimited basic queries",
+      "paidPlans": [
+        {
+          "name": "YouPro",
+          "priceCAD": 29,
+          "period": "month",
+          "details": "Unlimited AI chat, GPT-4 access, file uploads"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 47,
+      "inCategory": 12,
+      "trend": "stable"
+    },
+    "pros": [
+      "Free AI search with citations",
+      "Multiple AI modes (research, code, write)",
+      "Privacy-focused",
+      "No account required for basic use"
+    ],
+    "cons": [
+      "Less well-known than Perplexity",
+      "Smaller index than Google",
+      "Pro tier needed for best models"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 62
+  },
+  {
+    "id": "jasper",
+    "name": "Jasper",
+    "category": "productivity",
+    "developer": "Jasper AI",
+    "url": "https://www.jasper.ai/",
+    "description": "AI marketing content platform with brand voice training. Generates blog posts, social media, ads, and emails in your company's tone. Used by 100K+ businesses.",
+    "pricingCAD": {
+      "freeTier": false,
+      "freeTierDetails": "",
+      "paidPlans": [
+        {
+          "name": "Creator",
+          "priceCAD": 49,
+          "period": "month",
+          "details": "1 brand voice, SEO mode, browser extension"
+        },
+        {
+          "name": "Pro",
+          "priceCAD": 86,
+          "period": "month",
+          "details": "3 brand voices, collaboration, AI image generation"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 50,
+      "inCategory": 10,
+      "trend": "stable"
+    },
+    "pros": [
+      "Brand voice training",
+      "Excellent for marketing content",
+      "Templates for every content type",
+      "Used by 100K+ businesses"
+    ],
+    "cons": [
+      "No free tier â€” expensive",
+      "Marketing-focused only",
+      "General writing less strong than ChatGPT/Claude"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 65
+  },
+  {
+    "id": "ideogram",
+    "name": "Ideogram",
+    "category": "image-generation",
+    "developer": "Ideogram Inc.",
+    "url": "https://ideogram.ai/",
+    "description": "AI image generator that excels at rendering accurate text within images â€” a weakness of most competitors. Strong at logos, posters, and typography-heavy designs.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "10 free generations per day",
+      "paidPlans": [
+        {
+          "name": "Basic",
+          "priceCAD": 10,
+          "period": "month",
+          "details": "400 generations/month, priority queue"
+        },
+        {
+          "name": "Plus",
+          "priceCAD": 29,
+          "period": "month",
+          "details": "1000 generations/month, private mode"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 41,
+      "inCategory": 7,
+      "trend": "rising"
+    },
+    "pros": [
+      "Best text rendering in images",
+      "Great for logos and posters",
+      "Free tier available",
+      "Improving rapidly"
+    ],
+    "cons": [
+      "Less artistic than Midjourney",
+      "Smaller community",
+      "Newer â€” fewer integrations"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 68
+  },
+  {
+    "id": "leonardo-ai",
+    "name": "Leonardo AI",
+    "category": "image-generation",
+    "developer": "Leonardo Interactive",
+    "url": "https://leonardo.ai/",
+    "description": "AI image generator with game asset specialization. 150 free tokens daily. Fine-tune models on your style, generate textures, concept art, and environments for games.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "150 tokens per day (several images)",
+      "paidPlans": [
+        {
+          "name": "Apprentice",
+          "priceCAD": 17,
+          "period": "month",
+          "details": "8,500 tokens/month, higher resolution"
+        },
+        {
+          "name": "Artisan",
+          "priceCAD": 36,
+          "period": "month",
+          "details": "25,000 tokens/month, priority processing"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 43,
+      "inCategory": 8,
+      "trend": "rising"
+    },
+    "pros": [
+      "150 free tokens daily",
+      "Game asset specialization",
+      "Custom model fine-tuning",
+      "Good UI and community"
+    ],
+    "cons": [
+      "Token system can be confusing",
+      "Less artistic range than Midjourney",
+      "Gaming focus may not suit all needs"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 65
+  },
+  {
+    "id": "luma-dream-machine",
+    "name": "Luma Dream Machine",
+    "category": "video-generation",
+    "developer": "Luma Labs",
+    "url": "https://lumalabs.ai/",
+    "description": "Fast AI video generator by Luma Labs, originally known for 3D capture. Generates high-quality video clips from text and image prompts with good motion and coherence.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Limited free generations per month",
+      "paidPlans": [
+        {
+          "name": "Standard",
+          "priceCAD": 35,
+          "period": "month",
+          "details": "120 generations/month, faster processing"
+        },
+        {
+          "name": "Pro",
+          "priceCAD": 72,
+          "period": "month",
+          "details": "400 generations/month, highest quality"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 48,
+      "inCategory": 7,
+      "trend": "stable"
+    },
+    "pros": [
+      "Good motion coherence",
+      "Free tier available",
+      "Fast generation speed",
+      "Strong 3D/spatial understanding"
+    ],
+    "cons": [
+      "Less polished than Runway",
+      "Shorter clip durations",
+      "Newer in video â€” still catching up"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 65
+  },
+  {
+    "id": "rodin-ai",
+    "name": "Rodin AI",
+    "category": "3d-cad",
+    "developer": "Hyper / Deemos",
+    "url": "https://hyper3d.ai/",
+    "description": "Photorealistic 3D model generation from text or image input. Produces high-fidelity meshes with PBR textures suitable for games, film VFX, and product visualization.",
+    "pricingCAD": {
+      "freeTier": false,
+      "freeTierDetails": "",
+      "paidPlans": [
+        {
+          "name": "Starter",
+          "priceCAD": 99,
+          "period": "month",
+          "details": "100 generations/month, PBR textures, FBX/OBJ export"
+        },
+        {
+          "name": "Pro",
+          "priceCAD": 199,
+          "period": "month",
+          "details": "500 generations/month, priority, API access"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 55,
+      "inCategory": 14,
+      "trend": "stable"
+    },
+    "pros": [
+      "Photorealistic 3D output",
+      "PBR textures included",
+      "Good for film and games",
+      "Text and image input"
+    ],
+    "cons": [
+      "No free tier â€” expensive",
+      "Newer tool â€” smaller community",
+      "Complex scenes need iteration"
+    ],
+    "logoUrl": "",
+    "lastVerified": "2026-03-27",
+    "trustScore": 55
+  },
+  {
+    "id": "openclaw-framework",
+    "name": "OpenClaw",
+    "category": "ai-agents",
+    "developer": "Open Source Community",
+    "url": "https://github.com/openclaw/openclaw",
+    "description": "Open-source autonomous agent framework with 247K+ GitHub stars. Any LLM as autonomous agent for browsing, coding, research.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Fully open source",
+      "paidPlans": []
+    },
+    "ranking": {
+      "overall": 84,
+      "inCategory": 1,
+      "trend": "rising"
+    },
+    "pros": [
+      "Massive community support (247K+ stars)",
+      "Works with any LLM backend",
+      "Browsing, coding, and research capabilities",
+      "Highly extensible plugin system"
+    ],
+    "cons": [
+      "Requires technical setup",
+      "Can be resource-intensive",
+      "Quality depends on underlying LLM"
+    ],
+    "trustScore": 72,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "devin",
+    "name": "Devin",
+    "category": "ai-agents",
+    "developer": "Cognition Labs",
+    "url": "https://devin.ai",
+    "description": "AI software engineer that can plan, code, debug, and deploy. Hyped but only 13.86% real-world success rate.",
+    "pricingCAD": {
+      "freeTier": false,
+      "freeTierDetails": "",
+      "paidPlans": [
+        {
+          "name": "Teams",
+          "priceCAD": 500,
+          "period": "month",
+          "details": "Full AI engineer capabilities, team collaboration"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 85,
+      "inCategory": 2,
+      "trend": "stable"
+    },
+    "pros": [
+      "End-to-end software engineering",
+      "Can plan and execute complex tasks",
+      "Impressive demos and concept"
+    ],
+    "cons": [
+      "Very expensive ($500 CAD/mo)",
+      "Only 13.86% real-world success rate",
+      "Overhyped relative to actual performance"
+    ],
+    "trustScore": 60,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "browser-use",
+    "name": "Browser Use",
+    "category": "ai-agents",
+    "developer": "Open Source",
+    "url": "https://github.com/browser-use/browser-use",
+    "description": "Open-source autonomous browser agent. 89.1% task success rate. Python-based, works with any LLM.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Fully open source",
+      "paidPlans": []
+    },
+    "ranking": {
+      "overall": 86,
+      "inCategory": 3,
+      "trend": "rising"
+    },
+    "pros": [
+      "89.1% task success rate",
+      "Works with any LLM",
+      "Open source and free",
+      "Great for web automation"
+    ],
+    "cons": [
+      "Requires Python knowledge",
+      "Browser-only scope",
+      "Can be fragile on complex sites"
+    ],
+    "trustScore": 68,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "autogen",
+    "name": "AutoGen",
+    "category": "ai-agents",
+    "developer": "Microsoft",
+    "url": "https://github.com/microsoft/autogen",
+    "description": "Microsoft's multi-agent conversation framework. Enables complex agent workflows with human-in-the-loop.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Fully open source",
+      "paidPlans": []
+    },
+    "ranking": {
+      "overall": 87,
+      "inCategory": 4,
+      "trend": "rising"
+    },
+    "pros": [
+      "Microsoft backing and support",
+      "Human-in-the-loop capability",
+      "Multi-agent conversations",
+      "Strong documentation"
+    ],
+    "cons": [
+      "Complex setup for advanced workflows",
+      "Microsoft ecosystem bias",
+      "Rapidly evolving API"
+    ],
+    "trustScore": 82,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "crewai",
+    "name": "CrewAI",
+    "category": "ai-agents",
+    "developer": "CrewAI Inc",
+    "url": "https://www.crewai.com",
+    "description": "Role-based multi-agent framework. Great for prototyping AI agent teams. Python-based.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Open source framework",
+      "paidPlans": [
+        {
+          "name": "Enterprise",
+          "priceCAD": 0,
+          "period": "month",
+          "details": "Custom enterprise pricing available"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 88,
+      "inCategory": 5,
+      "trend": "rising"
+    },
+    "pros": [
+      "Intuitive role-based agent design",
+      "Great for rapid prototyping",
+      "Active community",
+      "Easy to learn"
+    ],
+    "cons": [
+      "Less mature than LangGraph for production",
+      "Limited built-in tools",
+      "Python only"
+    ],
+    "trustScore": 65,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "langgraph",
+    "name": "LangGraph",
+    "category": "ai-agents",
+    "developer": "LangChain Inc",
+    "url": "https://github.com/langchain-ai/langgraph",
+    "description": "Production-grade agent orchestration. Stateful, cyclical graphs. Industry standard for complex agents.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Open source framework",
+      "paidPlans": [
+        {
+          "name": "LangSmith Platform",
+          "priceCAD": 39,
+          "period": "month",
+          "details": "Observability, tracing, and debugging for agents"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 89,
+      "inCategory": 6,
+      "trend": "rising"
+    },
+    "pros": [
+      "Production-grade reliability",
+      "Stateful agent workflows",
+      "Industry standard",
+      "Great observability with LangSmith"
+    ],
+    "cons": [
+      "Steep learning curve",
+      "LangChain ecosystem dependency",
+      "Debugging complex graphs is hard"
+    ],
+    "trustScore": 75,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "sweep-ai",
+    "name": "Sweep AI",
+    "category": "ai-agents",
+    "developer": "Sweep",
+    "url": "https://sweep.dev",
+    "description": "AI code reviewer and bug fixer. Handles pull requests automatically. GitHub integration.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Free for open source projects",
+      "paidPlans": [
+        {
+          "name": "Pro",
+          "priceCAD": 144,
+          "period": "month",
+          "details": "Private repos, priority processing"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 90,
+      "inCategory": 7,
+      "trend": "rising"
+    },
+    "pros": [
+      "Automated PR reviews",
+      "GitHub native integration",
+      "Free for open source",
+      "Saves developer time"
+    ],
+    "cons": [
+      "Expensive Pro tier",
+      "Limited to GitHub",
+      "Can miss nuanced code issues"
+    ],
+    "trustScore": 62,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "swe-agent",
+    "name": "SWE-Agent",
+    "category": "ai-agents",
+    "developer": "Princeton NLP",
+    "url": "https://github.com/princeton-nlp/SWE-agent",
+    "description": "Open-source tool that turns LLMs into software engineering agents. Strong SWE-bench performance.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Research/open source",
+      "paidPlans": []
+    },
+    "ranking": {
+      "overall": 91,
+      "inCategory": 8,
+      "trend": "rising"
+    },
+    "pros": [
+      "Strong SWE-bench scores",
+      "Academic backing (Princeton)",
+      "Open source",
+      "Works with multiple LLMs"
+    ],
+    "cons": [
+      "Research-grade, not production-ready",
+      "Requires technical setup",
+      "Limited documentation"
+    ],
+    "trustScore": 70,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "ollama",
+    "name": "Ollama",
+    "category": "local-ai",
+    "developer": "Ollama",
+    "url": "https://ollama.ai",
+    "description": "Run large language models locally. Dead-simple setup. Supports Llama, Mistral, Gemma, Phi, and 100+ models.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Fully open source and free",
+      "paidPlans": []
+    },
+    "ranking": {
+      "overall": 92,
+      "inCategory": 1,
+      "trend": "rising"
+    },
+    "pros": [
+      "Dead-simple one-command setup",
+      "100+ model support",
+      "Great API compatibility",
+      "Active development"
+    ],
+    "cons": [
+      "Requires decent hardware (8GB+ RAM)",
+      "No built-in UI",
+      "Performance depends on local hardware"
+    ],
+    "trustScore": 78,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "lm-studio",
+    "name": "LM Studio",
+    "category": "local-ai",
+    "developer": "LM Studio",
+    "url": "https://lmstudio.ai",
+    "description": "Desktop app to discover, download, and run local LLMs. Beautiful UI, no command line needed.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Free for personal use",
+      "paidPlans": []
+    },
+    "ranking": {
+      "overall": 93,
+      "inCategory": 2,
+      "trend": "rising"
+    },
+    "pros": [
+      "Beautiful desktop UI",
+      "No command line needed",
+      "One-click model downloads",
+      "Built-in chat interface"
+    ],
+    "cons": [
+      "Requires decent hardware",
+      "Closed source",
+      "Limited customization vs CLI tools"
+    ],
+    "trustScore": 72,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "llamacpp",
+    "name": "llama.cpp",
+    "category": "local-ai",
+    "developer": "Georgi Gerganov",
+    "url": "https://github.com/ggerganov/llama.cpp",
+    "description": "C/C++ inference of LLMs. Foundation of most local AI tools. CPU and GPU optimized.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Fully open source",
+      "paidPlans": []
+    },
+    "ranking": {
+      "overall": 94,
+      "inCategory": 3,
+      "trend": "stable"
+    },
+    "pros": [
+      "Foundation of local AI ecosystem",
+      "Highly optimized C/C++",
+      "CPU and GPU support",
+      "Massive community"
+    ],
+    "cons": [
+      "Command-line only",
+      "Requires compilation knowledge",
+      "No GUI included"
+    ],
+    "trustScore": 80,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "jan-ai",
+    "name": "Jan",
+    "category": "local-ai",
+    "developer": "Jan AI",
+    "url": "https://jan.ai",
+    "description": "Open-source ChatGPT alternative that runs 100% offline. Clean UI, extensions, local-first.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Fully open source",
+      "paidPlans": []
+    },
+    "ranking": {
+      "overall": 95,
+      "inCategory": 4,
+      "trend": "rising"
+    },
+    "pros": [
+      "100% offline capability",
+      "Clean ChatGPT-like UI",
+      "Extension system",
+      "Privacy-first design"
+    ],
+    "cons": [
+      "Requires local hardware",
+      "Smaller model selection than Ollama",
+      "Newer project, less mature"
+    ],
+    "trustScore": 68,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "gpt4all",
+    "name": "GPT4All",
+    "category": "local-ai",
+    "developer": "Nomic AI",
+    "url": "https://gpt4all.io",
+    "description": "Run LLMs locally on consumer hardware. Privacy-focused. 4GB RAM minimum.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Fully open source",
+      "paidPlans": []
+    },
+    "ranking": {
+      "overall": 96,
+      "inCategory": 5,
+      "trend": "stable"
+    },
+    "pros": [
+      "Low hardware requirements (4GB RAM)",
+      "Privacy-focused",
+      "Simple installation",
+      "Good for beginners"
+    ],
+    "cons": [
+      "Limited model selection",
+      "Less performant than Ollama",
+      "Basic UI"
+    ],
+    "trustScore": 70,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "localai",
+    "name": "LocalAI",
+    "category": "local-ai",
+    "developer": "LocalAI Community",
+    "url": "https://localai.io",
+    "description": "Drop-in OpenAI-compatible API for local models. Supports text, audio, images. Self-hosted.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Fully open source",
+      "paidPlans": []
+    },
+    "ranking": {
+      "overall": 97,
+      "inCategory": 6,
+      "trend": "rising"
+    },
+    "pros": [
+      "OpenAI API compatible",
+      "Multi-modal support",
+      "Self-hosted",
+      "Docker-friendly"
+    ],
+    "cons": [
+      "Complex setup",
+      "Requires server knowledge",
+      "Resource intensive"
+    ],
+    "trustScore": 65,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "koboldcpp",
+    "name": "KoboldCpp",
+    "category": "local-ai",
+    "developer": "Community",
+    "url": "https://github.com/LostRuins/koboldcpp",
+    "description": "Easy single-file executable for running LLMs. UI included. Popular for creative writing.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Fully open source",
+      "paidPlans": []
+    },
+    "ranking": {
+      "overall": 98,
+      "inCategory": 7,
+      "trend": "stable"
+    },
+    "pros": [
+      "Single-file executable",
+      "Built-in web UI",
+      "Popular for creative writing",
+      "Easy to use"
+    ],
+    "cons": [
+      "Niche community",
+      "Limited model support vs Ollama",
+      "Less actively developed"
+    ],
+    "trustScore": 60,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "text-gen-webui",
+    "name": "Text Generation WebUI",
+    "category": "local-ai",
+    "developer": "oobabooga",
+    "url": "https://github.com/oobabooga/text-generation-webui",
+    "description": "Gradio web UI for running LLMs. Supports many backends. Highly customizable.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Fully open source",
+      "paidPlans": []
+    },
+    "ranking": {
+      "overall": 99,
+      "inCategory": 8,
+      "trend": "stable"
+    },
+    "pros": [
+      "Highly customizable",
+      "Multiple backend support",
+      "Gradio web interface",
+      "Active community"
+    ],
+    "cons": [
+      "Complex installation",
+      "Can be buggy",
+      "Steep learning curve"
+    ],
+    "trustScore": 65,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "gptzero",
+    "name": "GPTZero",
+    "category": "ai-security",
+    "developer": "GPTZero Inc",
+    "url": "https://gptzero.me",
+    "description": "Leading AI content detector. Used by educators and publishers. Detects ChatGPT, Claude, Gemini output.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "10K words/month free",
+      "paidPlans": [
+        {
+          "name": "Pro",
+          "priceCAD": 14,
+          "period": "month",
+          "details": "Higher limits, batch scanning, API access"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 100,
+      "inCategory": 1,
+      "trend": "stable"
+    },
+    "pros": [
+      "Industry-leading detection accuracy",
+      "Used by educators worldwide",
+      "Detects multiple AI models",
+      "API available"
+    ],
+    "cons": [
+      "False positives on non-native English",
+      "Limited free tier",
+      "Arms race with AI generators"
+    ],
+    "trustScore": 72,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "originality-ai",
+    "name": "Originality.ai",
+    "category": "ai-security",
+    "developer": "Originality.ai",
+    "url": "https://originality.ai",
+    "description": "AI and plagiarism detector for content publishers. Batch scanning, API available.",
+    "pricingCAD": {
+      "freeTier": false,
+      "freeTierDetails": "",
+      "paidPlans": [
+        {
+          "name": "Pay-per-use",
+          "priceCAD": 0.01,
+          "period": "month",
+          "details": "~$0.01 per 100 words scanned"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 101,
+      "inCategory": 2,
+      "trend": "stable"
+    },
+    "pros": [
+      "Combined AI + plagiarism detection",
+      "Batch scanning",
+      "API for integration",
+      "Good for publishers"
+    ],
+    "cons": [
+      "No free tier",
+      "Pay-per-use can add up",
+      "Accuracy varies by content type"
+    ],
+    "trustScore": 68,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "nightfall-ai",
+    "name": "Nightfall AI",
+    "category": "ai-security",
+    "developer": "Nightfall",
+    "url": "https://nightfall.ai",
+    "description": "DLP platform that detects sensitive data in AI interactions. Enterprise security for AI usage.",
+    "pricingCAD": {
+      "freeTier": false,
+      "freeTierDetails": "",
+      "paidPlans": [
+        {
+          "name": "Enterprise",
+          "priceCAD": 0,
+          "period": "month",
+          "details": "Custom enterprise pricing"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 102,
+      "inCategory": 3,
+      "trend": "rising"
+    },
+    "pros": [
+      "Enterprise-grade DLP",
+      "Protects sensitive data in AI",
+      "Multiple integration points",
+      "Compliance-friendly"
+    ],
+    "cons": [
+      "Enterprise pricing only",
+      "Complex setup",
+      "Overkill for individuals"
+    ],
+    "trustScore": 75,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "rebuff-ai",
+    "name": "Rebuff AI",
+    "category": "ai-security",
+    "developer": "Rebuff",
+    "url": "https://rebuff.ai",
+    "description": "Prompt injection detection. Protects LLM applications from adversarial attacks.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Open source",
+      "paidPlans": []
+    },
+    "ranking": {
+      "overall": 103,
+      "inCategory": 4,
+      "trend": "rising"
+    },
+    "pros": [
+      "Prompt injection detection",
+      "Open source",
+      "Easy to integrate",
+      "Growing importance"
+    ],
+    "cons": [
+      "Early stage product",
+      "Limited detection scope",
+      "Rapidly evolving threat landscape"
+    ],
+    "trustScore": 58,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "guardrails-ai",
+    "name": "Guardrails AI",
+    "category": "ai-security",
+    "developer": "Guardrails",
+    "url": "https://guardrailsai.com",
+    "description": "Add guardrails to LLM outputs. Validates structure, detects toxicity, enforces schemas.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Open source framework",
+      "paidPlans": [
+        {
+          "name": "Cloud",
+          "priceCAD": 0,
+          "period": "month",
+          "details": "Cloud plans with custom pricing"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 104,
+      "inCategory": 5,
+      "trend": "rising"
+    },
+    "pros": [
+      "Output validation and guardrails",
+      "Schema enforcement",
+      "Toxicity detection",
+      "Open source core"
+    ],
+    "cons": [
+      "Adds latency to responses",
+      "Configuration complexity",
+      "Cloud pricing unclear"
+    ],
+    "trustScore": 70,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "lakera-guard",
+    "name": "Lakera Guard",
+    "category": "ai-security",
+    "developer": "Lakera",
+    "url": "https://lakera.ai",
+    "description": "Real-time AI security. Detects prompt injections, data leakage, toxic content.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Free tier available",
+      "paidPlans": [
+        {
+          "name": "Enterprise",
+          "priceCAD": 0,
+          "period": "month",
+          "details": "Custom enterprise pricing"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 105,
+      "inCategory": 6,
+      "trend": "rising"
+    },
+    "pros": [
+      "Real-time protection",
+      "Prompt injection detection",
+      "Data leakage prevention",
+      "Free tier to start"
+    ],
+    "cons": [
+      "Enterprise pricing opaque",
+      "Newer company",
+      "Limited track record"
+    ],
+    "trustScore": 72,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "whisper",
+    "name": "Whisper",
+    "category": "speech-voice",
+    "developer": "OpenAI",
+    "url": "https://github.com/openai/whisper",
+    "description": "Open-source speech recognition. State-of-the-art accuracy. Runs locally or via API.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Open source, free locally",
+      "paidPlans": [
+        {
+          "name": "API",
+          "priceCAD": 0.006,
+          "period": "month",
+          "details": "$0.006 per minute via OpenAI API"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 106,
+      "inCategory": 1,
+      "trend": "stable"
+    },
+    "pros": [
+      "State-of-the-art accuracy",
+      "Runs locally for free",
+      "Multi-language support",
+      "OpenAI backed"
+    ],
+    "cons": [
+      "Local version needs GPU for speed",
+      "API costs for heavy use",
+      "No real-time streaming in base model"
+    ],
+    "trustScore": 85,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "assemblyai",
+    "name": "AssemblyAI",
+    "category": "speech-voice",
+    "developer": "AssemblyAI",
+    "url": "https://www.assemblyai.com",
+    "description": "Speech-to-text API with speaker diarization, sentiment analysis, topic detection.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "100 hours free",
+      "paidPlans": [
+        {
+          "name": "Pro",
+          "priceCAD": 0.5,
+          "period": "month",
+          "details": "$0.50/hour for transcription"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 107,
+      "inCategory": 2,
+      "trend": "rising"
+    },
+    "pros": [
+      "Speaker diarization",
+      "Sentiment analysis built in",
+      "Generous free tier (100hrs)",
+      "Great API docs"
+    ],
+    "cons": [
+      "API-only, no desktop app",
+      "Costs scale with usage",
+      "English-focused"
+    ],
+    "trustScore": 78,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "deepgram",
+    "name": "Deepgram",
+    "category": "speech-voice",
+    "developer": "Deepgram",
+    "url": "https://deepgram.com",
+    "description": "Fast, accurate speech recognition API. Real-time and batch. Great developer experience.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "$200 free credit to start",
+      "paidPlans": [
+        {
+          "name": "Pay-per-use",
+          "priceCAD": 0,
+          "period": "month",
+          "details": "Pay-per-use after credits"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 108,
+      "inCategory": 3,
+      "trend": "rising"
+    },
+    "pros": [
+      "Very fast transcription",
+      "$200 free credit",
+      "Real-time streaming",
+      "Great developer experience"
+    ],
+    "cons": [
+      "Credits run out fast at scale",
+      "Less known than Whisper",
+      "Pricing can be confusing"
+    ],
+    "trustScore": 76,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "play-ht",
+    "name": "PlayHT",
+    "category": "speech-voice",
+    "developer": "PlayHT",
+    "url": "https://play.ht",
+    "description": "AI voice generator and text-to-speech. Ultra-realistic voices. Voice cloning in seconds.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Limited free generations",
+      "paidPlans": [
+        {
+          "name": "Pro",
+          "priceCAD": 44,
+          "period": "month",
+          "details": "Unlimited voice generation, voice cloning"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 109,
+      "inCategory": 4,
+      "trend": "rising"
+    },
+    "pros": [
+      "Ultra-realistic voices",
+      "Quick voice cloning",
+      "Multiple languages",
+      "API available"
+    ],
+    "cons": [
+      "Pro plan expensive",
+      "Voice cloning ethical concerns",
+      "Free tier very limited"
+    ],
+    "trustScore": 68,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "resemble-ai",
+    "name": "Resemble AI",
+    "category": "speech-voice",
+    "developer": "Resemble AI",
+    "url": "https://www.resemble.ai",
+    "description": "AI voice generator with real-time voice cloning. Deepfake detection built in.",
+    "pricingCAD": {
+      "freeTier": false,
+      "freeTierDetails": "",
+      "paidPlans": [
+        {
+          "name": "Pay-per-use",
+          "priceCAD": 0.006,
+          "period": "month",
+          "details": "~$0.006 per second of audio"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 110,
+      "inCategory": 5,
+      "trend": "stable"
+    },
+    "pros": [
+      "Real-time voice cloning",
+      "Built-in deepfake detection",
+      "High quality output",
+      "Enterprise features"
+    ],
+    "cons": [
+      "No free tier",
+      "Custom pricing is opaque",
+      "Smaller community"
+    ],
+    "trustScore": 65,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "speechify",
+    "name": "Speechify",
+    "category": "speech-voice",
+    "developer": "Speechify",
+    "url": "https://speechify.com",
+    "description": "Text-to-speech for reading. Chrome extension, mobile apps. Natural-sounding voices.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Basic voices and features",
+      "paidPlans": [
+        {
+          "name": "Premium",
+          "priceCAD": 170,
+          "period": "year",
+          "details": "All voices, unlimited listening, OCR"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 111,
+      "inCategory": 6,
+      "trend": "stable"
+    },
+    "pros": [
+      "Great Chrome extension",
+      "Mobile apps available",
+      "Natural-sounding voices",
+      "OCR for images"
+    ],
+    "cons": [
+      "Premium is annual only ($170 CAD/yr)",
+      "Free voices are basic",
+      "Limited customization"
+    ],
+    "trustScore": 72,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "otter-ai",
+    "name": "Otter.ai",
+    "category": "speech-voice",
+    "developer": "Otter.ai",
+    "url": "https://otter.ai",
+    "description": "AI meeting transcription and notes. Real-time, integrates with Zoom/Teams/Meet.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "300 minutes/month free",
+      "paidPlans": [
+        {
+          "name": "Pro",
+          "priceCAD": 13,
+          "period": "month",
+          "details": "Unlimited transcription, advanced features"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 112,
+      "inCategory": 7,
+      "trend": "stable"
+    },
+    "pros": [
+      "Real-time meeting transcription",
+      "Zoom/Teams/Meet integration",
+      "300 min/mo free",
+      "AI meeting summaries"
+    ],
+    "cons": [
+      "English-only for best results",
+      "Free tier limited",
+      "Accuracy varies with audio quality"
+    ],
+    "trustScore": 74,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "descript",
+    "name": "Descript",
+    "category": "speech-voice",
+    "developer": "Descript",
+    "url": "https://descript.com",
+    "description": "All-in-one audio/video editor with AI transcription, voice cloning, screen recording.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "1 hour transcription, basic editing",
+      "paidPlans": [
+        {
+          "name": "Pro",
+          "priceCAD": 33,
+          "period": "month",
+          "details": "Unlimited transcription, all features"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 113,
+      "inCategory": 8,
+      "trend": "rising"
+    },
+    "pros": [
+      "All-in-one audio/video editing",
+      "Edit audio by editing text",
+      "Voice cloning",
+      "Screen recording"
+    ],
+    "cons": [
+      "Pro needed for serious use",
+      "Learning curve",
+      "Heavy application"
+    ],
+    "trustScore": 76,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "julius-ai",
+    "name": "Julius AI",
+    "category": "data-analysis",
+    "developer": "Julius",
+    "url": "https://julius.ai",
+    "description": "AI data analyst. Upload spreadsheets, get instant analysis, charts, and insights.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Limited free analysis",
+      "paidPlans": [
+        {
+          "name": "Pro",
+          "priceCAD": 29,
+          "period": "month",
+          "details": "Unlimited analysis, all chart types"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 114,
+      "inCategory": 4,
+      "trend": "rising"
+    },
+    "pros": [
+      "Upload and analyze spreadsheets instantly",
+      "Beautiful chart generation",
+      "Natural language queries",
+      "No coding required"
+    ],
+    "cons": [
+      "Limited free tier",
+      "Pro needed for real use",
+      "Data privacy concerns"
+    ],
+    "trustScore": 62,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "obviously-ai",
+    "name": "Obviously AI",
+    "category": "data-analysis",
+    "developer": "Obviously AI",
+    "url": "https://www.obviously.ai",
+    "description": "No-code ML predictions. Upload CSV, get predictive models in minutes.",
+    "pricingCAD": {
+      "freeTier": false,
+      "freeTierDetails": "",
+      "paidPlans": [
+        {
+          "name": "Starter",
+          "priceCAD": 100,
+          "period": "month",
+          "details": "Predictive models, basic features"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 115,
+      "inCategory": 5,
+      "trend": "stable"
+    },
+    "pros": [
+      "No-code ML predictions",
+      "Fast model creation",
+      "Good for business users",
+      "CSV upload and go"
+    ],
+    "cons": [
+      "Expensive starter plan ($100 CAD/mo)",
+      "No free tier",
+      "Limited model customization"
+    ],
+    "trustScore": 60,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "hex-ai",
+    "name": "Hex",
+    "category": "data-analysis",
+    "developer": "Hex Technologies",
+    "url": "https://hex.tech",
+    "description": "Collaborative data workspace with AI. SQL + Python + AI in one tool.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Free for individuals",
+      "paidPlans": [
+        {
+          "name": "Team",
+          "priceCAD": 29,
+          "period": "month",
+          "details": "Per user, collaboration features"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 116,
+      "inCategory": 6,
+      "trend": "rising"
+    },
+    "pros": [
+      "SQL + Python + AI combined",
+      "Collaborative workspace",
+      "Great for data teams",
+      "Free individual tier"
+    ],
+    "cons": [
+      "Learning curve for non-technical users",
+      "Team pricing adds up",
+      "Requires SQL/Python knowledge"
+    ],
+    "trustScore": 72,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "tableau-ai",
+    "name": "Tableau AI",
+    "category": "data-analysis",
+    "developer": "Salesforce",
+    "url": "https://www.tableau.com",
+    "description": "AI-powered analytics with natural language queries. Enterprise-grade visualization.",
+    "pricingCAD": {
+      "freeTier": false,
+      "freeTierDetails": "",
+      "paidPlans": [
+        {
+          "name": "Creator",
+          "priceCAD": 100,
+          "period": "month",
+          "details": "Per user, full analytics suite"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 117,
+      "inCategory": 7,
+      "trend": "stable"
+    },
+    "pros": [
+      "Enterprise-grade visualization",
+      "Natural language queries",
+      "Salesforce integration",
+      "Industry standard"
+    ],
+    "cons": [
+      "Very expensive",
+      "No free tier",
+      "Steep learning curve",
+      "Enterprise-focused"
+    ],
+    "trustScore": 82,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "semantic-scholar",
+    "name": "Semantic Scholar",
+    "category": "data-analysis",
+    "developer": "Allen Institute for AI",
+    "url": "https://www.semanticscholar.org",
+    "description": "AI-powered academic search engine. 200M+ papers. Citation analysis and paper recommendations.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Completely free",
+      "paidPlans": []
+    },
+    "ranking": {
+      "overall": 118,
+      "inCategory": 8,
+      "trend": "stable"
+    },
+    "pros": [
+      "200M+ papers indexed",
+      "Completely free",
+      "AI-powered recommendations",
+      "Citation analysis"
+    ],
+    "cons": [
+      "Academic focus only",
+      "Can miss recent preprints",
+      "No full-text for all papers"
+    ],
+    "trustScore": 85,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "connected-papers",
+    "name": "Connected Papers",
+    "category": "data-analysis",
+    "developer": "Connected Papers",
+    "url": "https://www.connectedpapers.com",
+    "description": "Visual tool for exploring academic paper connections. Find related work quickly.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "5 graphs per month free",
+      "paidPlans": [
+        {
+          "name": "Premium",
+          "priceCAD": 4,
+          "period": "month",
+          "details": "Unlimited graphs, advanced features"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 119,
+      "inCategory": 9,
+      "trend": "stable"
+    },
+    "pros": [
+      "Visual paper connection maps",
+      "Great for literature reviews",
+      "Very affordable premium",
+      "Easy to use"
+    ],
+    "cons": [
+      "Limited free tier (5 graphs/mo)",
+      "Academic papers only",
+      "Can miss newer papers"
+    ],
+    "trustScore": 72,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "scispace",
+    "name": "SciSpace",
+    "category": "data-analysis",
+    "developer": "SciSpace",
+    "url": "https://scispace.com",
+    "description": "AI research assistant. Read, understand, and write research papers with AI help.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Basic features free",
+      "paidPlans": [
+        {
+          "name": "Premium",
+          "priceCAD": 14,
+          "period": "month",
+          "details": "Unlimited AI explanations, advanced features"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 120,
+      "inCategory": 10,
+      "trend": "rising"
+    },
+    "pros": [
+      "AI paper explanations",
+      "Research writing assistance",
+      "Literature review tools",
+      "Affordable premium"
+    ],
+    "cons": [
+      "Academic niche",
+      "AI explanations can oversimplify",
+      "Limited for non-research use"
+    ],
+    "trustScore": 65,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "phind",
+    "name": "Phind",
+    "category": "text-chat",
+    "developer": "Phind",
+    "url": "https://phind.com",
+    "description": "AI search engine for developers. Code-focused answers with sources. Fast and accurate.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Generous free tier",
+      "paidPlans": [
+        {
+          "name": "Pro",
+          "priceCAD": 29,
+          "period": "month",
+          "details": "Unlimited searches, GPT-4 level model"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 121,
+      "inCategory": 11,
+      "trend": "rising"
+    },
+    "pros": [
+      "Developer-focused answers",
+      "Source citations",
+      "Fast response times",
+      "Great for coding questions"
+    ],
+    "cons": [
+      "Code-focused, less versatile",
+      "Pro needed for best model",
+      "Smaller community than Perplexity"
+    ],
+    "trustScore": 68,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "mistral-chat",
+    "name": "Mistral Le Chat",
+    "category": "text-chat",
+    "developer": "Mistral AI",
+    "url": "https://chat.mistral.ai",
+    "description": "Chat interface for Mistral models. European AI leader. Strong multilingual support.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Free chat access",
+      "paidPlans": [
+        {
+          "name": "API",
+          "priceCAD": 0,
+          "period": "month",
+          "details": "Pay-per-use API pricing"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 122,
+      "inCategory": 12,
+      "trend": "rising"
+    },
+    "pros": [
+      "European AI leader",
+      "Strong multilingual support",
+      "Free chat access",
+      "Competitive model quality"
+    ],
+    "cons": [
+      "Smaller ecosystem",
+      "Less known outside tech circles",
+      "API pricing can be confusing"
+    ],
+    "trustScore": 75,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "pi-ai",
+    "name": "Pi",
+    "category": "text-chat",
+    "developer": "Inflection AI",
+    "url": "https://pi.ai",
+    "description": "Personal AI with emotional intelligence. Conversational, empathetic, designed for extended dialogue.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Completely free",
+      "paidPlans": []
+    },
+    "ranking": {
+      "overall": 123,
+      "inCategory": 13,
+      "trend": "stable"
+    },
+    "pros": [
+      "Emotionally intelligent",
+      "Great conversational style",
+      "Completely free",
+      "Good for personal support"
+    ],
+    "cons": [
+      "Less capable for technical tasks",
+      "No code generation",
+      "Limited tool integrations"
+    ],
+    "trustScore": 62,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "playground-ai",
+    "name": "Playground",
+    "category": "image-generation",
+    "developer": "Playground AI",
+    "url": "https://playground.com",
+    "description": "AI image generation and editing. Mixed Image mode combines real and generated elements.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "500 images/day free",
+      "paidPlans": [
+        {
+          "name": "Pro",
+          "priceCAD": 22,
+          "period": "month",
+          "details": "Higher quality, commercial use"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 124,
+      "inCategory": 7,
+      "trend": "stable"
+    },
+    "pros": [
+      "Generous free tier (500 imgs/day)",
+      "Mixed Image mode",
+      "Good editing tools",
+      "Commercial license on Pro"
+    ],
+    "cons": [
+      "Quality below Midjourney",
+      "UI can be cluttered",
+      "Less community than competitors"
+    ],
+    "trustScore": 65,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "krea-ai",
+    "name": "KREA AI",
+    "category": "image-generation",
+    "developer": "KREA",
+    "url": "https://krea.ai",
+    "description": "Real-time AI image generation. Canvas-based editing. Watch images form as you type.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Limited free generations",
+      "paidPlans": [
+        {
+          "name": "Pro",
+          "priceCAD": 36,
+          "period": "month",
+          "details": "Unlimited generations, all features"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 125,
+      "inCategory": 8,
+      "trend": "rising"
+    },
+    "pros": [
+      "Real-time generation",
+      "Canvas-based editing",
+      "Unique interactive experience",
+      "Good for iteration"
+    ],
+    "cons": [
+      "Limited free tier",
+      "Pro expensive for casual use",
+      "Newer platform"
+    ],
+    "trustScore": 60,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "magnific",
+    "name": "Magnific AI",
+    "category": "image-generation",
+    "developer": "Magnific",
+    "url": "https://magnific.ai",
+    "description": "AI image upscaler and enhancer. Adds realistic detail when upscaling. Photography-grade results.",
+    "pricingCAD": {
+      "freeTier": false,
+      "freeTierDetails": "",
+      "paidPlans": [
+        {
+          "name": "Pro",
+          "priceCAD": 56,
+          "period": "month",
+          "details": "Image upscaling and enhancement"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 126,
+      "inCategory": 9,
+      "trend": "rising"
+    },
+    "pros": [
+      "Best-in-class upscaling",
+      "Adds realistic detail",
+      "Photography-grade results",
+      "Unique capability"
+    ],
+    "cons": [
+      "No free tier",
+      "Expensive ($56 CAD/mo)",
+      "Single-purpose tool"
+    ],
+    "trustScore": 62,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "minimax-video",
+    "name": "MiniMax Video",
+    "category": "video-generation",
+    "developer": "MiniMax",
+    "url": "https://minimaxi.com",
+    "description": "High-quality video generation. Strong character consistency. Chinese AI competitor.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Limited free credits",
+      "paidPlans": [
+        {
+          "name": "Pay-per-use",
+          "priceCAD": 0,
+          "period": "month",
+          "details": "Token-based pay-per-use"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 127,
+      "inCategory": 8,
+      "trend": "rising"
+    },
+    "pros": [
+      "Strong character consistency",
+      "High quality output",
+      "Competitive pricing",
+      "Improving rapidly"
+    ],
+    "cons": [
+      "Chinese company, data concerns",
+      "Less documentation in English",
+      "Smaller community outside Asia"
+    ],
+    "trustScore": 58,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "luma-ai",
+    "name": "Luma Dream Machine",
+    "category": "video-generation",
+    "developer": "Luma AI",
+    "url": "https://lumalabs.ai",
+    "description": "Video generation and 3D capture. Strong at realistic motion and physics.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Limited free generations",
+      "paidPlans": [
+        {
+          "name": "Pro",
+          "priceCAD": 36,
+          "period": "month",
+          "details": "More generations, higher quality"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 128,
+      "inCategory": 9,
+      "trend": "rising"
+    },
+    "pros": [
+      "Realistic motion and physics",
+      "3D capture capability",
+      "Good free tier",
+      "Improving rapidly"
+    ],
+    "cons": [
+      "Short clip lengths",
+      "Consistency issues",
+      "Pro needed for serious use"
+    ],
+    "trustScore": 65,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "haiper",
+    "name": "Haiper",
+    "category": "video-generation",
+    "developer": "Haiper AI",
+    "url": "https://haiper.ai",
+    "description": "Fast video generation with creative controls. Founded by ex-Google DeepMind researchers.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Free tier available",
+      "paidPlans": []
+    },
+    "ranking": {
+      "overall": 129,
+      "inCategory": 10,
+      "trend": "rising"
+    },
+    "pros": [
+      "Founded by DeepMind researchers",
+      "Fast generation",
+      "Creative controls",
+      "Free to try"
+    ],
+    "cons": [
+      "Early stage product",
+      "Limited output length",
+      "Less known than competitors"
+    ],
+    "trustScore": 58,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "mubert",
+    "name": "Mubert",
+    "category": "audio-music",
+    "developer": "Mubert",
+    "url": "https://mubert.com",
+    "description": "AI music generation via API and app. Royalty-free tracks for content creators.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Limited free generations",
+      "paidPlans": [
+        {
+          "name": "Pro",
+          "priceCAD": 14,
+          "period": "month",
+          "details": "Unlimited generation, commercial use"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 130,
+      "inCategory": 4,
+      "trend": "stable"
+    },
+    "pros": [
+      "Royalty-free output",
+      "API available",
+      "Good for background music",
+      "Affordable Pro plan"
+    ],
+    "cons": [
+      "Less creative control than Suno",
+      "Can sound generic",
+      "Limited genre range"
+    ],
+    "trustScore": 60,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "aiva",
+    "name": "AIVA",
+    "category": "audio-music",
+    "developer": "AIVA Technologies",
+    "url": "https://aiva.ai",
+    "description": "AI music composition. Classical, cinematic, and game music. Copyright-free for Pro users.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "3 downloads/month free",
+      "paidPlans": [
+        {
+          "name": "Pro",
+          "priceCAD": 16,
+          "period": "month",
+          "details": "Copyright-free, unlimited downloads"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 131,
+      "inCategory": 5,
+      "trend": "stable"
+    },
+    "pros": [
+      "Excellent for classical/cinematic music",
+      "Copyright-free on Pro",
+      "Good composition tools",
+      "Affordable"
+    ],
+    "cons": [
+      "Limited free tier (3 downloads/mo)",
+      "Best for orchestral/cinematic genres",
+      "Less versatile than Suno"
+    ],
+    "trustScore": 65,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "soundraw",
+    "name": "Soundraw",
+    "category": "audio-music",
+    "developer": "Soundraw",
+    "url": "https://soundraw.io",
+    "description": "AI music generator for creators. Customize length, tempo, instruments. Royalty-free.",
+    "pricingCAD": {
+      "freeTier": false,
+      "freeTierDetails": "",
+      "paidPlans": [
+        {
+          "name": "Creator",
+          "priceCAD": 24,
+          "period": "month",
+          "details": "Unlimited creation, royalty-free"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 132,
+      "inCategory": 6,
+      "trend": "stable"
+    },
+    "pros": [
+      "Fine-grained customization",
+      "Royalty-free output",
+      "Good for content creators",
+      "Length/tempo controls"
+    ],
+    "cons": [
+      "No free tier",
+      "Can sound formulaic",
+      "Limited to certain styles"
+    ],
+    "trustScore": 62,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "voicemod",
+    "name": "Voicemod",
+    "category": "audio-music",
+    "developer": "Voicemod",
+    "url": "https://www.voicemod.net",
+    "description": "Real-time AI voice changer. Gaming, streaming, content creation. Fun voice effects.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Basic voice effects free",
+      "paidPlans": [
+        {
+          "name": "Pro",
+          "priceCAD": 54,
+          "period": "year",
+          "details": "All voice effects, soundboard"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 133,
+      "inCategory": 7,
+      "trend": "stable"
+    },
+    "pros": [
+      "Real-time voice changing",
+      "Great for gaming/streaming",
+      "Fun voice effects",
+      "Affordable annual plan"
+    ],
+    "cons": [
+      "Windows-only for full features",
+      "Some voices sound artificial",
+      "Gaming-focused"
+    ],
+    "trustScore": 60,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "codeium",
+    "name": "Codeium/Windsurf",
+    "category": "coding-assistants",
+    "developer": "Codeium",
+    "url": "https://codeium.com",
+    "description": "Free AI code completion. VS Code, JetBrains, Vim. Now also powers Windsurf IDE.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Free for individuals",
+      "paidPlans": [
+        {
+          "name": "Teams",
+          "priceCAD": 17,
+          "period": "month",
+          "details": "Per user, team features, admin controls"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 134,
+      "inCategory": 9,
+      "trend": "rising"
+    },
+    "pros": [
+      "Free for individuals",
+      "Wide IDE support",
+      "Powers Windsurf IDE",
+      "Fast completions"
+    ],
+    "cons": [
+      "Less accurate than Copilot",
+      "Teams pricing",
+      "Brand confusion with Windsurf"
+    ],
+    "trustScore": 70,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "aider",
+    "name": "Aider",
+    "category": "coding-assistants",
+    "developer": "Paul Gauthier",
+    "url": "https://aider.chat",
+    "description": "AI pair programming in your terminal. Works with any LLM. Git-aware edits.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Open source, bring your own API key",
+      "paidPlans": []
+    },
+    "ranking": {
+      "overall": 135,
+      "inCategory": 10,
+      "trend": "rising"
+    },
+    "pros": [
+      "Git-aware edits",
+      "Works with any LLM",
+      "Terminal-based workflow",
+      "Open source"
+    ],
+    "cons": [
+      "Requires own API key",
+      "Terminal only, no GUI",
+      "Learning curve for non-devs"
+    ],
+    "trustScore": 72,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "continue-dev",
+    "name": "Continue",
+    "category": "coding-assistants",
+    "developer": "Continue",
+    "url": "https://continue.dev",
+    "description": "Open-source AI code assistant. VS Code and JetBrains. Bring your own model.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Fully open source",
+      "paidPlans": []
+    },
+    "ranking": {
+      "overall": 136,
+      "inCategory": 11,
+      "trend": "rising"
+    },
+    "pros": [
+      "Open source",
+      "Bring your own model",
+      "VS Code and JetBrains",
+      "Privacy-friendly"
+    ],
+    "cons": [
+      "Requires model setup",
+      "Less polished than Copilot",
+      "Smaller community"
+    ],
+    "trustScore": 70,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "sourcegraph-cody",
+    "name": "Cody (Sourcegraph)",
+    "category": "coding-assistants",
+    "developer": "Sourcegraph",
+    "url": "https://sourcegraph.com/cody",
+    "description": "AI coding assistant with full codebase context. Enterprise-grade. Code search.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Free tier available",
+      "paidPlans": [
+        {
+          "name": "Pro",
+          "priceCAD": 13,
+          "period": "month",
+          "details": "More usage, advanced features"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 137,
+      "inCategory": 12,
+      "trend": "rising"
+    },
+    "pros": [
+      "Full codebase context",
+      "Enterprise-grade",
+      "Powerful code search",
+      "Affordable Pro tier"
+    ],
+    "cons": [
+      "Less known than Copilot",
+      "Requires Sourcegraph setup for full power",
+      "Newer product"
+    ],
+    "trustScore": 75,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "napkin-ai",
+    "name": "Napkin AI",
+    "category": "productivity",
+    "developer": "Napkin",
+    "url": "https://napkin.ai",
+    "description": "Converts text into visual diagrams and presentations. Bridge between text AI and design tools.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Free beta",
+      "paidPlans": []
+    },
+    "ranking": {
+      "overall": 138,
+      "inCategory": 14,
+      "trend": "rising"
+    },
+    "pros": [
+      "Text to visual diagrams",
+      "Free during beta",
+      "Bridges text and design",
+      "Unique capability"
+    ],
+    "cons": [
+      "Beta product",
+      "Limited diagram types",
+      "May not stay free"
+    ],
+    "trustScore": 55,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "gamma-ai",
+    "name": "Gamma",
+    "category": "productivity",
+    "developer": "Gamma Tech",
+    "url": "https://gamma.app",
+    "description": "AI presentation and document maker. Beautiful slides from text prompts.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Limited free credits",
+      "paidPlans": [
+        {
+          "name": "Plus",
+          "priceCAD": 12,
+          "period": "month",
+          "details": "Unlimited AI, remove branding"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 139,
+      "inCategory": 15,
+      "trend": "rising"
+    },
+    "pros": [
+      "Beautiful AI presentations",
+      "Very affordable",
+      "No design skills needed",
+      "Fast creation"
+    ],
+    "cons": [
+      "Limited free credits",
+      "Templates can feel similar",
+      "Less customizable than PowerPoint"
+    ],
+    "trustScore": 62,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "mem-ai",
+    "name": "Mem",
+    "category": "productivity",
+    "developer": "Mem Labs",
+    "url": "https://mem.ai",
+    "description": "AI-powered knowledge base. Auto-organizes notes. Finds connections between ideas.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Basic features free",
+      "paidPlans": [
+        {
+          "name": "Teams",
+          "priceCAD": 14,
+          "period": "month",
+          "details": "Team collaboration, advanced AI"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 140,
+      "inCategory": 16,
+      "trend": "stable"
+    },
+    "pros": [
+      "Auto-organizes notes",
+      "AI finds connections",
+      "Clean interface",
+      "Good for knowledge management"
+    ],
+    "cons": [
+      "Smaller community than Notion",
+      "Limited integrations",
+      "AI organization not always accurate"
+    ],
+    "trustScore": 58,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "taskade",
+    "name": "Taskade",
+    "category": "productivity",
+    "developer": "Taskade",
+    "url": "https://taskade.com",
+    "description": "AI-powered productivity. Task management, notes, mind maps, AI agents.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Basic features free",
+      "paidPlans": [
+        {
+          "name": "Pro",
+          "priceCAD": 14,
+          "period": "month",
+          "details": "Unlimited AI, all features"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 141,
+      "inCategory": 17,
+      "trend": "stable"
+    },
+    "pros": [
+      "All-in-one productivity",
+      "AI agents built in",
+      "Mind maps and tasks",
+      "Affordable"
+    ],
+    "cons": [
+      "Jack of all trades",
+      "Less specialized than competitors",
+      "Can feel overwhelming"
+    ],
+    "trustScore": 60,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "beautiful-ai",
+    "name": "Beautiful.ai",
+    "category": "productivity",
+    "developer": "Beautiful.ai",
+    "url": "https://www.beautiful.ai",
+    "description": "AI presentation maker. Smart templates, auto-formatting. No design skills needed.",
+    "pricingCAD": {
+      "freeTier": false,
+      "freeTierDetails": "",
+      "paidPlans": [
+        {
+          "name": "Pro",
+          "priceCAD": 17,
+          "period": "month",
+          "details": "Unlimited presentations, export options"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 142,
+      "inCategory": 18,
+      "trend": "stable"
+    },
+    "pros": [
+      "Smart auto-formatting",
+      "Professional templates",
+      "Easy to use",
+      "Good for non-designers"
+    ],
+    "cons": [
+      "No free tier",
+      "Less AI-driven than Gamma",
+      "Limited customization"
+    ],
+    "trustScore": 62,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "activepieces",
+    "name": "Activepieces",
+    "category": "workflow-automation",
+    "developer": "Activepieces",
+    "url": "https://www.activepieces.com",
+    "description": "MIT-licensed automation platform. n8n alternative with lower vendor risk.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Free self-hosted",
+      "paidPlans": [
+        {
+          "name": "Cloud",
+          "priceCAD": 7,
+          "period": "month",
+          "details": "Hosted platform, basic features"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 143,
+      "inCategory": 4,
+      "trend": "rising"
+    },
+    "pros": [
+      "MIT licensed (true open source)",
+      "n8n alternative",
+      "Low cost cloud option",
+      "Self-hostable"
+    ],
+    "cons": [
+      "Smaller community than n8n",
+      "Fewer integrations",
+      "Less mature"
+    ],
+    "trustScore": 68,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "pipedream",
+    "name": "Pipedream",
+    "category": "workflow-automation",
+    "developer": "Pipedream",
+    "url": "https://pipedream.com",
+    "description": "Developer-first automation. Code + low-code. 2000+ integrations. Generous free tier.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Free daily invocations",
+      "paidPlans": [
+        {
+          "name": "Pro",
+          "priceCAD": 29,
+          "period": "month",
+          "details": "Higher limits, premium support"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 144,
+      "inCategory": 5,
+      "trend": "stable"
+    },
+    "pros": [
+      "Developer-first approach",
+      "2000+ integrations",
+      "Code + low-code",
+      "Generous free tier"
+    ],
+    "cons": [
+      "Requires coding knowledge for best use",
+      "Daily invocation limits on free",
+      "Less visual than Zapier"
+    ],
+    "trustScore": 72,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "litellm",
+    "name": "LiteLLM",
+    "category": "workflow-automation",
+    "developer": "BerriAI",
+    "url": "https://github.com/BerriAI/litellm",
+    "description": "Multi-AI gateway. One API for 100+ models. Zero markup. CAUTION: Supply chain attack March 2026.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Open source",
+      "paidPlans": []
+    },
+    "ranking": {
+      "overall": 145,
+      "inCategory": 6,
+      "trend": "declining"
+    },
+    "pros": [
+      "One API for 100+ models",
+      "Zero markup on model costs",
+      "Open source",
+      "Great for multi-model apps"
+    ],
+    "cons": [
+      "SUPPLY CHAIN ATTACK in March 2026",
+      "Security risk until audited",
+      "Requires self-hosting for safety",
+      "Trust damaged by attack"
+    ],
+    "trustScore": 45,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "routellm",
+    "name": "RouteLLM",
+    "category": "workflow-automation",
+    "developer": "LMSYS",
+    "url": "https://github.com/lm-sys/RouteLLM",
+    "description": "Smart model routing for cost optimization. 85% cost reduction by routing to appropriate model.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Open source",
+      "paidPlans": []
+    },
+    "ranking": {
+      "overall": 146,
+      "inCategory": 7,
+      "trend": "rising"
+    },
+    "pros": [
+      "85% cost reduction possible",
+      "Smart model routing",
+      "Open source",
+      "LMSYS backing"
+    ],
+    "cons": [
+      "Requires setup and tuning",
+      "Routing decisions not always optimal",
+      "Research-grade tool"
+    ],
+    "trustScore": 70,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "dify-ai",
+    "name": "Dify",
+    "category": "workflow-automation",
+    "developer": "Dify AI",
+    "url": "https://dify.ai",
+    "description": "Open-source LLM app development platform. Visual workflow builder. RAG pipeline. Agent framework.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Free self-hosted",
+      "paidPlans": [
+        {
+          "name": "Cloud",
+          "priceCAD": 59,
+          "period": "month",
+          "details": "Hosted platform, team features"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 147,
+      "inCategory": 8,
+      "trend": "rising"
+    },
+    "pros": [
+      "Visual workflow builder",
+      "RAG pipeline built in",
+      "Self-hostable",
+      "Agent framework included"
+    ],
+    "cons": [
+      "Cloud plan expensive",
+      "Complex for beginners",
+      "Rapidly changing API"
+    ],
+    "trustScore": 68,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "isaac-sim",
+    "name": "NVIDIA Isaac Sim",
+    "category": "robotics-ai",
+    "developer": "NVIDIA",
+    "url": "https://developer.nvidia.com/isaac/sim",
+    "description": "Open-source robotics simulation on Omniverse. GPU-accelerated physics, synthetic data generation, RL training, ROS 2 integration, digital twins. The dominant sim-to-real platform in 2026.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Free and open-source (Apache 2.0)",
+      "paidPlans": []
+    },
+    "ranking": {
+      "overall": 148,
+      "inCategory": 1,
+      "trend": "rising"
+    },
+    "pros": [
+      "GPU-accelerated physics",
+      "Photorealistic rendering",
+      "Full ROS 2 integration",
+      "Massive ecosystem (Isaac Lab, GR00T)"
+    ],
+    "cons": [
+      "Requires NVIDIA GPU",
+      "Steep learning curve",
+      "Heavy system requirements"
+    ],
+    "trustScore": 88,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "isaac-lab",
+    "name": "NVIDIA Isaac Lab",
+    "category": "robotics-ai",
+    "developer": "NVIDIA",
+    "url": "https://github.com/isaac-sim/IsaacLab",
+    "description": "GPU-accelerated robot learning framework built on Isaac Sim. 16+ robot models, 30+ environments. Supports RL, imitation learning, motion planning with RSL RL, SKRL, Stable Baselines.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Free and open-source",
+      "paidPlans": []
+    },
+    "ranking": {
+      "overall": 149,
+      "inCategory": 2,
+      "trend": "rising"
+    },
+    "pros": [
+      "GPU-accelerated training",
+      "Many pre-built environments",
+      "Multiple RL framework support"
+    ],
+    "cons": [
+      "Requires Isaac Sim",
+      "NVIDIA GPU dependency"
+    ],
+    "trustScore": 86,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "mujoco",
+    "name": "MuJoCo",
+    "category": "robotics-ai",
+    "developer": "Google DeepMind",
+    "url": "https://mujoco.org/",
+    "description": "High-performance physics engine for robotics and RL research. Gold standard for contact-rich simulation. MuJoCo Warp (GPU) and MuJoCo Playground actively updated. Originally by Emo Todorov, now open-sourced by DeepMind.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Free and open-source (Apache 2.0)",
+      "paidPlans": []
+    },
+    "ranking": {
+      "overall": 150,
+      "inCategory": 3,
+      "trend": "rising"
+    },
+    "pros": [
+      "Best contact physics",
+      "GPU-accelerated (Warp)",
+      "Research gold standard",
+      "Lightweight"
+    ],
+    "cons": [
+      "Less photorealistic than Isaac Sim",
+      "Steeper API than PyBullet"
+    ],
+    "trustScore": 88,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "gazebo",
+    "name": "Gazebo (Harmonic)",
+    "category": "robotics-ai",
+    "developer": "Open Robotics",
+    "url": "https://gazebosim.org/",
+    "description": "ROS 2-native robot simulator for multi-robot setups, sensor simulation, and navigation stacks. The standard simulator in the ROS ecosystem. Uses SDF/URDF assets.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Free and open-source",
+      "paidPlans": []
+    },
+    "ranking": {
+      "overall": 151,
+      "inCategory": 4,
+      "trend": "stable"
+    },
+    "pros": [
+      "ROS 2 native",
+      "Multi-robot support",
+      "Large asset library",
+      "Mature ecosystem"
+    ],
+    "cons": [
+      "CPU-only physics",
+      "Less photorealistic",
+      "Slower than GPU alternatives"
+    ],
+    "trustScore": 82,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "groot-n1",
+    "name": "NVIDIA GR00T N1",
+    "category": "robotics-ai",
+    "developer": "NVIDIA",
+    "url": "https://developer.nvidia.com/isaac/gr00t",
+    "description": "World's first open humanoid robot foundation model. Dual-system architecture (fast reflexes + deliberate reasoning). Cross-embodiment manipulation. Adopted by 1X, Agility, Boston Dynamics, NEURA.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Free and open-source",
+      "paidPlans": []
+    },
+    "ranking": {
+      "overall": 152,
+      "inCategory": 5,
+      "trend": "rising"
+    },
+    "pros": [
+      "First open humanoid foundation model",
+      "Multi-embodiment",
+      "Strong industry adoption",
+      "Dual-system reasoning"
+    ],
+    "cons": [
+      "Requires NVIDIA hardware",
+      "Early stage",
+      "Complex integration"
+    ],
+    "trustScore": 85,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "lerobot",
+    "name": "LeRobot",
+    "category": "robotics-ai",
+    "developer": "Hugging Face",
+    "url": "https://github.com/huggingface/lerobot",
+    "description": "Open-source robot learning platform. 22.7K GitHub stars. Models, datasets (grew from 1,145 to 26,991 on HF Hub), and tools in PyTorch. v0.5 adds Unitree G1 support, Pi0-FAST VLA policies, Isaac Lab integration. Accepted at ICLR 2026.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Free and open-source",
+      "paidPlans": []
+    },
+    "ranking": {
+      "overall": 153,
+      "inCategory": 6,
+      "trend": "rising"
+    },
+    "pros": [
+      "Fastest-growing robotics community",
+      "Huge dataset hub",
+      "PyTorch native",
+      "Hardware integrations"
+    ],
+    "cons": [
+      "Rapidly changing API",
+      "Requires ML knowledge"
+    ],
+    "trustScore": 80,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "physical-intelligence-pi0",
+    "name": "Physical Intelligence pi0",
+    "category": "robotics-ai",
+    "developer": "Physical Intelligence",
+    "url": "https://www.pi.website/blog/pi0",
+    "description": "Flow-matching VLA model for general robot control. Built on PaliGemma (3B params). Demonstrated folding laundry, packing, cooking. Outperforms OpenVLA and Octo on benchmarks. Now open-sourced. $400M+ funded.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Free and open-source",
+      "paidPlans": []
+    },
+    "ranking": {
+      "overall": 154,
+      "inCategory": 7,
+      "trend": "rising"
+    },
+    "pros": [
+      "State-of-the-art manipulation",
+      "Open-sourced",
+      "Smooth action generation",
+      "General-purpose"
+    ],
+    "cons": [
+      "Compute-intensive",
+      "Research-stage for deployment"
+    ],
+    "trustScore": 72,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "open-x-embodiment",
+    "name": "Open X-Embodiment Dataset",
+    "category": "robotics-ai",
+    "developer": "Google DeepMind + 33 labs",
+    "url": "https://robotics-transformer-x.github.io/",
+    "description": "Largest open robotics dataset: 1M+ real robot trajectories spanning 22 robot embodiments from 34 labs. Foundation for training cross-embodiment models like RT-X and OpenVLA.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Free and open dataset",
+      "paidPlans": []
+    },
+    "ranking": {
+      "overall": 155,
+      "inCategory": 8,
+      "trend": "rising"
+    },
+    "pros": [
+      "Largest open robotics dataset",
+      "Cross-embodiment",
+      "Industry-academic collaboration"
+    ],
+    "cons": [
+      "Requires significant compute to use",
+      "Research-focused"
+    ],
+    "trustScore": 88,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "px4",
+    "name": "PX4 Autopilot",
+    "category": "robotics-ai",
+    "developer": "Dronecode / Linux Foundation",
+    "url": "https://px4.io/",
+    "description": "Open-source production-grade flight control. AI/vision integration, LLM-driven autonomy via ROS 2, RL policy embedding. Powers Amazon MK30 and Zipline Sparrow. v1.16 adds ROS 2/fastDDS bridging.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Free and open-source (BSD)",
+      "paidPlans": []
+    },
+    "ranking": {
+      "overall": 156,
+      "inCategory": 9,
+      "trend": "rising"
+    },
+    "pros": [
+      "Production-grade",
+      "Linux Foundation backed",
+      "AI/RL integration",
+      "Huge ecosystem"
+    ],
+    "cons": [
+      "Complex configuration",
+      "Hardware-dependent tuning"
+    ],
+    "trustScore": 85,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "ardupilot",
+    "name": "ArduPilot",
+    "category": "robotics-ai",
+    "developer": "ArduPilot Community",
+    "url": "https://ardupilot.org/",
+    "description": "Versatile open-source autopilot for multi-copters, fixed wing, boats, rovers. 12.1K GitHub stars, 1.5K+ contributors. Dominates large-payload ag-spray VTOLs. Plane 4.6 added dual-IMU EKF3.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Free and open-source (GPL)",
+      "paidPlans": []
+    },
+    "ranking": {
+      "overall": 157,
+      "inCategory": 10,
+      "trend": "stable"
+    },
+    "pros": [
+      "Extremely versatile",
+      "Massive community",
+      "Multi-vehicle support",
+      "Battle-tested"
+    ],
+    "cons": [
+      "Complex parameter tuning",
+      "Documentation scattered"
+    ],
+    "trustScore": 85,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "unitree-sdk",
+    "name": "Unitree Robotics SDK",
+    "category": "robotics-ai",
+    "developer": "Unitree Robotics",
+    "url": "https://github.com/unitreerobotics",
+    "description": "ROS 2 tools for G1, H1, Go2, R1 robots. Open-sourced VLA and world-model-action models. MuJoCo simulation. LeRobot integration. G1 from $13.5K, R1 from $4.9K — most accessible humanoid platform.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "SDKs free/open-source; hardware separate",
+      "paidPlans": [
+        {
+          "name": "G1 Humanoid",
+          "priceCAD": 19440,
+          "period": "one-time",
+          "details": "Entry-level humanoid robot"
+        },
+        {
+          "name": "R1 Robot",
+          "priceCAD": 7056,
+          "period": "one-time",
+          "details": "Wheeled humanoid"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 158,
+      "inCategory": 11,
+      "trend": "rising"
+    },
+    "pros": [
+      "Most affordable humanoid",
+      "Open-source SDK+models",
+      "MuJoCo+LeRobot integration"
+    ],
+    "cons": [
+      "Chinese company (some supply chain concerns)",
+      "Early ecosystem"
+    ],
+    "trustScore": 70,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "boston-dynamics-sdk",
+    "name": "Boston Dynamics Spot SDK + Orbit",
+    "category": "robotics-ai",
+    "developer": "Boston Dynamics (Hyundai)",
+    "url": "https://dev.bostondynamics.com/",
+    "description": "Python SDK for Spot control, autonomy, payloads. Orbit fleet management with REST API, AI-powered anomaly detection. Electric Atlas humanoid in pilot at Hyundai.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "SDK free; requires Spot hardware (~$108K CAD)",
+      "paidPlans": [
+        {
+          "name": "Spot Robot",
+          "priceCAD": 108000,
+          "period": "one-time",
+          "details": "Quadruped robot platform"
+        },
+        {
+          "name": "Orbit SaaS",
+          "priceCAD": 0,
+          "period": "month",
+          "details": "Fleet management (custom pricing)"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 159,
+      "inCategory": 12,
+      "trend": "stable"
+    },
+    "pros": [
+      "Industry-leading hardware",
+      "Enterprise-grade",
+      "REST API",
+      "Anomaly detection AI"
+    ],
+    "cons": [
+      "Very expensive hardware",
+      "Proprietary ecosystem"
+    ],
+    "trustScore": 88,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "jetson-orin",
+    "name": "NVIDIA Jetson AGX Orin",
+    "category": "robotics-ai",
+    "developer": "NVIDIA",
+    "url": "https://developer.nvidia.com/embedded/jetson-agx-orin",
+    "description": "Flagship edge AI computer: 275 TOPS, 12-core ARM, 2048-core Ampere GPU, up to 64GB. 15-60W. Full CUDA ecosystem. Runs GR00T, Nemotron, Qwen. Industrial-grade option with ECC (-40C to 85C). Dominant edge AI for robotics.",
+    "pricingCAD": {
+      "freeTier": false,
+      "freeTierDetails": "",
+      "paidPlans": [
+        {
+          "name": "Module",
+          "priceCAD": 2878,
+          "period": "one-time",
+          "details": "275 TOPS AI compute module"
+        },
+        {
+          "name": "DevKit",
+          "priceCAD": 2878,
+          "period": "one-time",
+          "details": "Development kit with carrier board"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 160,
+      "inCategory": 13,
+      "trend": "rising"
+    },
+    "pros": [
+      "275 TOPS",
+      "Full CUDA stack",
+      "Industrial-grade option",
+      "Dominant platform"
+    ],
+    "cons": [
+      "Expensive",
+      "Power-hungry for some applications",
+      "NVIDIA lock-in"
+    ],
+    "trustScore": 90,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "edge-impulse",
+    "name": "Edge Impulse",
+    "category": "robotics-ai",
+    "developer": "Edge Impulse Inc.",
+    "url": "https://www.edgeimpulse.com/",
+    "description": "End-to-end TinyML development platform. Data collection, model training, optimization (EON Compiler reduces RAM 25-55%), deployment to MCUs. Supports Arduino, ESP32, STM32, Jetson. Leading TinyML platform.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Free community tier",
+      "paidPlans": [
+        {
+          "name": "Pro",
+          "priceCAD": 29,
+          "period": "month",
+          "details": "Per user, advanced features"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 161,
+      "inCategory": 14,
+      "trend": "rising"
+    },
+    "pros": [
+      "End-to-end TinyML",
+      "Broad hardware support",
+      "No ML expertise needed",
+      "EON compiler"
+    ],
+    "cons": [
+      "Advanced features paid",
+      "Limited to edge models"
+    ],
+    "trustScore": 75,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "isaac-ros",
+    "name": "NVIDIA Isaac ROS",
+    "category": "robotics-ai",
+    "developer": "NVIDIA",
+    "url": "https://developer.nvidia.com/isaac/ros",
+    "description": "CUDA-accelerated ROS 2 packages: Visual SLAM, nvBlox (3D mapping), cuMotion (motion planning), FoundationPose (6D pose estimation). GPU-accelerated drop-ins for the ROS ecosystem.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Free and open-source",
+      "paidPlans": []
+    },
+    "ranking": {
+      "overall": 162,
+      "inCategory": 15,
+      "trend": "rising"
+    },
+    "pros": [
+      "GPU-accelerated ROS 2",
+      "Drop-in replacements",
+      "Visual SLAM + 3D mapping"
+    ],
+    "cons": [
+      "NVIDIA GPU required",
+      "Jetson-focused"
+    ],
+    "trustScore": 85,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "nav2",
+    "name": "Nav2 (Navigation2)",
+    "category": "robotics-ai",
+    "developer": "Open Navigation LLC",
+    "url": "https://navigation.ros.org/",
+    "description": "The ROS 2 navigation stack. Path planning (A*, Dijkstra), local obstacle avoidance (DWA, TEB), behavior trees, waypoint following. Industry standard for autonomous mobile robot navigation.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Free and open-source",
+      "paidPlans": []
+    },
+    "ranking": {
+      "overall": 163,
+      "inCategory": 16,
+      "trend": "stable"
+    },
+    "pros": [
+      "Industry standard",
+      "Behavior trees",
+      "Highly configurable",
+      "Active community"
+    ],
+    "cons": [
+      "2D-focused",
+      "Configuration complexity"
+    ],
+    "trustScore": 85,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "foxglove",
+    "name": "Foxglove",
+    "category": "robotics-ai",
+    "developer": "Foxglove",
+    "url": "https://foxglove.dev/",
+    "description": "Modern robotics data visualization and observability. 20+ panels for debugging live/recorded ROS 2 data. Supports MCAP, .bag, .db3. Browser and desktop. Better than RViz for large datasets.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Free for individuals/small teams",
+      "paidPlans": [
+        {
+          "name": "Team",
+          "priceCAD": 108,
+          "period": "month",
+          "details": "Per user, collaboration features"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 164,
+      "inCategory": 17,
+      "trend": "rising"
+    },
+    "pros": [
+      "Modern UI vs RViz",
+      "Browser-based",
+      "Multi-format support",
+      "Great for debugging"
+    ],
+    "cons": [
+      "Team features paid",
+      "Newer ecosystem"
+    ],
+    "trustScore": 72,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "realsense",
+    "name": "RealSense Depth Cameras",
+    "category": "robotics-ai",
+    "developer": "RealSense (ex-Intel)",
+    "url": "https://www.realsenseai.com/",
+    "description": "Depth cameras with mm-level accuracy. Powers 60% of global AMR market and 80% of humanoid robotics. 276M data points/sec. Spun out from Intel July 2025 with $50M. NVIDIA Jetson Thor partnership.",
+    "pricingCAD": {
+      "freeTier": false,
+      "freeTierDetails": "",
+      "paidPlans": [
+        {
+          "name": "D435",
+          "priceCAD": 432,
+          "period": "one-time",
+          "details": "Stereo depth camera"
+        },
+        {
+          "name": "D455",
+          "priceCAD": 576,
+          "period": "one-time",
+          "details": "Wide-baseline depth camera"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 165,
+      "inCategory": 18,
+      "trend": "rising"
+    },
+    "pros": [
+      "60% AMR market share",
+      "mm-level accuracy",
+      "Now independent company",
+      "NVIDIA partnership"
+    ],
+    "cons": [
+      "Hardware cost",
+      "Requires integration work"
+    ],
+    "trustScore": 82,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "luxonis-oak",
+    "name": "Luxonis OAK-D / DepthAI",
+    "category": "robotics-ai",
+    "developer": "Luxonis",
+    "url": "https://www.luxonis.com/",
+    "description": "AI depth cameras with on-device neural inference (4 TOPS). Spatial AI fusing object detection with depth perception on-camera. OAK 4 is first fully self-contained AI vision platform. ROS driver available.",
+    "pricingCAD": {
+      "freeTier": false,
+      "freeTierDetails": "",
+      "paidPlans": [
+        {
+          "name": "OAK-D Lite",
+          "priceCAD": 143,
+          "period": "one-time",
+          "details": "Entry-level spatial AI camera"
+        },
+        {
+          "name": "OAK-D Pro",
+          "priceCAD": 431,
+          "period": "one-time",
+          "details": "Advanced depth + AI camera"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 166,
+      "inCategory": 19,
+      "trend": "rising"
+    },
+    "pros": [
+      "On-device AI inference",
+      "Affordable spatial AI",
+      "ROS compatible",
+      "Self-contained"
+    ],
+    "cons": [
+      "4 TOPS limit",
+      "Smaller ecosystem than RealSense"
+    ],
+    "trustScore": 72,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "covariant",
+    "name": "Covariant Brain (RFM-1)",
+    "category": "robotics-ai",
+    "developer": "Covariant",
+    "url": "https://covariant.ai/",
+    "description": "Universal AI for robot picking. Trained on the largest multimodal warehouse robotics dataset. Robots pick virtually any SKU on Day One. $222M funded. Warehouse/logistics focus.",
+    "pricingCAD": {
+      "freeTier": false,
+      "freeTierDetails": "",
+      "paidPlans": [
+        {
+          "name": "Enterprise",
+          "priceCAD": 0,
+          "period": "month",
+          "details": "Custom pricing"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 167,
+      "inCategory": 20,
+      "trend": "rising"
+    },
+    "pros": [
+      "Any-SKU picking",
+      "Largest warehouse dataset",
+      "Day-one deployment"
+    ],
+    "cons": [
+      "Enterprise-only pricing",
+      "Warehouse-specific"
+    ],
+    "trustScore": 72,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "wandelbots",
+    "name": "Wandelbots NOVA",
+    "category": "robotics-ai",
+    "developer": "Wandelbots",
+    "url": "https://www.wandelbots.com/",
+    "description": "Hardware-agnostic robot OS with no-code teaching. Programs robots 20x faster, 10x more cost-effective. Isaac Sim integration. Supports UR, Yaskawa, more. Customers: VW, Bayer, Fraunhofer. $123M funded.",
+    "pricingCAD": {
+      "freeTier": false,
+      "freeTierDetails": "",
+      "paidPlans": [
+        {
+          "name": "Enterprise",
+          "priceCAD": 0,
+          "period": "month",
+          "details": "Custom subscription"
+        }
+      ]
+    },
+    "ranking": {
+      "overall": 168,
+      "inCategory": 21,
+      "trend": "rising"
+    },
+    "pros": [
+      "No-code robot programming",
+      "Hardware-agnostic",
+      "20x faster programming",
+      "Major customers"
+    ],
+    "cons": [
+      "Enterprise pricing only",
+      "Requires Wandelbots hardware"
+    ],
+    "trustScore": 70,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "intrinsic-flowstate",
+    "name": "Intrinsic Flowstate (Google)",
+    "category": "robotics-ai",
+    "developer": "Intrinsic / Google",
+    "url": "https://www.intrinsic.ai/",
+    "description": "Web-based platform for building robotic applications without thousands of lines of code. Uses Gemini models and Google Cloud. AI for Industry developer challenge. Merged into Google 2025.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Developer challenge open; enterprise custom",
+      "paidPlans": []
+    },
+    "ranking": {
+      "overall": 169,
+      "inCategory": 22,
+      "trend": "rising"
+    },
+    "pros": [
+      "Google backing",
+      "Gemini AI integration",
+      "Web-based",
+      "No-code approach"
+    ],
+    "cons": [
+      "Early stage",
+      "Google Cloud dependency"
+    ],
+    "trustScore": 78,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "meta-habitat",
+    "name": "Meta Habitat 3.0",
+    "category": "robotics-ai",
+    "developer": "Meta FAIR",
+    "url": "https://aihabitat.org/",
+    "description": "High-quality simulator for robots and humanoid avatars in human-robot collaboration research. Social navigation benchmarks, PARTNR benchmark for planning and reasoning evaluation.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Free and open-source",
+      "paidPlans": []
+    },
+    "ranking": {
+      "overall": 170,
+      "inCategory": 23,
+      "trend": "rising"
+    },
+    "pros": [
+      "Best for human-robot collaboration",
+      "Social benchmarks",
+      "Meta research backing"
+    ],
+    "cons": [
+      "Research-focused",
+      "Less industrial than Isaac Sim"
+    ],
+    "trustScore": 82,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "drake",
+    "name": "Drake",
+    "category": "robotics-ai",
+    "developer": "Toyota Research / MIT",
+    "url": "https://drake.mit.edu/",
+    "description": "Toolbox for multibody dynamics, hydroelastic contact, model-based control, analysis-grade robotics simulation. Strong in manipulation planning. Used by TRI, MIT, Stanford.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Free and open-source (BSD)",
+      "paidPlans": []
+    },
+    "ranking": {
+      "overall": 171,
+      "inCategory": 24,
+      "trend": "stable"
+    },
+    "pros": [
+      "Analysis-grade precision",
+      "Strong manipulation planning",
+      "Toyota/MIT backing"
+    ],
+    "cons": [
+      "Niche community",
+      "Steeper learning curve"
+    ],
+    "trustScore": 80,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "webots",
+    "name": "Webots",
+    "category": "robotics-ai",
+    "developer": "Cyberbotics / EPFL",
+    "url": "https://cyberbotics.com/",
+    "description": "Open-source robot simulator since 1998. Good ROS 2 support, ideal for education, rapid prototyping, swarm robotics. Runs on modest hardware.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Free and open-source (Apache 2.0)",
+      "paidPlans": []
+    },
+    "ranking": {
+      "overall": 172,
+      "inCategory": 25,
+      "trend": "stable"
+    },
+    "pros": [
+      "25+ years mature",
+      "Runs on modest hardware",
+      "Great for education",
+      "Swarm support"
+    ],
+    "cons": [
+      "Less photorealistic",
+      "Smaller community than Gazebo"
+    ],
+    "trustScore": 78,
+    "logoUrl": "",
+    "lastVerified": "2026-03-27"
+  }
+]

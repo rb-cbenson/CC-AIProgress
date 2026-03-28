@@ -1,0 +1,328 @@
+[
+  {
+    "id": "test-video-creation",
+    "title": "AI Video Creation Showdown",
+    "category": "video-generation",
+    "priority": "try-asap",
+    "difficulty": "beginner",
+    "timeEstimate": "30-45 minutes",
+    "description": "Create a short video using the top free AI video tools. Compare quality, speed, and ease of use side by side.",
+    "toolsNeeded": [
+      { "toolId": "runway", "role": "Primary video generator (best quality)" },
+      { "toolId": "kling", "role": "Budget alternative (40% cheaper)" },
+      { "toolId": "pika", "role": "Speed champion (fastest generation)" }
+    ],
+    "hardwareNeeded": ["Computer with web browser", "Internet connection"],
+    "steps": [
+      { "step": 1, "title": "Pick a simple prompt", "instructions": "Choose a short, visual prompt like: 'A golden retriever running through autumn leaves in slow motion'. Use the same prompt for all tools to compare fairly.", "tip": "Keep it simple — complex prompts reveal differences but simple ones show baseline quality." },
+      { "step": 2, "title": "Try Runway (free credits)", "instructions": "Go to runwayml.com, sign up for a free account. Click 'Generate' > 'Text to Video'. Paste your prompt. Select Gen-4 if available. Generate and download.", "tip": "You get 125 free credits — enough for a few short clips." },
+      { "step": 3, "title": "Try Kling (free daily credits)", "instructions": "Go to klingai.com, create a free account. Use 'Text to Video' mode. Paste the same prompt. Generate and download.", "tip": "Kling gives daily free credits that reset — come back tomorrow for more." },
+      { "step": 4, "title": "Try Pika (free daily generations)", "instructions": "Go to pika.art, sign up for free. Paste the same prompt. Generate and download.", "tip": "Pika is the fastest — great for quick social media clips." },
+      { "step": 5, "title": "Compare results", "instructions": "Play all three videos side by side. Note: Which looks most realistic? Which has the best motion? Which was fastest? Which had the easiest interface?", "tip": "Save your favorites — these tools improve monthly, so re-test in 4-6 weeks." }
+    ],
+    "expectedOutcome": "Three short AI-generated videos to compare. You'll have a clear sense of which tool suits your needs and budget.",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "test-chat-comparison",
+    "title": "Chat AI Head-to-Head: ChatGPT vs Claude vs Gemini",
+    "category": "text-chat",
+    "priority": "try-asap",
+    "difficulty": "beginner",
+    "timeEstimate": "20-30 minutes",
+    "description": "Test the top 3 AI chatbots with the same prompts to see which fits your style. All have free tiers.",
+    "toolsNeeded": [
+      { "toolId": "chatgpt", "role": "Most popular — great all-rounder" },
+      { "toolId": "claude", "role": "Best for analysis and nuance" },
+      { "toolId": "gemini", "role": "Best Google integration" }
+    ],
+    "hardwareNeeded": ["Computer with web browser", "Internet connection"],
+    "steps": [
+      { "step": 1, "title": "Prepare test prompts", "instructions": "Write 3 test prompts: (1) A creative task: 'Write a short story about a time traveler who can only go back 5 minutes', (2) An analysis task: 'Compare the pros and cons of remote work vs office work', (3) A practical task: 'Create a weekly meal plan for a family of 4 on a $150 CAD budget'.", "tip": "Use prompts that matter to YOU — you'll get a much better sense of which tool fits." },
+      { "step": 2, "title": "Test ChatGPT", "instructions": "Go to chat.openai.com, sign up or log in (free). Send all 3 prompts in separate conversations. Save or screenshot the responses.", "tip": "ChatGPT tends to be more verbose — great for brainstorming." },
+      { "step": 3, "title": "Test Claude", "instructions": "Go to claude.ai, sign up or log in (free). Send the same 3 prompts. Save responses.", "tip": "Claude tends to be more nuanced and careful — great for analysis." },
+      { "step": 4, "title": "Test Gemini", "instructions": "Go to gemini.google.com, log in with Google account (free). Send the same 3 prompts. Save responses.", "tip": "Gemini can search the web in real-time — great for current topics." },
+      { "step": 5, "title": "Pick your favorite", "instructions": "Compare all 9 responses (3 prompts x 3 tools). Which gave the best creative writing? Best analysis? Most practical advice? Note your overall preference.", "tip": "You don't have to pick just one — many people use different tools for different tasks." }
+    ],
+    "expectedOutcome": "Clear understanding of which AI chatbot matches your communication style and needs. You may find each excels at different tasks.",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "test-ai-music",
+    "title": "Create Your First AI Song",
+    "category": "audio-music",
+    "priority": "try-asap",
+    "difficulty": "beginner",
+    "timeEstimate": "15-20 minutes",
+    "description": "Generate a full original song with lyrics and vocals using Suno's free tier. No musical knowledge needed.",
+    "toolsNeeded": [
+      { "toolId": "suno", "role": "AI music generator — creates full songs from text" }
+    ],
+    "hardwareNeeded": ["Computer with web browser and speakers/headphones", "Internet connection"],
+    "steps": [
+      { "step": 1, "title": "Sign up for Suno", "instructions": "Go to suno.com and create a free account. You get 10 free songs per day.", "tip": "" },
+      { "step": 2, "title": "Create with a simple prompt", "instructions": "Click 'Create'. In the text box, describe your song: 'An upbeat pop song about starting a new adventure, with catchy chorus'. Click Generate.", "tip": "Suno generates 2 variations — listen to both!" },
+      { "step": 3, "title": "Try custom mode", "instructions": "Click 'Create' again, toggle 'Custom' mode. Now you can write your own lyrics, choose a genre (e.g., 'indie folk', 'electronic', 'hip hop'), and set the mood.", "tip": "Try different genres with the same lyrics to hear how dramatically the output changes." },
+      { "step": 4, "title": "Download and share", "instructions": "Find your favorite generation, click the download button. Share with friends or keep for yourself!", "tip": "Free tier songs are for personal use only. Pro ($14 CAD/mo) allows commercial use." }
+    ],
+    "expectedOutcome": "A complete original song with lyrics, vocals, and instrumentation — created in minutes with no musical training.",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "test-coding-assistant",
+    "title": "Build a Web Page with AI (No Coding Required)",
+    "category": "coding-assistants",
+    "priority": "try-asap",
+    "difficulty": "beginner",
+    "timeEstimate": "20-30 minutes",
+    "description": "Use an AI coding assistant to create a complete web page from a plain English description. See how AI handles code generation.",
+    "toolsNeeded": [
+      { "toolId": "claude", "role": "Generate the complete web page code" }
+    ],
+    "hardwareNeeded": ["Computer with web browser and a text editor (Notepad works)", "Internet connection"],
+    "steps": [
+      { "step": 1, "title": "Describe what you want", "instructions": "Go to claude.ai (free). Type: 'Create a complete HTML page for a personal recipe collection. Include a nice design with categories for Breakfast, Lunch, and Dinner. Add 2 example recipes per category with ingredients and instructions. Make it look professional with modern CSS styling. Put everything in a single HTML file.'", "tip": "The more specific you are, the better the result." },
+      { "step": 2, "title": "Copy the code", "instructions": "Claude will generate a complete HTML file. Click the 'Copy' button on the code block.", "tip": "" },
+      { "step": 3, "title": "Save and open", "instructions": "Open Notepad (or any text editor). Paste the code. Save as 'recipes.html' (make sure to change 'Save as type' to 'All Files'). Double-click the saved file to open it in your browser.", "tip": "If it doesn't look right, go back to Claude and say 'The layout is broken, can you fix it?' — Claude can iterate." },
+      { "step": 4, "title": "Customize with AI", "instructions": "Go back to Claude and ask for changes: 'Add a dark mode toggle' or 'Replace the example recipes with Italian dishes' or 'Add a search bar'. Copy the updated code and replace the file.", "tip": "This is exactly how this AI Progress Dashboard was built!" }
+    ],
+    "expectedOutcome": "A professional-looking web page created entirely by AI, running locally in your browser. You'll see firsthand how AI coding assistants work.",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "test-image-generation",
+    "title": "AI Image Battle: Free vs Paid",
+    "category": "image-generation",
+    "priority": "try-asap",
+    "difficulty": "beginner",
+    "timeEstimate": "20-30 minutes",
+    "description": "Compare free and paid AI image generators with the same prompt. See if the paid options are worth it for your needs.",
+    "toolsNeeded": [
+      { "toolId": "craiyon", "role": "Completely free, unlimited, no account" },
+      { "toolId": "dalle", "role": "Free tier via ChatGPT (limited)" },
+      { "toolId": "adobe-firefly", "role": "25 free credits/month, commercially safe" }
+    ],
+    "hardwareNeeded": ["Computer with web browser", "Internet connection"],
+    "steps": [
+      { "step": 1, "title": "Choose a test prompt", "instructions": "Use something visually specific: 'A cozy coffee shop on a rainy evening, warm lights glowing through the windows, watercolor painting style'.", "tip": "Including a style ('watercolor', 'photorealistic', 'comic book') helps the AI produce better results." },
+      { "step": 2, "title": "Try Craiyon (free, no signup)", "instructions": "Go to craiyon.com. Paste the prompt and click Draw. Wait ~60 seconds. Save the best result.", "tip": "Craiyon is slower and lower quality, but completely free with no limits — great for brainstorming." },
+      { "step": 3, "title": "Try DALL-E via ChatGPT (free tier)", "instructions": "Go to chat.openai.com (free account). Type 'Generate an image: [your prompt]'. ChatGPT will create an image. Download it.", "tip": "Free tier has daily image limits. If you hit the limit, try tomorrow." },
+      { "step": 4, "title": "Try Adobe Firefly (25 free credits)", "instructions": "Go to firefly.adobe.com, create a free Adobe account. Click 'Text to Image'. Paste the prompt. Generate and download.", "tip": "Firefly images are safe for commercial use — trained only on licensed content." },
+      { "step": 5, "title": "Compare and decide", "instructions": "Put all images side by side. Consider: quality, style accuracy, speed, and whether the free options meet your needs or if you'd want to try Midjourney ($14 CAD/mo).", "tip": "For most casual use, free tools are great. Midjourney is worth trying if you need consistent, high-quality artistic images." }
+    ],
+    "expectedOutcome": "Side-by-side comparison of free AI image generators. You'll know whether free tools meet your needs or if paid options are worth exploring.",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "test-research-workflow",
+    "title": "AI-Powered Research: Perplexity + NotebookLM",
+    "category": "productivity",
+    "priority": "recommended",
+    "difficulty": "beginner",
+    "timeEstimate": "25-35 minutes",
+    "description": "Use AI to research a topic of your choice, organize the findings, and generate an audio summary you can listen to.",
+    "toolsNeeded": [
+      { "toolId": "perplexity", "role": "AI search engine with citations" },
+      { "toolId": "google-notebooklm", "role": "Organize sources and generate audio summary" }
+    ],
+    "hardwareNeeded": ["Computer with web browser and speakers/headphones", "Internet connection"],
+    "steps": [
+      { "step": 1, "title": "Research with Perplexity", "instructions": "Go to perplexity.ai (free). Search for something you're genuinely curious about — e.g., 'What are the health benefits and risks of intermittent fasting based on recent studies?' Note how it cites sources for every claim.", "tip": "Ask follow-up questions to go deeper — Perplexity remembers context within a thread." },
+      { "step": 2, "title": "Save key sources", "instructions": "From Perplexity's citations, open 3-5 of the most relevant source articles. Copy the URLs.", "tip": "" },
+      { "step": 3, "title": "Create a NotebookLM notebook", "instructions": "Go to notebooklm.google.com (free, Google account needed). Click 'New Notebook'. Add sources: paste the URLs from step 2. NotebookLM will analyze them.", "tip": "You can also upload PDFs, Google Docs, or paste text directly." },
+      { "step": 4, "title": "Generate audio overview", "instructions": "In NotebookLM, click 'Audio Overview' > 'Generate'. It will create a podcast-style discussion of your sources. Listen while doing other things!", "tip": "The audio overview is surprisingly engaging — like two hosts discussing your research topic." },
+      { "step": 5, "title": "Ask questions", "instructions": "Use NotebookLM's chat to ask specific questions about your sources: 'What do the studies agree on?' or 'What are the main controversies?'", "tip": "NotebookLM only answers from YOUR sources — no hallucination from outside data." }
+    ],
+    "expectedOutcome": "A well-organized research notebook with cited sources and an audio summary you can listen to. This workflow replaces hours of manual research.",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "test-deepseek-vs-chatgpt",
+    "title": "DeepSeek vs ChatGPT: The Free Challenger",
+    "category": "text-chat",
+    "priority": "recommended",
+    "difficulty": "beginner",
+    "timeEstimate": "15-20 minutes",
+    "description": "Test DeepSeek's free AI against ChatGPT. DeepSeek rivals top Western models at a fraction of the cost — see if the hype is real.",
+    "toolsNeeded": [
+      { "toolId": "deepseek", "role": "Free Chinese AI — strong at coding and math" },
+      { "toolId": "chatgpt", "role": "Comparison baseline — market leader" }
+    ],
+    "hardwareNeeded": ["Computer with web browser", "Internet connection"],
+    "steps": [
+      { "step": 1, "title": "Prepare test prompts", "instructions": "Use 2 prompts: (1) Coding: 'Write a Python script that downloads a webpage, extracts all links, and saves them to a CSV file. Include error handling.' (2) Reasoning: 'A farmer needs to cross a river with a wolf, a goat, and a cabbage. He can only take one at a time. The wolf eats the goat if left alone, the goat eats the cabbage. How does he do it? Explain step by step.'", "tip": "" },
+      { "step": 2, "title": "Test on DeepSeek", "instructions": "Go to deepseek.com, create a free account. Send both prompts. Save the responses.", "tip": "Try enabling 'Deep Think' mode for the reasoning problem — it shows the model's thought process." },
+      { "step": 3, "title": "Test on ChatGPT", "instructions": "Go to chat.openai.com (free). Send the same prompts. Save responses.", "tip": "" },
+      { "step": 4, "title": "Compare quality", "instructions": "For the code: Which is cleaner? More complete? Better error handling? For reasoning: Which explained more clearly? Got the right answer faster?", "tip": "DeepSeek often matches or beats ChatGPT on coding/math — the surprise is that it's completely free." }
+    ],
+    "expectedOutcome": "Direct comparison showing where DeepSeek matches ChatGPT and where it falls short. You may find a free alternative that works for most of your needs.",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "test-automation-zapier",
+    "title": "Your First AI Automation with Zapier",
+    "category": "workflow-automation",
+    "priority": "recommended",
+    "difficulty": "intermediate",
+    "timeEstimate": "30-40 minutes",
+    "description": "Create an automated workflow that uses AI to process information — e.g., summarize emails, auto-categorize tasks, or generate social posts.",
+    "toolsNeeded": [
+      { "toolId": "zapier", "role": "Workflow automation — connects everything" }
+    ],
+    "hardwareNeeded": ["Computer with web browser", "Gmail or other email account", "Internet connection"],
+    "steps": [
+      { "step": 1, "title": "Sign up for Zapier", "instructions": "Go to zapier.com and create a free account. You get 100 tasks/month free.", "tip": "" },
+      { "step": 2, "title": "Create a Zap", "instructions": "Click 'Create Zap'. For a beginner automation: Trigger = 'New Email in Gmail (matching search)' — filter for newsletters or a specific sender. Action = 'AI by Zapier: Summarize text'. This will auto-summarize incoming emails.", "tip": "Start with email summarization — it's immediately useful and easy to set up." },
+      { "step": 3, "title": "Configure the AI step", "instructions": "In the AI action, set the prompt to: 'Summarize this email in 2-3 bullet points. Include any action items.' Map the email body as input.", "tip": "Zapier's built-in AI is powered by GPT — no separate API key needed." },
+      { "step": 4, "title": "Add an output", "instructions": "Add another action: save the summary to Google Sheets, Notion, or send yourself a Slack message. This creates a running log of summarized emails.", "tip": "Google Sheets is the easiest output to start with." },
+      { "step": 5, "title": "Test and activate", "instructions": "Click 'Test' to run the Zap with a real email. Check the output. If it looks good, turn it on!", "tip": "The free tier gives you 100 tasks/month — enough to automate 3-4 emails per day." }
+    ],
+    "expectedOutcome": "A working automation that saves you time every day. Once you see how easy it is, you'll want to automate more workflows.",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "test-voice-cloning",
+    "title": "Clone Your Voice with ElevenLabs",
+    "category": "audio-music",
+    "priority": "recommended",
+    "difficulty": "beginner",
+    "timeEstimate": "15-20 minutes",
+    "description": "Create an AI clone of your voice that can read any text. Useful for narration, accessibility, or fun.",
+    "toolsNeeded": [
+      { "toolId": "elevenlabs", "role": "Best voice cloning quality" }
+    ],
+    "hardwareNeeded": ["Computer with web browser and microphone", "Quiet room for recording", "Internet connection"],
+    "steps": [
+      { "step": 1, "title": "Sign up for ElevenLabs", "instructions": "Go to elevenlabs.io and create a free account. You get 10,000 characters/month free.", "tip": "" },
+      { "step": 2, "title": "Record voice samples", "instructions": "Go to 'Voices' > 'Add Voice' > 'Instant Voice Cloning'. Record yourself reading the provided sample text (about 30 seconds). Speak clearly and naturally.", "tip": "A quiet room makes a huge difference in clone quality." },
+      { "step": 3, "title": "Test your voice clone", "instructions": "Go to 'Speech Synthesis'. Select your cloned voice. Type any text and click 'Generate'. Listen to your AI voice!", "tip": "Try different text to see how well it captures your tone and cadence." },
+      { "step": 4, "title": "Try different use cases", "instructions": "Generate: (1) A professional narration for a presentation, (2) A fun message to surprise a friend, (3) Reading a long article so you can listen instead of read.", "tip": "Voice cloning raises ethical questions — only clone your own voice or voices you have permission to use." }
+    ],
+    "expectedOutcome": "An AI clone of your voice that can read any text. You'll understand the power (and responsibility) of voice cloning technology.",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "test-local-ai",
+    "title": "Run AI Locally (No Internet, Full Privacy)",
+    "category": "all-in-one",
+    "priority": "optional",
+    "difficulty": "intermediate",
+    "timeEstimate": "30-45 minutes",
+    "description": "Run an AI chatbot entirely on your own computer. No data leaves your machine — complete privacy. Requires a decent GPU.",
+    "toolsNeeded": [
+      { "toolId": "hugging-face", "role": "Source for open-source models" }
+    ],
+    "hardwareNeeded": ["Computer with 8GB+ RAM (16GB recommended)", "GPU with 6GB+ VRAM recommended (NVIDIA preferred)", "10-20GB free disk space", "Internet for initial download only"],
+    "steps": [
+      { "step": 1, "title": "Install Ollama", "instructions": "Go to ollama.com and download the installer for your OS. Run the installer — it's a simple one-click setup.", "tip": "Ollama makes running local AI as easy as running a chat app." },
+      { "step": 2, "title": "Download a model", "instructions": "Open a terminal/command prompt. Type: 'ollama pull llama3.2' (3B model, ~2GB). Wait for download. For better quality: 'ollama pull llama3.1' (8B model, ~5GB).", "tip": "Start with the smaller model. You can always download larger ones later." },
+      { "step": 3, "title": "Chat with local AI", "instructions": "Type: 'ollama run llama3.2'. Start chatting! Everything runs on your machine — no internet needed after download.", "tip": "It won't be as good as ChatGPT/Claude, but it's completely private and free forever." },
+      { "step": 4, "title": "Try a web interface (optional)", "instructions": "For a nicer interface, install Open WebUI: go to openwebui.com, follow the Docker or pip install instructions. This gives you a ChatGPT-like interface for your local models.", "tip": "Open WebUI supports multiple models — download several and compare them locally." }
+    ],
+    "expectedOutcome": "A fully private AI running on your own hardware. Great for sensitive tasks or when you want AI without any data leaving your computer.",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "test-3d-print-pipeline",
+    "title": "Text to Physical Object: AI 3D Printing Pipeline",
+    "category": "3d-cad",
+    "priority": "try-asap",
+    "difficulty": "intermediate",
+    "timeEstimate": "60-90 minutes",
+    "description": "Generate a 3D model from a text description using AI, repair the mesh, and prepare it for 3D printing. Test the full pipeline from idea to printable file.",
+    "toolsNeeded": [
+      { "toolId": "meshy-ai", "role": "Primary 3D generator (best print support)" },
+      { "toolId": "tripo-ai", "role": "Alternative generator (cleaner topology)" },
+      { "toolId": "printpal", "role": "Print-optimized generator" }
+    ],
+    "hardwareNeeded": ["Computer with web browser", "Internet connection", "3D printer OR online print service account (JLCPCB, Shapeways)"],
+    "steps": [
+      { "step": 1, "title": "Choose a test object", "instructions": "Pick something simple but recognizable: a chess knight, a small vase, a phone stand, or a figurine. Use the same prompt for all 3 tools: 'A detailed chess knight piece, smooth surface, solid base, 5cm tall'", "tip": "Simple objects with a flat base print easiest. Avoid overhangs and thin features for your first test." },
+      { "step": 2, "title": "Generate in Meshy", "instructions": "Go to meshy.ai, create a free account. Choose 'Text to 3D'. Enter your prompt. Wait for generation (~2-5 minutes). Export as STL or 3MF format.", "tip": "3MF is better than STL — it includes scale information and is more reliable for printing." },
+      { "step": 3, "title": "Generate in Tripo and PrintPal", "instructions": "Repeat with tripo3d.ai and printpal.io using the same prompt. Export STL/3MF from each. You now have 3 versions to compare.", "tip": "Different generators excel at different shapes. Compare which produces the cleanest result for YOUR prompt." },
+      { "step": 4, "title": "Check mesh quality", "instructions": "Open each STL in an online mesh viewer (3dviewer.net is free). Look for: holes in the surface, floating fragments, walls that look paper-thin. If you have Blender (free), enable the 3D Print Toolbox add-on for detailed mesh analysis.", "tip": "A 'manifold' mesh is watertight with no holes — this is what printers need. Non-manifold = print failure." },
+      { "step": 5, "title": "Repair if needed", "instructions": "If mesh has issues, use Meshmixer (free, Autodesk) or the Blender 3D Print Toolbox: select non-manifold edges, fill holes, remove loose parts. Or use 3D AI Studio's mesh repair beta.", "tip": "Don't skip this step. Even the best AI generators produce non-watertight meshes 45% of the time." },
+      { "step": 6, "title": "Scale and slice", "instructions": "Open the repaired STL in your slicer (Bambu Studio, OrcaSlicer, or Cura — all free). Scale to your target size (e.g., 5cm tall). Check the preview — any red areas indicate printing problems. Slice and export G-code.", "tip": "If you don't have a printer, JLCPCB offers 3D printing starting at ~$1. Upload your STL at jlcpcb.com/3d-printing." },
+      { "step": 7, "title": "Print and evaluate", "instructions": "Print the best version. Evaluate: surface quality, dimensional accuracy, structural strength. Take photos for your records. Compare against what you imagined from the text prompt.", "tip": "Your first AI-generated print won't be perfect. The goal is understanding the pipeline — quality improves with better prompts and repair skills." }
+    ],
+    "expectedOutcome": "A physical 3D-printed object that started as a text description. You'll understand the full AI→print pipeline: what works, where it breaks, and how to fix it. This is the foundation for the Text-to-Physical-Object moonshot project.",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "test-ai-pcb-design",
+    "title": "AI-Designed PCB: From Description to Manufactured Board",
+    "category": "3d-cad",
+    "priority": "recommended",
+    "difficulty": "advanced",
+    "timeEstimate": "2-4 hours (plus 1-2 weeks for manufacturing)",
+    "description": "Use AI tools to design a simple PCB — LED blinker or USB breakout board. Test Quilter and Flux.ai. Export Gerbers and order from JLCPCB. See if AI can replace manual PCB design for simple projects.",
+    "toolsNeeded": [
+      { "toolId": "quilter-ai", "role": "AI PCB auto-layout (free beta)" },
+      { "toolId": "flux-ai", "role": "Full ECAD with AI copilot" }
+    ],
+    "hardwareNeeded": ["Computer with web browser", "Internet connection", "Soldering iron (basic)", "Components (~$5 from LCSC/DigiKey)"],
+    "steps": [
+      { "step": 1, "title": "Pick a simple project", "instructions": "Start with an LED blinker using a 555 timer (classic beginner circuit) or a USB-C breakout board (useful and simple). These are 1-2 layer boards with <20 components.", "tip": "Don't start with anything complex. The goal is testing AI tools, not designing a motherboard." },
+      { "step": 2, "title": "Design schematic in Flux.ai", "instructions": "Go to flux.ai, create an account. Use the AI copilot to help place components and wire the schematic. For a 555 blinker: the AI knows this circuit. Ask it.", "tip": "Flux.ai's AI copilot can suggest components and connections, but YOU need to verify the schematic makes sense." },
+      { "step": 3, "title": "Auto-layout with Quilter", "instructions": "Export your schematic from Flux (or create in KiCad). Import into quilter.ai. Let Quilter auto-place and auto-route. Compare against manual layout if you know how.", "tip": "Quilter is free during beta. It generates its first layout candidate in about an hour." },
+      { "step": 4, "title": "Run DRC", "instructions": "In Flux.ai, select the JLCPCB DRC template. Run Design Rule Check. Fix any violations (trace width too thin, spacing too close, drill sizes wrong).", "tip": "JLCPCB's minimum trace width is 0.127mm (5mil). Minimum spacing is the same. Minimum drill is 0.3mm." },
+      { "step": 5, "title": "Export and order", "instructions": "Export Gerber files + drill files. Go to jlcpcb.com, upload Gerbers. Review the preview — does it look right? 5 boards cost ~$2-5. Order.", "tip": "JLCPCB ships in 3-7 days. Check the Gerber preview carefully before ordering — mistakes cost time, not much money." },
+      { "step": 6, "title": "Solder and test", "instructions": "When boards arrive, solder components. Power up. Does it work? Document: what the AI got right, what you had to fix manually.", "tip": "If it doesn't work, use a multimeter to check connections. AI-designed boards sometimes have subtle routing errors." }
+    ],
+    "expectedOutcome": "A working PCB that was primarily designed by AI. You'll understand what AI EDA tools can and can't do, and where human expertise is still needed. This is Phase 1 of the AI Electronics Lab moonshot.",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "test-ai-short-film",
+    "title": "60-Second AI Short Film: Zero Camera, Zero Budget",
+    "category": "video-generation",
+    "priority": "try-asap",
+    "difficulty": "intermediate",
+    "timeEstimate": "2-3 hours",
+    "description": "Produce a complete 60-second short film using only AI — script, visuals, video, voice, music, editing. Two AI films premiered at Sundance 2026. A solo creator got a world record. You can do 60 seconds.",
+    "toolsNeeded": [
+      { "toolId": "chatgpt", "role": "Script writing" },
+      { "toolId": "runway", "role": "Video generation from images" },
+      { "toolId": "elevenlabs", "role": "Voice narration and sound effects" },
+      { "toolId": "suno", "role": "Background music score" }
+    ],
+    "hardwareNeeded": ["Computer with web browser", "Internet connection", "Free video editor (DaVinci Resolve or CapCut)"],
+    "steps": [
+      { "step": 1, "title": "Write the script", "instructions": "Ask ChatGPT or Claude: 'Write a 60-second short film script with narration. Genre: [sci-fi/mystery/comedy]. Include shot descriptions for 8-10 shots, each 5-8 seconds. Keep dialogue minimal — narration is easier for AI voice.'", "tip": "Narration-driven films work much better than dialogue — you avoid the lip-sync problem entirely." },
+      { "step": 2, "title": "Generate key frames", "instructions": "For each shot, use Midjourney, DALL-E, or FLUX to generate the visual. Use consistent style prompts: add '--sref [URL]' in Midjourney for style reference, or describe the same art style in every prompt.", "tip": "Character consistency is THE hardest part. Use a simple art style (illustration, watercolor, anime) — it's more forgiving than photorealistic." },
+      { "step": 3, "title": "Animate with video AI", "instructions": "Take each key frame image and upload to Runway Gen-4 (or Kling). Use 'Image to Video' mode. Generate 4-5 second clips for each shot. Download all clips.", "tip": "Keep clips short (3-5 seconds). Longer generations lose coherence. You can always extend with slow-motion." },
+      { "step": 4, "title": "Generate voice and music", "instructions": "ElevenLabs: paste your narration text, choose a voice, generate audio. Suno: describe the mood ('cinematic ambient score, mysterious, slow build') and generate a 60-second track.", "tip": "Generate 2-3 voice options and 2-3 music options. Pick the best combination." },
+      { "step": 5, "title": "Assemble in editor", "instructions": "Open DaVinci Resolve (free) or CapCut (free). Import all clips, arrange in order. Layer: video track + narration track + music track. Add transitions between shots. Adjust music volume under narration.", "tip": "Sound design makes or breaks it. Music at 20-30% volume under narration. Add 0.5-second crossfades between shots." },
+      { "step": 6, "title": "Export and publish", "instructions": "Export at 1080p. Watch it. Be honest about quality. Upload to YouTube (unlisted if you prefer). Share with someone for feedback.", "tip": "Your first one won't win Sundance. But you'll understand the entire pipeline and know exactly where to improve next time." }
+    ],
+    "expectedOutcome": "A complete 60-second film made entirely with AI. It won't be perfect — but it will exist, and you'll understand every step of the pipeline. This is the foundation for the AI Film Studio moonshot.",
+    "lastVerified": "2026-03-27"
+  },
+  {
+    "id": "test-multi-ai-chain",
+    "title": "Multi-AI Chain: One Task, Five AIs, Compare Results",
+    "category": "text-chat",
+    "priority": "try-asap",
+    "difficulty": "beginner",
+    "timeEstimate": "30-45 minutes",
+    "description": "Give the same complex task to 5 different AIs. Then chain them: AI-1 writes, AI-2 critiques, AI-3 rewrites, AI-4 fact-checks, AI-5 formats. See what happens when AIs review each other's work.",
+    "toolsNeeded": [
+      { "toolId": "chatgpt", "role": "Writer (initial draft)" },
+      { "toolId": "claude", "role": "Critic (reviews and improves)" },
+      { "toolId": "gemini", "role": "Fact-checker (Google integration)" },
+      { "toolId": "perplexity", "role": "Researcher (source verification)" },
+      { "toolId": "deepseek", "role": "Alternative perspective (different training)" }
+    ],
+    "hardwareNeeded": ["Computer with web browser", "Internet connection"],
+    "steps": [
+      { "step": 1, "title": "Pick a complex topic", "instructions": "Choose something that requires accuracy and nuance: 'Write a 500-word analysis of the current state of AI regulation in Canada, with specific policy names, dates, and implications for small businesses.'", "tip": "Pick a topic you care about and can verify. The point is seeing how AIs differ and where they fail." },
+      { "step": 2, "title": "Round 1: Parallel generation", "instructions": "Paste the same prompt into ChatGPT, Claude, Gemini, Perplexity, and DeepSeek. Save all 5 responses. Don't read them yet.", "tip": "All 5 have free tiers. If you haven't signed up for all of them yet, now's the time." },
+      { "step": 3, "title": "Round 2: Cross-review", "instructions": "Take ChatGPT's response and paste it into Claude with: 'Review this for accuracy, identify errors, suggest improvements, and rate it 1-10.' Do the same with Claude's response in ChatGPT.", "tip": "AIs are surprisingly good at catching each other's mistakes. They're also sometimes wrong about what's wrong." },
+      { "step": 4, "title": "Round 3: Fact-check", "instructions": "Take the best response and paste it into Perplexity: 'Fact-check every claim in this text. For each claim, provide a source URL.' Compare against what you can verify yourself.", "tip": "Perplexity cites sources — but check if those sources actually say what Perplexity claims they say." },
+      { "step": 5, "title": "Round 4: Final synthesis", "instructions": "Take the best elements from all responses. Give Claude (or your preferred AI) all 5 responses and ask: 'Synthesize these 5 perspectives into one definitive response. Flag any disagreements between the sources.'", "tip": "The synthesized version is almost always better than any single AI's response. This is the power of multi-AI workflows." },
+      { "step": 6, "title": "Score and document", "instructions": "Rate each AI's original response for: accuracy (1-10), depth (1-10), readability (1-10), and uniqueness (1-10). Save results. This becomes your personal AI comparison database.", "tip": "Your rankings will differ from published benchmarks because YOUR use case matters more than general benchmarks." }
+    ],
+    "expectedOutcome": "A clear understanding of how different AIs think, where each excels, and proof that multi-AI chains produce better results than any single AI. This is the foundation for the AI Orchestrator in the Idea Machine project.",
+    "lastVerified": "2026-03-27"
+  }
+]

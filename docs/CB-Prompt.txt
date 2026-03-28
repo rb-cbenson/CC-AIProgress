@@ -1,0 +1,77 @@
+Project: CC-AIProgress
+Started: March 27, 2026
+
+Objective: 
+
+Keep up to date with AI automatically
+
+Goals: 
+
+Keeping track of AI progress / Stay abreast of AI news
+What AI is capable of doing and what programs to use for what?
+Ensuring we don't stay with "old" technology for too long
+Be able to know what AI to try / experiment with
+
+Requirements:
+
+Potentially create as modular setup
+Create it as a program which can be easily viewed in Windows or on a Chromebook (without developer access / Linux ideally)
+Versioning progress of this project
+Able to revert (in this project) easily - potentially using backups or GitHub
+If an executable is needed / Chromebook APP, test first before creating (save tokens)
+Create a file noting this initial prompt (keep this as is for reference) then update (in a separate section) as new suggestions are made and decisions are taken
+
+Brainstorming:
+
+Lots of research and group by general categories 
+Subcategories into free vs paid options for each (include pricing in CAD)
+Search online for sites trying to keep up with AI progress
+Search online for user reviews, articles, blogs, press releases
+Include a section below this for specific applications which are not "general use" but perhaps targeted to specific fields
+Create a ranked list for each category, and think about how to treat programs which overlap multiple categories
+This can be run "in the background" to stay up to date
+Use AI to periodically check if whatever approach reached here should be updated based on news and adapt accordingly (prompt the user?)
+Might need several iterations based on user preference
+
+Considerations:
+
+Easy to view interface: pictures are always nice (I'm a human after all)
+Deduplication of everything found (news, articles, tools etc.)
+Consider if (and how) AI tools can be used together (AI programming with AI video for example)
+Any potential issues with each
+Create mutiple tabs if needed? 
+Regulations which come out (Canada, USA, World etc.)
+AI run in the cloud vs. Desktop (like Claude Desktop), or entirely locally?
+At what point is it worth NOT considering something? Don't want to be overwhelmed
+Can potentially still use AI; but let's try to keep it platform agnostic (potentially via a saved prompt? Open to ideas) and a way to easily recreate it if moved from Claude to another program (ChatGPT for example)
+If there's something which can do everyhing outlined here, it's worth noting.
+What might be missing from this prompt? Is it worth including what hardware is used / hardware progress?
+
+Examples:
+
+Examples (AI news): RSS feeds ; scraper tools for websites; https://www.therundown.ai/ ; https://www.superhuman.ai/ ; https://ised-isde.canada.ca/site/ised/en/artificial-intelligence-ecosystem https://www.reddit.com/r/AI_Agents/comments/1r4w3aw/how_do_you_stay_up_to_date_with_ai_especially/
+Examples (AI tools): ChatGPT from Anthropic (text generation, programming); Claude from Anthropic; Copilot; Gemini; https://chat.z.ai/ etc.
+Examples (Categorization): Research, creative writing, media generation (images, videos), programming (stand-alone, website, smartphone APPs, 3D modeling, Electronic design etc.) Feel free to create appropriate categories after all AI have been found) and update as needed
+Examples (Ranking): What's best for each category (and why); Best value; Which can do many things (not limited to one category) as well as "up and coming" (recently released as well as being talked about)
+Examples (Specific AI tools): https://www.notion.com/
+
+
+Additional Requirements:
+
+For this project, please implement Claude auto mode
+
+Additional Brainstorming:
+
+Comparison & Testing: This might actually be the most useful as a summary: An overall suggestion of "You should try this ASAP" (by category and overall) with guided step by step instructions on what to do / how to test. 
+The testing can involve using multiple tools with each other, and even hardware as needed (list what's needed, within reason). User can choose to try, save for later or delete. Saving for later can have the option of checking if that test is still valid or if there's something better. 
+
+Additional Examples:
+
+Examples (AI News): https://www.youtube.com/@mattbrwn
+Examples (AI tools):https://www.kimi.com/ ; https://suno.com/ ; https://qwen.ai/ ; https://www.deepseek.com/ ; https://meetcody.ai/ ; https://hex-rays.com/ida-pro ; https://copilot.microsoft.com/
+Example (Test): Multimedia (Video creation): Determine which AI is best to generate videos (free or paid) and use AI to automatically generate a video (user prompt). Have AI log in / create an account (user input / verification if needed)
+
+
+
+
+

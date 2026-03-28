@@ -1,0 +1,107 @@
+[
+  {
+    "id": "text-chat",
+    "name": "Text & Chat AI",
+    "icon": "message-circle",
+    "color": "#4361ee",
+    "description": "Conversational AI assistants for writing, research, analysis, and general-purpose tasks"
+  },
+  {
+    "id": "image-generation",
+    "name": "Image Generation",
+    "icon": "photo",
+    "color": "#f72585",
+    "description": "AI tools that create images from text prompts or modify existing images"
+  },
+  {
+    "id": "video-generation",
+    "name": "Video Generation",
+    "icon": "video",
+    "color": "#7209b7",
+    "description": "AI tools that generate or edit video content from text, images, or other video"
+  },
+  {
+    "id": "audio-music",
+    "name": "Audio & Music",
+    "icon": "music",
+    "color": "#3a0ca3",
+    "description": "AI tools for generating music, voice, sound effects, and audio editing"
+  },
+  {
+    "id": "coding-assistants",
+    "name": "Coding Assistants",
+    "icon": "code",
+    "color": "#06d6a0",
+    "description": "AI-powered tools for writing, reviewing, and debugging code"
+  },
+  {
+    "id": "productivity",
+    "name": "Productivity & Notes",
+    "icon": "clipboard",
+    "color": "#ffd166",
+    "description": "AI tools for note-taking, document management, meeting transcription, and workflow organization"
+  },
+  {
+    "id": "3d-cad",
+    "name": "3D & CAD / Specialized",
+    "icon": "3d-cube-sphere",
+    "color": "#ef476f",
+    "description": "AI for 3D modeling, CAD, electronic design, reverse engineering, and other specialized fields"
+  },
+  {
+    "id": "all-in-one",
+    "name": "All-in-One Platforms",
+    "icon": "layers-intersect",
+    "color": "#118ab2",
+    "description": "Platforms offering unified access to multiple AI models or spanning multiple categories"
+  },
+  {
+    "id": "workflow-automation",
+    "name": "Workflow & Automation",
+    "icon": "arrows-shuffle",
+    "color": "#073b4c",
+    "description": "Tools that connect AI services together and automate multi-step workflows"
+  },
+  {
+    "id": "ai-agents",
+    "name": "AI Agents & Autonomous",
+    "icon": "robot",
+    "color": "#e63946",
+    "description": "Autonomous AI agents that browse, code, research, and complete multi-step tasks independently"
+  },
+  {
+    "id": "local-ai",
+    "name": "Local & Open Source AI",
+    "icon": "server",
+    "color": "#457b9d",
+    "description": "AI models and tools that run locally on your hardware, preserving privacy and avoiding API costs"
+  },
+  {
+    "id": "ai-security",
+    "name": "AI Security & Trust",
+    "icon": "shield-check",
+    "color": "#2d6a4f",
+    "description": "Tools for securing AI systems, detecting AI-generated content, monitoring model safety, and auditing AI behavior"
+  },
+  {
+    "id": "speech-voice",
+    "name": "Speech & Voice AI",
+    "icon": "microphone",
+    "color": "#9b5de5",
+    "description": "AI tools for speech-to-text, text-to-speech, voice cloning, real-time translation, and voice assistants"
+  },
+  {
+    "id": "data-analysis",
+    "name": "Data Analysis & Research",
+    "icon": "chart-bar",
+    "color": "#ee6c4d",
+    "description": "AI tools for analyzing data, generating insights, research assistance, and scientific discovery"
+  },
+  {
+    "id": "robotics-ai",
+    "name": "Robotics & Embodied AI",
+    "icon": "robot",
+    "color": "#dc2626",
+    "description": "AI tools for robotics development: simulation, robot learning, drones/UAVs, humanoids, IoT/edge AI, ROS ecosystem, computer vision, industrial automation, and embodied AI foundation models"
+  }
+]

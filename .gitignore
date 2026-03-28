@@ -1,0 +1,11 @@
+# Claude Code session files
+.claude/scheduled_tasks.lock
+.claude/settings.local.json
+
+# One-time migration scripts (already ran, not needed in repo)
+scripts/add_intl_sources.py
+scripts/add_robotics.py
+scripts/update_tools.py
+
+# Local notes
+Safety.txt
