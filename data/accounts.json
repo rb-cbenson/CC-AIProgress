@@ -1,0 +1,31 @@
+{
+  "email": "colemanbensonai@gmail.com",
+  "note": "Dedicated AI tools account. No credentials stored here — use environment variables for API keys.",
+  "accounts": [
+    {
+      "service": "OpenAI API",
+      "toolId": "openai-api",
+      "signupDate": "2026-03-28",
+      "method": "google-sso",
+      "plan": "free",
+      "apiKeyEnvVar": "OPENAI_API_KEY",
+      "status": "needs-credits",
+      "notes": "Key generated but API requires prepaid credits. $5 minimum."
+    },
+    {
+      "service": "Google AI Studio (Gemini API)",
+      "toolId": "gemini-api",
+      "signupDate": "2026-03-28",
+      "method": "google-sso",
+      "plan": "free",
+      "apiKeyEnvVar": "GOOGLE_API_KEY",
+      "status": "provisioning",
+      "notes": "Key valid (model listing works). Generation quota shows 0 — new project provisioning, usually resolves within 1 hour."
+    }
+  ],
+  "pending": [
+    {"service": "Perplexity", "toolId": "perplexity", "priority": "high", "reason": "Search-augmented AI for research sweeps"},
+    {"service": "Hugging Face", "toolId": "hugging-face", "priority": "medium", "reason": "Model hub, free inference API"},
+    {"service": "Replicate", "toolId": "replicate", "priority": "low", "reason": "Run open-source models via API"}
+  ]
+}

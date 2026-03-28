@@ -22,7 +22,20 @@
           "period": "month",
           "details": "Unlimited access, o1/o3 reasoning models, highest limits"
         }
-      ]
+      ],
+      "freeTierLimits": {
+        "requestsPerDay": "limited (varies)",
+        "models": [
+          "gpt-4o (limited)",
+          "gpt-4o-mini"
+        ],
+        "features": [
+          "image generation (limited)",
+          "web browsing",
+          "file upload"
+        ],
+        "notes": "Daily caps on GPT-4o, more generous on 4o-mini"
+      }
     },
     "ranking": {
       "overall": 1,
@@ -87,7 +100,19 @@
           "period": "month",
           "details": "Highest usage limits, all models"
         }
-      ]
+      ],
+      "freeTierLimits": {
+        "requestsPerDay": "limited (varies by load)",
+        "models": [
+          "claude-sonnet-4.6"
+        ],
+        "features": [
+          "web search (limited)",
+          "file upload",
+          "projects"
+        ],
+        "notes": "Free tier uses Sonnet. Opus/extended thinking require Pro."
+      }
     },
     "ranking": {
       "overall": 2,
@@ -141,7 +166,11 @@
           "period": "month",
           "details": "Gemini Ultra, 2TB storage, Workspace integration"
         }
-      ]
+      ],
+      "freeTierLimits": {
+        "requestsPerDay": "unlimited (web UI)",
+        "notes": "Free web access to Gemini, generous limits. API limits separate."
+      }
     },
     "ranking": {
       "overall": 3,
@@ -198,7 +227,16 @@
           "period": "month",
           "details": "Unlimited Pro searches, file upload, API access"
         }
-      ]
+      ],
+      "freeTierLimits": {
+        "requestsPerDay": "5 Pro searches/day",
+        "features": [
+          "web search",
+          "citations",
+          "follow-up questions"
+        ],
+        "notes": "Free tier has limited Pro queries. Basic search unlimited."
+      }
     },
     "ranking": {
       "overall": 5,
@@ -570,7 +608,11 @@
           "period": "month",
           "details": "60hr fast, highest limits"
         }
-      ]
+      ],
+      "freeTierLimits": {
+        "requestsPerDay": 0,
+        "notes": "No free tier. Requires paid subscription starting ~$14 CAD/mo."
+      }
     },
     "ranking": {
       "overall": 4,
@@ -668,7 +710,11 @@
           "period": "month",
           "details": "Cloud-hosted generation if no local GPU"
         }
-      ]
+      ],
+      "freeTierLimits": {
+        "requestsPerDay": "unlimited",
+        "notes": "Open source, runs locally. No limits. Cloud APIs (Stability) have separate pricing."
+      }
     },
     "ranking": {
       "overall": 11,
@@ -885,7 +931,12 @@
           "period": "month",
           "details": "Unlimited generations"
         }
-      ]
+      ],
+      "freeTierLimits": {
+        "requestsPerDay": 0,
+        "credits": "125 credits on signup (enough for ~3 short videos)",
+        "notes": "Trial credits only. No ongoing free tier."
+      }
     },
     "ranking": {
       "overall": 9,
@@ -1206,7 +1257,15 @@
           "period": "month",
           "details": "2000 songs/month, highest quality"
         }
-      ]
+      ],
+      "freeTierLimits": {
+        "creditsPerDay": 50,
+        "features": [
+          "50 credits/day (~10 songs)",
+          "non-commercial use only"
+        ],
+        "notes": "Free tier is generous but non-commercial."
+      }
     },
     "ranking": {
       "overall": 19,
@@ -1317,7 +1376,11 @@
           "period": "month",
           "details": "500K characters, 160 voices, API"
         }
-      ]
+      ],
+      "freeTierLimits": {
+        "charactersPerMonth": 10000,
+        "notes": "10,000 characters/month free. ~10 minutes of audio."
+      }
     },
     "ranking": {
       "overall": 21,
@@ -1380,7 +1443,15 @@
           "period": "month/user",
           "details": "Fine-tuned models, knowledge bases"
         }
-      ]
+      ],
+      "freeTierLimits": {
+        "requestsPerMonth": 2000,
+        "features": [
+          "code completions (2000/mo)",
+          "chat (50/mo)"
+        ],
+        "notes": "Free tier: 2000 completions + 50 chat messages per month"
+      }
     },
     "ranking": {
       "overall": 8,
@@ -2236,7 +2307,16 @@
           "period": "month/user",
           "details": "SSO, audit logs, priority support"
         }
-      ]
+      ],
+      "freeTierLimits": {
+        "requestsPerDay": 1000,
+        "features": [
+          "inference API (rate limited)",
+          "model hosting (limited)",
+          "spaces (free)"
+        ],
+        "notes": "Free inference API with queue. Dedicated endpoints require Pro."
+      }
     },
     "ranking": {
       "overall": 10,
@@ -2456,7 +2536,12 @@
           "period": "month",
           "details": "10,000 executions, advanced features"
         }
-      ]
+      ],
+      "freeTierLimits": {
+        "workflows": 5,
+        "executions": "unlimited (self-hosted)",
+        "notes": "Cloud: 5 workflows free. Self-hosted: unlimited, fully free."
+      }
     },
     "ranking": {
       "overall": 13,
@@ -4646,7 +4731,11 @@
     "pricingCAD": {
       "freeTier": true,
       "freeTierDetails": "Fully open source and free",
-      "paidPlans": []
+      "paidPlans": [],
+      "freeTierLimits": {
+        "requestsPerDay": "unlimited",
+        "notes": "Runs locally. No API limits. Limited by your hardware."
+      }
     },
     "ranking": {
       "overall": 92,
@@ -4690,7 +4779,11 @@
     "pricingCAD": {
       "freeTier": true,
       "freeTierDetails": "Free for personal use",
-      "paidPlans": []
+      "paidPlans": [],
+      "freeTierLimits": {
+        "requestsPerDay": "unlimited",
+        "notes": "Runs locally. No API limits. Limited by your hardware."
+      }
     },
     "ranking": {
       "overall": 93,
@@ -7305,7 +7398,11 @@
     "pricingCAD": {
       "freeTier": true,
       "freeTierDetails": "Free and open-source (Apache 2.0)",
-      "paidPlans": []
+      "paidPlans": [],
+      "freeTierLimits": {
+        "requestsPerDay": "unlimited",
+        "notes": "Free and open source (Apache 2.0). No limits."
+      }
     },
     "ranking": {
       "overall": 150,
@@ -7349,7 +7446,11 @@
     "pricingCAD": {
       "freeTier": true,
       "freeTierDetails": "Free and open-source",
-      "paidPlans": []
+      "paidPlans": [],
+      "freeTierLimits": {
+        "requestsPerDay": "unlimited",
+        "notes": "Free and open source. No limits."
+      }
     },
     "ranking": {
       "overall": 151,
@@ -7827,7 +7928,12 @@
           "period": "month",
           "details": "Per user, advanced features"
         }
-      ]
+      ],
+      "freeTierLimits": {
+        "projects": 5,
+        "inferencePerMonth": 100000,
+        "notes": "Free: 5 projects, 100K inferences/month. Enterprise for more."
+      }
     },
     "ranking": {
       "overall": 161,
@@ -8397,7 +8503,11 @@
           "period": "month",
           "details": "Opus: ~$21.60/$108 per MTok in/out; Sonnet: ~$4.32/$21.60; Haiku: ~$0.36/$1.80 (CAD)"
         }
-      ]
+      ],
+      "freeTierLimits": {
+        "requestsPerDay": 0,
+        "notes": "No free tier. Pay-per-token. See anthropic.com/pricing"
+      }
     },
     "ranking": {
       "overall": 173,
@@ -8450,7 +8560,11 @@
           "period": "month",
           "details": "GPT-4o: ~$3.60/$14.40 per MTok in/out; GPT-5: ~$14.40/$43.20 (CAD)"
         }
-      ]
+      ],
+      "freeTierLimits": {
+        "requestsPerDay": 0,
+        "notes": "No free tier. Requires prepaid credits. Minimum $5 USD."
+      }
     },
     "ranking": {
       "overall": 174,
@@ -8505,7 +8619,19 @@
           "period": "month",
           "details": "Gemini 2.5 Pro: ~$1.80/$14.40 per MTok in/out (CAD). Free tier available."
         }
-      ]
+      ],
+      "freeTierLimits": {
+        "requestsPerDay": 500,
+        "requestsPerMinute": 10,
+        "tokensPerMinute": 250000,
+        "grounding": "500 RPD with Google Search (shared with Flash-Lite)",
+        "models": [
+          "gemini-2.0-flash",
+          "gemini-2.0-flash-lite",
+          "gemini-2.5-flash"
+        ],
+        "notes": "Free tier, no billing required"
+      }
     },
     "ranking": {
       "overall": 175,
@@ -8558,7 +8684,12 @@
           "period": "month",
           "details": "Sonar Pro: ~$4.32/$21.60 per MTok in/out + $7.20/1K searches (CAD)"
         }
-      ]
+      ],
+      "freeTierLimits": {
+        "requestsPerMinute": 50,
+        "tokensPerMinute": 150000,
+        "notes": "Pay-per-token. No free credits for new accounts."
+      }
     },
     "ranking": {
       "overall": 176,
@@ -8775,7 +8906,11 @@
           "period": "month",
           "details": "Per user, 50,000 minutes/month, advanced features"
         }
-      ]
+      ],
+      "freeTierLimits": {
+        "minutesPerMonth": 2000,
+        "notes": "2000 minutes/month free for public repos. 500 for private."
+      }
     },
     "ranking": {
       "overall": 180,
@@ -8818,7 +8953,12 @@
     "pricingCAD": {
       "freeTier": true,
       "freeTierDetails": "Free hosting for public repos, 100GB bandwidth/month",
-      "paidPlans": []
+      "paidPlans": [],
+      "freeTierLimits": {
+        "sites": "unlimited public repos",
+        "bandwidth": "100GB/month",
+        "notes": "Free for public repos. 100GB bandwidth, 1GB storage per site."
+      }
     },
     "ranking": {
       "overall": 181,
@@ -9087,7 +9227,11 @@
     "pricingCAD": {
       "freeTier": true,
       "freeTierDetails": "Completely free and open source (GPL)",
-      "paidPlans": []
+      "paidPlans": [],
+      "freeTierLimits": {
+        "requestsPerDay": "unlimited",
+        "notes": "Fully free and open source. No limits."
+      }
     },
     "ranking": {
       "overall": 187,
@@ -9133,7 +9277,11 @@
     "pricingCAD": {
       "freeTier": true,
       "freeTierDetails": "Completely free and open source (LGPL)",
-      "paidPlans": []
+      "paidPlans": [],
+      "freeTierLimits": {
+        "requestsPerDay": "unlimited",
+        "notes": "Fully free and open source. No limits."
+      }
     },
     "ranking": {
       "overall": 188,

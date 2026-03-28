@@ -139,11 +139,18 @@ Use `python scripts/backup.py` to create tagged snapshots. Tags are free (just p
   "pricingCAD": {
     "freeTier": true/false,
     "freeTierDetails": "string",
+    "freeTierLimits": { "requestsPerDay": number|string, "requestsPerMinute": number, "tokensPerMinute": number, "models": ["string"], "features": ["string"], "notes": "string" },
     "paidPlans": [{ "name": "string", "priceCAD": number, "period": "month|year", "details": "string" }]
   },
+  "capabilities": ["string (from capability type list)"],
+  "integrations": ["tool-id"],
+  "accessMethod": "web|web+api|api|cli|desktop-app",
+  "platformSupport": ["windows|mac|linux|web|api|ios|android"],
   "ranking": { "overall": number, "inCategory": number, "trend": "rising|stable|declining" },
   "pros": ["string"],
   "cons": ["string"],
+  "trustScore": number,
+  "firstTracked": "ISO date",
   "lastVerified": "ISO date"
 }]
 ```
