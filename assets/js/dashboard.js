@@ -618,28 +618,45 @@ function addRes(){
 function renderRankings(){
   const el=document.getElementById('tab-rankings');
   const sorted=[...S.tools].sort((a,b)=>a.ranking.overall-b.ranking.overall);
-  const top10=sorted.slice(0,10);
+  const top15=sorted.slice(0,15);
   const bestFree=S.tools.filter(t=>t.pricingCAD.freeTier).sort((a,b)=>a.ranking.overall-b.ranking.overall).slice(0,10);
   const rising=S.tools.filter(t=>t.ranking.trend==='rising').sort((a,b)=>a.ranking.overall-b.ranking.overall);
   const bestVal=S.tools.filter(t=>t.pricingCAD.freeTier||(t.pricingCAD.paidPlans.length&&t.pricingCAD.paidPlans[0].priceCAD<=20)).sort((a,b)=>a.ranking.overall-b.ranking.overall).slice(0,10);
   const perCat=S.cats.map(c=>({c,t:S.tools.filter(t=>t.category===c.id).sort((a,b)=>a.ranking.inCategory-b.ranking.inCategory).slice(0,3)}));
 
+  // Categorize free tiers
+  const freeUnlimited=S.tools.filter(t=>{
+    const lim=t.pricingCAD?.freeTierLimits;
+    return t.pricingCAD.freeTier&&lim&&(lim.requestsPerDay==='unlimited'||lim.notes?.toLowerCase().includes('unlimited')||lim.notes?.toLowerCase().includes('open source'));
+  });
+  const freeLimited=S.tools.filter(t=>{
+    const lim=t.pricingCAD?.freeTierLimits;
+    return t.pricingCAD.freeTier&&lim&&!freeUnlimited.includes(t);
+  });
+  const freeNoLimits=S.tools.filter(t=>t.pricingCAD.freeTier&&!t.pricingCAD.freeTierLimits);
+  const trialOnly=S.tools.filter(t=>{
+    const lim=t.pricingCAD?.freeTierLimits;
+    return t.pricingCAD.freeTier&&lim&&(lim.requestsPerDay===0||lim.notes?.toLowerCase().includes('trial')||lim.notes?.toLowerCase().includes('one-time'));
+  });
+  const paidOnly=S.tools.filter(t=>!t.pricingCAD.freeTier);
+
   el.innerHTML=`
     <div class="section-banner" data-ai-section="rankings" data-ai-description="AI tool rankings by category, value, momentum, and overall quality">
-      <h2>Rankings & Analysis</h2>
+      <h2>Tool Rankings & Analysis</h2>
       <p>Who's winning, who's rising, who's dying — ranked by features, adoption, pricing, and growth trajectory</p>
       <div class="banner-stats">
-        <span>#1 Overall: ${top10[0]?.name}</span>
+        <span>#1 Overall: ${top15[0]?.name}</span>
         <span>${rising.length} tools rising</span>
         <span>Best free: ${bestFree[0]?.name}</span>
       </div>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:10px">
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px">
+      <div class="chart-box"><h3>Most Popular (Top 15)</h3><div id="ch-popular"></div></div>
       <div class="chart-box"><h3>Tools per Category</h3><div id="ch1"></div></div>
-      <div class="chart-box"><h3>Free vs Paid</h3><div id="ch2"></div></div>
+      <div class="chart-box"><h3>Free vs Paid Breakdown</h3><div id="ch2"></div></div>
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px">
-      <div class="card"><div class="sh"><h3>🏆 Top 10 Overall</h3></div><ol class="rk">${top10.map((t,i)=>rkItem(t,i+1)).join('')}</ol></div>
+      <div class="card"><div class="sh"><h3>🏆 Top 15 Overall</h3></div><ol class="rk">${top15.map((t,i)=>rkItem(t,i+1)).join('')}</ol></div>
       <div class="card"><div class="sh"><h3>🆓 Best Free Tiers</h3></div><ol class="rk">${bestFree.map((t,i)=>rkItem(t,i+1)).join('')}</ol></div>
       <div class="card"><div class="sh"><h3>💰 Best Value (&lt;$20 CAD/mo)</h3></div><ol class="rk">${bestVal.map((t,i)=>rkItem(t,i+1)).join('')}</ol></div>
       <div class="card"><div class="sh"><h3>📈 Rising Stars</h3></div><ol class="rk">${rising.map((t,i)=>rkItem(t,i+1)).join('')}</ol></div>
@@ -650,11 +667,39 @@ function renderRankings(){
     </div>`;
 
   if(typeof ApexCharts!=='undefined'){
-    const cc=S.cats.map(c=>({n:c.name,v:S.tools.filter(t=>t.category===c.id).length,c:c.color}));
     const dk=document.documentElement.getAttribute('data-theme')==='dark';
+    const txtColor=dk?'#94a3b8':'#475569';
+
+    // Most Popular bar chart (top 15 by ranking, inverted so #1 has longest bar)
+    const maxRank=top15[top15.length-1]?.ranking.overall||100;
+    new ApexCharts(document.getElementById('ch-popular'),{
+      chart:{type:'bar',height:340,background:'transparent',toolbar:{show:false}},
+      series:[{name:'Popularity Score',data:top15.map(t=>maxRank-t.ranking.overall+1)}],
+      xaxis:{categories:top15.map(t=>t.name),labels:{style:{colors:txtColor,fontSize:'10px'}},axisBorder:{show:false}},
+      yaxis:{show:false},
+      plotOptions:{bar:{horizontal:true,borderRadius:3,barHeight:'70%',distributed:true}},
+      colors:top15.map(t=>{const c=S.cats.find(x=>x.id===t.category);return c?c.color:'#64748b';}),
+      legend:{show:false},
+      dataLabels:{enabled:false},
+      tooltip:{y:{formatter:function(v,opts){return '#'+top15[opts.dataPointIndex]?.ranking.overall+' overall';}}},
+      grid:{show:false},
+      theme:{mode:dk?'dark':'light'}
+    }).render();
+
+    // Tools per Category donut
+    const cc=S.cats.map(c=>({n:c.name,v:S.tools.filter(t=>t.category===c.id).length,c:c.color}));
     new ApexCharts(document.getElementById('ch1'),{chart:{type:'donut',height:240,background:'transparent'},series:cc.map(c=>c.v),labels:cc.map(c=>c.n),colors:cc.map(c=>c.c),legend:{position:'bottom',fontSize:'10px',labels:{colors:dk?'#94a3b8':undefined}},plotOptions:{pie:{donut:{size:'55%'}}},theme:{mode:dk?'dark':'light'}}).render();
-    const fc=S.tools.filter(t=>t.pricingCAD.freeTier).length;
-    new ApexCharts(document.getElementById('ch2'),{chart:{type:'donut',height:240,background:'transparent'},series:[fc,S.tools.length-fc],labels:['Free Tier','Paid Only'],colors:['#06d6a0','#ef476f'],legend:{position:'bottom',fontSize:'10px',labels:{colors:dk?'#94a3b8':undefined}},plotOptions:{pie:{donut:{size:'55%'}}},theme:{mode:dk?'dark':'light'}}).render();
+
+    // Free vs Paid breakdown donut (4 segments)
+    new ApexCharts(document.getElementById('ch2'),{
+      chart:{type:'donut',height:240,background:'transparent'},
+      series:[freeUnlimited.length, freeLimited.length+freeNoLimits.length, trialOnly.length, paidOnly.length],
+      labels:['Free Unlimited','Free (Limited Use)','Trial / Initial Credits','Paid Only'],
+      colors:['#06d6a0','#4ecdc4','#ffd166','#ef476f'],
+      legend:{position:'bottom',fontSize:'10px',labels:{colors:dk?'#94a3b8':undefined}},
+      plotOptions:{pie:{donut:{size:'55%'}}},
+      theme:{mode:dk?'dark':'light'}
+    }).render();
   }
 }
 
@@ -668,19 +713,23 @@ function rkItem(t,r){ const c=cat(t); return `<li data-tip="${t.description.subs
 function renderFlows(){
   const el=document.getElementById('tab-workflows');
   const totalPhases=S.projects.reduce((a,p)=>a+p.phases.length,0);
+  const wfs=Array.isArray(S.flows)?S.flows:(S.flows.workflows||[]);
+  const verifiedCount=wfs.filter(w=>w.verified).length;
+  const allSteps=wfs.flatMap(w=>(w.steps||[]));
+  const toolsUsed=new Set(allSteps.map(s=>s.toolId)).size;
   el.innerHTML=`
     <div class="section-banner" data-ai-section="workflows-projects" data-ai-description="AI tool workflows and ambitious multi-AI projects">
       <h2>Workflows & Projects</h2>
       <p>From simple tool combinations to moonshot projects — no limits, no brick walls</p>
       <div class="banner-stats">
-        <span>${S.flows.length} workflows</span>
+        <span>${wfs.length} workflows (${verifiedCount} verified)</span>
         <span>${S.projects.length} projects</span>
         <span>${totalPhases} phases planned</span>
-        <span>${new Set(S.flows.flatMap(w=>w.steps.map(s=>s.toolId))).size} tools used</span>
+        <span>${toolsUsed} tools used</span>
       </div>
     </div>
     <div class="stabs">
-      <button class="stab${S.wst!=='projects'?' active':''}" onclick="S.wst='flows';renderFlows()">⚡ Workflows (${S.flows.length})</button>
+      <button class="stab${S.wst!=='projects'?' active':''}" onclick="S.wst='flows';renderFlows()">⚡ Workflows (${wfs.length})</button>
       <button class="stab${S.wst==='projects'?' active':''}" onclick="S.wst='projects';renderFlows()">🚀 Projects & Moonshots (${S.projects.length})</button>
     </div>
     <div id="wcontent"></div>`;
@@ -689,19 +738,45 @@ function renderFlows(){
 
 function fillFlows(){
   const el=document.getElementById('wcontent'); if(!el)return;
+  // Support both old array format and new object format
+  const workflows=Array.isArray(S.flows)?S.flows:(S.flows.workflows||[]);
   el.innerHTML=`
-    ${S.flows.map(w=>{
-      const steps=w.steps.map((s,i)=>{const t=S.tools.find(x=>x.id===s.toolId);return `${i?'<span class="wf-arrow">→</span>':''}
-        <div class="wf-step" data-tip="${s.action}"><span class="n">${s.order}</span><div><span class="t"><a href="${t?t.url:'#'}" target="_blank" style="color:inherit;text-decoration:none">${t?t.name:s.toolId}</a></span><br><span class="a">${s.action}</span></div></div>`;}).join('');
+    ${workflows.map(w=>{
+      const steps=(w.steps||[]).map((s,i)=>{
+        const t=S.tools.find(x=>x.id===s.toolId);
+        const freeTag=s.free===false?'<span class="b" style="background:#ef476f;color:white;font-size:8px;margin-left:4px">PAID</span>':
+          s.freeLimit?'<span class="b" style="background:#ffd166;color:#333;font-size:8px;margin-left:4px">LIMITED</span>':'';
+        return `${i?'<span class="wf-arrow">→</span>':''}
+        <div class="wf-step" data-tip="${s.action}"><span class="n">${s.order}</span><div><span class="t"><a href="${t?t.url:'#'}" target="_blank" style="color:inherit;text-decoration:none">${t?t.name:s.toolId}</a>${freeTag}</span><br><span class="a">${s.action}</span></div></div>`;
+      }).join('');
+      const verified=w.verified?'<span class="b" style="background:#06d6a0;color:white;font-size:8px">VERIFIED</span>':
+        '<span class="b" style="background:var(--bg);color:var(--text-muted);font-size:8px">UNVERIFIED</span>';
+      const costTag=w.costTier==='free'?'<span class="b" style="background:#06d6a0;color:white;font-size:8px">ALL FREE</span>':
+        w.costTier==='mixed'?'<span class="b" style="background:#ffd166;color:#333;font-size:8px">FREE + PAID OPTIONS</span>':
+        '<span class="b" style="background:#ef476f;color:white;font-size:8px">PAID</span>';
+      const connectors=(w.connectors||[]).map(c=>
+        `<span class="b" style="background:var(--bg);color:var(--text-muted);font-size:8px" data-tip="${c.note||''}">${c.type}: ${c.name}</span>`
+      ).join(' ');
+      const gaps=(w.gaps||[]).map(g=>`<div style="font-size:var(--font-xs);color:var(--warning);margin-top:2px">⚠ ${g}</div>`).join('');
+      const insight=w.keyInsight?`<div style="font-size:var(--font-xs);color:var(--primary);margin-top:6px;padding:4px 6px;background:var(--primary-soft);border-radius:4px">💡 ${w.keyInsight}</div>`:'';
+      const freeAlt=w.freeAlternative?`<div style="font-size:var(--font-xs);color:var(--success);margin-top:2px">🆓 Free alternative: ${w.freeAlternative}</div>`:'';
       return `<div class="card" data-ai-workflow="${w.id}">
         <h3 style="margin:0 0 3px;font-size:var(--font);font-weight:700">${w.name}</h3>
         <div style="font-size:var(--font-xs);color:var(--text-muted);margin-bottom:8px">${w.description}</div>
-        <div style="margin-bottom:6px"><span class="b" style="background:var(--bg);color:var(--text-muted)">${w.difficulty}</span> <span class="b" style="background:var(--bg);color:var(--text-muted)">${w.category}</span> <span class="b-standalone">Standalone reference</span></div>
-        <div class="wf-steps">${steps}</div></div>`;
+        <div style="margin-bottom:6px;display:flex;flex-wrap:wrap;gap:4px">
+          ${verified} ${costTag}
+          <span class="b" style="background:var(--bg);color:var(--text-muted)">${w.difficulty||'intermediate'}</span>
+          <span class="b" style="background:var(--bg);color:var(--text-muted)">${w.category||''}</span>
+        </div>
+        <div class="wf-steps">${steps}</div>
+        ${connectors?'<div style="margin-top:6px;display:flex;flex-wrap:wrap;gap:3px">'+connectors+'</div>':''}
+        ${insight}${freeAlt}${gaps}
+        ${w.verifiedSource?'<div style="font-size:9px;color:var(--text-muted);margin-top:4px">Source: '+w.verifiedSource+'</div>':''}
+      </div>`;
     }).join('')}
     <div class="card" style="background:var(--primary-soft);border-color:var(--primary)">
       <h4 style="margin:0 0 4px;font-size:var(--font);color:var(--primary)">💡 Build Your Own Workflow</h4>
-      <p style="margin:0;font-size:var(--font-xs);color:var(--text-muted)">These are starting points. AI can help you design custom workflows for any task. The tools above are building blocks; the combinations are infinite.</p>
+      <p style="margin:0;font-size:var(--font-xs);color:var(--text-muted)">These are verified starting points from real users. The Phase 2 orchestrator can generate custom workflows for any task — just describe what you need.</p>
     </div>`;
 }
 
