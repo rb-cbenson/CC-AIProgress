@@ -29,6 +29,11 @@ if sys.platform == 'win32':
     sys.stdout.reconfigure(encoding='utf-8', errors='replace')
 
 BASE = Path(__file__).resolve().parent.parent
+
+# Load API keys from .env
+sys.path.insert(0, str(BASE / "scripts"))
+from env_loader import load_env
+load_env()
 DATA = BASE / "data"
 CACHE_PATH = DATA / "search-cache.json"
 STATUS_PATH = DATA / "search-status.json"

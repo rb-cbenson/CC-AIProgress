@@ -1,3 +1,6 @@
+# API keys — NEVER commit this
+.env
+
 # Claude Code session files
 .claude/scheduled_tasks.lock
 .claude/settings.local.json
