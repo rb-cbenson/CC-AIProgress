@@ -20,10 +20,22 @@
           "Auto-select best AI per task type (research → Perplexity, analysis → Claude, code → Claude Code)",
           "Store API responses in data/ai-responses/ for audit trail"
         ],
-        "aiTools": ["claude-api", "openai-api", "gemini-api", "perplexity-api"],
+        "aiTools": [
+          "claude-api",
+          "openai-api",
+          "gemini-api",
+          "perplexity-api"
+        ],
         "estimatedCost": "Free tier covers most — Claude free API, GPT free tier, Gemini free, Perplexity free searches",
-        "blockers": ["API keys needed", "Rate limits on free tiers"],
-        "workarounds": ["Rotate between AIs to stay within limits", "Cache responses to avoid redundant calls", "Use browser automation as fallback when APIs hit limits"]
+        "blockers": [
+          "API keys needed",
+          "Rate limits on free tiers"
+        ],
+        "workarounds": [
+          "Rotate between AIs to stay within limits",
+          "Cache responses to avoid redundant calls",
+          "Use browser automation as fallback when APIs hit limits"
+        ]
       },
       {
         "phase": 2,
@@ -38,10 +50,20 @@
           "Daily briefing generation: 'Here's what changed in AI today'",
           "Auto-commit data changes to GitHub with detailed diffs"
         ],
-        "aiTools": ["claude-scheduled-tasks", "github-actions", "web-scraping"],
+        "aiTools": [
+          "claude-scheduled-tasks",
+          "github-actions",
+          "playwright"
+        ],
         "estimatedCost": "Free (Claude scheduled tasks + GitHub Actions free tier)",
-        "blockers": ["Some sites block scraping"],
-        "workarounds": ["Use RSS feeds where available", "Use AI to read pages via browser automation", "Perplexity API as search proxy"]
+        "blockers": [
+          "Some sites block scraping"
+        ],
+        "workarounds": [
+          "Use RSS feeds where available",
+          "Use AI to read pages via browser automation",
+          "Perplexity API as search proxy"
+        ]
       },
       {
         "phase": 3,
@@ -56,10 +78,21 @@
           "Generate test report cards automatically",
           "Video recording of test sessions for review"
         ],
-        "aiTools": ["claude-browser-mcp", "puppeteer", "playwright"],
+        "aiTools": [
+          "claude-api",
+          "puppeteer",
+          "playwright"
+        ],
         "estimatedCost": "Free (runs on your Windows PC)",
-        "blockers": ["CAPTCHAs on some tools", "Login requirements"],
-        "workarounds": ["Store session cookies", "Use tools' APIs instead of UI where available", "AI vision to solve simple CAPTCHAs"]
+        "blockers": [
+          "CAPTCHAs on some tools",
+          "Login requirements"
+        ],
+        "workarounds": [
+          "Store session cookies",
+          "Use tools' APIs instead of UI where available",
+          "AI vision to solve simple CAPTCHAs"
+        ]
       },
       {
         "phase": 4,
@@ -74,10 +107,18 @@
           "Personalized recommendations based on your test history and interests",
           "Weekly 'AI Forecast' briefing"
         ],
-        "aiTools": ["claude-api", "data-analysis"],
+        "aiTools": [
+          "claude-api",
+          "julius-ai"
+        ],
         "estimatedCost": "Free (analysis on local data)",
-        "blockers": ["Need historical data first — takes weeks of collection"],
-        "workarounds": ["Backfill from web archives where possible", "Start collecting now, predictions improve over time"]
+        "blockers": [
+          "Need historical data first — takes weeks of collection"
+        ],
+        "workarounds": [
+          "Backfill from web archives where possible",
+          "Start collecting now, predictions improve over time"
+        ]
       }
     ],
     "biggestRisk": "API rate limits on free tiers",
@@ -106,10 +147,23 @@
           "Set up Cloudflare Tunnel or Tailscale for remote access from phone outside home",
           "Basic conversation loop: speak → transcribe → AI processes → TTS response"
         ],
-        "aiTools": ["whisper", "elevenlabs", "coqui-tts", "fastapi", "cloudflare-tunnel"],
+        "aiTools": [
+          "whisper",
+          "elevenlabs",
+          "coqui-tts",
+          "fastapi",
+          "cloudflare-tunnel"
+        ],
         "estimatedCost": "Free (Whisper is free, Coqui TTS is free, Cloudflare tunnel is free)",
-        "blockers": ["PC must be running", "Network setup for remote access"],
-        "workarounds": ["Wake-on-LAN to start PC remotely", "Tailscale for zero-config VPN", "Fallback to cloud TTS when local unavailable"]
+        "blockers": [
+          "PC must be running",
+          "Network setup for remote access"
+        ],
+        "workarounds": [
+          "Wake-on-LAN to start PC remotely",
+          "Tailscale for zero-config VPN",
+          "Fallback to cloud TTS when local unavailable"
+        ]
       },
       {
         "phase": 2,
@@ -124,10 +178,24 @@
           "Cost tracking: monitor API usage, prefer free tiers, warn before paid calls",
           "Plugin architecture: easy to add new AI tools as they launch"
         ],
-        "aiTools": ["openai-api", "claude-api", "perplexity-api", "suno-api", "runway-api", "midjourney"],
+        "aiTools": [
+          "openai-api",
+          "claude-api",
+          "perplexity-api",
+          "suno-api",
+          "runway-api",
+          "midjourney"
+        ],
         "estimatedCost": "Mostly free tiers — paid APIs only for heavy use ($5-20/month estimated)",
-        "blockers": ["Some tools have no API (Midjourney)", "Rate limits"],
-        "workarounds": ["Browser automation for tools without APIs", "Queue system to respect rate limits", "Local models (Stable Diffusion, DeepSeek) as unlimited fallbacks"]
+        "blockers": [
+          "Some tools have no API (Midjourney)",
+          "Rate limits"
+        ],
+        "workarounds": [
+          "Browser automation for tools without APIs",
+          "Queue system to respect rate limits",
+          "Local models (Stable Diffusion, DeepSeek) as unlimited fallbacks"
+        ]
       },
       {
         "phase": 3,
@@ -142,10 +210,24 @@
           "Program generation: describe what you want → AI writes, tests, and packages it",
           "Document generation: reports, presentations, spreadsheets from voice description"
         ],
-        "aiTools": ["stable-diffusion-local", "dall-e-api", "runway-api", "suno-api", "claude-code", "github-pages"],
+        "aiTools": [
+          "stable-diffusion",
+          "dall-e-api",
+          "runway-api",
+          "suno-api",
+          "claude-code",
+          "github-pages"
+        ],
         "estimatedCost": "Local generation is free. API calls: $0-20/month depending on usage",
-        "blockers": ["GPU needed for local image/video generation", "Quality varies"],
-        "workarounds": ["Use cloud APIs when local GPU insufficient", "Chain multiple AIs for quality improvement", "Human review step for important outputs"]
+        "blockers": [
+          "GPU needed for local image/video generation",
+          "Quality varies"
+        ],
+        "workarounds": [
+          "Use cloud APIs when local GPU insufficient",
+          "Chain multiple AIs for quality improvement",
+          "Human review step for important outputs"
+        ]
       },
       {
         "phase": 4,
@@ -160,10 +242,17 @@
           "Proactive suggestions: 'I noticed a new image AI launched — want me to test it?'",
           "Error recovery: when something fails, automatically try alternative approaches"
         ],
-        "aiTools": ["all-available"],
+        "aiTools": [],
         "estimatedCost": "Varies by usage — mostly free with occasional API costs",
-        "blockers": ["Trust/safety — autonomous actions need guardrails", "Complex error handling"],
-        "workarounds": ["Confirmation prompts for destructive actions", "Sandbox environments for testing", "Rollback capability for every action"]
+        "blockers": [
+          "Trust/safety — autonomous actions need guardrails",
+          "Complex error handling"
+        ],
+        "workarounds": [
+          "Confirmation prompts for destructive actions",
+          "Sandbox environments for testing",
+          "Rollback capability for every action"
+        ]
       }
     ],
     "biggestRisk": "Scope — this is a massive project",
@@ -192,10 +281,16 @@
           "Test combination workflows: output of one AI as input to another",
           "Publish results as structured data in this dashboard"
         ],
-        "aiTools": ["all-tracked-tools"],
+        "aiTools": [],
         "estimatedCost": "Free (using free tiers of all tools)",
-        "blockers": ["Time-intensive", "Free tier limits"],
-        "workarounds": ["Automate testing via browser automation", "Prioritize most impactful comparisons first"]
+        "blockers": [
+          "Time-intensive",
+          "Free tier limits"
+        ],
+        "workarounds": [
+          "Automate testing via browser automation",
+          "Prioritize most impactful comparisons first"
+        ]
       },
       {
         "phase": 2,
@@ -210,10 +305,17 @@
           "Test research chains: Perplexity searches → Claude analyzes → GPT generates report → Claude critiques",
           "Score each pipeline: quality, speed, cost, reliability"
         ],
-        "aiTools": ["all-available"],
+        "aiTools": [],
         "estimatedCost": "Mostly free tiers — some API costs for heavy chains",
-        "blockers": ["Complex orchestration", "Error propagation between AIs"],
-        "workarounds": ["Start with 2-tool chains, scale up", "Error handling at each stage", "Human checkpoint for expensive operations"]
+        "blockers": [
+          "Complex orchestration",
+          "Error propagation between AIs"
+        ],
+        "workarounds": [
+          "Start with 2-tool chains, scale up",
+          "Error handling at each stage",
+          "Human checkpoint for expensive operations"
+        ]
       },
       {
         "phase": 3,
@@ -230,10 +332,17 @@
           "Document exactly where each attempt succeeds, fails, and what would fix it",
           "Re-attempt monthly as tools improve — track progress toward 'impossible'"
         ],
-        "aiTools": ["all-available"],
+        "aiTools": [],
         "estimatedCost": "Variable — some challenges may require paid tiers",
-        "blockers": ["Current tool limitations", "Quality ceilings"],
-        "workarounds": ["Human-in-the-loop for quality gaps", "Mix AI and manual steps, document the ratio", "Track which steps will be automatable next"]
+        "blockers": [
+          "Current tool limitations",
+          "Quality ceilings"
+        ],
+        "workarounds": [
+          "Human-in-the-loop for quality gaps",
+          "Mix AI and manual steps, document the ratio",
+          "Track which steps will be automatable next"
+        ]
       },
       {
         "phase": 4,
@@ -248,10 +357,19 @@
           "Community contribution: accept test submissions from others",
           "Monthly 'State of AI Capability' report — auto-generated"
         ],
-        "aiTools": ["github-actions", "claude-scheduled-tasks", "browser-automation"],
+        "aiTools": [
+          "github-actions",
+          "claude-scheduled-tasks",
+          "playwright"
+        ],
         "estimatedCost": "Free (automated via GitHub Actions + scheduled tasks)",
-        "blockers": ["Scale — lots of tests to maintain"],
-        "workarounds": ["Prioritize high-impact tests", "AI generates and maintains test scripts"]
+        "blockers": [
+          "Scale — lots of tests to maintain"
+        ],
+        "workarounds": [
+          "Prioritize high-impact tests",
+          "AI generates and maintains test scripts"
+        ]
       }
     ],
     "biggestRisk": "Scope creep — there are infinite things to test",
@@ -281,10 +399,21 @@
           "Print top 3 results, photograph and document quality",
           "Build comparison database in data/3d-tests.json"
         ],
-        "aiTools": ["meshy-ai", "tripo-ai", "printpal", "blender"],
+        "aiTools": [
+          "meshy-ai",
+          "tripo-ai",
+          "printpal",
+          "blender"
+        ],
         "estimatedCost": "Free tiers + filament cost (~$5-10 in PLA per test batch)",
-        "blockers": ["Need access to a 3D printer", "Free tier generation limits"],
-        "workarounds": ["Use online print services (JLCPCB 3D printing, Shapeways) if no local printer", "Rotate between tools to stay within free limits"]
+        "blockers": [
+          "Need access to a 3D printer",
+          "Free tier generation limits"
+        ],
+        "workarounds": [
+          "Use online print services (JLCPCB 3D printing, Shapeways) if no local printer",
+          "Rotate between tools to stay within free limits"
+        ]
       },
       {
         "phase": 2,
@@ -300,10 +429,20 @@
           "Compare Zoo output to manual CAD for same parts",
           "Document where AI CAD fails vs succeeds"
         ],
-        "aiTools": ["zoo-cad", "fusion-360", "freecad"],
+        "aiTools": [
+          "zoo-cad",
+          "fusion-360",
+          "freecad"
+        ],
         "estimatedCost": "Zoo API: ~$5-10 for testing. FreeCAD is free.",
-        "blockers": ["Zoo is still early — complex parts may fail", "Mechanical parts need tight tolerances"],
-        "workarounds": ["Use Zoo for initial geometry, manual CAD cleanup for tolerances", "Backflip AI for mesh-to-parametric conversion if needed"]
+        "blockers": [
+          "Zoo is still early — complex parts may fail",
+          "Mechanical parts need tight tolerances"
+        ],
+        "workarounds": [
+          "Use Zoo for initial geometry, manual CAD cleanup for tolerances",
+          "Backflip AI for mesh-to-parametric conversion if needed"
+        ]
       },
       {
         "phase": 3,
@@ -319,10 +458,21 @@
           "Output: print-ready G-code with estimated time and material",
           "Web interface: paste description → get G-code"
         ],
-        "aiTools": ["meshy-ai", "zoo-cad", "blender-python", "orcaslicer-cli"],
+        "aiTools": [
+          "meshy-ai",
+          "zoo-cad",
+          "blender",
+          "orcaslicer-cli"
+        ],
         "estimatedCost": "API costs only — ~$0.50-2 per model",
-        "blockers": ["Mesh repair automation is imperfect", "Slicing parameters depend on printer/material"],
-        "workarounds": ["Conservative repair settings (better to over-repair than under)", "Printer profile presets for common setups"]
+        "blockers": [
+          "Mesh repair automation is imperfect",
+          "Slicing parameters depend on printer/material"
+        ],
+        "workarounds": [
+          "Conservative repair settings (better to over-repair than under)",
+          "Printer profile presets for common setups"
+        ]
       },
       {
         "phase": 4,
@@ -338,10 +488,22 @@
           "Cost estimation: material + print time + shipping",
           "Product listing: auto-generate product photos and descriptions"
         ],
-        "aiTools": ["meshy-ai", "zoo-cad", "jlcpcb-api", "claude-api"],
+        "aiTools": [
+          "meshy-ai",
+          "zoo-cad",
+          "jlcpcb-api",
+          "claude-api"
+        ],
         "estimatedCost": "Variable — $1-50 per product depending on complexity and manufacturing",
-        "blockers": ["Multi-part assemblies are hard — tolerance stacking", "No AI handles assemblies well yet"],
-        "workarounds": ["Start with simple 2-part assemblies", "Human review for critical dimensions", "Iterate: print, measure, adjust, reprint"]
+        "blockers": [
+          "Multi-part assemblies are hard — tolerance stacking",
+          "No AI handles assemblies well yet"
+        ],
+        "workarounds": [
+          "Start with simple 2-part assemblies",
+          "Human review for critical dimensions",
+          "Iterate: print, measure, adjust, reprint"
+        ]
       }
     ],
     "biggestRisk": "Mesh quality — 45% of AI-generated meshes aren't watertight",
@@ -371,10 +533,21 @@
           "Solder and test: does the board actually work?",
           "Build comparison database in data/pcb-tests.json"
         ],
-        "aiTools": ["quilter-ai", "flux-ai", "deeppcb"],
+        "aiTools": [
+          "quilter-ai",
+          "flux-ai",
+          "deeppcb"
+        ],
         "estimatedCost": "Free tool tiers + ~$5-15 per PCB order from JLCPCB (minimum 5 boards)",
-        "blockers": ["Need soldering equipment for testing", "Component sourcing and assembly"],
-        "workarounds": ["JLCPCB offers SMT assembly service", "Start with through-hole components (easier to solder)", "Use EasyEDA (free, integrated with JLCPCB) as baseline comparison"]
+        "blockers": [
+          "Need soldering equipment for testing",
+          "Component sourcing and assembly"
+        ],
+        "workarounds": [
+          "JLCPCB offers SMT assembly service",
+          "Start with through-hole components (easier to solder)",
+          "Use EasyEDA (free, integrated with JLCPCB) as baseline comparison"
+        ]
       },
       {
         "phase": 2,
@@ -389,10 +562,22 @@
           "Document where the chain breaks (analog, power, RF)",
           "Build LLM prompt templates for electronics requirements"
         ],
-        "aiTools": ["circuitmind", "claude-api", "quilter-ai", "flux-ai"],
+        "aiTools": [
+          "circuitmind",
+          "claude-api",
+          "quilter-ai",
+          "flux-ai"
+        ],
         "estimatedCost": "CircuitMind pricing TBD + Claude API (~$1-5 per session)",
-        "blockers": ["CircuitMind doesn't do power/analog circuits", "Handoff between tools requires manual steps"],
-        "workarounds": ["Design power sections manually in KiCad (free)", "Use LLMs to generate KiCad schematic files for analog portions", "Human review at every handoff point"]
+        "blockers": [
+          "CircuitMind doesn't do power/analog circuits",
+          "Handoff between tools requires manual steps"
+        ],
+        "workarounds": [
+          "Design power sections manually in KiCad (free)",
+          "Use LLMs to generate KiCad schematic files for analog portions",
+          "Human review at every handoff point"
+        ]
       },
       {
         "phase": 3,
@@ -407,10 +592,21 @@
           "Explore: can we train a custom model on open-source analog designs?",
           "Document exactly what analog AI CAN'T do — this is the research gap"
         ],
-        "aiTools": ["claude-api", "openai-api", "ltspice"],
+        "aiTools": [
+          "claude-api",
+          "openai-api",
+          "ltspice"
+        ],
         "estimatedCost": "LTspice is free. API costs minimal for testing.",
-        "blockers": ["Analog design is fundamentally harder for AI — noise, parasitics, non-idealities", "Safety concerns for power circuits"],
-        "workarounds": ["Start with low-power, low-frequency circuits where mistakes are safe", "Cross-verify between multiple LLMs", "Always simulate before manufacturing"]
+        "blockers": [
+          "Analog design is fundamentally harder for AI — noise, parasitics, non-idealities",
+          "Safety concerns for power circuits"
+        ],
+        "workarounds": [
+          "Start with low-power, low-frequency circuits where mistakes are safe",
+          "Cross-verify between multiple LLMs",
+          "Always simulate before manufacturing"
+        ]
       },
       {
         "phase": 4,
@@ -426,10 +622,21 @@
           "Tracking: order status, delivery estimation",
           "Full pipeline: text description → manufactured board in mailbox within 2 weeks"
         ],
-        "aiTools": ["flux-ai", "jlcpcb-api", "claude-api"],
+        "aiTools": [
+          "flux-ai",
+          "jlcpcb-api",
+          "claude-api"
+        ],
         "estimatedCost": "PCB orders: $5-50 depending on complexity. Assembly: $20-200.",
-        "blockers": ["Component availability changes daily", "Assembly errors from AI-generated pick-and-place files"],
-        "workarounds": ["Use JLCPCB's verified component library", "Order extra boards for testing", "Start with simple 2-layer boards"]
+        "blockers": [
+          "Component availability changes daily",
+          "Assembly errors from AI-generated pick-and-place files"
+        ],
+        "workarounds": [
+          "Use JLCPCB's verified component library",
+          "Order extra boards for testing",
+          "Start with simple 2-layer boards"
+        ]
       }
     ],
     "biggestRisk": "AI cannot design analog circuits — this limits what boards can be fully automated",
@@ -459,10 +666,21 @@
           "Identify the top 10 time-wasters that AI could handle",
           "Create data/workplace-tasks.json with the complete task map"
         ],
-        "aiTools": ["claude-api", "rescuetime", "toggl"],
+        "aiTools": [
+          "claude-api",
+          "rescuetime",
+          "toggl"
+        ],
         "estimatedCost": "Free (all tools have free tiers)",
-        "blockers": ["Privacy: screen recording captures sensitive work data", "Need your cooperation for accurate mapping"],
-        "workarounds": ["Option B avoids screen recording entirely", "Task mapping can be done conversationally", "Start with non-sensitive tasks only"]
+        "blockers": [
+          "Privacy: screen recording captures sensitive work data",
+          "Need your cooperation for accurate mapping"
+        ],
+        "workarounds": [
+          "Option B avoids screen recording entirely",
+          "Task mapping can be done conversationally",
+          "Start with non-sensitive tasks only"
+        ]
       },
       {
         "phase": 2,
@@ -478,10 +696,24 @@
           "Data entry: AI reads documents and fills forms/spreadsheets",
           "Browser automation: auto-fill forms, auto-login, auto-download reports"
         ],
-        "aiTools": ["zapier", "make", "power-automate", "otter-ai", "whisper", "claude-api"],
+        "aiTools": [
+          "zapier",
+          "make",
+          "power-automate",
+          "otter-ai",
+          "whisper",
+          "claude-api"
+        ],
         "estimatedCost": "Zapier free tier (100 tasks/mo), Make free tier (1000 ops/mo), Otter.ai free (300 min/mo)",
-        "blockers": ["Workplace IT policies may restrict tool installation", "Some tasks need admin access"],
-        "workarounds": ["Use browser-based tools that don't need installation", "Portable Python scripts that run without admin", "Start with personal tasks, expand to work tasks after proving value"]
+        "blockers": [
+          "Workplace IT policies may restrict tool installation",
+          "Some tasks need admin access"
+        ],
+        "workarounds": [
+          "Use browser-based tools that don't need installation",
+          "Portable Python scripts that run without admin",
+          "Start with personal tasks, expand to work tasks after proving value"
+        ]
       },
       {
         "phase": 3,
@@ -498,10 +730,24 @@
           "Voicemail alternative: AI takes the call, texts you a summary with suggested action",
           "Full loop: caller speaks → AI understands → looks up info → responds → logs the call"
         ],
-        "aiTools": ["whisper", "claude-api", "elevenlabs", "coqui-tts", "twilio"],
+        "aiTools": [
+          "whisper",
+          "claude-api",
+          "elevenlabs",
+          "coqui-tts",
+          "twilio"
+        ],
         "estimatedCost": "Twilio: ~$1/mo + $0.013/min. Whisper: free. TTS: free (Coqui) or $5/mo (ElevenLabs)",
-        "blockers": ["Latency — caller may notice AI delay", "Complex queries need human judgment", "Phone number porting"],
-        "workarounds": ["Start as voicemail replacement (no real-time pressure)", "AI asks clarifying questions to buy time", "Escalation: 'Let me connect you with Cole' for complex calls"]
+        "blockers": [
+          "Latency — caller may notice AI delay",
+          "Complex queries need human judgment",
+          "Phone number porting"
+        ],
+        "workarounds": [
+          "Start as voicemail replacement (no real-time pressure)",
+          "AI asks clarifying questions to buy time",
+          "Escalation: 'Let me connect you with Cole' for complex calls"
+        ]
       },
       {
         "phase": 4,
@@ -518,10 +764,22 @@
           "Dashboard: track what the agent did, time saved, accuracy",
           "Continuous improvement: agent learns from your corrections"
         ],
-        "aiTools": ["claude-api", "openai-assistants-api", "browser-automation", "zapier"],
+        "aiTools": [
+          "claude-api",
+          "openai-api",
+          "playwright",
+          "zapier"
+        ],
         "estimatedCost": "API costs: $5-30/month depending on usage volume",
-        "blockers": ["Trust — hard to trust AI with important work tasks initially", "Error rate needs to be very low"],
-        "workarounds": ["Start in 'suggest mode' — AI proposes, you approve", "Gradual autonomy: approve first 10 times, then auto-execute", "Undo capability for every action"]
+        "blockers": [
+          "Trust — hard to trust AI with important work tasks initially",
+          "Error rate needs to be very low"
+        ],
+        "workarounds": [
+          "Start in 'suggest mode' — AI proposes, you approve",
+          "Gradual autonomy: approve first 10 times, then auto-execute",
+          "Undo capability for every action"
+        ]
       }
     ],
     "biggestRisk": "Workplace IT policies may restrict what tools can be installed",
@@ -553,10 +811,25 @@
           "Grade: Colourlab AI for color correction",
           "Total time target: under 4 hours for 60 seconds"
         ],
-        "aiTools": ["chatgpt", "midjourney", "runway", "elevenlabs", "suno", "descript"],
+        "aiTools": [
+          "chatgpt",
+          "midjourney",
+          "runway",
+          "elevenlabs",
+          "suno",
+          "descript"
+        ],
         "estimatedCost": "Free tiers of most tools. Midjourney: ~$14 CAD/mo minimum.",
-        "blockers": ["Character consistency across frames", "Lip sync for dialogue", "Temporal coherence in video"],
-        "workarounds": ["Narration-driven (no lip sync needed)", "Consistent character via Midjourney style reference", "Short cuts (2-3 sec) to hide temporal artifacts"]
+        "blockers": [
+          "Character consistency across frames",
+          "Lip sync for dialogue",
+          "Temporal coherence in video"
+        ],
+        "workarounds": [
+          "Narration-driven (no lip sync needed)",
+          "Consistent character via Midjourney style reference",
+          "Short cuts (2-3 sec) to hide temporal artifacts"
+        ]
       },
       {
         "phase": 2,
@@ -572,10 +845,25 @@
           "Publish to YouTube, measure audience response",
           "Document total time and cost"
         ],
-        "aiTools": ["chatgpt", "claude", "midjourney", "runway", "kling", "elevenlabs", "suno", "davinci-resolve"],
+        "aiTools": [
+          "chatgpt",
+          "claude",
+          "midjourney",
+          "runway",
+          "kling",
+          "elevenlabs",
+          "suno",
+          "davinci-resolve"
+        ],
         "estimatedCost": "$20-50 in AI tool subscriptions for one month",
-        "blockers": ["Character consistency over 5 minutes is much harder", "Quality expectations rise with length"],
-        "workarounds": ["Mixed media: combine AI animation with motion graphics", "Use consistent art style (anime, watercolor) to mask inconsistencies"]
+        "blockers": [
+          "Character consistency over 5 minutes is much harder",
+          "Quality expectations rise with length"
+        ],
+        "workarounds": [
+          "Mixed media: combine AI animation with motion graphics",
+          "Use consistent art style (anime, watercolor) to mask inconsistencies"
+        ]
       }
     ],
     "biggestRisk": "Character consistency — AI can't maintain the same character across many scenes",
@@ -606,10 +894,24 @@
           "Create structured output: evidence quality ratings for each finding",
           "Output: comprehensive report with sections for patient, for doctor, for researcher"
         ],
-        "aiTools": ["perplexity-api", "claude-api", "openai-api", "pubmed-api", "clinicaltrials-api"],
+        "aiTools": [
+          "perplexity-api",
+          "claude-api",
+          "openai-api",
+          "pubmed-api",
+          "clinicaltrials-api"
+        ],
         "estimatedCost": "APIs mostly free for research-level queries. PubMed: free. ClinicalTrials.gov: free.",
-        "blockers": ["Medical accuracy is critical — AI hallucinations could be dangerous", "Paywalled papers"],
-        "workarounds": ["Always cite primary sources — never present AI summary as medical advice", "Use Unpaywall API for free paper access", "Cross-verify EVERY claim with at least 2 sources", "Include disclaimer: this is research aid, not medical advice"]
+        "blockers": [
+          "Medical accuracy is critical — AI hallucinations could be dangerous",
+          "Paywalled papers"
+        ],
+        "workarounds": [
+          "Always cite primary sources — never present AI summary as medical advice",
+          "Use Unpaywall API for free paper access",
+          "Cross-verify EVERY claim with at least 2 sources",
+          "Include disclaimer: this is research aid, not medical advice"
+        ]
       },
       {
         "phase": 2,
@@ -625,10 +927,21 @@
           "If no tool exists: identify the gap, find relevant training datasets (TCIA, Kaggle medical)",
           "Document how to request AI-assisted analysis from radiology departments"
         ],
-        "aiTools": ["claude-api", "perplexity-api", "hugging-face"],
+        "aiTools": [
+          "claude-api",
+          "perplexity-api",
+          "hugging-face"
+        ],
         "estimatedCost": "Research only — no cost beyond API queries",
-        "blockers": ["Most medical AI is clinical-only (not available to patients)", "FDA approval limits tool availability"],
-        "workarounds": ["Focus on what you can bring to your doctor as questions", "Identify clinical trials USING imaging AI that you could enroll in", "Open-source models can be explored for educational purposes"]
+        "blockers": [
+          "Most medical AI is clinical-only (not available to patients)",
+          "FDA approval limits tool availability"
+        ],
+        "workarounds": [
+          "Focus on what you can bring to your doctor as questions",
+          "Identify clinical trials USING imaging AI that you could enroll in",
+          "Open-source models can be explored for educational purposes"
+        ]
       },
       {
         "phase": 3,
@@ -645,10 +958,21 @@
           "Cost and access: treatment costs in Canada, provincial coverage, compassionate use programs",
           "Create visual treatment decision tree"
         ],
-        "aiTools": ["claude-api", "perplexity-api", "openai-api"],
+        "aiTools": [
+          "claude-api",
+          "perplexity-api",
+          "openai-api"
+        ],
         "estimatedCost": "API costs minimal — mostly research compilation",
-        "blockers": ["Treatment landscape changes rapidly", "Regional availability varies"],
-        "workarounds": ["Date-stamp everything", "Focus on Canadian availability first", "Weekly automated refresh for active clinical trials"]
+        "blockers": [
+          "Treatment landscape changes rapidly",
+          "Regional availability varies"
+        ],
+        "workarounds": [
+          "Date-stamp everything",
+          "Focus on Canadian availability first",
+          "Weekly automated refresh for active clinical trials"
+        ]
       },
       {
         "phase": 4,
@@ -664,10 +988,22 @@
           "Urgency detection: flag potential breakthroughs vs routine publications",
           "Integration with AI-Progress dashboard: tracked conditions as a data file"
         ],
-        "aiTools": ["claude-scheduled-tasks", "pubmed-api", "clinicaltrials-api", "google-scholar-alerts"],
+        "aiTools": [
+          "claude-scheduled-tasks",
+          "pubmed-api",
+          "clinicaltrials-api",
+          "google-scholar-alerts"
+        ],
         "estimatedCost": "Free (PubMed alerts free, Scholar alerts free, scheduled tasks free)",
-        "blockers": ["Information overload — many papers are incremental", "AI may over-flag routine publications as breakthroughs"],
-        "workarounds": ["AI filters by impact factor, citation count, and novelty", "Human review of weekly digest", "Configurable urgency thresholds"]
+        "blockers": [
+          "Information overload — many papers are incremental",
+          "AI may over-flag routine publications as breakthroughs"
+        ],
+        "workarounds": [
+          "AI filters by impact factor, citation count, and novelty",
+          "Human review of weekly digest",
+          "Configurable urgency thresholds"
+        ]
       }
     ],
     "biggestRisk": "Medical misinformation — AI hallucinations in a medical context could be harmful",
@@ -698,10 +1034,23 @@
           "Document exact failure points with screenshots and timestamps",
           "Publish findings as capability report in dashboard"
         ],
-        "aiTools": ["runway", "kling", "pika", "midjourney", "veo"],
+        "aiTools": [
+          "runway",
+          "kling",
+          "pika",
+          "midjourney",
+          "veo"
+        ],
         "estimatedCost": "Free tiers for initial testing. ~$30-60 in subscriptions for thorough testing.",
-        "blockers": ["Current max clip length is 4-16 seconds per generation", "Character drift across regenerations"],
-        "workarounds": ["Segment approach: treat each scene as independent, maintain consistency through art style", "Use LoRA/style references aggressively", "Limit character close-ups where drift is most visible"]
+        "blockers": [
+          "Current max clip length is 4-16 seconds per generation",
+          "Character drift across regenerations"
+        ],
+        "workarounds": [
+          "Segment approach: treat each scene as independent, maintain consistency through art style",
+          "Use LoRA/style references aggressively",
+          "Limit character close-ups where drift is most visible"
+        ]
       },
       {
         "phase": 2,
@@ -718,10 +1067,21 @@
           "Storyboard every scene with Midjourney before any video generation",
           "Estimated 400-600 shots for 60 minutes"
         ],
-        "aiTools": ["claude", "chatgpt", "midjourney"],
+        "aiTools": [
+          "claude",
+          "chatgpt",
+          "midjourney"
+        ],
         "estimatedCost": "Midjourney: ~$14 CAD/mo. AI writing: free tiers.",
-        "blockers": ["400+ shots is a massive organizational challenge", "Story quality matters — bad script = bad movie regardless of visuals"],
-        "workarounds": ["Project management tool for shot tracking", "Multiple script drafts with AI peer review", "Test audience feedback after first segment before committing to full film"]
+        "blockers": [
+          "400+ shots is a massive organizational challenge",
+          "Story quality matters — bad script = bad movie regardless of visuals"
+        ],
+        "workarounds": [
+          "Project management tool for shot tracking",
+          "Multiple script drafts with AI peer review",
+          "Test audience feedback after first segment before committing to full film"
+        ]
       },
       {
         "phase": 3,
@@ -739,10 +1099,25 @@
           "Quality control: review every shot, regenerate failures",
           "Estimated total production time: 2-4 weeks"
         ],
-        "aiTools": ["midjourney", "runway", "kling", "elevenlabs", "suno", "davinci-resolve"],
+        "aiTools": [
+          "midjourney",
+          "runway",
+          "kling",
+          "elevenlabs",
+          "suno",
+          "davinci-resolve"
+        ],
         "estimatedCost": "$50-150 in tool subscriptions over 1-2 months",
-        "blockers": ["Sheer volume of generation — 400+ clips", "Consistency across weeks of production", "Storage: 60min of footage + source files = hundreds of GB"],
-        "workarounds": ["Batch processing scripts to automate generation queues", "Version control for all assets", "Regular quality checkpoints every 15 minutes of assembled footage"]
+        "blockers": [
+          "Sheer volume of generation — 400+ clips",
+          "Consistency across weeks of production",
+          "Storage: 60min of footage + source files = hundreds of GB"
+        ],
+        "workarounds": [
+          "Batch processing scripts to automate generation queues",
+          "Version control for all assets",
+          "Regular quality checkpoints every 15 minutes of assembled footage"
+        ]
       },
       {
         "phase": 4,
@@ -759,10 +1134,20 @@
           "Capability report update in AI-Progress dashboard",
           "Plan for next attempt with improved tools (re-attempt in 6 months)"
         ],
-        "aiTools": ["youtube", "claude"],
+        "aiTools": [
+          "youtube",
+          "claude"
+        ],
         "estimatedCost": "Free (YouTube is free, writing is free)",
-        "blockers": ["Copyright concerns with AI-generated content on YouTube", "Quality may not meet watchability threshold"],
-        "workarounds": ["YouTube allows AI content with disclosure", "If full film quality is too low, publish as 'AI filmmaking experiment' documentary format", "Be honest about quality — the process documentation IS the value"]
+        "blockers": [
+          "Copyright concerns with AI-generated content on YouTube",
+          "Quality may not meet watchability threshold"
+        ],
+        "workarounds": [
+          "YouTube allows AI content with disclosure",
+          "If full film quality is too low, publish as 'AI filmmaking experiment' documentary format",
+          "Be honest about quality — the process documentation IS the value"
+        ]
       }
     ],
     "biggestRisk": "It might not be watchable. 60 minutes of AI-generated video might be unwatchable no matter how good the tools are in March 2026.",
