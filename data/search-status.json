@@ -1,0 +1,81 @@
+{
+  "calls": [
+    {
+      "timestamp": "2026-03-28T10:30:36.924309",
+      "provider": "tavily",
+      "query": "AI news today 2026",
+      "results": 5
+    },
+    {
+      "timestamp": "2026-03-28T10:30:39.566262",
+      "provider": "tavily",
+      "query": "new AI tool launch March 2026",
+      "results": 5
+    },
+    {
+      "timestamp": "2026-03-28T10:30:41.200327",
+      "provider": "tavily",
+      "query": "AI pricing changes 2026",
+      "results": 5
+    },
+    {
+      "timestamp": "2026-03-28T10:30:43.108356",
+      "provider": "tavily",
+      "query": "OpenAI announcement 2026",
+      "results": 5
+    },
+    {
+      "timestamp": "2026-03-28T10:30:45.207459",
+      "provider": "tavily",
+      "query": "Anthropic Claude announcement 2026",
+      "results": 5
+    },
+    {
+      "timestamp": "2026-03-28T10:30:46.844851",
+      "provider": "tavily",
+      "query": "Google Gemini update 2026",
+      "results": 5
+    },
+    {
+      "timestamp": "2026-03-28T10:30:48.607654",
+      "provider": "tavily",
+      "query": "AI robotics news 2026",
+      "results": 5
+    },
+    {
+      "timestamp": "2026-03-28T10:30:50.218487",
+      "provider": "tavily",
+      "query": "AI security incident vulnerability 2026",
+      "results": 5
+    },
+    {
+      "timestamp": "2026-03-28T10:30:51.685044",
+      "provider": "tavily",
+      "query": "Meta AI announcement 2026",
+      "results": 5
+    },
+    {
+      "timestamp": "2026-03-28T10:30:53.578315",
+      "provider": "tavily",
+      "query": "AI agent framework new 2026",
+      "results": 5
+    },
+    {
+      "timestamp": "2026-03-28T10:30:55.147790",
+      "provider": "tavily",
+      "query": "open source LLM release 2026",
+      "results": 5
+    },
+    {
+      "timestamp": "2026-03-28T10:30:56.975598",
+      "provider": "tavily",
+      "query": "AI hardware dedicated chip 2026",
+      "results": 5
+    }
+  ],
+  "daily_totals": {
+    "2026-03-28": {
+      "tavily": 12
+    }
+  }
+}
