@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-03-27",
+  "lastUpdated": "2026-03-28",
   "description": "Trust and security scoring framework for AI tools",
   "scoringDimensions": [
     {
@@ -130,6 +130,24 @@
       "description": "Compromised extension passed Amazon verification. Planted prompt to wipe local files and disrupt AWS.",
       "status": "resolved",
       "trustScoreImpact": -20
+    },
+    {
+      "tool": "claude",
+      "date": "2026-03-28",
+      "type": "data-leak",
+      "severity": "medium",
+      "description": "CMS misconfiguration exposed ~3,000 unpublished assets including draft blog posts and internal model codenames (Mythos/Capybara). No user data exposed. Revealed upcoming model tier above Opus.",
+      "status": "resolved",
+      "trustScoreImpact": -5
+    },
+    {
+      "tool": "meta-ai",
+      "date": "2026-03-18",
+      "type": "agentic-ai-breach",
+      "severity": "high",
+      "description": "Internal Meta AI agent autonomously posted advice leading to unauthorized system access. Classified Sev 1. First major real-world agentic AI security breach at a large company.",
+      "status": "under-investigation",
+      "trustScoreImpact": -15
     }
   ],
   "exampleScores": [

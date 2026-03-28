@@ -2447,5 +2447,115 @@
     ],
     "language": "en",
     "country": "Global"
+  },
+  {
+    "id": "openai-blog",
+    "name": "OpenAI Blog",
+    "type": "company-blog",
+    "url": "https://openai.com/blog",
+    "frequency": "Multiple per week",
+    "description": "Official OpenAI announcements: model launches, API changes, pricing updates, safety research, partnership news. Primary source for GPT/DALL-E/Sora updates.",
+    "free": true,
+    "tags": ["official", "announcements", "models", "pricing"]
+  },
+  {
+    "id": "anthropic-blog",
+    "name": "Anthropic News",
+    "type": "company-blog",
+    "url": "https://www.anthropic.com/news",
+    "frequency": "Multiple per week",
+    "description": "Official Anthropic announcements: Claude model releases, pricing changes, safety research, API updates. Primary source for Claude ecosystem news.",
+    "free": true,
+    "tags": ["official", "announcements", "models", "safety"]
+  },
+  {
+    "id": "google-ai-blog",
+    "name": "Google AI Blog / The Keyword AI",
+    "type": "company-blog",
+    "url": "https://blog.google/technology/ai/",
+    "frequency": "Multiple per week",
+    "description": "Official Google AI announcements: Gemini updates, DeepMind research, Google Cloud AI, Android AI features. Also covers hardware (TPUs).",
+    "free": true,
+    "tags": ["official", "announcements", "models", "research"]
+  },
+  {
+    "id": "meta-ai-blog",
+    "name": "Meta AI Blog",
+    "type": "company-blog",
+    "url": "https://ai.meta.com/blog/",
+    "frequency": "Weekly",
+    "description": "Official Meta AI announcements: Llama model releases, open-source research, PyTorch updates, AR/VR AI. Key source for open-weight model ecosystem.",
+    "free": true,
+    "tags": ["official", "announcements", "open-source", "models"]
+  },
+  {
+    "id": "microsoft-ai-blog",
+    "name": "Microsoft AI Blog",
+    "type": "company-blog",
+    "url": "https://blogs.microsoft.com/ai/",
+    "frequency": "Multiple per week",
+    "description": "Official Microsoft AI announcements: Copilot updates, Azure AI services, GitHub Copilot, Office AI features, partnerships (OpenAI investment).",
+    "free": true,
+    "tags": ["official", "announcements", "enterprise", "copilot"]
+  },
+  {
+    "id": "nvidia-ai-blog",
+    "name": "NVIDIA AI Blog",
+    "type": "company-blog",
+    "url": "https://blogs.nvidia.com/blog/category/deep-learning/",
+    "frequency": "Multiple per week",
+    "description": "Official NVIDIA AI announcements: GPU launches, CUDA updates, Isaac Sim, GTC announcements, NIM microservices. Critical for robotics and hardware AI.",
+    "free": true,
+    "tags": ["official", "announcements", "hardware", "robotics"]
+  },
+  {
+    "id": "stability-ai-blog",
+    "name": "Stability AI Blog",
+    "type": "company-blog",
+    "url": "https://stability.ai/news",
+    "frequency": "Weekly",
+    "description": "Official Stability AI announcements: Stable Diffusion releases, new model launches, API updates, partnerships.",
+    "free": true,
+    "tags": ["official", "announcements", "image-generation", "open-source"]
+  },
+  {
+    "id": "midjourney-announcements",
+    "name": "Midjourney Announcements (Discord)",
+    "type": "discord",
+    "url": "https://discord.gg/midjourney",
+    "frequency": "Irregular",
+    "description": "Midjourney announces exclusively via Discord #announcements channel. No blog. Version releases, feature changes, pricing updates all happen here first.",
+    "free": true,
+    "tags": ["official", "announcements", "image-generation"]
+  },
+  {
+    "id": "huggingface-blog",
+    "name": "Hugging Face Blog",
+    "type": "company-blog",
+    "url": "https://huggingface.co/blog",
+    "frequency": "Multiple per week",
+    "description": "Hugging Face announcements: new model integrations, Transformers library updates, Spaces features, community highlights, open-source AI ecosystem.",
+    "free": true,
+    "tags": ["official", "announcements", "open-source", "models"]
+  },
+  {
+    "id": "runway-blog",
+    "name": "Runway Blog",
+    "type": "company-blog",
+    "url": "https://runwayml.com/blog/",
+    "frequency": "Weekly",
+    "description": "Official Runway announcements: Gen model releases, video AI features, creative tools, partnerships with film studios.",
+    "free": true,
+    "tags": ["official", "announcements", "video-generation"]
+  },
+  {
+    "id": "elevenlabs-blog",
+    "name": "ElevenLabs Blog",
+    "type": "company-blog",
+    "url": "https://elevenlabs.io/blog",
+    "frequency": "Weekly",
+    "description": "Official ElevenLabs announcements: voice model updates, API changes, new features, pricing, partnerships.",
+    "free": true,
+    "tags": ["official", "announcements", "speech-voice", "audio"]
   }
 ]
