@@ -21,11 +21,35 @@
       "apiKeyEnvVar": "GOOGLE_API_KEY",
       "status": "provisioning",
       "notes": "Key valid (model listing works). Generation quota shows 0 — new project provisioning, usually resolves within 1 hour."
+    },
+    {
+      "service": "Perplexity",
+      "toolId": "perplexity",
+      "signupDate": "2026-03-28",
+      "method": "google-sso",
+      "plan": "free",
+      "apiKeyEnvVar": null,
+      "status": "active",
+      "notes": "Web access active. 5 Pro searches/day free. API requires Pro subscription ($20 USD/mo)."
+    },
+    {
+      "service": "Hugging Face",
+      "toolId": "hugging-face",
+      "signupDate": "2026-03-28",
+      "method": "email+password",
+      "plan": "free",
+      "username": "colemanbensonai",
+      "apiKeyEnvVar": "HF_TOKEN",
+      "status": "active",
+      "notes": "Token valid. Inference API needs provider enabled in settings. Model hub, Spaces, datasets all accessible."
     }
   ],
   "pending": [
-    {"service": "Perplexity", "toolId": "perplexity", "priority": "high", "reason": "Search-augmented AI for research sweeps"},
-    {"service": "Hugging Face", "toolId": "hugging-face", "priority": "medium", "reason": "Model hub, free inference API"},
-    {"service": "Replicate", "toolId": "replicate", "priority": "low", "reason": "Run open-source models via API"}
+    {
+      "service": "Replicate",
+      "toolId": "replicate",
+      "priority": "low",
+      "reason": "Run open-source models via API"
+    }
   ]
 }
