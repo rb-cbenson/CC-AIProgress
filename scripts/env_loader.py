@@ -16,6 +16,8 @@ def load_env(env_path=None):
     """Load .env file into os.environ. Doesn't override existing vars."""
     if env_path is None:
         env_path = Path(__file__).resolve().parent.parent / ".env"
+    elif isinstance(env_path, str):
+        env_path = Path(env_path)
 
     if not env_path.exists():
         return False

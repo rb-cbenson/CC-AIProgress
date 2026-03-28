@@ -2557,5 +2557,171 @@
     "description": "Official ElevenLabs announcements: voice model updates, API changes, new features, pricing, partnerships.",
     "free": true,
     "tags": ["official", "announcements", "speech-voice", "audio"]
+  },
+  {
+    "id": "google-patents-ai",
+    "name": "Google Patents — AI/ML",
+    "type": "patent-database",
+    "url": "https://patents.google.com/?q=artificial+intelligence+machine+learning&after=priority:20250101",
+    "frequency": "Daily new filings",
+    "description": "Earliest signal of what companies are building. Patent filings appear months to years before products launch. Filter by AI/ML keywords and company assignee.",
+    "free": true,
+    "tags": ["patents", "early-signal", "corporate-strategy"]
+  },
+  {
+    "id": "uspto-ai-patents",
+    "name": "USPTO AI Patent Search",
+    "type": "patent-database",
+    "url": "https://patft.uspto.gov/netahtml/PTO/search-bool.html",
+    "frequency": "Weekly new grants",
+    "description": "US Patent and Trademark Office. Search by assignee (Google, OpenAI, Meta) to see what's being patented. Grants appear ~18 months after filing.",
+    "free": true,
+    "tags": ["patents", "early-signal", "us-specific"]
+  },
+  {
+    "id": "lmsys-chatbot-arena",
+    "name": "LMSYS Chatbot Arena Leaderboard",
+    "type": "benchmark",
+    "url": "https://chat.lmsys.org/?leaderboard",
+    "frequency": "Continuously updated",
+    "description": "The most cited LLM ranking — real users vote on blind model comparisons. ELO-based ranking that reflects actual user preference, not synthetic benchmarks.",
+    "free": true,
+    "tags": ["benchmark", "leaderboard", "model-ranking", "real-users"]
+  },
+  {
+    "id": "open-llm-leaderboard",
+    "name": "Open LLM Leaderboard (Hugging Face)",
+    "type": "benchmark",
+    "url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+    "frequency": "Continuously updated",
+    "description": "Standardized benchmarks (MMLU, ARC, HellaSwag, etc.) for open-source models. Shows which open models are catching up to closed ones.",
+    "free": true,
+    "tags": ["benchmark", "leaderboard", "open-source", "model-ranking"]
+  },
+  {
+    "id": "artificial-analysis",
+    "name": "Artificial Analysis — AI Model Benchmarks",
+    "type": "benchmark",
+    "url": "https://artificialanalysis.ai/",
+    "frequency": "Updated with each model release",
+    "description": "Standardized benchmarks comparing all major models (open + closed) on quality, speed, and price. Includes API pricing tracker and throughput measurements.",
+    "free": true,
+    "tags": ["benchmark", "pricing", "speed", "model-comparison"]
+  },
+  {
+    "id": "a16z-ai-blog",
+    "name": "a16z AI Blog / Infra Blog",
+    "type": "vc-blog",
+    "url": "https://a16z.com/artificial-intelligence/",
+    "frequency": "Multiple per week",
+    "description": "Andreessen Horowitz AI investment thesis, market analysis, portfolio company insights. Major AI VC — their views shape industry direction and funding.",
+    "free": true,
+    "tags": ["vc", "investment", "market-analysis", "startups"]
+  },
+  {
+    "id": "sequoia-ai",
+    "name": "Sequoia Capital AI Perspectives",
+    "type": "vc-blog",
+    "url": "https://www.sequoiacap.com/article/",
+    "frequency": "Monthly",
+    "description": "Sequoia's AI market analysis — they published the influential 'AI 50' and 'Generative AI Market Map'. Signals which startups and sectors VCs are betting on.",
+    "free": true,
+    "tags": ["vc", "investment", "market-map", "startups"]
+  },
+  {
+    "id": "stanford-hai",
+    "name": "Stanford HAI (Human-Centered AI)",
+    "type": "academic-lab",
+    "url": "https://hai.stanford.edu/news",
+    "frequency": "Multiple per week",
+    "description": "Stanford's AI research institute. Publishes the annual AI Index Report — the most comprehensive annual survey of the AI landscape. Research on policy, ethics, economics of AI.",
+    "free": true,
+    "tags": ["academic", "research", "policy", "ai-index"]
+  },
+  {
+    "id": "mit-csail",
+    "name": "MIT CSAIL News",
+    "type": "academic-lab",
+    "url": "https://www.csail.mit.edu/news",
+    "frequency": "Multiple per week",
+    "description": "MIT Computer Science and AI Lab. Robotics research (key for user's field), NLP, computer vision, systems. Where many foundational AI breakthroughs originate.",
+    "free": true,
+    "tags": ["academic", "research", "robotics", "systems"]
+  },
+  {
+    "id": "mila-news",
+    "name": "Mila — Quebec AI Institute",
+    "type": "academic-lab",
+    "url": "https://mila.quebec/en/news/",
+    "frequency": "Weekly",
+    "description": "Canadian AI research institute (Yoshua Bengio). Relevant as a Canadian source and as one of the top 3 AI research labs globally. Focus on deep learning, responsible AI.",
+    "free": true,
+    "tags": ["academic", "research", "canadian", "deep-learning"],
+    "language": "en",
+    "country": "Canada"
+  },
+  {
+    "id": "nist-ai",
+    "name": "NIST AI — Standards & Framework",
+    "type": "government",
+    "url": "https://www.nist.gov/artificial-intelligence",
+    "frequency": "Monthly",
+    "description": "US National Institute of Standards and Technology. AI Risk Management Framework, AI safety standards, testing and evaluation. Shapes compliance requirements.",
+    "free": true,
+    "tags": ["government", "standards", "safety", "compliance"]
+  },
+  {
+    "id": "eu-ai-office",
+    "name": "EU AI Office",
+    "type": "government",
+    "url": "https://digital-strategy.ec.europa.eu/en/policies/ai-office",
+    "frequency": "Monthly",
+    "description": "Oversees the EU AI Act implementation. Regulatory updates, compliance timelines, enforcement actions. Critical for any AI tool operating in EU markets.",
+    "free": true,
+    "tags": ["government", "regulation", "eu-ai-act", "compliance"],
+    "language": "en",
+    "country": "EU"
+  },
+  {
+    "id": "cifar-ai",
+    "name": "CIFAR — Pan-Canadian AI Strategy",
+    "type": "government",
+    "url": "https://cifar.ca/ai/",
+    "frequency": "Monthly",
+    "description": "Canadian Institute for Advanced Research. Funds Mila, Vector, Amii. Canada's national AI strategy updates, funding announcements, researcher appointments.",
+    "free": true,
+    "tags": ["government", "canadian", "funding", "strategy"],
+    "language": "en",
+    "country": "Canada"
+  },
+  {
+    "id": "cset-georgetown",
+    "name": "CSET Georgetown — AI Policy",
+    "type": "think-tank",
+    "url": "https://cset.georgetown.edu/publications/",
+    "frequency": "Weekly",
+    "description": "Center for Security and Emerging Technology. AI policy research, workforce analysis, China AI tracking, semiconductor supply chain. Deep policy intelligence.",
+    "free": true,
+    "tags": ["think-tank", "policy", "china", "semiconductors"]
+  },
+  {
+    "id": "brookings-ai",
+    "name": "Brookings AI & Technology",
+    "type": "think-tank",
+    "url": "https://www.brookings.edu/topic/artificial-intelligence/",
+    "frequency": "Multiple per week",
+    "description": "Major US think tank. AI governance, economic impact, workforce displacement, international competition. Feeds directly into US policy discussions.",
+    "free": true,
+    "tags": ["think-tank", "policy", "governance", "economics"]
+  },
+  {
+    "id": "ai-jobs-net",
+    "name": "AI-Jobs.net",
+    "type": "job-board",
+    "url": "https://ai-jobs.net/",
+    "frequency": "Daily",
+    "description": "AI-specific job postings. Hiring signals what companies are building next — a spike in 'robotics engineer' postings means robotics products are coming.",
+    "free": true,
+    "tags": ["jobs", "hiring-signal", "early-indicator"]
   }
 ]
