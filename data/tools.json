@@ -44,7 +44,17 @@
     "lastVerified": "2026-03-27",
     "trustScore": 82,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "text-generation",
+      "text-analysis",
+      "summarization",
+      "image-generation",
+      "web-search",
+      "code-generation",
+      "code-analysis",
+      "image-analysis",
+      "translation"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -99,7 +109,14 @@
     "lastVerified": "2026-03-27",
     "trustScore": 85,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "text-generation",
+      "text-analysis",
+      "summarization",
+      "code-generation",
+      "code-analysis",
+      "translation"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -146,7 +163,16 @@
     "lastVerified": "2026-03-27",
     "trustScore": 80,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "text-generation",
+      "text-analysis",
+      "summarization",
+      "image-generation",
+      "code-generation",
+      "translation",
+      "image-analysis",
+      "web-search"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -194,7 +220,12 @@
     "lastVerified": "2026-03-27",
     "trustScore": 78,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "text-generation",
+      "text-analysis",
+      "summarization",
+      "web-search"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -242,7 +273,14 @@
     "lastVerified": "2026-03-27",
     "trustScore": 72,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "text-generation",
+      "text-analysis",
+      "summarization",
+      "web-search",
+      "code-generation",
+      "image-generation"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -289,7 +327,11 @@
     "lastVerified": "2026-03-27",
     "trustScore": 65,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "text-generation",
+      "text-analysis",
+      "summarization"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -329,7 +371,12 @@
     "lastVerified": "2026-03-27",
     "trustScore": 55,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "text-generation",
+      "text-analysis",
+      "summarization",
+      "web-search"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -376,7 +423,11 @@
     "lastVerified": "2026-03-27",
     "trustScore": 60,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "text-generation",
+      "text-analysis",
+      "summarization"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -429,7 +480,11 @@
     "lastVerified": "2026-03-27",
     "trustScore": 80,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "text-generation",
+      "text-analysis",
+      "summarization"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -468,7 +523,11 @@
     "lastVerified": "2026-03-27",
     "trustScore": 45,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "text-generation",
+      "text-analysis",
+      "summarization"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -534,7 +593,9 @@
     "lastVerified": "2026-03-27",
     "trustScore": 75,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "image-generation"
+    ],
     "integrations": [],
     "accessMethod": "web",
     "platformSupport": [
@@ -580,7 +641,9 @@
     "lastVerified": "2026-03-27",
     "trustScore": 82,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "image-generation"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -627,7 +690,10 @@
     "lastVerified": "2026-03-27",
     "trustScore": 78,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "image-generation",
+      "image-editing"
+    ],
     "integrations": [],
     "accessMethod": "cli",
     "platformSupport": [
@@ -676,7 +742,9 @@
     "lastVerified": "2026-03-27",
     "trustScore": 70,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "image-generation"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -729,7 +797,9 @@
     "lastVerified": "2026-03-27",
     "trustScore": 85,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "image-generation"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -775,7 +845,10 @@
     "lastVerified": "2026-03-27",
     "trustScore": 55,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "image-generation",
+      "image-editing"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -834,7 +907,12 @@
     "lastVerified": "2026-03-27",
     "trustScore": 72,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "video-generation",
+      "image-generation",
+      "image-editing",
+      "video-editing"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -881,7 +959,9 @@
     "lastVerified": "2026-03-27",
     "trustScore": 60,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "video-generation"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -934,7 +1014,9 @@
     "lastVerified": "2026-03-27",
     "trustScore": 58,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "video-generation"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -981,7 +1063,9 @@
     "lastVerified": "2026-03-27",
     "trustScore": 78,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "video-generation"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -1034,7 +1118,9 @@
     "lastVerified": "2026-03-27",
     "trustScore": 62,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "video-generation"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -1087,7 +1173,9 @@
     "lastVerified": "2026-03-27",
     "trustScore": 68,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "video-generation"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -1140,7 +1228,10 @@
     "lastVerified": "2026-03-27",
     "trustScore": 65,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "music-generation",
+      "audio-generation"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -1186,7 +1277,10 @@
     "lastVerified": "2026-03-27",
     "trustScore": 60,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "audio-generation",
+      "music-generation"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -1245,7 +1339,11 @@
     "lastVerified": "2026-03-27",
     "trustScore": 75,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "audio-generation",
+      "music-generation",
+      "speech-synthesis"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -1305,7 +1403,11 @@
     "lastVerified": "2026-03-27",
     "trustScore": 83,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "code-generation",
+      "code-analysis",
+      "code-execution"
+    ],
     "integrations": [],
     "accessMethod": "desktop-app",
     "platformSupport": [
@@ -1361,7 +1463,11 @@
     "lastVerified": "2026-03-27",
     "trustScore": 72,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "code-generation",
+      "code-analysis",
+      "code-execution"
+    ],
     "integrations": [],
     "accessMethod": "desktop-app",
     "platformSupport": [
@@ -1421,7 +1527,10 @@
     "lastVerified": "2026-03-27",
     "trustScore": 85,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "code-generation",
+      "code-analysis"
+    ],
     "integrations": [],
     "accessMethod": "desktop-app",
     "platformSupport": [
@@ -1469,7 +1578,11 @@
     "lastVerified": "2026-03-27",
     "trustScore": 68,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "code-generation",
+      "code-analysis",
+      "code-execution"
+    ],
     "integrations": [],
     "accessMethod": "desktop-app",
     "platformSupport": [
@@ -1517,7 +1630,10 @@
     "lastVerified": "2026-03-27",
     "trustScore": 78,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "code-generation",
+      "code-analysis"
+    ],
     "integrations": [],
     "accessMethod": "desktop-app",
     "platformSupport": [
@@ -1571,7 +1687,10 @@
     "lastVerified": "2026-03-27",
     "trustScore": 70,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "code-generation",
+      "code-analysis"
+    ],
     "integrations": [],
     "accessMethod": "desktop-app",
     "platformSupport": [
@@ -1625,7 +1744,11 @@
     "lastVerified": "2026-03-27",
     "trustScore": 78,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "text-editing",
+      "summarization",
+      "web-search"
+    ],
     "integrations": [],
     "accessMethod": "web",
     "platformSupport": [
@@ -1665,7 +1788,11 @@
     "lastVerified": "2026-03-27",
     "trustScore": 82,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "text-editing",
+      "summarization",
+      "web-search"
+    ],
     "integrations": [],
     "accessMethod": "web",
     "platformSupport": [
@@ -1717,7 +1844,10 @@
     "lastVerified": "2026-03-27",
     "trustScore": 80,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "text-editing",
+      "summarization"
+    ],
     "integrations": [],
     "accessMethod": "web",
     "platformSupport": [
@@ -1768,7 +1898,10 @@
     "lastVerified": "2026-03-27",
     "trustScore": 50,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "text-editing",
+      "summarization"
+    ],
     "integrations": [],
     "accessMethod": "web",
     "platformSupport": [
@@ -1813,7 +1946,11 @@
     "lastVerified": "2026-03-27",
     "trustScore": 55,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "text-editing",
+      "summarization",
+      "speech-recognition"
+    ],
     "integrations": [],
     "accessMethod": "web",
     "platformSupport": [
@@ -1858,7 +1995,10 @@
     "lastVerified": "2026-03-27",
     "trustScore": 45,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "3d-modeling",
+      "cad-design"
+    ],
     "integrations": [],
     "accessMethod": "desktop-app",
     "platformSupport": [
@@ -1905,7 +2045,10 @@
     "lastVerified": "2026-03-27",
     "trustScore": 50,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "3d-modeling",
+      "cad-design"
+    ],
     "integrations": [],
     "accessMethod": "desktop-app",
     "platformSupport": [
@@ -1952,7 +2095,10 @@
     "lastVerified": "2026-03-27",
     "trustScore": 48,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "3d-modeling",
+      "cad-design"
+    ],
     "integrations": [],
     "accessMethod": "desktop-app",
     "platformSupport": [
@@ -2006,7 +2152,11 @@
     "lastVerified": "2026-03-27",
     "trustScore": 75,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "3d-modeling",
+      "cad-design",
+      "web-search"
+    ],
     "integrations": [],
     "accessMethod": "desktop-app",
     "platformSupport": [
@@ -2053,7 +2203,10 @@
     "lastVerified": "2026-03-27",
     "trustScore": 40,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "text-generation",
+      "text-analysis"
+    ],
     "integrations": [],
     "accessMethod": "web",
     "platformSupport": [
@@ -2105,7 +2258,10 @@
     "lastVerified": "2026-03-27",
     "trustScore": 65,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "text-generation",
+      "text-analysis"
+    ],
     "integrations": [],
     "accessMethod": "web",
     "platformSupport": [
@@ -2150,7 +2306,10 @@
     "lastVerified": "2026-03-27",
     "trustScore": 50,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "text-generation",
+      "text-analysis"
+    ],
     "integrations": [],
     "accessMethod": "web",
     "platformSupport": [
@@ -2208,7 +2367,10 @@
     "lastVerified": "2026-03-27",
     "trustScore": 82,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "automation",
+      "api-call"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -2261,7 +2423,9 @@
     "lastVerified": "2026-03-27",
     "trustScore": 78,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "automation"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -2314,7 +2478,10 @@
     "lastVerified": "2026-03-27",
     "trustScore": 75,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "automation",
+      "api-call"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -2362,7 +2529,11 @@
     "lastVerified": "2026-03-27",
     "trustScore": 58,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "3d-modeling",
+      "cad-design",
+      "3d-slicing"
+    ],
     "integrations": [],
     "accessMethod": "desktop-app",
     "platformSupport": [
@@ -2410,7 +2581,10 @@
     "lastVerified": "2026-03-27",
     "trustScore": 55,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "3d-modeling",
+      "cad-design"
+    ],
     "integrations": [],
     "accessMethod": "desktop-app",
     "platformSupport": [
@@ -2459,7 +2633,10 @@
     "lastVerified": "2026-03-27",
     "trustScore": 60,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "3d-modeling",
+      "cad-design"
+    ],
     "integrations": [],
     "accessMethod": "desktop-app",
     "platformSupport": [
@@ -2508,7 +2685,12 @@
     "lastVerified": "2026-03-27",
     "trustScore": 52,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "3d-modeling",
+      "cad-design",
+      "circuit-design",
+      "pcb-layout"
+    ],
     "integrations": [],
     "accessMethod": "desktop-app",
     "platformSupport": [
@@ -2557,7 +2739,12 @@
     "lastVerified": "2026-03-27",
     "trustScore": 48,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "3d-modeling",
+      "cad-design",
+      "circuit-design",
+      "pcb-layout"
+    ],
     "integrations": [],
     "accessMethod": "desktop-app",
     "platformSupport": [
@@ -2606,7 +2793,12 @@
     "lastVerified": "2026-03-27",
     "trustScore": 50,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "3d-modeling",
+      "cad-design",
+      "circuit-design",
+      "pcb-layout"
+    ],
     "integrations": [],
     "accessMethod": "desktop-app",
     "platformSupport": [
@@ -2655,7 +2847,10 @@
     "lastVerified": "2026-03-27",
     "trustScore": 65,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "code-generation",
+      "code-analysis"
+    ],
     "integrations": [],
     "accessMethod": "desktop-app",
     "platformSupport": [
@@ -2710,7 +2905,10 @@
     "lastVerified": "2026-03-27",
     "trustScore": 72,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "code-generation",
+      "code-analysis"
+    ],
     "integrations": [],
     "accessMethod": "desktop-app",
     "platformSupport": [
@@ -2759,7 +2957,12 @@
     "lastVerified": "2026-03-27",
     "trustScore": 50,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "3d-modeling",
+      "cad-design",
+      "circuit-design",
+      "pcb-layout"
+    ],
     "integrations": [],
     "accessMethod": "desktop-app",
     "platformSupport": [
@@ -2808,7 +3011,11 @@
     "lastVerified": "2026-03-27",
     "trustScore": 45,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "3d-modeling",
+      "cad-design",
+      "3d-slicing"
+    ],
     "integrations": [],
     "accessMethod": "desktop-app",
     "platformSupport": [
@@ -2856,7 +3063,11 @@
     "lastVerified": "2026-03-27",
     "trustScore": 75,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "data-analysis",
+      "text-analysis",
+      "web-search"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -2903,7 +3114,11 @@
     "lastVerified": "2026-03-27",
     "trustScore": 72,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "data-analysis",
+      "text-analysis",
+      "web-search"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -2943,7 +3158,11 @@
     "lastVerified": "2026-03-27",
     "trustScore": 68,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "data-analysis",
+      "text-analysis",
+      "web-search"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -2996,7 +3215,10 @@
     "lastVerified": "2026-03-27",
     "trustScore": 55,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "text-editing",
+      "summarization"
+    ],
     "integrations": [],
     "accessMethod": "web",
     "platformSupport": [
@@ -3035,7 +3257,10 @@
     "lastVerified": "2026-03-27",
     "trustScore": 45,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "text-editing",
+      "summarization"
+    ],
     "integrations": [],
     "accessMethod": "web",
     "platformSupport": [
@@ -3081,7 +3306,10 @@
     "lastVerified": "2026-03-27",
     "trustScore": 50,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "3d-modeling",
+      "cad-design"
+    ],
     "integrations": [],
     "accessMethod": "desktop-app",
     "platformSupport": [
@@ -3129,7 +3357,10 @@
     "lastVerified": "2026-03-27",
     "trustScore": 78,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "text-editing",
+      "summarization"
+    ],
     "integrations": [],
     "accessMethod": "web",
     "platformSupport": [
@@ -3168,7 +3399,10 @@
     "lastVerified": "2026-03-27",
     "trustScore": 72,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "text-editing",
+      "summarization"
+    ],
     "integrations": [],
     "accessMethod": "web",
     "platformSupport": [
@@ -3207,7 +3441,10 @@
     "lastVerified": "2026-03-27",
     "trustScore": 78,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "text-editing",
+      "summarization"
+    ],
     "integrations": [],
     "accessMethod": "web",
     "platformSupport": [
@@ -3253,7 +3490,9 @@
     "lastVerified": "2026-03-27",
     "trustScore": 60,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "image-generation"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -3300,7 +3539,10 @@
     "lastVerified": "2026-03-27",
     "trustScore": 58,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "text-generation",
+      "text-analysis"
+    ],
     "integrations": [],
     "accessMethod": "web",
     "platformSupport": [
@@ -3339,7 +3581,9 @@
     "lastVerified": "2026-03-27",
     "trustScore": 45,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "image-generation"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -3386,7 +3630,10 @@
     "lastVerified": "2026-03-27",
     "trustScore": 40,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "text-editing",
+      "summarization"
+    ],
     "integrations": [],
     "accessMethod": "web",
     "platformSupport": [
@@ -3432,7 +3679,12 @@
     "lastVerified": "2026-03-27",
     "trustScore": 75,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "text-generation",
+      "text-analysis",
+      "summarization",
+      "web-search"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -3479,7 +3731,10 @@
     "lastVerified": "2026-03-27",
     "trustScore": 70,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "text-generation",
+      "text-analysis"
+    ],
     "integrations": [],
     "accessMethod": "web",
     "platformSupport": [
@@ -3525,7 +3780,10 @@
     "lastVerified": "2026-03-27",
     "trustScore": 72,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "text-generation",
+      "text-analysis"
+    ],
     "integrations": [],
     "accessMethod": "web",
     "platformSupport": [
@@ -3571,7 +3829,10 @@
     "lastVerified": "2026-03-27",
     "trustScore": 65,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "code-generation",
+      "code-analysis"
+    ],
     "integrations": [],
     "accessMethod": "desktop-app",
     "platformSupport": [
@@ -3619,7 +3880,10 @@
     "lastVerified": "2026-03-27",
     "trustScore": 68,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "code-generation",
+      "code-analysis"
+    ],
     "integrations": [],
     "accessMethod": "desktop-app",
     "platformSupport": [
@@ -3660,7 +3924,11 @@
     "lastVerified": "2026-03-27",
     "trustScore": 55,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "automation",
+      "code-execution",
+      "web-search"
+    ],
     "integrations": [],
     "accessMethod": "api",
     "platformSupport": [
@@ -3706,7 +3974,10 @@
     "lastVerified": "2026-03-27",
     "trustScore": 65,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "automation",
+      "code-execution"
+    ],
     "integrations": [],
     "accessMethod": "api",
     "platformSupport": [
@@ -3752,7 +4023,10 @@
     "lastVerified": "2026-03-27",
     "trustScore": 68,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "automation",
+      "code-execution"
+    ],
     "integrations": [],
     "accessMethod": "api",
     "platformSupport": [
@@ -3798,7 +4072,12 @@
     "lastVerified": "2026-03-27",
     "trustScore": 62,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "text-generation",
+      "text-analysis",
+      "summarization",
+      "web-search"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -3851,7 +4130,11 @@
     "lastVerified": "2026-03-27",
     "trustScore": 65,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "text-editing",
+      "summarization",
+      "speech-synthesis"
+    ],
     "integrations": [],
     "accessMethod": "web",
     "platformSupport": [
@@ -3903,7 +4186,9 @@
     "lastVerified": "2026-03-27",
     "trustScore": 68,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "image-generation"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -3956,7 +4241,9 @@
     "lastVerified": "2026-03-27",
     "trustScore": 65,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "image-generation"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -4009,7 +4296,9 @@
     "lastVerified": "2026-03-27",
     "trustScore": 65,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "video-generation"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -4062,7 +4351,10 @@
     "lastVerified": "2026-03-27",
     "trustScore": 55,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "3d-modeling",
+      "cad-design"
+    ],
     "integrations": [],
     "accessMethod": "desktop-app",
     "platformSupport": [
@@ -4109,7 +4401,11 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "automation",
+      "code-execution",
+      "deployment"
+    ],
     "integrations": [],
     "accessMethod": "api",
     "platformSupport": [
@@ -4148,7 +4444,10 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "automation",
+      "code-execution"
+    ],
     "integrations": [],
     "accessMethod": "api",
     "platformSupport": [
@@ -4187,7 +4486,10 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "automation",
+      "code-execution"
+    ],
     "integrations": [],
     "accessMethod": "api",
     "platformSupport": [
@@ -4233,7 +4535,10 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "automation",
+      "code-execution"
+    ],
     "integrations": [],
     "accessMethod": "api",
     "platformSupport": [
@@ -4279,7 +4584,10 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "automation",
+      "code-execution"
+    ],
     "integrations": [],
     "accessMethod": "api",
     "platformSupport": [
@@ -4318,7 +4626,10 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "automation",
+      "code-execution"
+    ],
     "integrations": [],
     "accessMethod": "api",
     "platformSupport": [
@@ -4357,7 +4668,10 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "text-generation",
+      "text-analysis"
+    ],
     "integrations": [],
     "accessMethod": "cli",
     "platformSupport": [
@@ -4398,7 +4712,10 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "text-generation",
+      "text-analysis"
+    ],
     "integrations": [],
     "accessMethod": "desktop-app",
     "platformSupport": [
@@ -4439,7 +4756,10 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "text-generation",
+      "text-analysis"
+    ],
     "integrations": [],
     "accessMethod": "cli",
     "platformSupport": [
@@ -4480,7 +4800,10 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "text-generation",
+      "text-analysis"
+    ],
     "integrations": [],
     "accessMethod": "cli",
     "platformSupport": [
@@ -4521,7 +4844,10 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "text-generation",
+      "text-analysis"
+    ],
     "integrations": [],
     "accessMethod": "cli",
     "platformSupport": [
@@ -4562,7 +4888,10 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "text-generation",
+      "text-analysis"
+    ],
     "integrations": [],
     "accessMethod": "cli",
     "platformSupport": [
@@ -4603,7 +4932,10 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "text-generation",
+      "text-analysis"
+    ],
     "integrations": [],
     "accessMethod": "cli",
     "platformSupport": [
@@ -4644,7 +4976,10 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "text-generation",
+      "text-analysis"
+    ],
     "integrations": [],
     "accessMethod": "cli",
     "platformSupport": [
@@ -4692,7 +5027,9 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "text-analysis"
+    ],
     "integrations": [],
     "accessMethod": "api",
     "platformSupport": [
@@ -4738,7 +5075,9 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "text-analysis"
+    ],
     "integrations": [],
     "accessMethod": "api",
     "platformSupport": [
@@ -4784,7 +5123,9 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "text-analysis"
+    ],
     "integrations": [],
     "accessMethod": "api",
     "platformSupport": [
@@ -4823,7 +5164,9 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "text-analysis"
+    ],
     "integrations": [],
     "accessMethod": "api",
     "platformSupport": [
@@ -4869,7 +5212,9 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "text-analysis"
+    ],
     "integrations": [],
     "accessMethod": "api",
     "platformSupport": [
@@ -4915,7 +5260,9 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "text-analysis"
+    ],
     "integrations": [],
     "accessMethod": "api",
     "platformSupport": [
@@ -4961,7 +5308,10 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "speech-synthesis",
+      "speech-recognition"
+    ],
     "integrations": [],
     "accessMethod": "api",
     "platformSupport": [
@@ -5007,7 +5357,10 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "speech-synthesis",
+      "speech-recognition"
+    ],
     "integrations": [],
     "accessMethod": "api",
     "platformSupport": [
@@ -5053,7 +5406,10 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "speech-synthesis",
+      "speech-recognition"
+    ],
     "integrations": [],
     "accessMethod": "api",
     "platformSupport": [
@@ -5099,7 +5455,10 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "speech-synthesis",
+      "speech-recognition"
+    ],
     "integrations": [],
     "accessMethod": "api",
     "platformSupport": [
@@ -5145,7 +5504,10 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "speech-synthesis",
+      "speech-recognition"
+    ],
     "integrations": [],
     "accessMethod": "api",
     "platformSupport": [
@@ -5191,7 +5553,10 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "speech-synthesis",
+      "speech-recognition"
+    ],
     "integrations": [],
     "accessMethod": "api",
     "platformSupport": [
@@ -5237,7 +5602,10 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "speech-synthesis",
+      "speech-recognition"
+    ],
     "integrations": [],
     "accessMethod": "api",
     "platformSupport": [
@@ -5283,7 +5651,11 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "speech-synthesis",
+      "speech-recognition",
+      "video-editing"
+    ],
     "integrations": [],
     "accessMethod": "api",
     "platformSupport": [
@@ -5329,7 +5701,10 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "data-analysis",
+      "text-analysis"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -5376,7 +5751,10 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "data-analysis",
+      "text-analysis"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -5423,7 +5801,10 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "data-analysis",
+      "text-analysis"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -5471,7 +5852,10 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "data-analysis",
+      "text-analysis"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -5511,7 +5895,11 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "data-analysis",
+      "text-analysis",
+      "web-search"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -5558,7 +5946,10 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "data-analysis",
+      "text-analysis"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -5605,7 +5996,11 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "data-analysis",
+      "text-analysis",
+      "web-search"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -5652,7 +6047,12 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "text-generation",
+      "text-analysis",
+      "summarization",
+      "web-search"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -5699,7 +6099,11 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "text-generation",
+      "text-analysis",
+      "summarization"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -5739,7 +6143,11 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "text-generation",
+      "text-analysis",
+      "summarization"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -5786,7 +6194,10 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "image-generation",
+      "image-editing"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -5833,7 +6244,10 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "image-generation",
+      "image-editing"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -5880,7 +6294,9 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "image-generation"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -5927,7 +6343,9 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "video-generation"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -5967,7 +6385,10 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "video-generation",
+      "web-search"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -6014,7 +6435,10 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "audio-generation",
+      "music-generation"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -6061,7 +6485,10 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "audio-generation",
+      "music-generation"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -6108,7 +6535,10 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "audio-generation",
+      "music-generation"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -6155,7 +6585,11 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "audio-generation",
+      "music-generation",
+      "speech-synthesis"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -6202,7 +6636,10 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "code-generation",
+      "code-analysis"
+    ],
     "integrations": [],
     "accessMethod": "desktop-app",
     "platformSupport": [
@@ -6243,7 +6680,10 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "code-generation",
+      "code-analysis"
+    ],
     "integrations": [],
     "accessMethod": "desktop-app",
     "platformSupport": [
@@ -6284,7 +6724,10 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "code-generation",
+      "code-analysis"
+    ],
     "integrations": [],
     "accessMethod": "desktop-app",
     "platformSupport": [
@@ -6332,7 +6775,11 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "code-generation",
+      "code-analysis",
+      "web-search"
+    ],
     "integrations": [],
     "accessMethod": "desktop-app",
     "platformSupport": [
@@ -6373,7 +6820,10 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "text-editing",
+      "summarization"
+    ],
     "integrations": [],
     "accessMethod": "web",
     "platformSupport": [
@@ -6419,7 +6869,10 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "text-editing",
+      "summarization"
+    ],
     "integrations": [],
     "accessMethod": "web",
     "platformSupport": [
@@ -6465,7 +6918,10 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "text-editing",
+      "summarization"
+    ],
     "integrations": [],
     "accessMethod": "web",
     "platformSupport": [
@@ -6511,7 +6967,10 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "text-editing",
+      "summarization"
+    ],
     "integrations": [],
     "accessMethod": "web",
     "platformSupport": [
@@ -6557,7 +7016,10 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "text-editing",
+      "summarization"
+    ],
     "integrations": [],
     "accessMethod": "web",
     "platformSupport": [
@@ -6603,7 +7065,9 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "automation"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -6650,7 +7114,9 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "automation"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -6691,7 +7157,9 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "automation"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -6731,7 +7199,9 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "automation"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -6771,7 +7241,12 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "simulation",
+      "robot-control",
+      "sensor-processing",
+      "path-planning"
+    ],
     "integrations": [],
     "accessMethod": "desktop-app",
     "platformSupport": [
@@ -6808,7 +7283,10 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "simulation",
+      "robot-control"
+    ],
     "integrations": [],
     "accessMethod": "desktop-app",
     "platformSupport": [
@@ -6848,7 +7326,11 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "simulation",
+      "robot-control",
+      "path-planning"
+    ],
     "integrations": [],
     "accessMethod": "cli",
     "platformSupport": [
@@ -6889,7 +7371,11 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "simulation",
+      "robot-control",
+      "sensor-processing"
+    ],
     "integrations": [],
     "accessMethod": "cli",
     "platformSupport": [
@@ -6928,7 +7414,10 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "simulation",
+      "robot-control"
+    ],
     "integrations": [],
     "accessMethod": "desktop-app",
     "platformSupport": [
@@ -6968,7 +7457,10 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "simulation",
+      "robot-control"
+    ],
     "integrations": [],
     "accessMethod": "desktop-app",
     "platformSupport": [
@@ -7008,7 +7500,10 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "simulation",
+      "robot-control"
+    ],
     "integrations": [],
     "accessMethod": "desktop-app",
     "platformSupport": [
@@ -7047,7 +7542,10 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "simulation",
+      "robot-control"
+    ],
     "integrations": [],
     "accessMethod": "desktop-app",
     "platformSupport": [
@@ -7087,7 +7585,11 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "robot-control",
+      "path-planning",
+      "sensor-processing"
+    ],
     "integrations": [],
     "accessMethod": "cli",
     "platformSupport": [
@@ -7126,7 +7628,11 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "robot-control",
+      "path-planning",
+      "sensor-processing"
+    ],
     "integrations": [],
     "accessMethod": "desktop-app",
     "platformSupport": [
@@ -7178,7 +7684,10 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "simulation",
+      "robot-control"
+    ],
     "integrations": [],
     "accessMethod": "desktop-app",
     "platformSupport": [
@@ -7231,7 +7740,10 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "simulation",
+      "robot-control"
+    ],
     "integrations": [],
     "accessMethod": "desktop-app",
     "platformSupport": [
@@ -7285,7 +7797,11 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "code-execution",
+      "sensor-processing",
+      "robot-control"
+    ],
     "integrations": [],
     "accessMethod": "desktop-app",
     "platformSupport": [
@@ -7332,7 +7848,11 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "sensor-processing",
+      "code-generation",
+      "deployment"
+    ],
     "integrations": [],
     "accessMethod": "desktop-app",
     "platformSupport": [
@@ -7371,7 +7891,10 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "simulation",
+      "robot-control"
+    ],
     "integrations": [],
     "accessMethod": "desktop-app",
     "platformSupport": [
@@ -7411,7 +7934,11 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "simulation",
+      "robot-control",
+      "path-planning"
+    ],
     "integrations": [],
     "accessMethod": "desktop-app",
     "platformSupport": [
@@ -7458,7 +7985,10 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "simulation",
+      "robot-control"
+    ],
     "integrations": [],
     "accessMethod": "desktop-app",
     "platformSupport": [
@@ -7511,7 +8041,11 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "sensor-processing",
+      "image-analysis",
+      "3d-modeling"
+    ],
     "integrations": [],
     "accessMethod": "desktop-app",
     "platformSupport": [
@@ -7564,7 +8098,10 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "sensor-processing",
+      "image-analysis"
+    ],
     "integrations": [],
     "accessMethod": "desktop-app",
     "platformSupport": [
@@ -7610,7 +8147,10 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "simulation",
+      "robot-control"
+    ],
     "integrations": [],
     "accessMethod": "desktop-app",
     "platformSupport": [
@@ -7657,7 +8197,10 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "simulation",
+      "robot-control"
+    ],
     "integrations": [],
     "accessMethod": "desktop-app",
     "platformSupport": [
@@ -7697,7 +8240,10 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "simulation",
+      "robot-control"
+    ],
     "integrations": [],
     "accessMethod": "desktop-app",
     "platformSupport": [
@@ -7736,7 +8282,11 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "simulation",
+      "robot-control",
+      "web-search"
+    ],
     "integrations": [],
     "accessMethod": "desktop-app",
     "platformSupport": [
@@ -7775,7 +8325,10 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "simulation",
+      "robot-control"
+    ],
     "integrations": [],
     "accessMethod": "desktop-app",
     "platformSupport": [
@@ -7815,7 +8368,10 @@
     "logoUrl": "",
     "lastVerified": "2026-03-27",
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "simulation",
+      "robot-control"
+    ],
     "integrations": [],
     "accessMethod": "desktop-app",
     "platformSupport": [
@@ -7862,7 +8418,15 @@
     "lastVerified": "2026-03-28",
     "trustScore": 88,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "text-generation",
+      "text-analysis",
+      "summarization",
+      "code-generation",
+      "code-analysis",
+      "api-call",
+      "translation"
+    ],
     "integrations": [],
     "accessMethod": "api",
     "platformSupport": [
@@ -7907,7 +8471,17 @@
     "lastVerified": "2026-03-28",
     "trustScore": 85,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "text-generation",
+      "text-analysis",
+      "summarization",
+      "code-generation",
+      "image-generation",
+      "speech-synthesis",
+      "speech-recognition",
+      "api-call",
+      "translation"
+    ],
     "integrations": [],
     "accessMethod": "api",
     "platformSupport": [
@@ -7952,7 +8526,15 @@
     "lastVerified": "2026-03-28",
     "trustScore": 85,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "text-generation",
+      "text-analysis",
+      "summarization",
+      "code-generation",
+      "api-call",
+      "translation",
+      "image-analysis"
+    ],
     "integrations": [],
     "accessMethod": "api",
     "platformSupport": [
@@ -7997,7 +8579,13 @@
     "lastVerified": "2026-03-28",
     "trustScore": 78,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "text-generation",
+      "text-analysis",
+      "summarization",
+      "web-search",
+      "api-call"
+    ],
     "integrations": [],
     "accessMethod": "api",
     "platformSupport": [
@@ -8042,7 +8630,10 @@
     "lastVerified": "2026-03-28",
     "trustScore": 84,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "image-generation",
+      "api-call"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -8094,7 +8685,11 @@
     "lastVerified": "2026-03-28",
     "trustScore": 72,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "audio-generation",
+      "music-generation",
+      "api-call"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -8146,7 +8741,10 @@
     "lastVerified": "2026-03-28",
     "trustScore": 80,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "video-generation",
+      "api-call"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -8198,7 +8796,11 @@
     "lastVerified": "2026-03-28",
     "trustScore": 92,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "automation",
+      "deployment",
+      "code-execution"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -8237,7 +8839,9 @@
     "lastVerified": "2026-03-28",
     "trustScore": 92,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "deployment"
+    ],
     "integrations": [],
     "accessMethod": "web",
     "platformSupport": [
@@ -8282,7 +8886,10 @@
     "lastVerified": "2026-03-28",
     "trustScore": 85,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "automation",
+      "web-search"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -8321,7 +8928,11 @@
     "lastVerified": "2026-03-28",
     "trustScore": 88,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "web-scraping",
+      "automation",
+      "code-execution"
+    ],
     "integrations": [],
     "accessMethod": "cli",
     "platformSupport": [
@@ -8361,7 +8972,11 @@
     "lastVerified": "2026-03-28",
     "trustScore": 88,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "web-scraping",
+      "automation",
+      "code-execution"
+    ],
     "integrations": [],
     "accessMethod": "cli",
     "platformSupport": [
@@ -8401,7 +9016,11 @@
     "lastVerified": "2026-03-28",
     "trustScore": 82,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "api-call",
+      "code-execution",
+      "deployment"
+    ],
     "integrations": [],
     "accessMethod": "desktop-app",
     "platformSupport": [
@@ -8448,7 +9067,9 @@
     "lastVerified": "2026-03-28",
     "trustScore": 88,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "deployment"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -8487,7 +9108,13 @@
     "lastVerified": "2026-03-28",
     "trustScore": 90,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "3d-modeling",
+      "cad-design",
+      "simulation",
+      "code-execution",
+      "video-editing"
+    ],
     "integrations": [],
     "accessMethod": "desktop-app",
     "platformSupport": [
@@ -8527,7 +9154,10 @@
     "lastVerified": "2026-03-28",
     "trustScore": 75,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "3d-modeling",
+      "cad-design"
+    ],
     "integrations": [],
     "accessMethod": "desktop-app",
     "platformSupport": [
@@ -8574,7 +9204,11 @@
     "lastVerified": "2026-03-28",
     "trustScore": 85,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "3d-modeling",
+      "cad-design",
+      "simulation"
+    ],
     "integrations": [],
     "accessMethod": "desktop-app",
     "platformSupport": [
@@ -8614,7 +9248,10 @@
     "lastVerified": "2026-03-28",
     "trustScore": 76,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "3d-slicing",
+      "file-conversion"
+    ],
     "integrations": [],
     "accessMethod": "desktop-app",
     "platformSupport": [
@@ -8654,7 +9291,10 @@
     "lastVerified": "2026-03-28",
     "trustScore": 85,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "circuit-design",
+      "simulation"
+    ],
     "integrations": [],
     "accessMethod": "desktop-app",
     "platformSupport": [
@@ -8701,7 +9341,10 @@
     "lastVerified": "2026-03-28",
     "trustScore": 78,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "pcb-layout",
+      "api-call"
+    ],
     "integrations": [],
     "accessMethod": "desktop-app",
     "platformSupport": [
@@ -8748,7 +9391,10 @@
     "lastVerified": "2026-03-28",
     "trustScore": 90,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "video-editing",
+      "audio-generation"
+    ],
     "integrations": [],
     "accessMethod": "desktop-app",
     "platformSupport": [
@@ -8788,7 +9434,9 @@
     "lastVerified": "2026-03-28",
     "trustScore": 70,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "speech-synthesis"
+    ],
     "integrations": [],
     "accessMethod": "api",
     "platformSupport": [
@@ -8833,7 +9481,10 @@
     "lastVerified": "2026-03-28",
     "trustScore": 88,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "api-call",
+      "speech-synthesis"
+    ],
     "integrations": [],
     "accessMethod": "api",
     "platformSupport": [
@@ -8884,7 +9535,9 @@
     "lastVerified": "2026-03-28",
     "trustScore": 85,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "automation"
+    ],
     "integrations": [],
     "accessMethod": "web",
     "platformSupport": [
@@ -8935,7 +9588,10 @@
     "lastVerified": "2026-03-28",
     "trustScore": 80,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "data-analysis",
+      "automation"
+    ],
     "integrations": [],
     "accessMethod": "web",
     "platformSupport": [
@@ -8980,7 +9636,10 @@
     "lastVerified": "2026-03-28",
     "trustScore": 75,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "data-analysis",
+      "automation"
+    ],
     "integrations": [],
     "accessMethod": "web",
     "platformSupport": [
@@ -9018,7 +9677,11 @@
     "lastVerified": "2026-03-28",
     "trustScore": 95,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "data-analysis",
+      "web-search",
+      "api-call"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -9057,7 +9720,10 @@
     "lastVerified": "2026-03-28",
     "trustScore": 95,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "data-analysis",
+      "api-call"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -9096,7 +9762,10 @@
     "lastVerified": "2026-03-28",
     "trustScore": 85,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "web-search",
+      "data-analysis"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
@@ -9142,7 +9811,10 @@
     "lastVerified": "2026-03-28",
     "trustScore": 88,
     "firstTracked": "2026-03-28",
-    "capabilities": [],
+    "capabilities": [
+      "video-generation",
+      "deployment"
+    ],
     "integrations": [],
     "accessMethod": "web+api",
     "platformSupport": [
