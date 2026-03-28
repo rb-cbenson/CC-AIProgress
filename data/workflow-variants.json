@@ -1,0 +1,960 @@
+[
+  {
+    "workflowType": "short-video",
+    "variants": [
+      {
+        "variantId": "short-video-free-best",
+        "name": "Free Best Quality",
+        "tier": "FREE-BEST",
+        "steps": [
+          {
+            "order": 1,
+            "toolId": "dalle",
+            "action": "Generate concept image",
+            "free": true
+          },
+          {
+            "order": 2,
+            "toolId": "perplexity",
+            "action": "Write script",
+            "free": true
+          },
+          {
+            "order": 3,
+            "toolId": "pika",
+            "action": "Generate video",
+            "free": true
+          },
+          {
+            "order": 4,
+            "toolId": "stable-diffusion",
+            "action": "Edit video",
+            "free": true
+          }
+        ],
+        "estimatedCost": "$0",
+        "pros": [
+          "All free",
+          "Fast turnaround"
+        ],
+        "cons": [
+          "Lower quality than paid"
+        ],
+        "testable": true
+      },
+      {
+        "variantId": "short-video-free-local",
+        "name": "Free Local",
+        "tier": "FREE-LOCAL",
+        "steps": [
+          {
+            "order": 1,
+            "toolId": "ollama",
+            "action": "Generate script locally",
+            "free": true
+          },
+          {
+            "order": 2,
+            "toolId": "coqui-tts",
+            "action": "Local voiceover",
+            "free": true
+          },
+          {
+            "order": 3,
+            "toolId": "stable-diffusion",
+            "action": "Generate visual frames",
+            "free": true
+          },
+          {
+            "order": 4,
+            "toolId": "davinci-resolve",
+            "action": "Edit, animate, export",
+            "free": true
+          }
+        ],
+        "estimatedCost": "$0",
+        "pros": [
+          "All free",
+          "No internet required"
+        ],
+        "cons": [
+          "Limited capabilities"
+        ],
+        "testable": true
+      },
+      {
+        "variantId": "short-video-paid-premium",
+        "name": "Paid Premium",
+        "tier": "PAID-PREMIUM",
+        "steps": [
+          {
+            "order": 1,
+            "toolId": "midjourney",
+            "action": "Generate concept image",
+            "free": false
+          },
+          {
+            "order": 2,
+            "toolId": "copilot-chat",
+            "action": "Write script",
+            "free": true
+          },
+          {
+            "order": 3,
+            "toolId": "runway",
+            "action": "Generate video",
+            "free": true
+          },
+          {
+            "order": 4,
+            "toolId": "adobe-firefly",
+            "action": "Edit video",
+            "free": true
+          }
+        ],
+        "estimatedCost": "$100",
+        "pros": [
+          "High quality",
+          "Fast turnaround"
+        ],
+        "cons": [
+          "Expensive"
+        ],
+        "testable": true
+      }
+    ]
+  },
+  {
+    "workflowType": "coding",
+    "variants": [
+      {
+        "variantId": "coding-free-best",
+        "name": "Free Best Quality",
+        "tier": "FREE-BEST",
+        "steps": [
+          {
+            "order": 1,
+            "toolId": "github-copilot",
+            "action": "Generate code",
+            "free": true
+          },
+          {
+            "order": 2,
+            "toolId": "cursor",
+            "action": "Review code",
+            "free": true
+          },
+          {
+            "order": 3,
+            "toolId": "tabnine",
+            "action": "Optimize code",
+            "free": true
+          }
+        ],
+        "estimatedCost": "$0",
+        "pros": [
+          "All free",
+          "Fast turnaround"
+        ],
+        "cons": [
+          "Lower quality than paid"
+        ],
+        "testable": true
+      },
+      {
+        "variantId": "coding-free-local",
+        "name": "Free Local",
+        "tier": "FREE-LOCAL",
+        "steps": [
+          {
+            "order": 1,
+            "toolId": "ollama",
+            "action": "Local LLM for code assistance",
+            "free": true
+          },
+          {
+            "order": 2,
+            "toolId": "claude-code",
+            "action": "Multi-file implementation and refactoring",
+            "free": true
+          },
+          {
+            "order": 3,
+            "toolId": "github-actions",
+            "action": "CI/CD and automated testing",
+            "free": true
+          }
+        ],
+        "estimatedCost": "$0",
+        "pros": [
+          "All free",
+          "No internet required"
+        ],
+        "cons": [
+          "Limited capabilities"
+        ],
+        "testable": true
+      },
+      {
+        "variantId": "coding-paid-premium",
+        "name": "Paid Premium",
+        "tier": "PAID-PREMIUM",
+        "steps": [
+          {
+            "order": 1,
+            "toolId": "claude-code",
+            "action": "Generate code",
+            "free": false
+          },
+          {
+            "order": 2,
+            "toolId": "github-copilot",
+            "action": "Review code",
+            "free": true
+          },
+          {
+            "order": 3,
+            "toolId": "windsurf",
+            "action": "Optimize code",
+            "free": true
+          }
+        ],
+        "estimatedCost": "$50",
+        "pros": [
+          "High quality",
+          "Fast turnaround"
+        ],
+        "cons": [
+          "Expensive"
+        ],
+        "testable": true
+      }
+    ]
+  },
+  {
+    "workflowType": "research",
+    "variants": [
+      {
+        "variantId": "research-free-best",
+        "name": "Free Best Quality",
+        "tier": "FREE-BEST",
+        "steps": [
+          {
+            "order": 1,
+            "toolId": "perplexity",
+            "action": "Generate research question",
+            "free": true
+          },
+          {
+            "order": 2,
+            "toolId": "elicit",
+            "action": "Conduct research",
+            "free": true
+          },
+          {
+            "order": 3,
+            "toolId": "notion-ai",
+            "action": "Organize research",
+            "free": true
+          }
+        ],
+        "estimatedCost": "$0",
+        "pros": [
+          "All free",
+          "Fast turnaround"
+        ],
+        "cons": [
+          "Lower quality than paid"
+        ],
+        "testable": true
+      },
+      {
+        "variantId": "research-free-local",
+        "name": "Free Local",
+        "tier": "FREE-LOCAL",
+        "steps": [
+          {
+            "order": 1,
+            "toolId": "ollama",
+            "action": "Local LLM for analysis and brainstorming",
+            "free": true
+          },
+          {
+            "order": 2,
+            "toolId": "stable-diffusion",
+            "action": "Generate diagrams and visual aids",
+            "free": true
+          },
+          {
+            "order": 3,
+            "toolId": "google-notebooklm",
+            "action": "Organize sources and summary",
+            "free": true
+          }
+        ],
+        "estimatedCost": "$0",
+        "pros": [
+          "All free",
+          "No internet required"
+        ],
+        "cons": [
+          "Limited capabilities"
+        ],
+        "testable": true
+      },
+      {
+        "variantId": "research-paid-premium",
+        "name": "Paid Premium",
+        "tier": "PAID-PREMIUM",
+        "steps": [
+          {
+            "order": 1,
+            "toolId": "copilot-chat",
+            "action": "Generate research question",
+            "free": true
+          },
+          {
+            "order": 2,
+            "toolId": "consensus",
+            "action": "Conduct research",
+            "free": true
+          },
+          {
+            "order": 3,
+            "toolId": "google-notebooklm",
+            "action": "Organize research",
+            "free": true
+          }
+        ],
+        "estimatedCost": "$20",
+        "pros": [
+          "High quality",
+          "Fast turnaround"
+        ],
+        "cons": [
+          "Expensive"
+        ],
+        "testable": true
+      }
+    ]
+  },
+  {
+    "workflowType": "robotics-sim",
+    "variants": [
+      {
+        "variantId": "robotics-sim-free-best",
+        "name": "Free Best Quality",
+        "tier": "FREE-BEST",
+        "steps": [
+          {
+            "order": 1,
+            "toolId": "mujoco",
+            "action": "Physics simulation and robot modeling",
+            "free": true
+          },
+          {
+            "order": 2,
+            "toolId": "ros2",
+            "action": "Robot control middleware",
+            "free": true
+          },
+          {
+            "order": 3,
+            "toolId": "gazebo",
+            "action": "World simulation with sensors",
+            "free": true
+          },
+          {
+            "order": 4,
+            "toolId": "opencv",
+            "action": "Computer vision and perception",
+            "free": true
+          }
+        ],
+        "estimatedCost": "$0",
+        "pros": [
+          "All free",
+          "Fast turnaround"
+        ],
+        "cons": [
+          "Lower quality than paid"
+        ],
+        "testable": true
+      },
+      {
+        "variantId": "robotics-sim-free-local",
+        "name": "Free Local",
+        "tier": "FREE-LOCAL",
+        "steps": [
+          {
+            "order": 1,
+            "toolId": "mujoco",
+            "action": "Local physics simulation",
+            "free": true
+          },
+          {
+            "order": 2,
+            "toolId": "gazebo",
+            "action": "Local world simulation",
+            "free": true
+          },
+          {
+            "order": 3,
+            "toolId": "ros2",
+            "action": "Local robot control",
+            "free": true
+          },
+          {
+            "order": 4,
+            "toolId": "opencv",
+            "action": "Local computer vision",
+            "free": true
+          }
+        ],
+        "estimatedCost": "$0",
+        "pros": [
+          "All free",
+          "No internet required"
+        ],
+        "cons": [
+          "Limited capabilities"
+        ],
+        "testable": true
+      },
+      {
+        "variantId": "robotics-sim-paid-premium",
+        "name": "Paid Premium",
+        "tier": "PAID-PREMIUM",
+        "steps": [
+          {
+            "order": 1,
+            "toolId": "isaac-sim",
+            "action": "NVIDIA Isaac high-fidelity sim",
+            "free": true
+          },
+          {
+            "order": 2,
+            "toolId": "ros2",
+            "action": "Isaac ROS with NITROS",
+            "free": true
+          },
+          {
+            "order": 3,
+            "toolId": "jetson-orin",
+            "action": "Edge deployment",
+            "free": true
+          }
+        ],
+        "estimatedCost": "$100",
+        "pros": [
+          "High quality",
+          "Fast turnaround"
+        ],
+        "cons": [
+          "Expensive"
+        ],
+        "testable": true
+      }
+    ]
+  },
+  {
+    "workflowType": "pcb-design",
+    "variants": [
+      {
+        "variantId": "pcb-design-free-best",
+        "name": "Free Best Quality",
+        "tier": "FREE-BEST",
+        "steps": [
+          {
+            "order": 1,
+            "toolId": "groq",
+            "action": "AI requirements analysis and component selection",
+            "free": true
+          },
+          {
+            "order": 2,
+            "toolId": "kicad",
+            "action": "Schematic capture with AI plugin",
+            "free": true
+          },
+          {
+            "order": 3,
+            "toolId": "kicad",
+            "action": "PCB layout and routing",
+            "free": true
+          },
+          {
+            "order": 4,
+            "toolId": "blender",
+            "action": "3D render via pcb2blender",
+            "free": true
+          },
+          {
+            "order": 5,
+            "toolId": "jlcpcb-api",
+            "action": "Export and order fabrication",
+            "free": true
+          }
+        ],
+        "estimatedCost": "$0",
+        "pros": [
+          "All free",
+          "Fast turnaround"
+        ],
+        "cons": [
+          "Lower quality than paid"
+        ],
+        "testable": true
+      },
+      {
+        "variantId": "pcb-design-free-local",
+        "name": "Free Local",
+        "tier": "FREE-LOCAL",
+        "steps": [
+          {
+            "order": 1,
+            "toolId": "kicad",
+            "action": "Full schematic and PCB locally",
+            "free": true
+          },
+          {
+            "order": 2,
+            "toolId": "ltspice",
+            "action": "Circuit simulation",
+            "free": true
+          },
+          {
+            "order": 3,
+            "toolId": "freecad",
+            "action": "3D enclosure design",
+            "free": true
+          },
+          {
+            "order": 4,
+            "toolId": "blender",
+            "action": "Photorealistic render",
+            "free": true
+          }
+        ],
+        "estimatedCost": "$0",
+        "pros": [
+          "All free",
+          "No internet required"
+        ],
+        "cons": [
+          "Limited capabilities"
+        ],
+        "testable": true
+      },
+      {
+        "variantId": "pcb-design-paid-premium",
+        "name": "Paid Premium",
+        "tier": "PAID-PREMIUM",
+        "steps": [
+          {
+            "order": 1,
+            "toolId": "backflip-ai",
+            "action": "Design PCB",
+            "free": false
+          },
+          {
+            "order": 2,
+            "toolId": "copilot-chat",
+            "action": "Generate PCB layout",
+            "free": true
+          },
+          {
+            "order": 3,
+            "toolId": "runway",
+            "action": "Simulate PCB",
+            "free": true
+          }
+        ],
+        "estimatedCost": "$50",
+        "pros": [
+          "High quality",
+          "Fast turnaround"
+        ],
+        "cons": [
+          "Expensive"
+        ],
+        "testable": true
+      }
+    ]
+  },
+  {
+    "workflowType": "music",
+    "variants": [
+      {
+        "variantId": "music-free-best",
+        "name": "Free Best Quality",
+        "tier": "FREE-BEST",
+        "steps": [
+          {
+            "order": 1,
+            "toolId": "groq",
+            "action": "Generate lyrics and style description",
+            "free": true
+          },
+          {
+            "order": 2,
+            "toolId": "suno",
+            "action": "Generate full song with vocals",
+            "free": true
+          },
+          {
+            "order": 3,
+            "toolId": "udio",
+            "action": "Edit and refine sections",
+            "free": true
+          },
+          {
+            "order": 4,
+            "toolId": "davinci-resolve",
+            "action": "Final mix and master",
+            "free": true
+          }
+        ],
+        "estimatedCost": "$0",
+        "pros": [
+          "All free",
+          "Fast turnaround"
+        ],
+        "cons": [
+          "Lower quality than paid"
+        ],
+        "testable": true
+      },
+      {
+        "variantId": "music-free-local",
+        "name": "Free Local",
+        "tier": "FREE-LOCAL",
+        "steps": [
+          {
+            "order": 1,
+            "toolId": "ollama",
+            "action": "Generate lyrics locally",
+            "free": true
+          },
+          {
+            "order": 2,
+            "toolId": "coqui-tts",
+            "action": "Local voice synthesis",
+            "free": true
+          },
+          {
+            "order": 3,
+            "toolId": "davinci-resolve",
+            "action": "Audio editing and mixing",
+            "free": true
+          }
+        ],
+        "estimatedCost": "$0",
+        "pros": [
+          "All free",
+          "No internet required"
+        ],
+        "cons": [
+          "Limited capabilities"
+        ],
+        "testable": true
+      },
+      {
+        "variantId": "music-paid-premium",
+        "name": "Paid Premium",
+        "tier": "PAID-PREMIUM",
+        "steps": [
+          {
+            "order": 1,
+            "toolId": "claude",
+            "action": "Professional lyrics and arrangement",
+            "free": true
+          },
+          {
+            "order": 2,
+            "toolId": "suno",
+            "action": "Generate full song",
+            "free": true
+          },
+          {
+            "order": 3,
+            "toolId": "elevenlabs",
+            "action": "Professional vocal synthesis",
+            "free": false
+          },
+          {
+            "order": 4,
+            "toolId": "davinci-resolve",
+            "action": "Professional mix",
+            "free": true
+          }
+        ],
+        "estimatedCost": "$20",
+        "pros": [
+          "High quality",
+          "Fast turnaround"
+        ],
+        "cons": [
+          "Expensive"
+        ],
+        "testable": true
+      }
+    ]
+  },
+  {
+    "workflowType": "prototype",
+    "variants": [
+      {
+        "variantId": "prototype-free-best",
+        "name": "Free Best Quality",
+        "tier": "FREE-BEST",
+        "steps": [
+          {
+            "order": 1,
+            "toolId": "groq",
+            "action": "Design specs from idea description",
+            "free": true
+          },
+          {
+            "order": 2,
+            "toolId": "blender",
+            "action": "3D model the product",
+            "free": true
+          },
+          {
+            "order": 3,
+            "toolId": "orcaslicer-cli",
+            "action": "Slice for 3D printing",
+            "free": true
+          },
+          {
+            "order": 4,
+            "toolId": "kicad",
+            "action": "Design electronics if needed",
+            "free": true
+          },
+          {
+            "order": 5,
+            "toolId": "claude-code",
+            "action": "Generate firmware",
+            "free": true
+          },
+          {
+            "order": 6,
+            "toolId": "jlcpcb-api",
+            "action": "Order PCB fabrication",
+            "free": true
+          }
+        ],
+        "estimatedCost": "$0",
+        "pros": [
+          "All free",
+          "Fast turnaround"
+        ],
+        "cons": [
+          "Lower quality than paid"
+        ],
+        "testable": true
+      },
+      {
+        "variantId": "prototype-free-local",
+        "name": "Free Local",
+        "tier": "FREE-LOCAL",
+        "steps": [
+          {
+            "order": 1,
+            "toolId": "ollama",
+            "action": "Local AI for design brainstorming",
+            "free": true
+          },
+          {
+            "order": 2,
+            "toolId": "freecad",
+            "action": "Parametric CAD modeling",
+            "free": true
+          },
+          {
+            "order": 3,
+            "toolId": "orcaslicer-cli",
+            "action": "Slice for 3D printing",
+            "free": true
+          },
+          {
+            "order": 4,
+            "toolId": "kicad",
+            "action": "PCB design",
+            "free": true
+          },
+          {
+            "order": 5,
+            "toolId": "ltspice",
+            "action": "Circuit simulation",
+            "free": true
+          }
+        ],
+        "estimatedCost": "$0",
+        "pros": [
+          "All free",
+          "No internet required"
+        ],
+        "cons": [
+          "Limited capabilities"
+        ],
+        "testable": true
+      },
+      {
+        "variantId": "prototype-paid-premium",
+        "name": "Paid Premium",
+        "tier": "PAID-PREMIUM",
+        "steps": [
+          {
+            "order": 1,
+            "toolId": "claude",
+            "action": "Detailed product design spec",
+            "free": true
+          },
+          {
+            "order": 2,
+            "toolId": "fusion-360",
+            "action": "Professional CAD with simulation",
+            "free": false
+          },
+          {
+            "order": 3,
+            "toolId": "kicad",
+            "action": "PCB with Quilter AI auto-routing",
+            "free": true
+          },
+          {
+            "order": 4,
+            "toolId": "blender",
+            "action": "Photorealistic product renders",
+            "free": true
+          },
+          {
+            "order": 5,
+            "toolId": "jlcpcb-api",
+            "action": "Order PCB + parts",
+            "free": true
+          }
+        ],
+        "estimatedCost": "$100",
+        "pros": [
+          "High quality",
+          "Fast turnaround"
+        ],
+        "cons": [
+          "Expensive"
+        ],
+        "testable": true
+      }
+    ]
+  },
+  {
+    "workflowType": "content",
+    "variants": [
+      {
+        "variantId": "content-free-best",
+        "name": "Free Best Quality",
+        "tier": "FREE-BEST",
+        "steps": [
+          {
+            "order": 1,
+            "toolId": "perplexity",
+            "action": "Generate content idea",
+            "free": true
+          },
+          {
+            "order": 2,
+            "toolId": "notion-ai",
+            "action": "Write content",
+            "free": true
+          },
+          {
+            "order": 3,
+            "toolId": "dalle",
+            "action": "Generate images",
+            "free": true
+          }
+        ],
+        "estimatedCost": "$0",
+        "pros": [
+          "All free",
+          "Fast turnaround"
+        ],
+        "cons": [
+          "Lower quality than paid"
+        ],
+        "testable": true
+      },
+      {
+        "variantId": "content-free-local",
+        "name": "Free Local",
+        "tier": "FREE-LOCAL",
+        "steps": [
+          {
+            "order": 1,
+            "toolId": "ollama",
+            "action": "Draft content locally",
+            "free": true
+          },
+          {
+            "order": 2,
+            "toolId": "stable-diffusion",
+            "action": "Generate images locally",
+            "free": true
+          },
+          {
+            "order": 3,
+            "toolId": "davinci-resolve",
+            "action": "Edit video content",
+            "free": true
+          }
+        ],
+        "estimatedCost": "$0",
+        "pros": [
+          "All free",
+          "No internet required"
+        ],
+        "cons": [
+          "Limited capabilities"
+        ],
+        "testable": true
+      },
+      {
+        "variantId": "content-paid-premium",
+        "name": "Paid Premium",
+        "tier": "PAID-PREMIUM",
+        "steps": [
+          {
+            "order": 1,
+            "toolId": "copilot-chat",
+            "action": "Generate content idea",
+            "free": true
+          },
+          {
+            "order": 2,
+            "toolId": "jasper",
+            "action": "Write content",
+            "free": false
+          },
+          {
+            "order": 3,
+            "toolId": "runway",
+            "action": "Generate images",
+            "free": true
+          }
+        ],
+        "estimatedCost": "$50",
+        "pros": [
+          "High quality",
+          "Fast turnaround"
+        ],
+        "cons": [
+          "Expensive"
+        ],
+        "testable": true
+      }
+    ]
+  }
+]
