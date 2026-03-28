@@ -1,81 +1,508 @@
-[
-  {
-    "id": "content-creation",
-    "name": "Content Creation Pipeline",
-    "description": "Create polished blog posts, articles, or social media content using AI for writing, images, and editing",
-    "category": "content",
-    "difficulty": "beginner",
-    "steps": [
-      { "toolId": "chatgpt", "action": "Draft the content with outline and key points", "order": 1 },
-      { "toolId": "claude", "action": "Refine tone, check accuracy, and improve structure", "order": 2 },
-      { "toolId": "midjourney", "action": "Generate accompanying images and graphics", "order": 3 },
-      { "toolId": "grammarly", "action": "Final grammar, clarity, and style polish", "order": 4 }
-    ]
-  },
-  {
-    "id": "code-development",
-    "name": "AI-Assisted Code Development",
-    "description": "Plan, implement, review, and ship code faster using multiple AI coding tools together",
-    "category": "development",
-    "difficulty": "intermediate",
-    "steps": [
-      { "toolId": "claude", "action": "Plan architecture and design decisions", "order": 1 },
-      { "toolId": "cursor", "action": "Implement code with AI-assisted editing", "order": 2 },
-      { "toolId": "claude-code", "action": "Review, test, and refactor across the full repo", "order": 3 },
-      { "toolId": "github-copilot", "action": "CI/CD assistance and documentation", "order": 4 }
-    ]
-  },
-  {
-    "id": "video-production",
-    "name": "AI Video Production",
-    "description": "Create professional videos from concept to final cut using AI at every step",
-    "category": "media",
-    "difficulty": "intermediate",
-    "steps": [
-      { "toolId": "chatgpt", "action": "Write the script and storyboard", "order": 1 },
-      { "toolId": "elevenlabs", "action": "Generate voiceover narration", "order": 2 },
-      { "toolId": "midjourney", "action": "Create visual assets and backgrounds", "order": 3 },
-      { "toolId": "runway", "action": "Generate video clips from images and prompts", "order": 4 },
-      { "toolId": "suno", "action": "Create background music", "order": 5 }
-    ]
-  },
-  {
-    "id": "research-synthesis",
-    "name": "Research & Knowledge Synthesis",
-    "description": "Research a topic thoroughly using AI search, organize findings, and produce a comprehensive summary",
-    "category": "research",
-    "difficulty": "beginner",
-    "steps": [
-      { "toolId": "perplexity", "action": "Research with citations — gather facts and sources", "order": 1 },
-      { "toolId": "claude", "action": "Synthesize findings into structured analysis", "order": 2 },
-      { "toolId": "google-notebooklm", "action": "Organize sources and generate audio summary", "order": 3 },
-      { "toolId": "notion-ai", "action": "Store, organize, and share the final output", "order": 4 }
-    ]
-  },
-  {
-    "id": "music-production",
-    "name": "AI Music Production",
-    "description": "Create original music tracks with vocals, mix, and prepare for distribution",
-    "category": "media",
-    "difficulty": "beginner",
-    "steps": [
-      { "toolId": "chatgpt", "action": "Write lyrics and describe the musical style", "order": 1 },
-      { "toolId": "suno", "action": "Generate the full song with vocals", "order": 2 },
-      { "toolId": "udio", "action": "Fine-tune and edit specific sections (inpainting)", "order": 3 },
-      { "toolId": "elevenlabs", "action": "Generate alternative vocal tracks or voice effects", "order": 4 }
-    ]
-  },
-  {
-    "id": "business-automation",
-    "name": "Business Process Automation",
-    "description": "Automate repetitive business tasks using AI-powered workflow tools",
-    "category": "business",
-    "difficulty": "intermediate",
-    "steps": [
-      { "toolId": "chatgpt", "action": "Map out the process and identify automation points", "order": 1 },
-      { "toolId": "zapier", "action": "Connect apps and create automated workflows (Zaps)", "order": 2 },
-      { "toolId": "notion-ai", "action": "Set up project tracking and documentation", "order": 3 },
-      { "toolId": "grammarly", "action": "Auto-polish all outgoing communications", "order": 4 }
-    ]
+{
+  "description": "Multi-tool AI workflows — verified pipelines people actually use. Auto-discovery via workflow-from-youtube, workflow-from-reddit, workflow-from-github methods in discovery-methods.json.",
+  "lastUpdated": "2026-03-28",
+  "autoUpdateMethod": "Research sweep searches for new workflows monthly. Each workflow tracks its verification status and staleness. Tools within workflows are checked against tools.json — if a tool is deprecated, the workflow gets flagged for update.",
+  "workflows": [
+    {
+      "id": "ai-short-video",
+      "name": "AI Short-Form Video Production",
+      "description": "End-to-end automated video creation for TikTok/Reels/Shorts",
+      "category": "media",
+      "difficulty": "intermediate",
+      "verified": true,
+      "verifiedSource": "n8n template #3121, Like2Byte tutorial, multiple Medium articles",
+      "costTier": "mixed",
+      "freeAlternative": "Replace Kling with free Runway trial, OpusClip with DaVinci Resolve captions",
+      "steps": [
+        {
+          "toolId": "openai-api",
+          "action": "Script generation and scene breakdown",
+          "order": 1,
+          "free": true
+        },
+        {
+          "toolId": "stable-diffusion",
+          "action": "Generate still images per scene (local, free)",
+          "order": 2,
+          "free": true
+        },
+        {
+          "toolId": "elevenlabs",
+          "action": "Generate voiceover (audio-FIRST — before visuals)",
+          "order": 3,
+          "free": true,
+          "freeLimit": "10,000 chars/month"
+        },
+        {
+          "toolId": "kling",
+          "action": "Animate stills with lip-sync (Motion Brush intensity 3-8)",
+          "order": 4,
+          "free": false,
+          "paidNote": "Credits required"
+        },
+        {
+          "toolId": "davinci-resolve",
+          "action": "Final edit, captions, export",
+          "order": 5,
+          "free": true
+        }
+      ],
+      "orchestration": "n8n or Make connects all steps automatically",
+      "keyInsight": "Audio is generated BEFORE visuals. Kling Motion Brush intensity 3 for calm, 8 for action. ElevenLabs Stability 45%, Similarity 90%.",
+      "gaps": [
+        "No free video animation tool matches Kling quality yet"
+      ],
+      "lastVerified": "2026-03-28",
+      "connectors": [
+        {
+          "type": "n8n-template",
+          "name": "AI Video Generator",
+          "url": "https://n8n.io/workflows/3121",
+          "note": "Pre-built n8n workflow connecting all video pipeline steps"
+        },
+        {
+          "type": "browser-extension",
+          "name": "OpusClip",
+          "url": "https://www.opus.pro/",
+          "note": "Auto-captioning and platform formatting"
+        }
+      ]
+    },
+    {
+      "id": "multi-model-coding",
+      "name": "Multi-Model AI Coding Pipeline",
+      "description": "Use different AI coding tools for what each does best",
+      "category": "development",
+      "difficulty": "intermediate",
+      "verified": true,
+      "verifiedSource": "Emergent.sh benchmarks, Builder.io comparison, DEV Community",
+      "costTier": "free",
+      "freeAlternative": null,
+      "steps": [
+        {
+          "toolId": "claude-code",
+          "action": "Feature implementation, large refactors, multi-file agentic tasks (80.8% SWE-bench)",
+          "order": 1,
+          "free": true,
+          "freeLimit": "Claude Max plan"
+        },
+        {
+          "toolId": "cursor",
+          "action": "Day-to-day editing, iterative refinement, debugging (auto-routes between models)",
+          "order": 2,
+          "free": true,
+          "freeLimit": "Limited completions/month"
+        },
+        {
+          "toolId": "github-copilot",
+          "action": "CI/CD assistance, documentation, inline completions",
+          "order": 3,
+          "free": true,
+          "freeLimit": "2000 completions + 50 chats/month"
+        },
+        {
+          "toolId": "claude-api",
+          "action": "Adversarial code review in CI (different model reviews the code)",
+          "order": 4,
+          "free": false,
+          "paidNote": "API costs"
+        }
+      ],
+      "orchestration": "GitHub Actions runs adversarial review step automatically",
+      "keyInsight": "Claude Code completed a Next.js build with 33K tokens; Cursor used 188K on the same prompt. They complement, not compete. Agent Teams (Feb 2026) lets Claude Code spawn sub-agents.",
+      "gaps": [],
+      "lastVerified": "2026-03-28",
+      "connectors": [
+        {
+          "type": "mcp-server",
+          "name": "Claude Code MCP",
+          "url": "built-in",
+          "note": "Claude Code has built-in MCP support for browser, GitHub, filesystem"
+        },
+        {
+          "type": "ide-extension",
+          "name": "GitHub Copilot",
+          "url": "https://github.com/features/copilot",
+          "note": "VS Code / JetBrains extension"
+        },
+        {
+          "type": "ide-extension",
+          "name": "Cursor",
+          "url": "https://cursor.com",
+          "note": "Full IDE with built-in multi-model routing"
+        },
+        {
+          "type": "github-action",
+          "name": "Claude Code Action",
+          "url": "https://github.com/anthropics/claude-code-action",
+          "note": "Claude reviews PRs in CI/CD"
+        }
+      ]
+    },
+    {
+      "id": "research-pipeline",
+      "name": "Research & Knowledge Synthesis (3-Model)",
+      "description": "Local exploration → structured understanding → polished output",
+      "category": "research",
+      "difficulty": "beginner",
+      "verified": true,
+      "verifiedSource": "XDA Developers article, Reddit discussions",
+      "costTier": "free",
+      "freeAlternative": null,
+      "steps": [
+        {
+          "toolId": "ollama",
+          "action": "Uncapped exploration sandbox — no filters, no rate limits, idea generation",
+          "order": 1,
+          "free": true
+        },
+        {
+          "toolId": "google-notebooklm",
+          "action": "Structured understanding, source grounding, organize research",
+          "order": 2,
+          "free": true
+        },
+        {
+          "toolId": "claude",
+          "action": "Final output: interactive prototypes, UI components, documents",
+          "order": 3,
+          "free": true,
+          "freeLimit": "Daily limits on free tier"
+        }
+      ],
+      "orchestration": "Manual handoff between tools",
+      "keyInsight": "Local models handle discovery (no rate limits), NotebookLM handles verification, Claude handles polished output. Each tool does what it's best at.",
+      "gaps": [
+        "Handoff between tools is manual — could be automated with file watchers"
+      ],
+      "lastVerified": "2026-03-28",
+      "connectors": [
+        {
+          "type": "browser-extension",
+          "name": "Claude in Chrome",
+          "url": "chrome extension",
+          "note": "Claude can browse and extract from web pages directly"
+        },
+        {
+          "type": "mcp-server",
+          "name": "Google Drive MCP",
+          "url": "built-in",
+          "note": "Claude can read Google Docs for research input"
+        },
+        {
+          "type": "claude-connector",
+          "name": "Gmail connector",
+          "url": "built-in",
+          "note": "Claude can read research-related emails"
+        }
+      ]
+    },
+    {
+      "id": "isaac-sim-to-real",
+      "name": "NVIDIA Isaac Sim-to-Real Robotics Pipeline",
+      "description": "Train in simulation, deploy on physical robot with zero-shot transfer",
+      "category": "robotics",
+      "difficulty": "advanced",
+      "verified": true,
+      "verifiedSource": "NVIDIA blog (UR10e gear assembly), ROSCon 2025 multi-robot demo",
+      "costTier": "free",
+      "freeAlternative": null,
+      "steps": [
+        {
+          "toolId": "isaac-sim",
+          "action": "Import URDF, set up environment, add sensors",
+          "order": 1,
+          "free": true
+        },
+        {
+          "toolId": "isaac-sim",
+          "action": "Synthetic data generation (NVIDIA Cosmos)",
+          "order": 2,
+          "free": true
+        },
+        {
+          "toolId": "isaac-sim",
+          "action": "RL training with Isaac Lab",
+          "order": 3,
+          "free": true
+        },
+        {
+          "toolId": "ros2",
+          "action": "Isaac ROS NITROS — GPU-accelerated Visual SLAM, nvBlox, cuMotion, FoundationPose",
+          "order": 4,
+          "free": true
+        },
+        {
+          "toolId": "jetson-orin",
+          "action": "Edge deployment — software-in-loop then hardware-in-loop",
+          "order": 5,
+          "free": true,
+          "freeLimit": "Hardware cost ~$500-2000"
+        }
+      ],
+      "orchestration": "NVIDIA toolchain handles pipeline internally",
+      "keyInsight": "Zero-shot sim-to-real transfer demonstrated — policy trained entirely in simulation deployed on physical UR10e without fine-tuning.",
+      "gaps": [
+        "Requires NVIDIA GPU (RTX 3070+ minimum)",
+        "Linux-only for Isaac Sim"
+      ],
+      "lastVerified": "2026-03-28",
+      "connectors": [
+        {
+          "type": "ros2-bridge",
+          "name": "Isaac ROS NITROS Bridge",
+          "url": "https://nvidia-isaac-ros.github.io/concepts/nitros_bridge/tutorial_isaac_sim.html",
+          "note": "GPU-accelerated ROS2 to Isaac Sim connection"
+        },
+        {
+          "type": "ros2-package",
+          "name": "isaac_ros_visual_slam",
+          "note": "Visual SLAM for localization"
+        },
+        {
+          "type": "ros2-package",
+          "name": "nvblox",
+          "note": "3D mapping and obstacle detection"
+        },
+        {
+          "type": "ros2-package",
+          "name": "cuMotion",
+          "note": "GPU-accelerated motion planning"
+        }
+      ]
+    },
+    {
+      "id": "ai-pcb-design",
+      "name": "AI-Assisted PCB Design Pipeline",
+      "description": "Text description to manufactured PCB using AI at every step",
+      "category": "electronics",
+      "difficulty": "intermediate",
+      "verified": true,
+      "verifiedSource": "GitHub repos (kicad-happy, KiCAD-MCP-Server), Hackster.io, Quilter.ai",
+      "costTier": "free",
+      "freeAlternative": "Replace Quilter.ai with KiCad manual routing",
+      "steps": [
+        {
+          "toolId": "claude-code",
+          "action": "Parse requirements, cross-reference datasheets, detect design errors (kicad-happy skills)",
+          "order": 1,
+          "free": true
+        },
+        {
+          "toolId": "kicad",
+          "action": "Schematic capture — KiCad AI Plugin for natural language commands",
+          "order": 2,
+          "free": true,
+          "communityCode": "https://kicad.alttab.rs/"
+        },
+        {
+          "toolId": "kicad",
+          "action": "PCB layout with AI auto-routing via Quilter.ai or manual",
+          "order": 3,
+          "free": true
+        },
+        {
+          "toolId": "blender",
+          "action": "3D render of PCB for documentation",
+          "order": 4,
+          "free": true,
+          "communityCode": "https://github.com/30350n/pcb2blender"
+        },
+        {
+          "toolId": "jlcpcb-api",
+          "action": "Generate Gerbers, BOM, CPL and order fabrication",
+          "order": 5,
+          "free": true,
+          "communityCode": "https://github.com/bouni/kicad-jlcpcb-tools"
+        }
+      ],
+      "orchestration": "KiCad MCP Server (52 tools) enables AI-to-KiCad communication",
+      "keyInsight": "KiCad's open S-expression file format is what makes AI integration viable. MCP server provides 52 tools and 8 dynamic resources.",
+      "gaps": [
+        "AI auto-routing (Quilter.ai) is paid for complex boards",
+        "Schematic → PCB netlist validation still needs human review"
+      ],
+      "lastVerified": "2026-03-28",
+      "connectors": [
+        {
+          "type": "mcp-server",
+          "name": "KiCAD MCP Server",
+          "url": "https://github.com/mixelpixx/KiCAD-MCP-Server",
+          "tools": 52,
+          "note": "Claude can control KiCad directly via MCP"
+        },
+        {
+          "type": "claude-skill",
+          "name": "kicad-happy",
+          "url": "https://github.com/aklofas/kicad-happy",
+          "note": "Claude Code skills for KiCad schematic parsing"
+        },
+        {
+          "type": "kicad-plugin",
+          "name": "KiCad AI Plugin (ALT TAB)",
+          "url": "https://kicad.alttab.rs/",
+          "note": "Natural language commands in KiCad, supports Claude/GPT/Gemini backends"
+        },
+        {
+          "type": "kicad-plugin",
+          "name": "kicad-jlcpcb-tools",
+          "url": "https://github.com/bouni/kicad-jlcpcb-tools",
+          "note": "Direct JLCPCB fabrication export from KiCad"
+        },
+        {
+          "type": "blender-addon",
+          "name": "pcb2blender",
+          "url": "https://github.com/30350n/pcb2blender",
+          "note": "KiCad PCB 3D export to Blender"
+        }
+      ]
+    },
+    {
+      "id": "elevenlabs-flows",
+      "name": "ElevenLabs Flows — Full-Stack Content",
+      "description": "Single-platform multimedia creation: video + audio + effects via visual canvas",
+      "category": "media",
+      "difficulty": "beginner",
+      "verified": true,
+      "verifiedSource": "ElevenLabs official launch March 2026, Feisworld guide",
+      "costTier": "mixed",
+      "freeAlternative": "Use separate free tools: Stable Diffusion + Coqui TTS + DaVinci Resolve",
+      "steps": [
+        {
+          "toolId": "elevenlabs",
+          "action": "Visual node-based canvas: connect text → image/video → audio → output",
+          "order": 1,
+          "free": false,
+          "paidNote": "Free tier limited, full Flows requires subscription"
+        },
+        {
+          "toolId": "elevenlabs",
+          "action": "35+ integrated models: Veo, Sora, Kling, Wan, Flux, Seedance for visuals",
+          "order": 2,
+          "free": false
+        },
+        {
+          "toolId": "elevenlabs",
+          "action": "TTS, voice cloning, lip-sync, SFX, music generation",
+          "order": 3,
+          "free": false
+        },
+        {
+          "toolId": "elevenlabs",
+          "action": "Non-destructive iteration: change one node, only downstream re-renders",
+          "order": 4,
+          "free": false
+        }
+      ],
+      "orchestration": "Built-in — ElevenLabs Flows IS the orchestrator",
+      "keyInsight": "Non-destructive iteration means changing one node only re-processes downstream. Consolidates 3-5 separate tools into one platform. This is the consolidation trend in action.",
+      "gaps": [
+        "Vendor lock-in risk — everything depends on ElevenLabs",
+        "Free tier may be too limited"
+      ],
+      "lastVerified": "2026-03-28"
+    },
+    {
+      "id": "self-hosted-ai",
+      "name": "Self-Hosted Private AI Stack",
+      "description": "Fully private, uncapped AI assistant running locally",
+      "category": "infrastructure",
+      "difficulty": "intermediate",
+      "verified": true,
+      "verifiedSource": "Reddit discussions, XDA Developers",
+      "costTier": "free",
+      "freeAlternative": null,
+      "steps": [
+        {
+          "toolId": "ollama",
+          "action": "Local model runtime — download and run open models",
+          "order": 1,
+          "free": true
+        },
+        {
+          "toolId": "lm-studio",
+          "action": "Alternative: GUI-based local model management",
+          "order": 2,
+          "free": true
+        },
+        {
+          "toolId": "ollama",
+          "action": "Open WebUI: ChatGPT-like interface with RAG, multi-user, function calling",
+          "order": 3,
+          "free": true
+        }
+      ],
+      "orchestration": "Open WebUI handles everything after Ollama is running",
+      "keyInsight": "Mini PC (~$800 one-time) replaces ~$200/month in cloud API costs. No rate limits, no data leaving the device. ROI in 4 months.",
+      "gaps": [
+        "Model quality still behind closed models for complex tasks",
+        "Requires decent hardware (16GB+ RAM)"
+      ],
+      "lastVerified": "2026-03-28",
+      "connectors": [
+        {
+          "type": "web-ui",
+          "name": "Open WebUI",
+          "url": "https://github.com/open-webui/open-webui",
+          "note": "ChatGPT-like interface for Ollama with RAG, plugins, function calling"
+        },
+        {
+          "type": "api-server",
+          "name": "Ollama API",
+          "url": "http://localhost:11434",
+          "note": "OpenAI-compatible API for local models"
+        }
+      ]
+    },
+    {
+      "id": "content-creation",
+      "name": "Content Creation Pipeline",
+      "description": "Blog posts, articles, social media content using AI writing + images + editing",
+      "category": "content",
+      "difficulty": "beginner",
+      "verified": false,
+      "verifiedSource": "Original project workflow — not independently verified",
+      "costTier": "free",
+      "freeAlternative": null,
+      "steps": [
+        {
+          "toolId": "chatgpt",
+          "action": "Draft content with outline and key points",
+          "order": 1,
+          "free": true
+        },
+        {
+          "toolId": "claude",
+          "action": "Refine tone, check accuracy, improve structure",
+          "order": 2,
+          "free": true
+        },
+        {
+          "toolId": "stable-diffusion",
+          "action": "Generate images locally (free, no credits)",
+          "order": 3,
+          "free": true
+        },
+        {
+          "toolId": "grammarly",
+          "action": "Final grammar, clarity, style polish",
+          "order": 4,
+          "free": true,
+          "freeLimit": "Basic suggestions only"
+        }
+      ],
+      "orchestration": "Manual handoff",
+      "keyInsight": "Use different AI for drafting vs refining — each has different strengths.",
+      "gaps": [
+        "Midjourney produces better images but costs $14+ CAD/month"
+      ],
+      "lastVerified": "2026-03-28"
+    }
+  ],
+  "metaInsights": {
+    "orchestrationTrend": "The competitive advantage in 2026 is not which AI tool you use but how you connect them. n8n and Make appear repeatedly as the glue layer. MCP (Model Context Protocol) is emerging as the standardized integration protocol.",
+    "consolidationTrend": "ElevenLabs Flows represents platforms absorbing the orchestration layer. Watch for this pattern — it reduces flexibility but increases ease of use.",
+    "costRule": "8-hour rule: if a tool doesn't save at least 8 hours per $50/month, cut it from the stack.",
+    "freeFirstPrinciple": "Every workflow should have a fully free path. Paid upgrades are optional improvements, not requirements."
   }
-]
+}
