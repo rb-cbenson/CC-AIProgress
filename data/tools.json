@@ -11043,5 +11043,167 @@
     "trustScore": 64,
     "firstTracked": "2026-03-28",
     "lastVerified": "2026-03-28"
+  },
+  {
+    "id": "lindy-ai",
+    "name": "Lindy.ai",
+    "category": "ai-agents",
+    "developer": "Lindy",
+    "url": "https://www.lindy.ai/",
+    "description": "No-code AI agent builder. Create agents for email triage, meeting scheduling, customer support, sales outreach. Connects to 3,000+ apps.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "Free tier with limited agent runs",
+      "freeTierLimits": {
+        "notes": "Free tier available with limits"
+      },
+      "paidPlans": [
+        {
+          "name": "Pro",
+          "priceCAD": 70,
+          "period": "month",
+          "details": "Unlimited agents and runs"
+        }
+      ]
+    },
+    "capabilities": [
+      "automation",
+      "text-generation",
+      "api-call"
+    ],
+    "integrations": [
+      "zapier",
+      "n8n"
+    ],
+    "accessMethod": "web",
+    "platformSupport": [
+      "web"
+    ],
+    "ranking": {
+      "overall": 65,
+      "inCategory": 5,
+      "trend": "rising"
+    },
+    "pros": [
+      "No-code agent builder",
+      "3000+ app integrations",
+      "Pre-built templates"
+    ],
+    "cons": [
+      "Pro plan expensive",
+      "Web-only"
+    ],
+    "trustScore": 68,
+    "firstTracked": "2026-03-28",
+    "lastVerified": "2026-03-28"
+  },
+  {
+    "id": "copy-ai",
+    "name": "Copy.ai",
+    "category": "productivity",
+    "developer": "Copy.ai",
+    "url": "https://www.copy.ai/",
+    "description": "AI copywriting and content platform. Marketing copy, blog posts, social media, emails. GTM AI workflows for sales teams.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "2,000 words/month free",
+      "freeTierLimits": {
+        "notes": "2,000 words/month renewable"
+      },
+      "paidPlans": [
+        {
+          "name": "Starter",
+          "priceCAD": 50,
+          "period": "month",
+          "details": "Unlimited words"
+        }
+      ]
+    },
+    "capabilities": [
+      "text-generation",
+      "text-editing",
+      "summarization"
+    ],
+    "integrations": [
+      "zapier"
+    ],
+    "accessMethod": "web",
+    "platformSupport": [
+      "web"
+    ],
+    "ranking": {
+      "overall": 62,
+      "inCategory": 8,
+      "trend": "stable"
+    },
+    "pros": [
+      "Purpose-built for marketing copy",
+      "2000 free words/month renewable",
+      "GTM templates"
+    ],
+    "cons": [
+      "Not general-purpose AI",
+      "Web-only",
+      "Expensive for unlimited"
+    ],
+    "trustScore": 72,
+    "firstTracked": "2026-03-28",
+    "lastVerified": "2026-03-28"
+  },
+  {
+    "id": "intercom-fin",
+    "name": "Intercom Fin",
+    "category": "ai-agents",
+    "developer": "Intercom",
+    "url": "https://www.intercom.com/",
+    "description": "AI customer support agent. Resolves tickets autonomously using your knowledge base. Hands off to humans when needed.",
+    "pricingCAD": {
+      "freeTier": true,
+      "freeTierDetails": "14-day free trial",
+      "freeTierLimits": {
+        "notes": "14-day trial only. No ongoing free tier."
+      },
+      "paidPlans": [
+        {
+          "name": "Essential",
+          "priceCAD": 42,
+          "period": "month",
+          "details": "Per seat + $0.99/resolution"
+        }
+      ]
+    },
+    "capabilities": [
+      "text-generation",
+      "text-analysis",
+      "automation",
+      "api-call"
+    ],
+    "integrations": [
+      "zapier",
+      "n8n"
+    ],
+    "accessMethod": "web+api",
+    "platformSupport": [
+      "web",
+      "api"
+    ],
+    "ranking": {
+      "overall": 55,
+      "inCategory": 4,
+      "trend": "rising"
+    },
+    "pros": [
+      "Autonomous ticket resolution",
+      "Uses your knowledge base",
+      "Enterprise-grade"
+    ],
+    "cons": [
+      "Expensive per-seat + per-resolution",
+      "Trial only, no free tier",
+      "Support niche"
+    ],
+    "trustScore": 80,
+    "firstTracked": "2026-03-28",
+    "lastVerified": "2026-03-28"
   }
 ]

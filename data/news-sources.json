@@ -2868,5 +2868,61 @@
       "video-generation",
       "crowdsourced"
     ]
+  },
+  {
+    "id": "futuretools",
+    "name": "FutureTools (Matt Wolfe)",
+    "type": "directory",
+    "url": "https://futuretools.io/",
+    "frequency": "Regular updates",
+    "description": "4,000+ tools in 29 categories. Curated by Matt Wolfe (230K+ YouTube).",
+    "free": true,
+    "tags": [
+      "directory",
+      "discovery",
+      "curated"
+    ]
+  },
+  {
+    "id": "r-locallama",
+    "name": "r/LocalLLaMA",
+    "type": "reddit",
+    "url": "https://www.reddit.com/r/LocalLLaMA/",
+    "frequency": "Hourly",
+    "description": "Builder community for local AI. Monthly threads on what people use. High signal.",
+    "free": true,
+    "tags": [
+      "reddit",
+      "community",
+      "local-ai"
+    ]
+  },
+  {
+    "id": "r-aivideo",
+    "name": "r/aivideo",
+    "type": "reddit",
+    "url": "https://www.reddit.com/r/aivideo/",
+    "frequency": "Daily",
+    "description": "AI video generation community. Tool comparisons, workflow sharing.",
+    "free": true,
+    "tags": [
+      "reddit",
+      "community",
+      "video-generation"
+    ]
+  },
+  {
+    "id": "r-aiagents",
+    "name": "r/AI_Agents",
+    "type": "reddit",
+    "url": "https://www.reddit.com/r/AI_Agents/",
+    "frequency": "Daily",
+    "description": "AI agent community. Autonomous agents, tool use, multi-step workflows.",
+    "free": true,
+    "tags": [
+      "reddit",
+      "community",
+      "ai-agents"
+    ]
   }
 ]
