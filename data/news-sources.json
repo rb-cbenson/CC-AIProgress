@@ -2456,7 +2456,12 @@
     "frequency": "Multiple per week",
     "description": "Official OpenAI announcements: model launches, API changes, pricing updates, safety research, partnership news. Primary source for GPT/DALL-E/Sora updates.",
     "free": true,
-    "tags": ["official", "announcements", "models", "pricing"]
+    "tags": [
+      "official",
+      "announcements",
+      "models",
+      "pricing"
+    ]
   },
   {
     "id": "anthropic-blog",
@@ -2466,7 +2471,12 @@
     "frequency": "Multiple per week",
     "description": "Official Anthropic announcements: Claude model releases, pricing changes, safety research, API updates. Primary source for Claude ecosystem news.",
     "free": true,
-    "tags": ["official", "announcements", "models", "safety"]
+    "tags": [
+      "official",
+      "announcements",
+      "models",
+      "safety"
+    ]
   },
   {
     "id": "google-ai-blog",
@@ -2476,7 +2486,12 @@
     "frequency": "Multiple per week",
     "description": "Official Google AI announcements: Gemini updates, DeepMind research, Google Cloud AI, Android AI features. Also covers hardware (TPUs).",
     "free": true,
-    "tags": ["official", "announcements", "models", "research"]
+    "tags": [
+      "official",
+      "announcements",
+      "models",
+      "research"
+    ]
   },
   {
     "id": "meta-ai-blog",
@@ -2486,7 +2501,12 @@
     "frequency": "Weekly",
     "description": "Official Meta AI announcements: Llama model releases, open-source research, PyTorch updates, AR/VR AI. Key source for open-weight model ecosystem.",
     "free": true,
-    "tags": ["official", "announcements", "open-source", "models"]
+    "tags": [
+      "official",
+      "announcements",
+      "open-source",
+      "models"
+    ]
   },
   {
     "id": "microsoft-ai-blog",
@@ -2496,7 +2516,12 @@
     "frequency": "Multiple per week",
     "description": "Official Microsoft AI announcements: Copilot updates, Azure AI services, GitHub Copilot, Office AI features, partnerships (OpenAI investment).",
     "free": true,
-    "tags": ["official", "announcements", "enterprise", "copilot"]
+    "tags": [
+      "official",
+      "announcements",
+      "enterprise",
+      "copilot"
+    ]
   },
   {
     "id": "nvidia-ai-blog",
@@ -2506,7 +2531,12 @@
     "frequency": "Multiple per week",
     "description": "Official NVIDIA AI announcements: GPU launches, CUDA updates, Isaac Sim, GTC announcements, NIM microservices. Critical for robotics and hardware AI.",
     "free": true,
-    "tags": ["official", "announcements", "hardware", "robotics"]
+    "tags": [
+      "official",
+      "announcements",
+      "hardware",
+      "robotics"
+    ]
   },
   {
     "id": "stability-ai-blog",
@@ -2516,7 +2546,12 @@
     "frequency": "Weekly",
     "description": "Official Stability AI announcements: Stable Diffusion releases, new model launches, API updates, partnerships.",
     "free": true,
-    "tags": ["official", "announcements", "image-generation", "open-source"]
+    "tags": [
+      "official",
+      "announcements",
+      "image-generation",
+      "open-source"
+    ]
   },
   {
     "id": "midjourney-announcements",
@@ -2526,7 +2561,11 @@
     "frequency": "Irregular",
     "description": "Midjourney announces exclusively via Discord #announcements channel. No blog. Version releases, feature changes, pricing updates all happen here first.",
     "free": true,
-    "tags": ["official", "announcements", "image-generation"]
+    "tags": [
+      "official",
+      "announcements",
+      "image-generation"
+    ]
   },
   {
     "id": "huggingface-blog",
@@ -2536,7 +2575,12 @@
     "frequency": "Multiple per week",
     "description": "Hugging Face announcements: new model integrations, Transformers library updates, Spaces features, community highlights, open-source AI ecosystem.",
     "free": true,
-    "tags": ["official", "announcements", "open-source", "models"]
+    "tags": [
+      "official",
+      "announcements",
+      "open-source",
+      "models"
+    ]
   },
   {
     "id": "runway-blog",
@@ -2546,7 +2590,11 @@
     "frequency": "Weekly",
     "description": "Official Runway announcements: Gen model releases, video AI features, creative tools, partnerships with film studios.",
     "free": true,
-    "tags": ["official", "announcements", "video-generation"]
+    "tags": [
+      "official",
+      "announcements",
+      "video-generation"
+    ]
   },
   {
     "id": "elevenlabs-blog",
@@ -2556,7 +2604,12 @@
     "frequency": "Weekly",
     "description": "Official ElevenLabs announcements: voice model updates, API changes, new features, pricing, partnerships.",
     "free": true,
-    "tags": ["official", "announcements", "speech-voice", "audio"]
+    "tags": [
+      "official",
+      "announcements",
+      "speech-voice",
+      "audio"
+    ]
   },
   {
     "id": "google-patents-ai",
@@ -2566,7 +2619,11 @@
     "frequency": "Daily new filings",
     "description": "Earliest signal of what companies are building. Patent filings appear months to years before products launch. Filter by AI/ML keywords and company assignee.",
     "free": true,
-    "tags": ["patents", "early-signal", "corporate-strategy"]
+    "tags": [
+      "patents",
+      "early-signal",
+      "corporate-strategy"
+    ]
   },
   {
     "id": "uspto-ai-patents",
@@ -2576,7 +2633,11 @@
     "frequency": "Weekly new grants",
     "description": "US Patent and Trademark Office. Search by assignee (Google, OpenAI, Meta) to see what's being patented. Grants appear ~18 months after filing.",
     "free": true,
-    "tags": ["patents", "early-signal", "us-specific"]
+    "tags": [
+      "patents",
+      "early-signal",
+      "us-specific"
+    ]
   },
   {
     "id": "lmsys-chatbot-arena",
@@ -2586,7 +2647,12 @@
     "frequency": "Continuously updated",
     "description": "The most cited LLM ranking — real users vote on blind model comparisons. ELO-based ranking that reflects actual user preference, not synthetic benchmarks.",
     "free": true,
-    "tags": ["benchmark", "leaderboard", "model-ranking", "real-users"]
+    "tags": [
+      "benchmark",
+      "leaderboard",
+      "model-ranking",
+      "real-users"
+    ]
   },
   {
     "id": "open-llm-leaderboard",
@@ -2596,7 +2662,12 @@
     "frequency": "Continuously updated",
     "description": "Standardized benchmarks (MMLU, ARC, HellaSwag, etc.) for open-source models. Shows which open models are catching up to closed ones.",
     "free": true,
-    "tags": ["benchmark", "leaderboard", "open-source", "model-ranking"]
+    "tags": [
+      "benchmark",
+      "leaderboard",
+      "open-source",
+      "model-ranking"
+    ]
   },
   {
     "id": "artificial-analysis",
@@ -2606,7 +2677,12 @@
     "frequency": "Updated with each model release",
     "description": "Standardized benchmarks comparing all major models (open + closed) on quality, speed, and price. Includes API pricing tracker and throughput measurements.",
     "free": true,
-    "tags": ["benchmark", "pricing", "speed", "model-comparison"]
+    "tags": [
+      "benchmark",
+      "pricing",
+      "speed",
+      "model-comparison"
+    ]
   },
   {
     "id": "a16z-ai-blog",
@@ -2616,7 +2692,12 @@
     "frequency": "Multiple per week",
     "description": "Andreessen Horowitz AI investment thesis, market analysis, portfolio company insights. Major AI VC — their views shape industry direction and funding.",
     "free": true,
-    "tags": ["vc", "investment", "market-analysis", "startups"]
+    "tags": [
+      "vc",
+      "investment",
+      "market-analysis",
+      "startups"
+    ]
   },
   {
     "id": "sequoia-ai",
@@ -2626,7 +2707,12 @@
     "frequency": "Monthly",
     "description": "Sequoia's AI market analysis — they published the influential 'AI 50' and 'Generative AI Market Map'. Signals which startups and sectors VCs are betting on.",
     "free": true,
-    "tags": ["vc", "investment", "market-map", "startups"]
+    "tags": [
+      "vc",
+      "investment",
+      "market-map",
+      "startups"
+    ]
   },
   {
     "id": "stanford-hai",
@@ -2636,7 +2722,12 @@
     "frequency": "Multiple per week",
     "description": "Stanford's AI research institute. Publishes the annual AI Index Report — the most comprehensive annual survey of the AI landscape. Research on policy, ethics, economics of AI.",
     "free": true,
-    "tags": ["academic", "research", "policy", "ai-index"]
+    "tags": [
+      "academic",
+      "research",
+      "policy",
+      "ai-index"
+    ]
   },
   {
     "id": "mit-csail",
@@ -2646,7 +2737,12 @@
     "frequency": "Multiple per week",
     "description": "MIT Computer Science and AI Lab. Robotics research (key for user's field), NLP, computer vision, systems. Where many foundational AI breakthroughs originate.",
     "free": true,
-    "tags": ["academic", "research", "robotics", "systems"]
+    "tags": [
+      "academic",
+      "research",
+      "robotics",
+      "systems"
+    ]
   },
   {
     "id": "mila-news",
@@ -2656,7 +2752,12 @@
     "frequency": "Weekly",
     "description": "Canadian AI research institute (Yoshua Bengio). Relevant as a Canadian source and as one of the top 3 AI research labs globally. Focus on deep learning, responsible AI.",
     "free": true,
-    "tags": ["academic", "research", "canadian", "deep-learning"],
+    "tags": [
+      "academic",
+      "research",
+      "canadian",
+      "deep-learning"
+    ],
     "language": "en",
     "country": "Canada"
   },
@@ -2668,7 +2769,12 @@
     "frequency": "Monthly",
     "description": "US National Institute of Standards and Technology. AI Risk Management Framework, AI safety standards, testing and evaluation. Shapes compliance requirements.",
     "free": true,
-    "tags": ["government", "standards", "safety", "compliance"]
+    "tags": [
+      "government",
+      "standards",
+      "safety",
+      "compliance"
+    ]
   },
   {
     "id": "eu-ai-office",
@@ -2678,7 +2784,12 @@
     "frequency": "Monthly",
     "description": "Oversees the EU AI Act implementation. Regulatory updates, compliance timelines, enforcement actions. Critical for any AI tool operating in EU markets.",
     "free": true,
-    "tags": ["government", "regulation", "eu-ai-act", "compliance"],
+    "tags": [
+      "government",
+      "regulation",
+      "eu-ai-act",
+      "compliance"
+    ],
     "language": "en",
     "country": "EU"
   },
@@ -2690,7 +2801,12 @@
     "frequency": "Monthly",
     "description": "Canadian Institute for Advanced Research. Funds Mila, Vector, Amii. Canada's national AI strategy updates, funding announcements, researcher appointments.",
     "free": true,
-    "tags": ["government", "canadian", "funding", "strategy"],
+    "tags": [
+      "government",
+      "canadian",
+      "funding",
+      "strategy"
+    ],
     "language": "en",
     "country": "Canada"
   },
@@ -2702,7 +2818,12 @@
     "frequency": "Weekly",
     "description": "Center for Security and Emerging Technology. AI policy research, workforce analysis, China AI tracking, semiconductor supply chain. Deep policy intelligence.",
     "free": true,
-    "tags": ["think-tank", "policy", "china", "semiconductors"]
+    "tags": [
+      "think-tank",
+      "policy",
+      "china",
+      "semiconductors"
+    ]
   },
   {
     "id": "brookings-ai",
@@ -2712,7 +2833,12 @@
     "frequency": "Multiple per week",
     "description": "Major US think tank. AI governance, economic impact, workforce displacement, international competition. Feeds directly into US policy discussions.",
     "free": true,
-    "tags": ["think-tank", "policy", "governance", "economics"]
+    "tags": [
+      "think-tank",
+      "policy",
+      "governance",
+      "economics"
+    ]
   },
   {
     "id": "ai-jobs-net",
@@ -2722,6 +2848,25 @@
     "frequency": "Daily",
     "description": "AI-specific job postings. Hiring signals what companies are building next — a spike in 'robotics engineer' postings means robotics products are coming.",
     "free": true,
-    "tags": ["jobs", "hiring-signal", "early-indicator"]
+    "tags": [
+      "jobs",
+      "hiring-signal",
+      "early-indicator"
+    ]
+  },
+  {
+    "id": "arena-ai-video",
+    "name": "Arena.ai Video Leaderboard",
+    "type": "benchmark",
+    "url": "https://arena.ai/",
+    "frequency": "Continuously updated",
+    "description": "Crowdsourced blind-comparison ELO leaderboard for AI video models. 5M+ monthly users. Current T2V leader changes frequently. Essential for ranking video tools.",
+    "free": true,
+    "tags": [
+      "benchmark",
+      "leaderboard",
+      "video-generation",
+      "crowdsourced"
+    ]
   }
 ]

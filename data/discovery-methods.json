@@ -2,9 +2,7 @@
   "version": "1.0",
   "lastUpdated": "2026-03-27",
   "description": "Methods for automatically discovering, validating, and improving intelligence sources. These are the GENERATORS, not the list itself. The system uses these methods to find new sources, validate existing ones, and improve its own discovery capability.",
-
   "corePrinciple": "The list of sources should never be static. These methods generate the list, and the methods themselves should improve over time. Discovery > Curation > Monitoring > Discovery (recursive loop).",
-
   "discoveryMethods": [
     {
       "id": "backlink-crawl",
@@ -12,7 +10,11 @@
       "type": "automated",
       "description": "Start from known high-quality sources. Follow their citations, blogrolls, 'recommended reading' links, and references. Each good source points to more good sources.",
       "how": "For each source in news-sources.json, fetch the page, extract outbound links to other AI/tech sites. Score by how many existing sources link to them (convergence = quality signal). Add high-scoring discoveries.",
-      "tools": ["web scraper", "link extractor", "Python beautifulsoup"],
+      "tools": [
+        "web scraper",
+        "link extractor",
+        "Python beautifulsoup"
+      ],
       "frequency": "weekly",
       "expectedYield": "10-20 new sources per run initially, tapering as coverage improves",
       "implementationStatus": "not-built",
@@ -24,11 +26,43 @@
       "description": "Search Reddit, HN, Discord, Zhihu for 'best AI newsletter', 'AI news source', 'how do you keep up with AI', etc. People constantly share their personal source lists.",
       "type": "automated",
       "how": "Search Reddit API/RSS for posts in r/MachineLearning, r/artificial, r/ChatGPT matching patterns like 'newsletter', 'news source', 'keep up with', 'best resource'. Extract mentioned URLs. Cross-reference against existing list.",
-      "tools": ["Reddit RSS", "HN Algolia API", "regex URL extraction"],
+      "tools": [
+        "Reddit RSS",
+        "HN Algolia API",
+        "regex URL extraction"
+      ],
       "frequency": "weekly",
       "expectedYield": "5-15 new sources per run, high quality (community-vetted)",
       "implementationStatus": "not-built",
-      "priority": "high"
+      "priority": "high",
+      "categoryQueries": {
+        "video-generation": [
+          "site:reddit.com best AI video generator 2026",
+          "site:reddit.com AI video tool comparison",
+          "site:reddit.com r/aivideo",
+          "site:reddit.com r/StableDiffusion video"
+        ],
+        "image-generation": [
+          "site:reddit.com best AI image generator 2026",
+          "site:reddit.com r/StableDiffusion",
+          "site:reddit.com r/midjourney alternatives"
+        ],
+        "text-chat": [
+          "site:reddit.com best LLM 2026",
+          "site:reddit.com r/LocalLLaMA",
+          "site:reddit.com ChatGPT alternative"
+        ],
+        "coding-assistants": [
+          "site:reddit.com best AI coding tool 2026",
+          "site:reddit.com cursor vs windsurf vs claude code"
+        ],
+        "robotics-ai": [
+          "site:reddit.com AI robotics tools 2026",
+          "site:reddit.com r/robotics AI",
+          "site:reddit.com ROS2 AI"
+        ]
+      },
+      "note": "CRITICAL: Reddit surfaces tools that real users actually use. News articles miss niche/new tools. Run category-specific Reddit queries monthly."
     },
     {
       "id": "newsletter-cross-reference",
@@ -36,7 +70,11 @@
       "description": "AI newsletters constantly reference each other and link to sources. Parse newsletter archives for mentioned tools, sites, and sources not in our database.",
       "type": "automated",
       "how": "For newsletters with web archives (Substack, Beehiiv), fetch recent issues. Extract all unique domains mentioned. Compare against news-sources.json and tools.json. New domains = potential new sources or tools.",
-      "tools": ["web scraper", "URL extraction", "domain deduplication"],
+      "tools": [
+        "web scraper",
+        "URL extraction",
+        "domain deduplication"
+      ],
       "frequency": "weekly",
       "expectedYield": "5-10 new sources, plus tool discoveries",
       "implementationStatus": "not-built",
@@ -48,7 +86,11 @@
       "description": "GitHub 'awesome' lists are community-maintained catalogs. Monitor awesome-llm, awesome-generative-ai, awesome-chatgpt, awesome-robotics, etc. for new additions.",
       "type": "automated",
       "how": "Track GitHub commits to known awesome-* repos via Atom feeds. Parse diffs for new URLs added. Each new entry is a potential tool or source.",
-      "tools": ["GitHub Atom feeds", "diff parsing", "URL extraction"],
+      "tools": [
+        "GitHub Atom feeds",
+        "diff parsing",
+        "URL extraction"
+      ],
       "frequency": "daily",
       "expectedYield": "2-5 new tools/sources per week",
       "implementationStatus": "not-built",
@@ -60,7 +102,11 @@
       "description": "Major conferences (NeurIPS, ICML, CVPR, ICRA, RSS, CoRL) publish proceedings. Scan for new tools, frameworks, and datasets mentioned in accepted papers.",
       "type": "periodic",
       "how": "After each major conference, fetch the proceedings list (usually on OpenReview or conference site). Extract tool/framework names and GitHub URLs from abstracts. Cross-reference against tools.json.",
-      "tools": ["OpenReview API", "web scraper", "NLP for tool name extraction"],
+      "tools": [
+        "OpenReview API",
+        "web scraper",
+        "NLP for tool name extraction"
+      ],
       "frequency": "per-conference (6-8 times/year)",
       "expectedYield": "10-30 new tools per major conference",
       "implementationStatus": "not-built",
@@ -72,7 +118,10 @@
       "description": "New AI tools launch on Product Hunt, HN Show, and similar platforms. Monitor for AI-tagged launches.",
       "type": "automated",
       "how": "Product Hunt RSS (free) + HN 'Show HN' via Algolia API filtered for AI/ML keywords. Each qualifying launch = potential new tool.",
-      "tools": ["Product Hunt RSS", "HN Algolia API"],
+      "tools": [
+        "Product Hunt RSS",
+        "HN Algolia API"
+      ],
       "frequency": "daily",
       "expectedYield": "3-10 new tools per week",
       "implementationStatus": "not-built",
@@ -84,7 +133,9 @@
       "description": "HF Hub shows trending models and spaces. New trending items often indicate new tools, companies, or capabilities not yet tracked.",
       "type": "automated",
       "how": "HF API: /api/models?sort=trending and /api/spaces?sort=trending. Extract creator organizations. New orgs with popular models = potential new tool entries.",
-      "tools": ["Hugging Face Hub API (free, no auth)"],
+      "tools": [
+        "Hugging Face Hub API (free, no auth)"
+      ],
       "frequency": "daily",
       "expectedYield": "2-5 new discoveries per week",
       "implementationStatus": "not-built",
@@ -96,7 +147,11 @@
       "description": "New AI frameworks appear on PyPI/npm before they get press coverage. Monitor for AI/ML-tagged new packages with rapid download growth.",
       "type": "automated",
       "how": "PyPI RSS for new packages + PyPI API for download counts. Filter by keywords (llm, ai, robot, vision, transformer, agent). Packages crossing 1K downloads/week = worth investigating.",
-      "tools": ["PyPI RSS", "PyPI JSON API", "npm registry API"],
+      "tools": [
+        "PyPI RSS",
+        "PyPI JSON API",
+        "npm registry API"
+      ],
       "frequency": "daily",
       "expectedYield": "1-3 significant new tools per week",
       "implementationStatus": "not-built",
@@ -108,7 +163,12 @@
       "description": "When a new tool goes viral on Twitter/X, Reddit, Weibo, or Zhihu, the mention velocity spikes. Detect these spikes before mainstream coverage.",
       "type": "automated",
       "how": "Track mention counts for AI-related terms across social platforms over sliding windows. A 10x spike in mentions of a previously unknown name = discovery. Use RSSHub for Chinese platforms.",
-      "tools": ["Twitter/X API or Nitter RSS", "Reddit RSS", "RSSHub (Chinese platforms)", "Mastodon streaming"],
+      "tools": [
+        "Twitter/X API or Nitter RSS",
+        "Reddit RSS",
+        "RSSHub (Chinese platforms)",
+        "Mastodon streaming"
+      ],
       "frequency": "hourly when running",
       "expectedYield": "1-2 viral discoveries per week",
       "implementationStatus": "not-built",
@@ -120,7 +180,11 @@
       "description": "Directories like Futurepedia (5K+ tools), There's an AI for That (12K+ tools) update frequently. Diff their listings periodically to find new additions.",
       "type": "automated",
       "how": "Scrape or API-access major directories. Compare against previous snapshot. New entries = potential additions to our database with pre-existing descriptions and categories.",
-      "tools": ["web scraper", "diff engine", "previously-stored snapshots"],
+      "tools": [
+        "web scraper",
+        "diff engine",
+        "previously-stored snapshots"
+      ],
       "frequency": "weekly",
       "expectedYield": "20-50 new tools per week (most low-quality; filter needed)",
       "implementationStatus": "not-built",
@@ -132,7 +196,11 @@
       "description": "When an AI company raises money, it often signals a tool worth tracking. Monitor Crunchbase, PitchBook, or news for AI funding rounds.",
       "type": "automated",
       "how": "Search news for 'AI startup raises', 'series A', 'seed round' + AI keywords. Extract company names and products. Cross-reference against tools.json.",
-      "tools": ["news search", "Crunchbase (if API available)", "SEC EDGAR"],
+      "tools": [
+        "news search",
+        "Crunchbase (if API available)",
+        "SEC EDGAR"
+      ],
       "frequency": "weekly",
       "expectedYield": "3-5 new companies/tools per week",
       "implementationStatus": "not-built",
@@ -144,7 +212,11 @@
       "description": "English-language bridge sources (ChinaTalk, ChinAI, Korea Herald Tech) translate foreign AI developments. Monitor these for mentions of platforms/tools/sources we don't track yet.",
       "type": "automated",
       "how": "Parse bridge source archives for mentioned Chinese/Korean/Japanese/Russian platform names, URLs, tools. Each mention of an unknown platform = potential new source to add.",
-      "tools": ["web scraper", "NLP entity extraction", "translation API"],
+      "tools": [
+        "web scraper",
+        "NLP entity extraction",
+        "translation API"
+      ],
       "frequency": "weekly",
       "expectedYield": "2-5 new non-English sources per month",
       "implementationStatus": "not-built",
@@ -156,7 +228,10 @@
       "description": "The system should periodically ask: what TYPES of sources am I missing? What countries have zero coverage? What AI sub-domains have no dedicated source?",
       "type": "ai-driven",
       "how": "Analyze news-sources.json distribution by type, language, country, and AI domain. Identify categories with <3 sources. Generate targeted search queries to fill gaps. Example: if 'robotics' has 5 sources but 'quantum AI' has 0, prioritize quantum AI source discovery.",
-      "tools": ["self-analysis script", "AI session with web search"],
+      "tools": [
+        "self-analysis script",
+        "AI session with web search"
+      ],
       "frequency": "monthly",
       "expectedYield": "identifies 3-5 coverage gaps per run",
       "implementationStatus": "not-built",
@@ -168,7 +243,10 @@
       "description": "Sources die, newsletters stop, sites go offline. Automatically detect and flag dead sources.",
       "type": "automated",
       "how": "HTTP HEAD request every source URL monthly. 404/timeout = flag for removal. Check RSS feeds for last publish date — if >90 days silent, flag as potentially dead. Check newsletter archives for last issue date.",
-      "tools": ["HTTP checker", "RSS date parser"],
+      "tools": [
+        "HTTP checker",
+        "RSS date parser"
+      ],
       "frequency": "monthly",
       "expectedYield": "removes 2-5 dead sources per run, keeping the list clean",
       "implementationStatus": "not-built",
@@ -180,7 +258,11 @@
       "description": "Not all sources are equal. Auto-score based on: update frequency, citation by other sources, unique information ratio, reliability.",
       "type": "ai-driven",
       "how": "For each source: check last update date, count how often it's cited by other sources in our list, measure how often it surfaces information before other sources (scoop rate). Low-scoring sources get deprioritized; high-scoring ones get promoted in the dashboard.",
-      "tools": ["web scraper", "citation graph", "date analysis"],
+      "tools": [
+        "web scraper",
+        "citation graph",
+        "date analysis"
+      ],
       "frequency": "monthly",
       "expectedYield": "quality ranking for all sources, surfacing the top 20% that provide 80% of value",
       "implementationStatus": "not-built",
@@ -192,7 +274,11 @@
       "description": "Search GitHub, Stack Overflow, Reddit, and forums for unofficial code that connects tools together. People write scripts, plugins, and workarounds to make tools work together that have no official integration. These community solutions are often the fastest path to connecting tools.",
       "type": "search-based",
       "how": "For each pair of high-value tools in tools.json, search GitHub for repos that import/reference both (e.g., 'kicad blender python', 'ros2 opencv example', 'n8n claude api'). Search Stack Overflow for questions about connecting them. Record found repos/solutions in the integrations field AND in a new community-integrations.json file with: tool pair, repo URL, description, stars, last updated, quality assessment.",
-      "tools": ["GitHub Search API", "Stack Overflow API", "Reddit search"],
+      "tools": [
+        "GitHub Search API",
+        "Stack Overflow API",
+        "Reddit search"
+      ],
       "frequency": "monthly for major tools, quarterly for all",
       "expectedYield": "10-30 new integration paths per run, many unofficial but practical",
       "implementationStatus": "not-built",
@@ -211,21 +297,58 @@
       "description": "THIS method. The system should periodically review which discovery methods found the most valuable sources and tools, and adjust priorities and frequencies accordingly. Methods that find nothing get deprioritized. Methods that find gold get run more often.",
       "type": "ai-driven",
       "how": "Track which discovery method produced each source/tool addition. After 3 months, analyze: which methods have the best hit rate? Which find things earliest? Adjust frequency and priority fields in this file. Propose new methods based on what worked.",
-      "tools": ["self-analysis", "AI session"],
+      "tools": [
+        "self-analysis",
+        "AI session"
+      ],
       "frequency": "quarterly",
       "expectedYield": "continuous improvement of the discovery system itself",
       "implementationStatus": "not-built",
       "priority": "high"
     }
   ],
-
   "implementationOrder": [
-    {"phase": 1, "methods": ["github-awesome-lists", "product-hunt-monitoring", "huggingface-trending", "reddit-mention-mining"], "reason": "Free APIs, easy to implement, high yield"},
-    {"phase": 2, "methods": ["backlink-crawl", "newsletter-cross-reference", "non-english-bridge-scan", "self-gap-analysis"], "reason": "Requires scraping but high value"},
-    {"phase": 3, "methods": ["pypi-npm-new-packages", "conference-proceedings-scan", "social-media-velocity", "funding-announcement-tracking"], "reason": "More complex, moderate yield"},
-    {"phase": 4, "methods": ["ai-tool-directory-diff", "dead-source-pruning", "source-quality-scoring", "discovery-method-improvement"], "reason": "Maintenance and meta-improvement"}
+    {
+      "phase": 1,
+      "methods": [
+        "github-awesome-lists",
+        "product-hunt-monitoring",
+        "huggingface-trending",
+        "reddit-mention-mining"
+      ],
+      "reason": "Free APIs, easy to implement, high yield"
+    },
+    {
+      "phase": 2,
+      "methods": [
+        "backlink-crawl",
+        "newsletter-cross-reference",
+        "non-english-bridge-scan",
+        "self-gap-analysis"
+      ],
+      "reason": "Requires scraping but high value"
+    },
+    {
+      "phase": 3,
+      "methods": [
+        "pypi-npm-new-packages",
+        "conference-proceedings-scan",
+        "social-media-velocity",
+        "funding-announcement-tracking"
+      ],
+      "reason": "More complex, moderate yield"
+    },
+    {
+      "phase": 4,
+      "methods": [
+        "ai-tool-directory-diff",
+        "dead-source-pruning",
+        "source-quality-scoring",
+        "discovery-method-improvement"
+      ],
+      "reason": "Maintenance and meta-improvement"
+    }
   ],
-
   "recursiveLoops": {
     "discovery-to-monitoring": "New sources found by discovery methods get added to news-sources.json → monitoring pipeline reads them → discovers new tools → tools.json updated → dashboard reflects changes",
     "monitoring-to-discovery": "Monitoring existing sources surfaces mentions of NEW sources → triggers discovery methods → news-sources.json grows → monitoring coverage expands",
@@ -233,17 +356,19 @@
     "sources-to-methods": "As new types of platforms emerge (e.g., a new Chinese social network for AI), new discovery methods may be needed → discovery-methods.json updated",
     "methods-to-methods": "The meta-method (discovery-method-improvement) evaluates all other methods → adjusts priorities → the system learns which discovery approaches work best"
   },
-
   "selfImprovementLayers": {
     "principle": "Self-improvement is not limited to source discovery. EVERY layer of the system has its own improvement loop. Each layer generates, validates, and refines its outputs — and each layer can improve the layers above and below it.",
-
     "layers": [
       {
         "layer": 1,
         "name": "Source Discovery",
         "what": "Finding new news sources, RSS feeds, newsletters, blogs, social accounts",
-        "inputsFrom": ["discoveryMethods in this file"],
-        "outputsTo": ["data/news-sources.json"],
+        "inputsFrom": [
+          "discoveryMethods in this file"
+        ],
+        "outputsTo": [
+          "data/news-sources.json"
+        ],
         "selfImproves": "discovery-method-improvement meta-method evaluates which discovery approaches work best → adjusts priorities/frequencies",
         "improvesOtherLayers": "New sources feed Layer 2 (tool discovery) with raw material"
       },
@@ -251,25 +376,59 @@
         "layer": 2,
         "name": "Tool Discovery",
         "what": "Identifying new AI tools, frameworks, models, platforms",
-        "inputsFrom": ["news-sources.json (monitored feeds)", "GitHub trending", "HF trending", "PyPI/npm", "Product Hunt", "conference papers"],
-        "outputsTo": ["data/tools.json"],
+        "inputsFrom": [
+          "news-sources.json (monitored feeds)",
+          "GitHub trending",
+          "HF trending",
+          "PyPI/npm",
+          "Product Hunt",
+          "conference papers"
+        ],
+        "outputsTo": [
+          "data/tools.json"
+        ],
         "selfImproves": "Track which discovery channels find the best tools earliest. Channels with high hit rates get prioritized. Channels that only find noise get deprioritized.",
         "improvesOtherLayers": "New tools may have blogs/docs → become new sources (Layer 1). New tools may enable new workflows (Layer 4). Clusters of tools in unknown domains → trigger new categories (Layer 3).",
         "methods": [
-          {"id": "tool-from-source-monitoring", "how": "Every source in news-sources.json is scanned for tool mentions not in tools.json"},
-          {"id": "tool-from-github-trending", "how": "Daily GitHub trending scan filtered by AI/ML topics and star velocity"},
-          {"id": "tool-from-package-registries", "how": "PyPI/npm new packages with AI keywords + rapid download growth"},
-          {"id": "tool-from-social-buzz", "how": "Reddit/HN/Twitter velocity spikes for unknown tool names"},
-          {"id": "tool-from-funding", "how": "AI startup funding announcements → investigate what they built"},
-          {"id": "tool-from-papers", "how": "Conference proceedings and arXiv papers → extract framework/tool references"}
+          {
+            "id": "tool-from-source-monitoring",
+            "how": "Every source in news-sources.json is scanned for tool mentions not in tools.json"
+          },
+          {
+            "id": "tool-from-github-trending",
+            "how": "Daily GitHub trending scan filtered by AI/ML topics and star velocity"
+          },
+          {
+            "id": "tool-from-package-registries",
+            "how": "PyPI/npm new packages with AI keywords + rapid download growth"
+          },
+          {
+            "id": "tool-from-social-buzz",
+            "how": "Reddit/HN/Twitter velocity spikes for unknown tool names"
+          },
+          {
+            "id": "tool-from-funding",
+            "how": "AI startup funding announcements → investigate what they built"
+          },
+          {
+            "id": "tool-from-papers",
+            "how": "Conference proceedings and arXiv papers → extract framework/tool references"
+          }
         ]
       },
       {
         "layer": 3,
         "name": "Category Evolution",
         "what": "Detecting when new AI domains emerge that deserve their own category, or when existing categories should merge/split",
-        "inputsFrom": ["tools.json distribution analysis", "news trends", "conference track lists", "industry reports"],
-        "outputsTo": ["data/categories.json"],
+        "inputsFrom": [
+          "tools.json distribution analysis",
+          "news trends",
+          "conference track lists",
+          "industry reports"
+        ],
+        "outputsTo": [
+          "data/categories.json"
+        ],
         "selfImproves": "Monthly analysis: Are any categories growing too large (>25 tools → consider splitting)? Are any too small (<3 tools → consider merging)? Are tools being miscategorized based on how the industry describes them?",
         "improvesOtherLayers": "New categories create targeted discovery queries for Layer 1 and Layer 2. Category clarity improves trust scoring and rankings.",
         "signals": [
@@ -284,23 +443,51 @@
         "layer": 4,
         "name": "Workflow Discovery",
         "what": "Finding how people combine tools in pipelines we haven't documented",
-        "inputsFrom": ["YouTube tutorials", "Reddit 'my AI workflow' posts", "blog posts", "GitHub repos with multiple AI tool integrations"],
-        "outputsTo": ["data/workflows.json"],
+        "inputsFrom": [
+          "YouTube tutorials",
+          "Reddit 'my AI workflow' posts",
+          "blog posts",
+          "GitHub repos with multiple AI tool integrations"
+        ],
+        "outputsTo": [
+          "data/workflows.json"
+        ],
         "selfImproves": "Track which workflows get the most engagement/adoption. Retire workflows using deprecated tools. Discover new workflows enabled by newly added tools.",
         "improvesOtherLayers": "Workflow gaps reveal missing tools (Layer 2). Popular workflows suggest which tool categories matter most (Layer 3). Workflow documentation sites become new sources (Layer 1).",
         "methods": [
-          {"id": "workflow-from-youtube", "how": "Search YouTube for 'AI workflow 2026', 'my AI stack', 'AI automation setup' → extract tool combinations"},
-          {"id": "workflow-from-reddit", "how": "Monitor r/ChatGPT, r/artificial, r/automate for posts describing multi-tool setups"},
-          {"id": "workflow-from-github", "how": "Repos with multiple AI SDK dependencies → infer integration patterns"},
-          {"id": "workflow-from-templates", "how": "n8n/Zapier/Make template galleries → AI-tagged templates reveal common automation patterns"}
+          {
+            "id": "workflow-from-youtube",
+            "how": "Search YouTube for 'AI workflow 2026', 'my AI stack', 'AI automation setup' → extract tool combinations"
+          },
+          {
+            "id": "workflow-from-reddit",
+            "how": "Monitor r/ChatGPT, r/artificial, r/automate for posts describing multi-tool setups"
+          },
+          {
+            "id": "workflow-from-github",
+            "how": "Repos with multiple AI SDK dependencies → infer integration patterns"
+          },
+          {
+            "id": "workflow-from-templates",
+            "how": "n8n/Zapier/Make template galleries → AI-tagged templates reveal common automation patterns"
+          }
         ]
       },
       {
         "layer": 5,
         "name": "Strategy & Knowledge Improvement",
         "what": "Keeping strategies.json, regulations.json, and project knowledge current as reality changes",
-        "inputsFrom": ["briefings.json (accumulated intelligence)", "tool changes", "regulatory news", "user feedback"],
-        "outputsTo": ["data/strategies.json", "data/regulations.json", "data/projects.json"],
+        "inputsFrom": [
+          "briefings.json (accumulated intelligence)",
+          "tool changes",
+          "regulatory news",
+          "user feedback"
+        ],
+        "outputsTo": [
+          "data/strategies.json",
+          "data/regulations.json",
+          "data/projects.json"
+        ],
         "selfImproves": "When a strategy's 'currentState' or 'futureState' prediction proves wrong, flag it for rewrite. Track prediction accuracy over time. Strategies that frequently need updating may indicate fast-moving domains needing more monitoring.",
         "improvesOtherLayers": "Strategy gaps identify missing tool categories (Layer 3). Regulatory changes affect tool rankings and trust scores (Layer 2). New workaround strategies may reveal niche tools (Layer 2)."
       },
@@ -308,8 +495,19 @@
         "layer": 6,
         "name": "System Architecture Improvement",
         "what": "The system improves its own structure: file schemas, automation pipelines, dashboard features, CLAUDE.md instructions",
-        "inputsFrom": ["All other layers", "error logs", "validation failures", "user feedback", "session analysis"],
-        "outputsTo": ["CLAUDE.md", "data/automation.json", "scripts/*", "assets/js/dashboard.js"],
+        "inputsFrom": [
+          "All other layers",
+          "error logs",
+          "validation failures",
+          "user feedback",
+          "session analysis"
+        ],
+        "outputsTo": [
+          "CLAUDE.md",
+          "data/automation.json",
+          "scripts/*",
+          "assets/js/dashboard.js"
+        ],
         "selfImproves": "Every session that encounters a friction point should propose a fix. Validation errors trigger schema improvements. Slow discovery triggers pipeline optimization. Dashboard gaps trigger UI work.",
         "improvesOtherLayers": "Better architecture makes ALL other layers more effective. Better schemas catch more data quality issues. Better automation runs discoveries more frequently. Better CLAUDE.md makes every AI session more productive.",
         "triggers": [
@@ -321,7 +519,6 @@
         ]
       }
     ],
-
     "crossLayerFeedback": {
       "upward": "Each layer feeds the layer above it. Better sources → better tool discovery → better category understanding → better workflows → better strategies → better system architecture.",
       "downward": "Each layer improves the layer below it. Better architecture → better automation → better strategy tracking → better workflow documentation → better tool coverage → better source discovery.",
